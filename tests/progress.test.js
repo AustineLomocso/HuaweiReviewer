@@ -102,3 +102,13 @@ test('retry adds wrong and uncertain, removes clean correct', () => {
   progress.applyRetry(retry, qs, { fixed: ['T'], wrong: ['F'], unsure: ['T'] }, { unsure: true }, 9);
   assert.deepStrictEqual(Object.keys(retry).sort(), ['keep', 'unsure', 'wrong']);
 });
+
+test('a chapter with an unwritten subchapter is not complete', () => {
+  const st = blank();
+  finishSub(st, 'c-1-1', true);
+  finishSub(st, 'c-1', true);
+  const partial = { 'c-1': entry(1), 'c-1-1': entry(1) };
+  const s = progress.nodeStats(structure.courses[0].chapters[0], partial, st);
+  assert.strictEqual(s.complete, false);
+  assert.ok(s.pct < 100);
+});

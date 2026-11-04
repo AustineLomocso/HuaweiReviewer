@@ -50,7 +50,9 @@
     let done = 0;
     let total = 0;
     const walk = (n) => {
-      ownItems(n.id, manifest).forEach((i) => { total += 1; if (itemDone(i, state)) done += 1; });
+      const items = ownItems(n.id, manifest);
+      if (items.length === 0) total += 1; // Unwritten content counts as not done.
+      items.forEach((i) => { total += 1; if (itemDone(i, state)) done += 1; });
       childrenOf(n).forEach(walk);
     };
     walk(node);
