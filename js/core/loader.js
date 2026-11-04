@@ -69,7 +69,7 @@
     const { id, kind } = parseKey(key);
     if (key === 'retry:all') {
       const ids = [...new Set(Object.keys(retry).map(sectionOfQid).filter(Boolean))];
-      await Promise.all(ids.map((s) => loadSection(s).catch(() => null)));
+      await Promise.all(ids.map(loadSection));
       await loadMocks();
     } else if (kind === 'past' || kind === 'full') {
       await loadMocks();

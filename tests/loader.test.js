@@ -60,3 +60,15 @@ test('only past sets, full mocks and retry offer practice', () => {
   assert.strictEqual(HR.tests.allowsPractice('m1:full'), true);
   assert.strictEqual(HR.tests.allowsPractice('retry:all'), true);
 });
+
+test('a retry set reports a section that fails to load', async () => {
+  globalThis.document = {
+    createElement: () => ({}),
+    head: { appendChild: (el) => (el.src.includes('/sections/') ? el.onerror() : el.onload()) },
+  };
+  try {
+    await assert.rejects(() => HR.tests.ensureLoaded('retry:all', { 'x-9-pre-01': { at: 1 } }));
+  } finally {
+    delete globalThis.document;
+  }
+});

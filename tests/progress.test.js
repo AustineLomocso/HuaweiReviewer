@@ -112,3 +112,13 @@ test('a chapter with an unwritten subchapter is not complete', () => {
   assert.strictEqual(s.complete, false);
   assert.ok(s.pct < 100);
 });
+
+test('a repeated question is one retry entry under its canonical ID', () => {
+  const retry = {};
+  const repeat = { id: 'm2-05', type: 'tf', answer: ['T'], mergedInto: 'm1-09' };
+  progress.applyRetry(retry, [repeat], { 'm2-05': ['F'] }, {}, 3);
+  assert.deepStrictEqual(Object.keys(retry), ['m1-09']);
+  const canonical = { id: 'm1-09', type: 'tf', answer: ['T'], mergedInto: null };
+  progress.applyRetry(retry, [canonical], { 'm1-09': ['T'] }, {}, 4);
+  assert.deepStrictEqual(Object.keys(retry), []);
+});

@@ -93,9 +93,10 @@
 
   function applyRetry(retry, questions, answers, uncertain, now) {
     questions.forEach((q) => {
+      const id = q.mergedInto || q.id;
       const correct = root.HR.scoring.isCorrect(q, answers[q.id]);
-      if (correct && !uncertain[q.id]) delete retry[q.id];
-      else retry[q.id] = { at: now };
+      if (correct && !uncertain[q.id]) delete retry[id];
+      else retry[id] = { at: now };
     });
   }
 
