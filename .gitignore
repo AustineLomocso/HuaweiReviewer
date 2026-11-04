@@ -2,3 +2,5 @@
 HUAWEI PAST EXAMS/
 *.HEIC
 *.pdf
+work/
+node_modules/

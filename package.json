@@ -1,0 +1,9 @@
+{
+  "name": "huawei-reviewer",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/",
+    "check": "node tools/check-content.js",
+    "manifest": "node tools/build-manifest.js"
+  }
+}
