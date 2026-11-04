@@ -45,3 +45,15 @@ test('exactly 60 percent passes', () => {
   assert.strictEqual(r.pct, 60);
   assert.strictEqual(r.passed, true);
 });
+
+test('a score just under 60 percent fails even if it rounds to 60', () => {
+  const tf = Array.from({ length: 21 }, (_, i) => ({ id: 't' + i, type: 'tf', answer: ['T'] }));
+  const multi = Array.from({ length: 26 }, (_, i) => ({ id: 'm' + i, type: 'multi', answer: ['A', 'B'] }));
+  const answers = { t0: ['T'], t1: ['T'] };
+  for (let i = 0; i < 25; i++) answers['m' + i] = ['A', 'B'];
+  const r = scoring.scoreAttempt([...tf, ...multi], answers);
+  assert.strictEqual(r.earned, 482);
+  assert.strictEqual(r.total, 804);
+  assert.strictEqual(r.pct, 60);
+  assert.strictEqual(r.passed, false);
+});

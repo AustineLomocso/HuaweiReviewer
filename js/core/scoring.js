@@ -26,7 +26,7 @@
       }
     }
     const pct = total ? Math.round((earned / total) * 1000) / 10 : 0;
-    return { earned, total, pct, passed: pct >= PASS_PCT, byType, correctIds };
+    return { earned, total, pct, passed: total > 0 && earned * 100 >= PASS_PCT * total, byType, correctIds };
   }
 
   root.HR = root.HR || {};
