@@ -54,5 +54,5 @@
   }
 
   root.HR = root.HR || {};
-  root.HR.paper = { buildPaper, label, timeLimitMs, newSession };
+  root.HR.paper = { rng, buildPaper, label, timeLimitMs, newSession };
 })(globalThis);
