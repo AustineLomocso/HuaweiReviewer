@@ -1,0 +1,58 @@
+:root {
+  --bg: #f4f5f7; --panel: #ffffff; --text: #1d2430; --muted: #5f6b7a; --line: #dde1e7;
+  --accent: #1f5fbf; --accent-text: #ffffff; --good: #1b7f4b; --bad: #bf2f2f; --warn: #b5620b; --soft: #e9effa;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14181f; --panel: #1d232d; --text: #e7eaf0; --muted: #a0abba; --line: #333c49;
+    --accent: #6ea3f0; --accent-text: #10141a; --good: #58c48c; --bad: #f08080; --warn: #e8a65c; --soft: #26324a;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--accent); }
+h1 { font-size: 1.5rem; margin: 0 0 .5rem; }
+h2 { font-size: 1.15rem; margin: 0 0 .5rem; }
+.site-header { padding: .75rem 1rem; background: var(--panel); border-bottom: 1px solid var(--line); }
+.brand { font-weight: 700; text-decoration: none; color: var(--text); }
+main { max-width: 1040px; margin: 0 auto; padding: 1rem; }
+.site-footer { max-width: 1040px; margin: 0 auto; padding: 1rem; color: var(--muted); font-size: .85rem; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+.muted { color: var(--muted); }
+.small { font-size: .875rem; }
+.row { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; }
+.spread { justify-content: space-between; }
+.grow { flex: 1 1 auto; min-width: 0; }
+.bar { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; margin: .4rem 0; }
+.bar > span { display: block; height: 100%; background: var(--accent); }
+.btn { display: inline-block; padding: .45rem .9rem; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--text); font: inherit; cursor: pointer; text-decoration: none; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+.btn.warn { border-color: var(--warn); color: var(--warn); }
+.btn.on { background: var(--warn); border-color: var(--warn); color: var(--accent-text); }
+.btn:disabled { opacity: .5; cursor: default; }
+.banner { background: var(--warn); color: var(--accent-text); padding: .5rem 1rem; }
+.badge { display: inline-block; padding: 0 .45rem; border-radius: 4px; font-size: .78rem; border: 1px solid currentColor; }
+.good { color: var(--good); } .bad { color: var(--bad); } .warned { color: var(--warn); }
+details > summary { cursor: pointer; font-weight: 600; }
+.list { list-style: none; padding: 0; margin: .5rem 0; }
+.list li { padding: .5rem 0; border-top: 1px solid var(--line); }
+.test-grid { display: grid; gap: .5rem; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.exam { display: grid; grid-template-columns: 240px 1fr; gap: 1rem; align-items: start; }
+.exam-top { position: sticky; top: 0; z-index: 2; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: .6rem 1rem; margin-bottom: 1rem; }
+.nav-panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: .75rem; max-height: 75vh; overflow: auto; }
+.nav-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin: .35rem 0 .75rem; }
+.nav-q { padding: .25rem 0; border: 1px solid var(--line); border-radius: 4px; background: transparent; color: var(--text); cursor: pointer; font: inherit; font-size: .85rem; }
+.nav-q.answered { background: var(--soft); }
+.nav-q.uncertain { border-color: var(--warn); color: var(--warn); font-weight: 700; }
+.nav-q.current { outline: 2px solid var(--accent); }
+.option { display: flex; gap: .6rem; align-items: flex-start; padding: .55rem .6rem; border: 1px solid transparent; border-radius: 6px; cursor: pointer; }
+.option:hover { background: var(--soft); }
+.option.right { border-color: var(--good); }
+.option.wrong { border-color: var(--bad); }
+.review { border-top: 1px solid var(--line); padding: .75rem 0; }
+.stem { font-size: 1.05rem; margin: .25rem 0 .75rem; }
+@media (max-width: 760px) {
+  .exam { grid-template-columns: 1fr; }
+  .nav-panel { max-height: 30vh; order: 2; }
+}
