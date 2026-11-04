@@ -8,45 +8,95 @@
 
   function isValid(o) {
     return !!o && o.v === VERSION &&
-      ['read', 'attempts', 'inProgress', 'retry'].every((k) => o[k] && typeof o[k] === 'object');
+      ['read', 'attempts', 'inProgress', 'retry'].every((k) => o[k] && typeof o[k] === 'object' && !Array.isArray(o[k]));
   }
 
   function createStore(backend) {
     const store = { available: true, wasCorrupt: false };
     let state = fresh();
+    let lastRaw = null;
+    let holdsUnsavedCorruptData = false;
+
+    function parseValid(raw) {
+      try {
+        const parsed = JSON.parse(raw);
+        return isValid(parsed) ? parsed : null;
+      } catch (e) {
+        return null;
+      }
+    }
+
     try {
       const raw = backend.getItem(KEY);
+      lastRaw = raw;
       if (raw !== null) {
-        let parsed = null;
-        try { parsed = JSON.parse(raw); } catch (e) { parsed = null; }
-        if (isValid(parsed)) {
+        const parsed = parseValid(raw);
+        if (parsed) {
           state = parsed;
         } else {
           store.wasCorrupt = true;
-          backend.setItem(KEY + '.corrupt', raw);
+          try {
+            backend.setItem(KEY + '.corrupt', raw);
+          } catch (e) {
+            holdsUnsavedCorruptData = true;
+            store.available = false;
+          }
         }
       }
+      if (!holdsUnsavedCorruptData) backend.setItem(KEY + '.probe', '1');
     } catch (e) {
       store.available = false;
     }
 
-    function save() {
+    // Picks up changes from another tab. Same-tab updates keep the same object.
+    function syncFromOtherTabs() {
       try {
-        backend.setItem(KEY, JSON.stringify(state));
+        const raw = backend.getItem(KEY);
+        if (raw === lastRaw) return;
+        const parsed = parseValid(raw);
+        if (parsed) {
+          state = parsed;
+          lastRaw = raw;
+        }
+      } catch (e) {
+        // Storage is unreadable, so keep working in memory.
+      }
+    }
+
+    function save() {
+      if (holdsUnsavedCorruptData) return false;
+      try {
+        const json = JSON.stringify(state);
+        backend.setItem(KEY, json);
+        lastRaw = json;
+        store.available = true;
+        return true;
       } catch (e) {
         store.available = false;
+        return false;
       }
     }
 
     store.get = () => state;
-    store.update = (fn) => { fn(state); save(); };
+    store.update = (fn) => {
+      syncFromOtherTabs();
+      fn(state);
+      save();
+    };
     store.exportJSON = () => JSON.stringify(state, null, 2);
     store.importJSON = (text) => {
       let parsed;
       try { parsed = JSON.parse(text); } catch (e) { throw new Error('This file is not valid JSON.'); }
       if (!isValid(parsed)) throw new Error('This file is not a compatible reviewer backup.');
+      const previous = state;
+      const previousHold = holdsUnsavedCorruptData;
       state = parsed;
-      save();
+      holdsUnsavedCorruptData = false;
+      if (!save()) {
+        state = previous;
+        holdsUnsavedCorruptData = previousHold;
+        throw new Error('The backup could not be saved because browser storage is unavailable or full.');
+      }
     };
     return store;
   }

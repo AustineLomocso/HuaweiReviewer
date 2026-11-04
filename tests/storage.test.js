@@ -59,3 +59,69 @@ test('rejects invalid backups and leaves data unchanged', () => {
   }
   assert.strictEqual(s.get().read.keep, 1);
 });
+
+test('two tabs do not overwrite each other', () => {
+  const b = memoryBackend();
+  const tab1 = storage.createStore(b);
+  const tab2 = storage.createStore(b);
+  tab1.update((st) => { st.read.ch1 = 1; });
+  tab2.update((st) => { st.read.ch2 = 1; });
+  const saved = JSON.parse(b.getItem(storage.KEY));
+  assert.strictEqual(saved.read.ch1, 1);
+  assert.strictEqual(saved.read.ch2, 1);
+});
+
+test('state keeps its identity across updates in a single tab', () => {
+  const s = storage.createStore(memoryBackend());
+  const before = s.get();
+  s.update((st) => { st.read.a = 1; });
+  s.update((st) => { st.read.b = 1; });
+  assert.strictEqual(s.get(), before);
+});
+
+test('rejects backups with array-shaped sections', () => {
+  const s = storage.createStore(memoryBackend());
+  const bad = JSON.stringify({ v: storage.VERSION, read: [], attempts: {}, inProgress: {}, retry: {} });
+  assert.throws(() => s.importJSON(bad));
+});
+
+test('never overwrites corrupt data it could not set aside', () => {
+  const b = memoryBackend();
+  b.setItem(storage.KEY, '{real but truncated');
+  const realSet = b.setItem;
+  b.setItem = (k, v) => { if (k.endsWith('.corrupt')) throw new Error('quota'); realSet(k, v); };
+  const s = storage.createStore(b);
+  assert.strictEqual(s.available, false);
+  s.update((st) => { st.read.n = 1; });
+  assert.strictEqual(b.getItem(storage.KEY), '{real but truncated');
+});
+
+test('detects storage that reads but cannot write at startup', () => {
+  const b = memoryBackend();
+  b.setItem = () => { throw new Error('blocked'); };
+  assert.strictEqual(storage.createStore(b).available, false);
+});
+
+test('available recovers after a later successful save', () => {
+  const b = memoryBackend();
+  const s = storage.createStore(b);
+  const realSet = b.setItem;
+  b.setItem = () => { throw new Error('quota'); };
+  s.update((st) => { st.read.a = 1; });
+  assert.strictEqual(s.available, false);
+  b.setItem = realSet;
+  s.update((st) => { st.read.b = 1; });
+  assert.strictEqual(s.available, true);
+  assert.strictEqual(JSON.parse(b.getItem(storage.KEY)).read.a, 1);
+});
+
+test('a restore that cannot be saved reports failure and keeps current data', () => {
+  const b = memoryBackend();
+  const s = storage.createStore(b);
+  s.update((st) => { st.read.old = 1; });
+  const backup = JSON.stringify({ v: storage.VERSION, read: { imported: 1 }, attempts: {}, inProgress: {}, retry: {} });
+  b.setItem = () => { throw new Error('quota'); };
+  assert.throws(() => s.importJSON(backup));
+  assert.strictEqual(s.get().read.old, 1);
+  assert.strictEqual(s.get().read.imported, undefined);
+});
