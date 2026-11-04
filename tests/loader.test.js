@@ -61,13 +61,27 @@ test('only past sets, full mocks and retry offer practice', () => {
   assert.strictEqual(HR.tests.allowsPractice('retry:all'), true);
 });
 
-test('a retry set reports a section that fails to load', async () => {
+function fakeDocument(failing) {
   globalThis.document = {
     createElement: () => ({}),
-    head: { appendChild: (el) => (el.src.includes('/sections/') ? el.onerror() : el.onload()) },
+    head: { appendChild: (el) => (failing(el.src) ? el.onerror() : el.onload()) },
   };
+}
+
+test('a retry set reports a section that fails to load', async () => {
+  fakeDocument((src) => src.includes('/sections/'));
   try {
-    await assert.rejects(() => HR.tests.ensureLoaded('retry:all', { 'x-9-pre-01': { at: 1 } }));
+    const r = await HR.tests.ensureLoaded('retry:all', { 'x-9-pre-01': { at: 1 }, 'y-9-post-02': { at: 1 }, 'm1-01': { at: 1 } });
+    assert.deepStrictEqual(r, { failed: 2 });
+  } finally {
+    delete globalThis.document;
+  }
+});
+
+test('other test types still reject when their section fails to load', async () => {
+  fakeDocument((src) => src.includes('/sections/'));
+  try {
+    await assert.rejects(() => HR.tests.ensureLoaded('x-8:pre', {}));
   } finally {
     delete globalThis.document;
   }

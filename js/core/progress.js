@@ -77,6 +77,14 @@
     return Math.round((Math.max(...post.map((a) => a.pct)) - pre[0].pct) * 10) / 10;
   }
 
+  function bestScore(id, state) {
+    const pcts = [];
+    KINDS.forEach((k) => {
+      (state.attempts[testKey(id, k)] || []).forEach((a) => { if (a.mode === 'exam') pcts.push(a.pct); });
+    });
+    return pcts.length ? Math.max(...pcts) : null;
+  }
+
   function weakTopics(structure, state) {
     const out = [];
     allNodes(structure).forEach(({ node }) => {
@@ -94,6 +102,9 @@
   function applyRetry(retry, questions, answers, uncertain, now) {
     questions.forEach((q) => {
       const id = q.mergedInto || q.id;
+      const answered = (answers[q.id] || []).length > 0;
+      // A question that was never answered tells us nothing about it.
+      if (!answered && !uncertain[q.id]) return;
       const correct = root.HR.scoring.isCorrect(q, answers[q.id]);
       if (correct && !uncertain[q.id]) delete retry[id];
       else retry[id] = { at: now };
@@ -103,6 +114,6 @@
   root.HR = root.HR || {};
   root.HR.progress = {
     KINDS, testKey, childrenOf, allNodes, findNode, descendantIds, ownItems, itemDone,
-    ownComplete, nodeStats, testSummary, gain, weakTopics, applyRetry,
+    ownComplete, nodeStats, testSummary, gain, bestScore, weakTopics, applyRetry,
   };
 })(globalThis);

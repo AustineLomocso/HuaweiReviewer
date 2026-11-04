@@ -125,3 +125,35 @@ test('a restore that cannot be saved reports failure and keeps current data', ()
   assert.strictEqual(s.get().read.old, 1);
   assert.strictEqual(s.get().read.imported, undefined);
 });
+
+test('sync picks up another tab without writing', () => {
+  const b = memoryBackend();
+  const tab1 = storage.createStore(b);
+  const tab2 = storage.createStore(b);
+  tab1.update((st) => { st.read.fromTab1 = 1; });
+  assert.strictEqual(tab2.get().read.fromTab1, undefined);
+  tab2.sync();
+  assert.strictEqual(tab2.get().read.fromTab1, 1);
+});
+
+test('validateJSON throws the import messages and returns the parsed backup', () => {
+  const s = storage.createStore(memoryBackend());
+  assert.throws(() => s.validateJSON('nope'), /not valid JSON/);
+  assert.throws(() => s.validateJSON('{}'), /not a compatible reviewer backup/);
+  const good = JSON.stringify({ v: storage.VERSION, read: { a: 1 }, attempts: {}, inProgress: {}, retry: {} });
+  assert.strictEqual(s.validateJSON(good).read.a, 1);
+  assert.throws(() => s.importJSON('nope'), /not valid JSON/);
+});
+
+test('onSaveFailure is called when a save fails', () => {
+  const b = memoryBackend();
+  const s = storage.createStore(b);
+  let calls = 0;
+  s.onSaveFailure = () => { calls += 1; };
+  s.update((st) => { st.read.ok = 1; });
+  assert.strictEqual(calls, 0);
+  b.setItem = () => { throw new Error('quota'); };
+  s.update((st) => { st.read.bad = 1; });
+  assert.strictEqual(calls, 1);
+  assert.strictEqual(s.available, false);
+});

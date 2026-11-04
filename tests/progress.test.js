@@ -122,3 +122,35 @@ test('a repeated question is one retry entry under its canonical ID', () => {
   progress.applyRetry(retry, [canonical], { 'm1-09': ['T'] }, {}, 4);
   assert.deepStrictEqual(Object.keys(retry), []);
 });
+
+test('an unanswered question not marked Uncertain leaves its retry entry unchanged', () => {
+  const retry = { had: { at: 1 } };
+  const qs = [
+    { id: 'had', type: 'tf', answer: ['T'] },
+    { id: 'never', type: 'tf', answer: ['T'] },
+    { id: 'unsureBlank', type: 'tf', answer: ['T'] },
+  ];
+  progress.applyRetry(retry, qs, {}, { unsureBlank: true }, 9);
+  assert.deepStrictEqual(retry.had, { at: 1 });
+  assert.strictEqual('never' in retry, false);
+  assert.deepStrictEqual(retry.unsureBlank, { at: 9 });
+});
+
+test('an empty answer array counts as unanswered for retry', () => {
+  const retry = { had: { at: 1 } };
+  progress.applyRetry(retry, [{ id: 'had', type: 'multi', answer: ['A', 'B'] }], { had: [] }, {}, 9);
+  assert.deepStrictEqual(retry.had, { at: 1 });
+});
+
+test('bestScore is the highest exam percent across a node\'s own tests', () => {
+  const st = blank();
+  st.attempts['c-1-1:pre'] = [attempt(40, 1), attempt(55, 2)];
+  st.attempts['c-1-1:post'] = [attempt(72.5, 3)];
+  st.attempts['c-1-1:past'] = [attempt(100, 4, 'practice')];
+  st.attempts['c-1:pre'] = [attempt(90, 5)];
+  assert.strictEqual(progress.bestScore('c-1-1', st), 72.5);
+  assert.strictEqual(progress.bestScore('c-1', st), 90);
+  assert.strictEqual(progress.bestScore('c-1-2', st), null);
+  st.attempts['c-1-2:past'] = [attempt(80, 6, 'practice')];
+  assert.strictEqual(progress.bestScore('c-1-2', st), null);
+});

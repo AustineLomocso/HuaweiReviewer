@@ -69,13 +69,14 @@
     const { id, kind } = parseKey(key);
     if (key === 'retry:all') {
       const ids = [...new Set(Object.keys(retry).map(sectionOfQid).filter(Boolean))];
-      await Promise.all(ids.map(loadSection));
+      // A stale ID must not block the rest of the retry set, so count failures instead of throwing.
+      const settled = await Promise.allSettled(ids.map(loadSection));
       await loadMocks();
-    } else if (kind === 'past' || kind === 'full') {
-      await loadMocks();
-    } else {
-      await loadSection(id);
+      return { failed: settled.filter((r) => r.status === 'rejected').length };
     }
+    if (kind === 'past' || kind === 'full') await loadMocks();
+    else await loadSection(id);
+    return { failed: 0 };
   }
 
   function title(key) {

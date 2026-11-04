@@ -63,8 +63,15 @@
       }
     }
 
+    function failed() {
+      if (typeof store.onSaveFailure === 'function') {
+        try { store.onSaveFailure(); } catch (e) { /* A broken callback must not break saving. */ }
+      }
+      return false;
+    }
+
     function save() {
-      if (holdsUnsavedCorruptData) return false;
+      if (holdsUnsavedCorruptData) return failed();
       try {
         const json = JSON.stringify(state);
         backend.setItem(KEY, json);
@@ -73,10 +80,20 @@
         return true;
       } catch (e) {
         store.available = false;
-        return false;
+        return failed();
       }
     }
 
+    function validateJSON(text) {
+      let parsed;
+      try { parsed = JSON.parse(text); } catch (e) { throw new Error('This file is not valid JSON.'); }
+      if (!isValid(parsed)) throw new Error('This file is not a compatible reviewer backup.');
+      return parsed;
+    }
+
+    store.sync = syncFromOtherTabs;
+    store.onSaveFailure = null;
+    store.validateJSON = validateJSON;
     store.get = () => state;
     store.update = (fn) => {
       syncFromOtherTabs();
@@ -85,9 +102,7 @@
     };
     store.exportJSON = () => JSON.stringify(state, null, 2);
     store.importJSON = (text) => {
-      let parsed;
-      try { parsed = JSON.parse(text); } catch (e) { throw new Error('This file is not valid JSON.'); }
-      if (!isValid(parsed)) throw new Error('This file is not a compatible reviewer backup.');
+      const parsed = validateJSON(text);
       const previous = state;
       const previousHold = holdsUnsavedCorruptData;
       state = parsed;
