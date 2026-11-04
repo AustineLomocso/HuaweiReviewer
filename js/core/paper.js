@@ -36,6 +36,23 @@
     return 'ABCDEFGH'[i];
   }
 
+  const SECONDS_PER_QUESTION = 90;
+  const timeLimitMs = (count) => count * SECONDS_PER_QUESTION * 1000;
+
+  function newSession(questions, { seed, mode, timed, keepOrder = false, now }) {
+    return {
+      paper: buildPaper(questions, { seed, keepOrder }),
+      answers: {},
+      uncertain: {},
+      checked: {},
+      cur: 0,
+      mode,
+      autoAdvance: false,
+      startedAt: now,
+      deadline: mode === 'exam' && timed ? now + timeLimitMs(questions.length) : null,
+    };
+  }
+
   root.HR = root.HR || {};
-  root.HR.paper = { buildPaper, label };
+  root.HR.paper = { buildPaper, label, timeLimitMs, newSession };
 })(globalThis);

@@ -45,3 +45,25 @@ test('labels follow display position', () => {
   assert.strictEqual(paper.label(0), 'A');
   assert.strictEqual(paper.label(3), 'D');
 });
+
+test('timer allows 90 seconds per question', () => {
+  assert.strictEqual(paper.timeLimitMs(60), 90 * 60 * 1000);
+  assert.strictEqual(paper.timeLimitMs(5), 7.5 * 60 * 1000);
+});
+
+test('new session records mode, order and deadline', () => {
+  const s = paper.newSession(qs, { seed: 1, mode: 'exam', timed: true, keepOrder: false, now: 1000 });
+  assert.strictEqual(s.mode, 'exam');
+  assert.strictEqual(s.deadline, 1000 + 5 * 90000);
+  assert.strictEqual(s.paper.length, 5);
+  assert.deepStrictEqual(s.answers, {});
+  assert.strictEqual(s.cur, 0);
+});
+
+test('untimed sessions have no deadline', () => {
+  assert.strictEqual(paper.newSession(qs, { seed: 1, mode: 'exam', timed: false, now: 1 }).deadline, null);
+});
+
+test('practice sessions never have a deadline', () => {
+  assert.strictEqual(paper.newSession(qs, { seed: 1, mode: 'practice', timed: true, now: 1 }).deadline, null);
+});
