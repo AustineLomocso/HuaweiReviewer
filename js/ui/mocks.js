@@ -18,7 +18,8 @@
           ' ', s.passed && h('span', { class: 'badge good' }, 'Passed')),
           h('div', { class: 'row' },
             h('a', { class: 'btn primary', href: `#/test/${encodeURIComponent(key)}` }, state.inProgress[key] ? 'Resume' : 'Open'),
-            s.attempts > 0 && h('a', { class: 'btn', href: `#/results/${encodeURIComponent(key)}/${s.attempts - 1}` }, 'Last result')));
+            s.attempts > 0 && h('a', { class: 'btn', href: `#/results/${encodeURIComponent(key)}/${s.attempts - 1}` }, 'Last result')),
+          HR.ui.history(key, state.attempts[key] || []));
       }),
     ));
   }

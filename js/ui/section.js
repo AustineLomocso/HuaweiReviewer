@@ -17,7 +17,8 @@
         ' ', s.passed && h('span', { class: 'badge good' }, 'Passed')),
       h('div', { class: 'row', style: 'margin-top:.5rem' },
         h('a', { class: 'btn primary', href: `#/test/${encodeURIComponent(key)}` }, inProgress ? 'Resume' : 'Open'),
-        s.attempts > 0 && h('a', { class: 'btn', href: `#/results/${encodeURIComponent(key)}/${s.attempts - 1}` }, 'Last result')));
+        s.attempts > 0 && h('a', { class: 'btn', href: `#/results/${encodeURIComponent(key)}/${s.attempts - 1}` }, 'Last result')),
+      HR.ui.history(key, state.attempts[key] || []));
   }
 
   function notesBlock(id, node, course, section) {
@@ -37,7 +38,7 @@
         class: read ? 'btn' : 'btn primary',
         onclick: () => {
           store.update((st) => { if (read) delete st.read[id]; else st.read[id] = Date.now(); });
-          HR.app.rerender();
+          HR.app.rerender({ keepScroll: true });
         },
       }, read ? 'Marked as read (undo)' : 'Mark as read'));
   }
@@ -93,7 +94,10 @@
       el.append(h('section', { class: 'card' }, h('h2', null, 'Subchapters'),
         h('ul', { class: 'list' }, node.subs.map((s) => {
           const st = HR.progress.nodeStats(s, HR.data.manifest, state);
-          return h('li', null, h('a', { href: `#/s/${s.id}` }, `${s.num} ${s.title}`), bar(st.pct));
+          const best = HR.progress.bestScore(s.id, state);
+          return h('li', null, h('div', { class: 'row spread' },
+            h('a', { href: `#/s/${s.id}` }, `${s.num} ${s.title}`),
+            best !== null && h('span', { class: 'small muted' }, `Best ${best}%`)), bar(st.pct));
         }))));
     }
   }
@@ -112,15 +116,19 @@
       h('section', { class: 'card' }, h('h2', null, 'Chapters'),
         course.chapters.map((ch) => {
           const cs = HR.progress.nodeStats(ch, HR.data.manifest, state);
+          const chBest = HR.progress.bestScore(ch.id, state);
           return h('details', { open: true, style: 'margin-bottom:.75rem' },
-            h('summary', null, `${ch.num} ${ch.title} (${cs.pct}%)`),
+            h('summary', null, `${ch.num} ${ch.title} (${cs.pct}%)${chBest !== null ? ` · Best ${chBest}%` : ''}`),
             h('ul', { class: 'list' },
               h('li', null, h('a', { href: `#/s/${ch.id}` }, 'Chapter notes and tests')),
               ch.subs.map((s) => {
                 const ss = HR.progress.nodeStats(s, HR.data.manifest, state);
+                const best = HR.progress.bestScore(s.id, state);
                 return h('li', null, h('div', { class: 'row spread' },
                   h('a', { href: `#/s/${s.id}` }, `${s.num} ${s.title}`),
-                  ss.complete ? h('span', { class: 'badge good' }, 'Complete') : h('span', { class: 'small muted' }, `${ss.pct}%`)),
+                  h('span', { class: 'row' },
+                    best !== null && h('span', { class: 'small muted' }, `Best ${best}%`),
+                    ss.complete ? h('span', { class: 'badge good' }, 'Complete') : h('span', { class: 'small muted' }, `${ss.pct}%`))),
                 bar(ss.pct));
               })));
         })),

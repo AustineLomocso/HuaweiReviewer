@@ -29,27 +29,45 @@
     }
   }
 
-  async function route() {
+  let token = 0;
+
+  async function route(opts) {
+    const keepScroll = !!(opts && opts.keepScroll === true);
+    const mine = ++token;
     if (cleanup) { cleanup(); cleanup = null; }
     const hash = location.hash || '#/';
     const view = document.getElementById('view');
-    view.replaceChildren();
-    window.scrollTo(0, 0);
+    const y = window.scrollY;
+    if (!keepScroll) {
+      view.replaceChildren();
+      window.scrollTo(0, 0);
+    }
     banner();
     const match = routes.map(([re, make]) => [re.exec(hash), make]).find(([m]) => m);
     if (!match) {
-      view.append(h('div', { class: 'card' }, 'Page not found. ', h('a', { href: '#/' }, 'Back to the dashboard')));
+      view.replaceChildren(h('div', { class: 'card' }, 'Page not found. ', h('a', { href: '#/' }, 'Back to the dashboard')));
       return;
     }
+    // Screens render into a detached box, so a slow render from an earlier navigation cannot draw over a newer one.
+    const box = h('div');
     try {
-      cleanup = (await match[1](match[0])(view)) || null;
+      const result = (await match[1](match[0])(box)) || null;
+      if (mine !== token) {
+        if (typeof result === 'function') result();
+        return;
+      }
+      view.replaceChildren(...box.childNodes);
+      cleanup = result;
     } catch (e) {
+      if (mine !== token) return;
       view.replaceChildren(h('div', { class: 'card' }, h('h2', null, 'This page could not be loaded'), h('p', null, e.message), h('a', { href: '#/' }, 'Back to the dashboard')));
     }
+    if (keepScroll) window.scrollTo(0, y);
     banner();
   }
 
   HR.app = { store: HR.storage.createStore(backend()), rerender: route };
-  root.addEventListener('hashchange', route);
+  HR.app.store.onSaveFailure = banner;
+  root.addEventListener('hashchange', () => route());
   route();
 })(globalThis);

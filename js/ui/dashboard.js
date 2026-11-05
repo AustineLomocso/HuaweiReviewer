@@ -12,10 +12,17 @@
         if (!f) return;
         const text = await f.text();
         e.target.value = '';
+        try {
+          store.validateJSON(text);
+        } catch (err) {
+          status.textContent = err.message;
+          return;
+        }
         if (!confirm('Replace all progress in this browser with this backup?')) return;
         try {
           store.importJSON(text);
-          status.textContent = 'Backup restored.';
+          // The status text would be lost in the rerender, so confirm with an alert.
+          alert('Backup restored.');
           HR.app.rerender();
         } catch (err) {
           status.textContent = err.message;
@@ -24,7 +31,7 @@
     });
     const exportIt = () => {
       const url = URL.createObjectURL(new Blob([store.exportJSON()], { type: 'application/json' }));
-      const a = h('a', { href: url, download: `huawei-reviewer-backup-${new Date().toISOString().slice(0, 10)}.json` });
+      const a = h('a', { href: url, download: `huawei-reviewer-backup-${HR.ui.localDate(new Date())}.json` });
       a.click();
       URL.revokeObjectURL(url);
       status.textContent = 'Backup downloaded.';
@@ -49,7 +56,7 @@
     // Built through h(), because el.append would print null and false as text.
     el.append(h('div', null,
       h('h1', null, 'Your progress'),
-      state.last && h('section', { class: 'card row spread' },
+      state.last && typeof state.last.hash === 'string' && /^#\//.test(state.last.hash) && h('section', { class: 'card row spread' },
         h('span', null, 'Continue where you left off: ', h('strong', null, state.last.label)),
         h('a', { class: 'btn primary', href: state.last.hash }, 'Continue')),
       h('div', { class: 'test-grid' }, structure.courses.map((c) => {
