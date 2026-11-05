@@ -2,12 +2,15 @@
   const HR = root.HR;
   const TYPE_NAME = { single: 'Single-answer', multi: 'Multiple-answer', tf: 'True/False' };
 
+  // Answers are listed in the letter order the student saw. An option missing from the order gets no letter.
   function letters(q, order, keys) {
     if (!keys || !keys.length) return 'No answer';
-    return keys.map((k) => {
+    const pos = (k) => { const i = order.indexOf(k); return i < 0 ? Infinity : i; };
+    return [...keys].sort((a, b) => pos(a) - pos(b)).map((k) => {
       const opt = q.options.find((o) => o.key === k);
       const text = opt ? opt.text : k;
-      return q.type === 'tf' ? text : `${HR.paper.label(order.indexOf(k))}. ${text}`;
+      const i = order.indexOf(k);
+      return q.type === 'tf' || i < 0 || i >= 8 ? text : `${HR.paper.label(i)}. ${text}`;
     }).join('; ');
   }
 
@@ -20,8 +23,7 @@
     const rows = attempt.paper.map((p) => ({ p, q: HR.tests.findQuestion(p.id) }));
     const live = rows.filter((r) => r.q);
     const r = HR.scoring.scoreAttempt(live.map((x) => x.q), attempt.answers);
-    const { id, kind } = HR.tests.parseKey(key);
-    const back = kind === 'full' ? '#/mocks' : key === 'retry:all' ? '#/' : `#/s/${id}`;
+    const back = HR.ui.backHref(key);
 
     el.append(
       h('section', { class: 'card' },
@@ -29,8 +31,9 @@
         h('p', { style: 'font-size:1.4rem;margin:.25rem 0' },
           h('strong', null, `${attempt.earned} / ${attempt.total} points (${attempt.pct}%)`), ' ',
           h('span', { class: attempt.passed ? 'badge good' : 'badge bad' }, attempt.passed ? 'Passed' : 'Not passed')),
-        h('p', { class: 'small muted' }, `${attempt.mode === 'practice' ? 'Practice' : 'Exam'} mode · ${Math.round(attempt.secs / 60)} min · Pass mark 60%`),
-        r.total !== attempt.total && h('p', { class: 'small warned' }, 'Some questions have since been corrected, so the score below may differ from the recorded score.'),
+        h('p', { class: 'small muted' }, `${attempt.mode === 'practice' ? 'Practice' : 'Exam'} mode · ${HR.ui.duration(attempt.secs)} · Pass mark 60%`),
+        (r.total !== attempt.total || r.earned !== attempt.earned) && h('p', { class: 'small warned' }, 'Some questions have since been corrected, so the score below may differ from the recorded score.'),
+        live.length < rows.length && h('p', { class: 'small warned' }, `${rows.length - live.length} question${rows.length - live.length === 1 ? ' is' : 's are'} no longer available and not shown below.`),
         h('ul', { class: 'list' }, Object.entries(r.byType).map(([t, b]) =>
           h('li', null, `${TYPE_NAME[t]}: ${b.correct}/${b.count} correct, ${b.earned}/${b.total} points`))),
         h('div', { class: 'row' },
@@ -45,6 +48,8 @@
               h('strong', { class: ok ? 'good' : 'bad' }, ok ? 'Correct' : 'Incorrect'),
               attempt.uncertain[q.id] && h('span', { class: 'badge warned' }, 'Marked Uncertain')),
             h('p', { class: 'stem' }, `${i + 1}. ${q.stem}`),
+            q.note && h('p', { class: 'small warned' }, q.note),
+            q.appearsIn && h('p', { class: 'small muted' }, `Appeared in: ${q.appearsIn.join(', ')}`),
             h('p', { class: 'small' }, h('strong', null, 'Your answer: '), letters(q, p.optionOrder, chosen)),
             h('p', { class: 'small' }, h('strong', null, 'Correct answer: '), letters(q, p.optionOrder, q.answer)),
             h('p', { class: 'small' }, q.explanation),

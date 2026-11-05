@@ -32,6 +32,38 @@
     return h('span', { class: 'badge warned' }, 'AI-inferred, verify');
   }
 
+  function duration(secs) {
+    const t = Math.max(0, Math.round(secs || 0));
+    return t < 60 ? `${t} s` : `${Math.floor(t / 60)} min ${t % 60} s`;
+  }
+
+  const pad = (n) => String(n).padStart(2, '0');
+  function localDate(d) {
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  }
+  function dateTime(at) {
+    const d = new Date(at);
+    return `${localDate(d)} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  }
+
+  // Where "Back" goes for a test key.
+  function backHref(key) {
+    const { id, kind } = HR.tests.parseKey(key);
+    return kind === 'full' ? '#/mocks' : key === 'retry:all' ? '#/' : `#/s/${id}`;
+  }
+
+  // Every attempt of a test, newest first, in a collapsed list.
+  function history(key, attempts) {
+    if (!attempts.length) return null;
+    return h('details', { style: 'margin-top:.5rem' },
+      h('summary', { class: 'small' }, `Attempt history (${attempts.length})`),
+      h('ul', { class: 'list small' }, attempts.map((a, i) => ({ a, i })).reverse().map(({ a, i }) =>
+        h('li', null,
+          [dateTime(a.at), a.mode === 'practice' ? 'Practice' : `Exam ${a.pct}%`,
+            a.passed ? 'Passed' : 'Not passed', duration(a.secs)].join(' · '), ' ',
+          h('a', { href: `#/results/${encodeURIComponent(key)}/${i}` }, 'View')))));
+  }
+
   HR.ui = HR.ui || {};
-  Object.assign(HR.ui, { h, bar, pagesText, sourceBadge });
+  Object.assign(HR.ui, { h, bar, pagesText, sourceBadge, duration, localDate, dateTime, backHref, history });
 })(globalThis);
