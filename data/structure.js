@@ -84,6 +84,28 @@ HR.registerStructure({
         ] },
       ],
     },
+    {
+      id: 'beyond', title: 'Beyond the Course Material', external: true,
+      chapters: [
+        { id: 'beyond-1', num: '1', title: 'Big Data', subs: [
+          { id: 'beyond-1-1', num: '1.1', title: 'Hadoop, YARN, HBase and Hive' },
+          { id: 'beyond-1-2', num: '1.2', title: 'Spark' },
+          { id: 'beyond-1-3', num: '1.3', title: 'Flink' },
+          { id: 'beyond-1-4', num: '1.4', title: 'Kafka' },
+          { id: 'beyond-1-5', num: '1.5', title: 'Elasticsearch and ClickHouse' },
+        ] },
+        { id: 'beyond-2', num: '2', title: 'AI/ML Fundamentals and Frameworks', subs: [
+          { id: 'beyond-2-1', num: '2.1', title: 'Machine Learning Fundamentals' },
+          { id: 'beyond-2-2', num: '2.2', title: 'Deep Learning Frameworks' },
+          { id: 'beyond-2-3', num: '2.3', title: 'MindSpore' },
+          { id: 'beyond-2-4', num: '2.4', title: 'Ascend and CANN' },
+          { id: 'beyond-2-5', num: '2.5', title: 'Image Processing' },
+        ] },
+        { id: 'beyond-3', num: '3', title: 'Cloud Data Center and Networking', subs: [
+          { id: 'beyond-3-1', num: '3.1', title: 'Data Center Design and Network Virtualization' },
+        ] },
+      ],
+    },
   ],
   mocks: [
     { id: 'm2324', year: '2023-24', title: 'ICT Competition 2023-2024 Practice Competition, Cloud Track' },

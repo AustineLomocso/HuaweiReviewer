@@ -21,7 +21,7 @@ test('IDs are unique', () => {
 });
 
 test('page ranges are ordered, contiguous and inside the PDF', () => {
-  for (const course of data.structure.courses) {
+  for (const course of data.structure.courses.filter((c) => c.pdf)) {
     let chapterEnd = 0;
     for (const ch of course.chapters) {
       assert.strictEqual(ch.pages[0], chapterEnd + 1, ch.id);
@@ -35,4 +35,11 @@ test('page ranges are ordered, contiguous and inside the PDF', () => {
     }
     assert.strictEqual(chapterEnd, course.pageCount, course.id);
   }
+});
+
+test('Course 3 is marked as outside the course material', () => {
+  const beyond = data.structure.courses.find((c) => c.id === 'beyond');
+  assert.strictEqual(beyond.external, true);
+  assert.strictEqual(beyond.chapters.length, 3);
+  assert.strictEqual(beyond.chapters.flatMap((c) => c.subs).length, 11);
 });
