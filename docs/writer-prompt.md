@@ -17,3 +17,15 @@ Given to each content subagent, along with a section ID. Paths are relative to t
 8. Do not edit any other file and do not commit.
 
 Report only: counts, how many inferred, any shortfall and why.
+
+## Chapter and course files
+
+Follow the same steps, with these differences:
+
+- Chapter sizes: pre 10 (4 single, 3 multi, 3 tf), post 10 (4/3/3), summative 20 (8/7/5). Course sizes: 60 questions per test (25/20/15).
+- Read the notes of the sections below yours, and the PDF pages you cite. Pages must fall in your node's range.
+- Notes summarise and connect the sections, and compare when to choose what, rather than repeating every bullet.
+- Questions cut across subchapters: scenarios choosing between options, comparisons, and how things relate.
+- Before writing, generate the stems already used below your level, and do not repeat them or those in `data/past/`:
+  `node tools/list-stems.js <id>` prints every stem for your node's descendants.
+- Run the checker and fix near-duplicate warnings involving your questions.
