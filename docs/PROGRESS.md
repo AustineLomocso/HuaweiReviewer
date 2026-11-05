@@ -55,7 +55,7 @@ Each code task went through an implementer and an independent reviewer. Reviewer
 
 ## Session log
 
-### 2026-11-05 to 2026-11-06: Design through pilot
+### First session, started 2026-11-04: Design through pilot
 
 - Agreed the requirements with the user, and wrote the spec and plan.
 - Built and reviewed the core logic and all screens. Reviews found real bugs, now fixed, including tabs overwriting each other's progress and stale answers being scored.
