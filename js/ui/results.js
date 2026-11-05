@@ -1,6 +1,7 @@
 (function (root) {
   const HR = root.HR;
   const TYPE_NAME = { single: 'Single-answer', multi: 'Multiple-answer', tf: 'True/False' };
+  const NAV_TYPE_NAME = { single: 'Single-Answer Question', multi: 'Multiple-Answer Question', tf: 'True or False' };
 
   // Answers are listed in the letter order the student saw. An option missing from the order gets no letter.
   function letters(q, order, keys) {
@@ -12,6 +13,33 @@
       const i = order.indexOf(k);
       return q.type === 'tf' || i < 0 || i >= 8 ? text : `${HR.paper.label(i)}. ${text}`;
     }).join('; ');
+  }
+
+  // Jumps to a review row without touching the URL hash, which the router owns.
+  function jumpTo(i) {
+    const row = document.getElementById(`review-${i}`);
+    if (!row) return;
+    row.scrollIntoView({ block: 'start' });
+    row.focus({ preventScroll: true });
+  }
+
+  function reviewNav(h, live, attempt) {
+    const status = (q) => HR.scoring.itemStatus(q, attempt.answers[q.id]);
+    const groups = ['single', 'multi', 'tf'].map((t) => {
+      const items = live.map(({ q }, i) => ({ q, i })).filter(({ q }) => q.type === t);
+      return items.length && [
+        h('div', { class: 'small' }, h('strong', null, NAV_TYPE_NAME[t]), ` (${items.length})`),
+        h('div', { class: 'nav-grid' }, items.map(({ q, i }) => {
+          const st = status(q);
+          return h('button', {
+            type: 'button', class: `nav-q ${st}`, onclick: () => jumpTo(i),
+            'aria-label': HR.scoring.navLabel(i + 1, st),
+          }, i + 1);
+        })),
+      ];
+    });
+    return h('div', { class: 'review-nav' }, groups,
+      h('p', { class: 'small muted' }, 'Green is correct. Red is incorrect or unanswered. Select a number to jump to that question.'));
   }
 
   async function render(el, key, index) {
@@ -40,14 +68,16 @@
           h('a', { class: 'btn primary', href: `#/test/${encodeURIComponent(key)}` }, 'Retake'),
           h('a', { class: 'btn', href: back }, 'Back'))),
       h('section', { class: 'card' }, h('h2', null, 'Review'),
+        reviewNav(h, live, attempt),
         live.map(({ p, q }, i) => {
           const chosen = attempt.answers[q.id];
           const ok = HR.scoring.isCorrect(q, chosen);
-          return h('div', { class: 'review' },
+          return h('div', { class: 'review', id: `review-${i}`, tabindex: '-1' },
             h('div', { class: 'row spread' },
               h('strong', { class: ok ? 'good' : 'bad' }, ok ? 'Correct' : 'Incorrect'),
               attempt.uncertain[q.id] && h('span', { class: 'badge warned' }, 'Marked Uncertain')),
-            h('p', { class: 'stem' }, `${i + 1}. ${q.stem}`),
+            h('p', { class: 'stem' },
+              h('span', { class: `qnum ${HR.scoring.itemStatus(q, chosen)}` }, i + 1), ' ', q.stem),
             q.note && h('p', { class: 'small warned' }, q.note),
             q.appearsIn && h('p', { class: 'small muted' }, `Appeared in: ${q.appearsIn.join(', ')}`),
             h('p', { class: 'small' }, h('strong', null, 'Your answer: '), letters(q, p.optionOrder, chosen)),

@@ -7,6 +7,26 @@
     return [...q.answer].sort().join('|') === [...selected].sort().join('|');
   }
 
+  // Result of one question for colouring and labelling. Unanswered counts as incorrect.
+  function itemStatus(q, selected) {
+    return isCorrect(q, selected) ? 'correct' : 'incorrect';
+  }
+
+  // In Practice, single-answer and True/False questions are revealed the moment an option is chosen.
+  // Multiple-answer questions wait for an explicit "Submit answer".
+  function revealsOnSelect(q) {
+    return q.type !== 'multi';
+  }
+
+  // The status shown in the Practice navigator: null until the question has been revealed, and always null in Exam mode.
+  function revealedStatus(q, selected, mode, revealed) {
+    return mode === 'practice' && revealed ? itemStatus(q, selected) : null;
+  }
+
+  function navLabel(number, status) {
+    return `Question ${number}, ${status}`;
+  }
+
   function scoreAttempt(questions, answers) {
     const byType = {};
     const correctIds = [];
@@ -30,5 +50,5 @@
   }
 
   root.HR = root.HR || {};
-  root.HR.scoring = { POINTS, PASS_PCT, isCorrect, scoreAttempt };
+  root.HR.scoring = { POINTS, PASS_PCT, isCorrect, itemStatus, revealsOnSelect, revealedStatus, navLabel, scoreAttempt };
 })(globalThis);

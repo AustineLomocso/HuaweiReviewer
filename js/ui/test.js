@@ -138,11 +138,18 @@
         s.answers[q.id] = q.type === 'multi'
           ? (cur.includes(optKey) ? cur.filter((k) => k !== optKey) : [...cur, optKey])
           : [optKey];
+        // Practice shows the verdict as soon as a single-answer or True/False option is chosen, and locks the question.
+        if (s.mode === 'practice' && HR.scoring.revealsOnSelect(q)) s.checked[q.id] = true;
       })) return;
       draw();
       const input = [...main.querySelectorAll('input[data-key]')].find((i) => i.dataset.key === optKey);
       if (input) input.focus();
       const s = session();
+      if (s.checked[q.id]) {
+        const fb = main.querySelector('.feedback');
+        if (fb && fb.scrollIntoView) fb.scrollIntoView({ block: 'nearest' });
+      }
+      // Exam only: in Practice the student must see the feedback, so nothing jumps ahead.
       if (s.autoAdvance && q.type !== 'multi' && s.mode === 'exam' && curOf(s) < usable.length - 1) {
         clearTimeout(advanceId);
         advanceId = setTimeout(() => { const now = session(); if (now) go(curOf(now) + 1); }, 250);
@@ -162,7 +169,13 @@
             if ((s.answers[p.id] || []).length) cls.push('answered');
             if (s.uncertain[p.id]) cls.push('uncertain');
             if (i === curOf(s)) cls.push('current');
-            return h('button', { class: cls.join(' '), onclick: () => go(i) }, i + 1);
+            // Green or red only once a Practice question has been revealed. Exam mode never shows a verdict.
+            const status = HR.scoring.revealedStatus(byId[p.id], s.answers[p.id], s.mode, s.checked[p.id]);
+            if (status) cls.push(status);
+            return h('button', {
+              class: cls.join(' '), onclick: () => go(i),
+              'aria-label': status ? HR.scoring.navLabel(i + 1, status) : null,
+            }, i + 1);
           })));
       });
       const uncertain = usable.filter((p) => s.uncertain[p.id]).length;
@@ -183,7 +196,8 @@
       const p = usable[cur];
       const q = byId[p.id];
       const chosen = s.answers[q.id] || [];
-      const checked = !!s.checked[q.id];
+      const checked = s.mode === 'practice' && !!s.checked[q.id];
+      const ok = HR.scoring.isCorrect(q, chosen);
       main.replaceChildren(h('section', { class: 'card' },
         h('div', { class: 'small muted row spread' },
           h('span', null, `${TYPE_NAME[q.type]} · Question ${cur + 1}/${usable.length} · ${HR.scoring.POINTS[q.type]} points`),
@@ -200,12 +214,12 @@
           return h('label', { class: cls.join(' ') },
             h('input', {
               type: q.type === 'multi' ? 'checkbox' : 'radio', name: 'opt', 'data-key': k, checked: chosen.includes(k),
-              disabled: checked, onchange: () => select(q, k),
+              disabled: checked, onclick: () => select(q, k),
             }),
             h('span', null, q.type === 'tf' ? opt.text : `${HR.paper.label(i)}. ${opt.text}`));
         }),
-        checked && h('div', { class: 'card', style: 'margin-top:.75rem' },
-          h('strong', { class: HR.scoring.isCorrect(q, chosen) ? 'good' : 'bad' }, HR.scoring.isCorrect(q, chosen) ? 'Correct' : 'Incorrect'),
+        checked && h('div', { class: 'card feedback', style: 'margin-top:.75rem', role: 'status' },
+          h('strong', { class: ok ? 'good' : 'bad' }, ok ? 'Correct' : 'Incorrect'),
           h('p', null, q.explanation), q.flag && h('p', { class: 'warned small' }, q.flag), sourceBadge(q)),
         h('div', { class: 'row', style: 'margin-top:1rem' },
           cur > 0 && h('button', { class: 'btn', onclick: () => go(cur - 1) }, 'Previous'),
@@ -216,10 +230,10 @@
               if (edit((x) => { if (x.uncertain[q.id]) delete x.uncertain[q.id]; else x.uncertain[q.id] = true; })) draw();
             },
           }, 'Uncertain'),
-          s.mode === 'practice' && !checked && h('button', {
+          s.mode === 'practice' && !checked && q.type === 'multi' && h('button', {
             class: 'btn', disabled: chosen.length === 0,
             onclick: () => { if (edit((x) => { x.checked[q.id] = true; })) draw(); },
-          }, 'Check answer'),
+          }, 'Submit answer'),
           cur === usable.length - 1 && h('button', { class: 'btn primary', onclick: confirmSubmit }, 'Submit'))));
     }
 

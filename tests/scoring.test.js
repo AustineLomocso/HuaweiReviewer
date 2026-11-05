@@ -57,3 +57,31 @@ test('a score just under 60 percent fails even if it rounds to 60', () => {
   assert.strictEqual(r.pct, 60);
   assert.strictEqual(r.passed, false);
 });
+
+test('itemStatus is correct or incorrect, and unanswered counts as incorrect', () => {
+  assert.strictEqual(scoring.itemStatus(single, ['B']), 'correct');
+  assert.strictEqual(scoring.itemStatus(single, ['A']), 'incorrect');
+  assert.strictEqual(scoring.itemStatus(single, []), 'incorrect');
+  assert.strictEqual(scoring.itemStatus(single, undefined), 'incorrect');
+  assert.strictEqual(scoring.itemStatus(multi, ['C', 'A']), 'correct');
+  assert.strictEqual(scoring.itemStatus(multi, ['A']), 'incorrect');
+});
+
+test('single-answer and true/false questions reveal on selection, multiple-answer ones do not', () => {
+  assert.ok(scoring.revealsOnSelect(single));
+  assert.ok(scoring.revealsOnSelect(tf));
+  assert.ok(!scoring.revealsOnSelect(multi));
+});
+
+test('revealedStatus is only set in Practice, once the question is revealed', () => {
+  assert.strictEqual(scoring.revealedStatus(single, ['B'], 'practice', true), 'correct');
+  assert.strictEqual(scoring.revealedStatus(single, ['A'], 'practice', true), 'incorrect');
+  assert.strictEqual(scoring.revealedStatus(single, ['B'], 'practice', false), null);
+  assert.strictEqual(scoring.revealedStatus(single, ['B'], 'practice', undefined), null);
+  assert.strictEqual(scoring.revealedStatus(single, ['B'], 'exam', true), null);
+});
+
+test('navLabel names the question number and its status', () => {
+  assert.strictEqual(scoring.navLabel(3, 'correct'), 'Question 3, correct');
+  assert.strictEqual(scoring.navLabel(12, 'incorrect'), 'Question 12, incorrect');
+});

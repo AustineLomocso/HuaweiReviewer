@@ -253,8 +253,10 @@ async function main() {
     await h.go('#/');
     const st = await h.st();
     const ids = Object.keys(st.retry).sort();
-    const expIds = [...new Set([...nonCorrectIds, uncertainId])].sort();
+    // A question left unanswered (e.g. a multi whose four options are all correct cannot be answered wrongly) never enters the retry set.
+    const expIds = [...new Set([...nonCorrectIds.filter((id) => (att1.answers[id] || []).length), uncertainId])].sort();
     ok(JSON.stringify(ids) === JSON.stringify(expIds), `retry set = missed + uncertain (${ids.length}/${expIds.length})`);
+    if (JSON.stringify(ids) !== JSON.stringify(expIds)) info(`missing from retry: ${JSON.stringify(expIds.filter((x) => !ids.includes(x)))}, extra: ${JSON.stringify(ids.filter((x) => !expIds.includes(x)))}; uncertain ${uncertainId}; answers ${JSON.stringify(att1.answers)}; paper ${JSON.stringify(att1.paper.map((x) => x.id))}`);
     const dash = await h.view();
     ok(new RegExp(`Retry set: ${ids.length} question`).test(dash), 'dashboard line: ' + (dash.match(/Retry set: [^\n]*/) || ['none'])[0]);
     ok((await p.locator('a:text-is("Practise them")').count()) === 1, 'Practise them link shown');
@@ -337,7 +339,7 @@ async function main() {
     ok(/points \(/.test(await h.view()), 'results screen displayed: ' + (await h.view()).split('\n')[0]);
   });
 
-  await item(8, 'Past set in Practice: no timer, Check answer feedback and lock, Best unchanged', async () => {
+  await item(8, 'Past set in Practice: no timer, instant feedback and lock, Best unchanged', async () => {
     // exam first so a Best exists
     await h.go(`#/test/${enc(PAST)}`);
     ok(await p.locator('label[for=timed]').isVisible(), 'exam mode offers timer on start screen');
@@ -354,17 +356,20 @@ async function main() {
     await p.click('button:text-is("Start")'); await p.waitForTimeout(500);
     const pr = await h.session(PAST);
     ok(pr.s.deadline === null && /No timer/.test(await p.locator('.exam-top').innerText()), 'no timer running in practice');
-    ok(await p.locator('button:text-is("Check answer")').isDisabled(), 'Check answer disabled until an answer is picked');
-    const q0 = pr.qs[0];
+    ok((await p.locator('button:text-is("Check answer")').count()) === 0, 'no Check answer button in practice');
+    const i0 = pr.qs.findIndex((q) => q.type !== 'multi');
+    const q0 = pr.qs[i0];
     const wrong = q0.options.map((o) => o.key).filter((k) => !q0.answer.includes(k))[0];
-    await h.pick(pr, 0, [wrong]);
-    await p.click('button:text-is("Check answer")'); await p.waitForTimeout(150);
+    await h.pick(pr, i0, [wrong]); await p.waitForTimeout(150);
     const fb = await p.locator('.exam .card .card').innerText();
-    ok(/Incorrect/.test(fb) && fb.includes(q0.explanation), 'feedback shows verdict and explanation');
+    ok(/Incorrect/.test(fb) && fb.includes(q0.explanation), 'feedback shows verdict and explanation straight after choosing');
     ok((await p.locator('.option.right').count()) >= 1 && (await p.locator('.option.wrong').count()) >= 1, 'right/wrong options highlighted');
     ok(await p.locator('.option input').evaluateAll((l) => l.every((i) => i.disabled)), 'question locked (inputs disabled)');
-    ok((await p.locator('button:text-is("Check answer")').count()) === 0, 'Check answer button gone');
-    for (let i = 1; i < pr.qs.length; i++) { const w = pr.qs[i].options.map((o) => o.key).filter((k) => !pr.qs[i].answer.includes(k)); if (w.length) await h.pick(pr, i, [w[0]]); }
+    for (let i = 0; i < pr.qs.length; i++) {
+      if (i === i0) continue;
+      const w = pr.qs[i].options.map((o) => o.key).filter((k) => !pr.qs[i].answer.includes(k));
+      if (w.length) await h.pick(pr, i, [w[0]]);
+    }
     await h.submit();
     const st = await h.st();
     const pa = st.attempts[PAST][1];
@@ -374,6 +379,164 @@ async function main() {
     const ctext = await p.locator('#view .card', { hasText: title }).filter({ hasText: 'attempt' }).last().innerText();
     const line = ctext.split('\n').find((l) => /attempt/.test(l));
     ok(new RegExp(`Best ${bestBefore}% · Latest ${bestBefore}% · 2 attempts`).test(line), `Best/Latest unchanged by practice: "${line}"`);
+  });
+
+  // ---- instant practice feedback, coloured numbers, quiet exam screen, results navigator, resume
+  const colourOf = (cssVar) => p.evaluate((v) => { const e = document.createElement('i'); e.style.color = `var(${v})`; document.body.append(e); const c = getComputedStyle(e).color; e.remove(); return c; }, cssVar);
+  const navState = () => p.locator('.nav-panel .nav-q').evaluateAll((l) => l.map((b) => ({ n: Number(b.textContent.trim().match(/^\d+/)[0]), correct: b.classList.contains('correct'), incorrect: b.classList.contains('incorrect'), label: b.getAttribute('aria-label') })));
+  const statusOf = (att, aqs) => aqs.map((q) => { const c = att.answers[q.id]; return c && c.length === q.answer.length && q.answer.every((k) => c.includes(k)) ? 'correct' : 'incorrect'; });
+  let practiceKey = null;
+
+  async function reviewChecks(att, label) {
+    const aqs = await h.questions(att.paper.map((x) => x.id));
+    const expect = statusOf(att, aqs);
+    ok((await p.locator('.review-nav .nav-q').count()) === aqs.length, `${label}: review navigator has ${aqs.length} numbers`);
+    const heads = await p.locator('.review-nav > .small:not(.muted)').allInnerTexts();
+    ok(heads.length >= 1 && heads.every((t) => /\(\d+\)/.test(t)), `${label}: navigator grouped by type (${heads.join(' | ')})`);
+    const nums = await p.locator('.review-nav .nav-q').evaluateAll((l) => l.map((b) => ({ n: Number(b.textContent.trim().match(/^\d+/)[0]), c: b.classList.contains('correct') ? 'correct' : b.classList.contains('incorrect') ? 'incorrect' : 'none', label: b.getAttribute('aria-label') })));
+    const bad = nums.filter((b) => b.c !== expect[b.n - 1] || b.label !== `Question ${b.n}, ${expect[b.n - 1]}`);
+    ok(bad.length === 0, `${label}: every navigator number has the right colour class and aria-label (${bad.length} wrong)`);
+    const unanswered = aqs.filter((q) => !(att.answers[q.id] || []).length).length;
+    info(`${label}: ${expect.filter((x) => x === 'correct').length} green, ${expect.filter((x) => x === 'incorrect').length} red (${unanswered} unanswered, counted red)`);
+    const qn = await p.locator('.review .qnum').evaluateAll((l) => l.map((b) => ({ t: b.textContent.trim(), c: b.classList.contains('correct') ? 'correct' : b.classList.contains('incorrect') ? 'incorrect' : 'none' })));
+    ok(qn.length === aqs.length && qn.every((x, i) => x.t === String(i + 1) && x.c === expect[i]), `${label}: every review item number is coloured to match`);
+    const verdicts = await p.locator('.review').evaluateAll((l) => l.map((r) => (/Incorrect/.test(r.querySelector('strong').textContent) ? 'incorrect' : 'correct')));
+    ok(JSON.stringify(verdicts) === JSON.stringify(expect), `${label}: Correct/Incorrect text kept and agrees`);
+    const green = await colourOf('--good');
+    const red = await colourOf('--bad');
+    const bgOf = (sel) => p.locator(sel).first().evaluate((e) => getComputedStyle(e).backgroundColor);
+    if (expect.includes('correct')) ok((await bgOf('.review-nav .nav-q.correct')) === green, `${label}: green number background is --good (${green})`);
+    if (expect.includes('incorrect')) ok((await bgOf('.review-nav .nav-q.incorrect')) === red, `${label}: red number background is --bad (${red})`);
+    const target = Math.min(aqs.length - 1, Math.max(1, Math.floor(aqs.length / 2)));
+    await p.evaluate(() => window.scrollTo(0, 0));
+    await p.locator('.review-nav .nav-q', { hasText: new RegExp(`^${target + 1}\\b`) }).first().click(); await p.waitForTimeout(300);
+    const top = await p.locator('.review').nth(target).evaluate((e) => Math.round(e.getBoundingClientRect().top));
+    const vh = await p.evaluate(() => innerHeight);
+    ok(top >= -2 && top < vh * 0.6, `${label}: clicking ${target + 1} scrolled its review row into view (top ${top}px of ${vh})`);
+    ok(await p.locator('.review').nth(target).evaluate((e) => document.activeElement === e), `${label}: the row took focus`);
+    ok((await h.hash()).startsWith('#/results/'), `${label}: still on the results route after the jump (${await h.hash()})`);
+  }
+
+  await item(15, 'Practice: instant feedback, Submit answer for multi, green/red navigator, no jump ahead, resume, review navigator', async () => {
+    for (const k of [PAST, ...structure.mocks.map((m) => `${m.id}:full`)]) {
+      await h.start(k, { practice: true });
+      const t = (await h.session(k)).qs.map((q) => q.type);
+      if (t.includes('multi') && t.filter((x) => x !== 'multi').length >= 3) { practiceKey = k; break; }
+      await p.click('button:text-is("Discard")'); await p.waitForTimeout(300);
+    }
+    ok(!!practiceKey, 'found a set with a multiple-answer question and several others: ' + practiceKey);
+    const sess = await h.session(practiceKey);
+    const qs = sess.qs;
+    const singles = qs.map((q, i) => (q.type !== 'multi' ? i : -1)).filter((i) => i >= 0);
+    const multis = qs.map((q, i) => (q.type === 'multi' ? i : -1)).filter((i) => i >= 0);
+    const wrongOf = (q) => q.options.map((o) => o.key).filter((k) => !q.answer.includes(k))[0];
+    const good = await colourOf('--good');
+    const bad = await colourOf('--bad');
+    const bg = (sel) => p.locator(sel).first().evaluate((e) => getComputedStyle(e).backgroundColor);
+    const allLocked = () => p.locator('.option input').evaluateAll((l) => l.every((i) => i.disabled));
+
+    ok((await p.locator('button:text-is("Check answer")').count()) === 0, 'no Check answer button on a fresh practice question');
+    ok((await navState()).every((b) => !b.correct && !b.incorrect && !b.label), 'nothing coloured or labelled before any answer');
+
+    // Auto-advance on: a Practice choice must stay put so the feedback is seen.
+    await p.locator('.nav-panel input[type=checkbox]').check(); await p.waitForTimeout(50);
+    const iW = singles[0];
+    await h.toQ(iW);
+    const hdrBefore = await h.hdr();
+    ok((await p.locator('button:text-is("Submit answer")').count()) === 0, 'no Submit answer button on a single/true-false question');
+    await p.locator('.option input').nth(sess.s.paper[iW].optionOrder.indexOf(wrongOf(qs[iW]))).check();
+    await p.waitForTimeout(700);
+    ok((await h.hdr()) === hdrBefore, 'did not auto-advance past the feedback: ' + hdrBefore);
+    const fbTxt = await p.locator('.feedback').innerText();
+    ok(/Incorrect/.test(fbTxt) && fbTxt.includes(qs[iW].explanation), 'wrong choice: Incorrect and explanation shown immediately');
+    ok(/Course material: |AI-inferred, verify/.test(fbTxt), 'source label shown in the feedback');
+    ok(await allLocked(), 'question locked after choosing');
+    ok((await p.locator('.option.right').count()) >= 1 && (await p.locator('.option.wrong').count()) === 1, 'correct option and the wrong choice highlighted');
+    ok((await h.st()).inProgress[practiceKey].checked[qs[iW].id] === true, 'revealed state stored in session.checked');
+    await p.locator('.nav-panel input[type=checkbox]').uncheck();
+
+    let ns = await navState();
+    ok(ns[iW].incorrect && ns[iW].label === `Question ${iW + 1}, incorrect`, `Q${iW + 1} nav is red with aria-label "${ns[iW].label}"`);
+    ok((await bg('.nav-panel .nav-q.incorrect')) === bad, 'red nav background is --bad: ' + (await bg('.nav-panel .nav-q.incorrect')));
+
+    const iR = singles[1];
+    await h.pick(sess, iR, qs[iR].answer); await p.waitForTimeout(100);
+    ns = await navState();
+    ok(ns[iR].correct && ns[iR].label === `Question ${iR + 1}, correct`, `Q${iR + 1} nav is green with aria-label "${ns[iR].label}"`);
+    ok((await bg('.nav-panel .nav-q.correct')) === good, 'green nav background is --good: ' + (await bg('.nav-panel .nav-q.correct')));
+    ok(/Correct/.test(await p.locator('.feedback').innerText()), 'right choice: Correct feedback');
+    ok(ns.filter((b) => b.correct || b.incorrect).length === 2, 'only the two revealed questions are coloured');
+
+    const iM = multis[0];
+    await h.toQ(iM);
+    const sub = p.locator('button:text-is("Submit answer")');
+    ok((await sub.count()) === 1 && (await sub.isDisabled()), 'multi: Submit answer shown and disabled until something is selected');
+    ok((await p.locator('button:text-is("Check answer")').count()) === 0, 'multi: no Check answer button');
+    await p.locator('.option input').nth(sess.s.paper[iM].optionOrder.indexOf(qs[iM].answer[0])).check(); await p.waitForTimeout(100);
+    ok(await sub.isEnabled(), 'multi: Submit answer enabled after a selection');
+    ok((await p.locator('.feedback').count()) === 0 && (await p.locator('.option.right').count()) === 0, 'multi: nothing revealed by selecting');
+    const mid = (await navState())[iM];
+    ok(!mid.correct && !mid.incorrect && !mid.label, 'multi: nav not coloured before Submit answer');
+    await sub.click(); await p.waitForTimeout(150);
+    ok((await p.locator('.feedback').count()) === 1 && (await p.locator('.option.right').count()) === qs[iM].answer.length, 'multi: Submit answer reveals the correct choices');
+    ok(await allLocked(), 'multi: locked after Submit answer');
+    ok((await sub.count()) === 0, 'multi: Submit answer gone once revealed');
+    ns = await navState();
+    const mExpected = qs[iM].answer.length === 1 ? 'correct' : 'incorrect';
+    ok(ns[iM][mExpected] && ns[iM].label === `Question ${iM + 1}, ${mExpected}`, `multi nav ${mExpected} with label "${ns[iM].label}"`);
+
+    // Resume: reload keeps revealed state, colours and lock
+    await h.toQ(iW);
+    await p.reload(); await p.waitForTimeout(700);
+    const ns2 = await navState();
+    ok(JSON.stringify(ns2.map((b) => [b.correct, b.incorrect, b.label])) === JSON.stringify(ns.map((b) => [b.correct, b.incorrect, b.label])), 'after reload the same numbers are coloured and labelled');
+    await h.toQ(iW);
+    ok((await p.locator('.feedback').count()) === 1 && /Incorrect/.test(await p.locator('.feedback').innerText()), 'after reload the revealed question still shows its feedback');
+    ok(await allLocked(), 'after reload the revealed question is still locked');
+    await h.toQ(iR);
+    ok(/Correct/.test(await p.locator('.feedback').innerText()), 'after reload the right one is still revealed');
+
+    await h.submit();
+    const att = (await h.st()).attempts[practiceKey].slice(-1)[0];
+    ok(att.mode === 'practice', 'practice attempt stored');
+    await reviewChecks(att, 'practice attempt');
+  });
+
+  await item(16, 'Results review navigator on an Exam attempt, unanswered counted red', async () => {
+    await h.go(`#/results/${enc(PRE)}/0`);
+    await reviewChecks((await h.st()).attempts[PRE][0], 'exam attempt');
+    const k = POST;
+    await h.start(k);
+    const sess = await h.session(k);
+    await h.pick(sess, 0, sess.qs[0].answer);
+    await h.submit();
+    const att = (await h.st()).attempts[k].slice(-1)[0];
+    ok(sess.qs.length > 1, 'set has several questions');
+    const reds = await p.locator('.review-nav .nav-q.incorrect').count();
+    ok(reds === sess.qs.length - 1, `unanswered questions are red (${reds} red of ${sess.qs.length}; one answered correctly)`);
+    ok((await p.locator('.review-nav .nav-q.correct').count()) === 1, 'the one answered question is green');
+    ok(att.mode === 'exam', 'attempt was exam mode');
+  });
+
+  await item(17, 'Exam screen stays quiet: no verdict colours, labels, reveal or Submit answer before submit', async () => {
+    const k = practiceKey || PRE;
+    await h.start(k);
+    const sess = await h.session(k);
+    const qs = sess.qs;
+    const iS = qs.findIndex((q) => q.type !== 'multi');
+    const iM = qs.findIndex((q) => q.type === 'multi');
+    await h.pick(sess, iS, [qs[iS].options.map((o) => o.key).filter((x) => !qs[iS].answer.includes(x))[0]]);
+    await p.waitForTimeout(150);
+    ok((await p.locator('.feedback').count()) === 0 && (await p.locator('.option.right').count()) === 0 && (await p.locator('.option.wrong').count()) === 0, 'exam: choosing shows no feedback or highlight');
+    ok(await p.locator('.option input').evaluateAll((l) => l.every((i) => !i.disabled)), 'exam: options stay selectable (not locked)');
+    if (iM >= 0) {
+      await h.pick(sess, iM, qs[iM].answer);
+      ok((await p.locator('button:text-is("Submit answer")').count()) === 0 && (await p.locator('button:text-is("Check answer")').count()) === 0, 'exam: no Submit answer or Check answer button');
+      ok((await p.locator('.feedback').count()) === 0, 'exam: no reveal after choosing multi answers');
+    }
+    ok((await navState()).every((b) => !b.correct && !b.incorrect && !b.label), 'exam: navigator never shows green/red or verdict labels');
+    ok(Object.keys((await h.st()).inProgress[k].checked).length === 0, 'exam: nothing stored as revealed');
+    await p.click('button:text-is("Discard")'); await p.waitForTimeout(300);
   });
 
   await item(9, 'Full mock: first attempt in original order, 25/20/15, 1000 points', async () => {
@@ -554,9 +717,11 @@ async function main() {
     // practice screenshot with feedback
     await b.start(PAST, { practice: true });
     const ps = await b.session(PAST);
-    await b.pick(ps, 0, [ps.qs[0].options.map((o) => o.key).filter((k) => !ps.qs[0].answer.includes(k))[0] || ps.qs[0].answer[0]]);
-    await q.click('button:text-is("Check answer")'); await q.waitForTimeout(150);
-    await overflow('test (practice, checked)');
+    const pi = ps.qs.map((x, i) => (x.type !== 'multi' ? i : -1)).filter((i) => i >= 0);
+    await b.pick(ps, pi[1], ps.qs[pi[1]].answer);
+    await b.pick(ps, pi[0], [ps.qs[pi[0]].options.map((o) => o.key).filter((k) => !ps.qs[pi[0]].answer.includes(k))[0] || ps.qs[pi[0]].answer[0]]);
+    await q.waitForTimeout(150);
+    await overflow('test (practice, one wrong and one right revealed)');
     // mock with many questions
     const mockInfo = await q.evaluate(() => HR.data.structure.mocks.map((m) => m.id));
     for (const id of mockInfo) {
@@ -592,7 +757,7 @@ async function main() {
 
   await browser.close();
   console.log('\n================ SUMMARY ================');
-  const order = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, '11b', 12, 13, 14, 'corrupt', 'console'];
+  const order = [1, 2, 3, 4, 5, 6, 7, 8, 15, 16, 17, 9, 10, 11, '11b', 12, 13, 14, 'corrupt', 'console'];
   for (const id of order) if (results[id]) console.log(`${results[id].pass ? 'PASS' : 'FAIL'}  ${id}  ${results[id].name}`);
   console.log('screenshots:', shotNames.join(' '));
   const failed = Object.values(results).some((r) => !r.pass);
