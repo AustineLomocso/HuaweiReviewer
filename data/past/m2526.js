@@ -1987,7 +1987,7 @@ HR.registerMock({
    "answer": [
     "T"
    ],
-   "explanation": "Periodic and scheduled AS policies add and remove instances on a regular schedule, which fits recurring traffic patterns, keeping the service stable while avoiding idle resources.",
+   "explanation": "A scheduled policy fires once at a set time, while a periodic policy repeats at set intervals, so periodic policies fit recurring web traffic patterns. Adding and removing instances as demand changes keeps the service stable and avoids idle resources.",
    "source": {
     "kind": "material",
     "pdf": "cloud",

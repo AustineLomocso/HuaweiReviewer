@@ -4,41 +4,20 @@ Read this at the start of each session, and update it before ending one. Task nu
 
 ## Current state
 
-**Waiting on the user:** pilot approval (Task 21). Do not start bulk writing (Tasks 22-23) without it.
+**Pilot:** approved by the user (Task 21). Review fixes and tighter writing rules are applied (see the session log). The user also requested practice-mode feedback changes, which another agent is working on in `js/`, `css/` and `tests/`. Bulk writing (Tasks 22-23) may start once those land and the user confirms the Course 3 topics.
 
 - **Branch:** `build/reviewer`, not merged to `main`.
 - **Done:** Tasks 1-20. Core logic, all screens, past exam transcription and answers, and the pilot chapter.
 - **Content so far:** Cloud Chapter 2 (7 section files, 160 questions) and all 3 mocks (180 questions, 173 unique). The other 57 sections are unwritten.
-- **Tests at last run:** 91/91 unit tests and the full browser checklist pass.
+- **Tests at last run:** 96/96 unit tests pass. The browser checklist was not rerun after the practice-mode changes started.
 - **Expected checker output:** 63 `unknown section beyond-pending` errors. These are past questions on outside topics, mapped to a placeholder in `work/beyond-map.json` until Course 3 exists. They appear in the full mocks but not in topic sets. Task 22 clears them.
 
 ## Next steps
 
-1. Get the user's verdict on the pilot, and apply any feedback.
-2. Fix the 7 questions the pilot fact-check found (below).
-3. Add the pilot's lessons to `docs/content-brief.md` (below).
-4. Task 22: propose Course 3 topics with question counts, and get the user's confirmation. Replace `work/beyond-map.json`, then run `node tools/write-past.js`.
-5. Task 23: generate subchapters, then chapters, then courses, with each level given the existing stems so it does not repeat them. Run up to 5 subagents at a time, and pass each one its plan line range.
-6. Tasks 24-25: final checks with `--strict`, a fact-check per chapter, a README, and a report to the user.
-
-### Pilot fixes still to apply
-
-| Question | Fix |
-|---|---|
-| `cloud-2-5-summative-07` | Replace option C (the "most recent Kubernetes and Docker releases" claim) with a durable fact. Cover option D in the explanation. |
-| `cloud-2-5-summative-09` | Near-verbatim slide text. Plant a real error or make it a scenario. |
-| `cloud-2-6-post-02` | Depends only on recalling 6 vs 60. Make the false statement conceptual. |
-| `cloud-2-1-summative-07` | Tests console wizard layout. Test what the settings do instead. |
-| `m2526-53` | Explanation only: a scheduled policy fires once at a set time, and a periodic one repeats. Update `work/past-answered` too. |
-| `cloud-2-post-04` | Reword to "Which node type should it choose?", and make the wrong options more plausible. |
-| `cloud-2-pre-01` | Reword to "Which of the following is not a Huawei Cloud computing service?" |
-
-### Lessons for the content brief
-
-- Vary multiple-answer sets, including all four correct. None of the 8 sampled pilot questions had all four correct, but about half of one mock's do, going by our own unconfirmed answers.
-- Use subtle wrong options from the same domain, like reinstalling vs changing an OS. Avoid easily dismissed ones like "Disable RBAC".
-- Keep True/False statements near the real length (a median of about 160 characters, against the pilot's 240), and avoid a repeated "true sentence, false ending" pattern.
-- Avoid slide-recall trivia, and phrases like "listed in the course", which real exams do not use.
+1. Finish and verify the practice-mode feedback changes (other agent), then rerun `node tests/e2e/e2e-full.js`.
+2. Task 22: propose Course 3 topics with question counts, and get the user's confirmation. Replace `work/beyond-map.json`, then run `node tools/write-past.js`.
+3. Task 23: generate subchapters, then chapters, then courses, with each level given the existing stems so it does not repeat them. Run up to 5 subagents at a time, and pass each one its plan line range.
+4. Tasks 24-25: final checks with `--strict`, a fact-check per chapter, a README, and a report to the user.
 
 ## Decisions
 
@@ -63,3 +42,10 @@ Each code task went through an implementer and an independent reviewer. Reviewer
 - Built the pilot. A fact-check of 25 sampled questions found 0 wrong answers and 7 with style, wording, or ambiguity problems.
 - Hit the plan's 5-hour usage limit once and resumed safely. Expect more stops during bulk writing.
 - Moved the browser test script into the repo, and added `CLAUDE.md` and this file.
+
+### Pilot review fixes, 2026-11-05
+- User approved the pilot (Task 21) and asked for practice-mode feedback changes, which another agent is making.
+- Applied the 7 fact-check fixes, including the `m2526-53` explanation (also in `work/past-answered/b08.json`).
+- Added "Quality rules learned from the pilot" to `docs/content-brief.md`.
+- Reworked the pilot chapter against those rules: multiple-answer questions with all 4 correct went from 0 to 16 of 55, and obviously wrong distractors were replaced with plausible ones.
+- Check result: 96/96 unit tests pass, and the checker reports only `unknown section beyond-pending`.

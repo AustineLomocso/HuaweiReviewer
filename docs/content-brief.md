@@ -36,3 +36,28 @@ Match the mock exams:
 ## Section file format
 `data/sections/<id>.js`:
 HR.registerSection({ id, notes:[{heading,pages:[a,b],bullets:[...]}], tests:{pre:[...],post:[...],summative:[...]}, shortfall:{} });
+
+## Quality rules learned from the pilot
+These came from fact-checking the pilot chapter. Treat them as firm rules.
+
+### Multiple-answer questions
+- Vary how many options are correct. Across a section's multiple-answer questions, use a mix of 2, 3 and sometimes all 4 correct, wherever the material honestly supports it. A reader must not be able to assume that at least one option is always wrong. Aim for roughly one in four multiple-answer questions to have all 4 correct.
+- Only make all 4 correct when every option is supported by the cited pages. Never invent a true option to hit the ratio.
+
+### Wrong options
+- Wrong options must be plausible and close to the truth: the same service family, a real feature applied to the wrong service, or a slightly wrong limit. Reinstalling versus changing an OS is the model.
+- Never use options that can be dismissed without knowledge, such as "Disable RBAC" or "Move all workloads onto a single bare-metal node". If a candidate option is wrong for an obvious reason, rewrite it.
+
+### True/False statements
+- Aim for about 160 characters, with some shorter ones. The real exam's median is about 160, and the pilot ran near 240.
+- Vary the shape. Do not always write a true sentence with a false ending. Sometimes the whole claim is false, and sometimes a short statement is simply true.
+- Never mark a near-verbatim slide sentence as True. Plant a real error, or turn it into a short scenario.
+
+### What to test
+- Do not test console layout, wizard steps or lone slide numbers. A number is fair only when it is a meaningful limit, and then the wrong version must be conceptual as well as numeric.
+- Do not write "listed in the course", "described in the material" or similar. Questions should read like the real exam, not a quiz about the slides.
+- Stems that ask for a choice should name what is being chosen, for example "Which node type should it choose?".
+
+### Explanations
+- Teach the fact, and address the misleading options. Say what the tempting wrong option gets wrong.
+- Never write "each part matches" or "the other statements match". If every option is correct, say why each kind of option belongs.
