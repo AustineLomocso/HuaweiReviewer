@@ -139,6 +139,13 @@ HR.registerManifest({
   "summative": 10,
   "past": 0
  },
+ "cloud-1": {
+  "notes": true,
+  "pre": 10,
+  "post": 10,
+  "summative": 20,
+  "past": 4
+ },
  "cloud-1-1": {
   "notes": true,
   "pre": 5,
@@ -209,6 +216,13 @@ HR.registerManifest({
   "summative": 10,
   "past": 0
  },
+ "cloud-3": {
+  "notes": true,
+  "pre": 10,
+  "post": 10,
+  "summative": 20,
+  "past": 19
+ },
  "cloud-3-1": {
   "notes": true,
   "pre": 5,
@@ -250,6 +264,13 @@ HR.registerManifest({
   "post": 5,
   "summative": 10,
   "past": 1
+ },
+ "cloud-4": {
+  "notes": true,
+  "pre": 10,
+  "post": 10,
+  "summative": 20,
+  "past": 14
  },
  "cloud-4-1": {
   "notes": true,
