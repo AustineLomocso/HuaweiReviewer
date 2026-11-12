@@ -1,4 +1,11 @@
 HR.registerManifest({
+ "ai-1": {
+  "notes": true,
+  "pre": 10,
+  "post": 10,
+  "summative": 20,
+  "past": 1
+ },
  "ai-1-1": {
   "notes": true,
   "pre": 5,
@@ -26,6 +33,13 @@ HR.registerManifest({
   "post": 5,
   "summative": 10,
   "past": 0
+ },
+ "ai-2": {
+  "notes": true,
+  "pre": 10,
+  "post": 10,
+  "summative": 20,
+  "past": 23
  },
  "ai-2-1": {
   "notes": true,
@@ -55,6 +69,13 @@ HR.registerManifest({
   "summative": 10,
   "past": 0
  },
+ "ai-3": {
+  "notes": true,
+  "pre": 10,
+  "post": 10,
+  "summative": 20,
+  "past": 3
+ },
  "ai-3-1": {
   "notes": true,
   "pre": 5,
@@ -74,6 +95,13 @@ HR.registerManifest({
   "pre": 5,
   "post": 5,
   "summative": 10,
+  "past": 0
+ },
+ "ai-4": {
+  "notes": true,
+  "pre": 10,
+  "post": 10,
+  "summative": 20,
   "past": 0
  },
  "ai-4-1": {
@@ -104,6 +132,13 @@ HR.registerManifest({
   "summative": 10,
   "past": 0
  },
+ "ai-5": {
+  "notes": true,
+  "pre": 10,
+  "post": 10,
+  "summative": 20,
+  "past": 0
+ },
  "ai-5-1": {
   "notes": true,
   "pre": 5,
@@ -117,6 +152,13 @@ HR.registerManifest({
   "post": 5,
   "summative": 6,
   "past": 0
+ },
+ "ai-6": {
+  "notes": true,
+  "pre": 10,
+  "post": 10,
+  "summative": 20,
+  "past": 1
  },
  "ai-6-1": {
   "notes": true,
@@ -300,6 +342,13 @@ HR.registerManifest({
   "summative": 6,
   "past": 0
  },
+ "cloud-5": {
+  "notes": true,
+  "pre": 10,
+  "post": 10,
+  "summative": 20,
+  "past": 15
+ },
  "cloud-5-1": {
   "notes": true,
   "pre": 5,
@@ -341,6 +390,13 @@ HR.registerManifest({
   "post": 5,
   "summative": 10,
   "past": 4
+ },
+ "cloud-6": {
+  "notes": true,
+  "pre": 10,
+  "post": 10,
+  "summative": 20,
+  "past": 20
  },
  "cloud-6-1": {
   "notes": true,
