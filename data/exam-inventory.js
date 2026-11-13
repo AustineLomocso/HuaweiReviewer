@@ -10896,10 +10896,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-081",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A gaming company has deployed an application on a Huawei Cloud Elastic Cloud Server (ECS), which is in the same region and VPC as its Relational Database Service (RDS) DB instance. They should use a private IP address to connect the ECS and DB instance.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "When an ECS and an RDS instance are in the same region and VPC, the ECS should connect to the database through its private IP address. Private connections have lower latency and higher security, and avoid EIP and bandwidth charges.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215027.png",
@@ -10919,10 +10944,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-082",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Fallback is a special form of fault tolerance. When the service throughput is large and resources are insufficient, you can use fallback to disable non-critical or underperforming services to reduce resource usage and keep main services running.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Fallback (service degradation) is a fault-tolerance technique: under heavy load or resource shortage, non-critical or poorly performing services are switched off or simplified so that core services keep running.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215029.png",
@@ -10942,10 +10992,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-083",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "RDS for MySQL read replicas have the same specifications as the primary DB instance, which improves service availability.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "RDS for MySQL read replicas offload read traffic from the primary instance, and their specifications can be chosen independently of the primary's. Availability comes from the primary/standby HA pair, which switches over in seconds, not from read replicas, which cannot exist on their own.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       342
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. That replica specifications can differ from the primary comes from RDS documentation rather than the cited page."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215030.png",
@@ -10965,10 +11044,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-084",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "In HBase, HLogs ensure that data written by users is not lost upon a RegionServer failure. Multiple regions in a RegionServer have their own HLogs.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "The HLog (write-ahead log) protects written data against RegionServer failure, but all regions on a RegionServer share the same HLog rather than each having its own.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       599
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215032.png",
@@ -10988,10 +11096,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-085",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "The self-supervised learning algorithm uses certain methods to \"create\" labels when a dataset has only unlabeled data.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Self-supervised learning trains on unlabeled data by automatically generating supervisory signals (labels) from the data itself, for example by predicting masked or hidden parts of the input.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       15
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215034.png",
@@ -11011,10 +11148,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-086",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "One function of the language model is to solve the problem of multi-phonic words. After the acoustic model provides the pronunciation sequence, the language model is used to find the string sequence with the highest probability from the candidate string sequences.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "In speech recognition, the acoustic model maps audio features to a pronunciation sequence, and the language model then chooses the most probable word string among the candidates. That is how it resolves words that sound alike but are written differently.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       277
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course page shows the acoustic-model-then-language-model pipeline; the homophone role is inferred from it."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215036.png",
@@ -11034,10 +11200,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-087",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Models with higher performance usually have more parameters. In other words, having more parameters is better because it helps ensure higher performance.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "Larger models often perform better, but more parameters do not guarantee higher performance. Too many parameters for the available data causes overfitting, and also raises compute, memory, and latency costs, so model size has to match the task and data.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215037.png",
@@ -11057,10 +11248,40 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-088",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Quantization in digital image processing converts sensor signals of sampling points into discrete integers. More quantization levels indicate more image layers. The higher the grayscale resolution, the better the image quality and less data there is.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "Quantization converts continuous sensor signals at sampling points into discrete integers, and more quantization levels give more gray levels and a higher grayscale resolution with better image quality. The cost is a larger data volume, not less data, so the final claim is false.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       79,
+       80
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215039.png",
@@ -11080,17 +11301,46 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-089",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "If no activation functions are added, the neural network is linear. In this case, regardless of how many hidden layers are added, only one is used. Activation functions need to be added to make the neural network non-linear.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Without activation functions, each layer is a matrix multiplication, and a chain of them collapses into a single equivalent linear transformation, so extra hidden layers add nothing. Non-linear activation functions are what let a deep network model non-linear relationships.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       32
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215040.png",
      "number": 90,
      "paperTotal": 90,
      "type": "tf",
-     "stem": "Huawei's ModelArts is a one-stop Al development platform that supports the entire Al development process, from data processing to model training and deployment. It does not allow multiple users to label the same dataset.",
+     "stem": "Huawei's ModelArts is a one-stop AI development platform that supports the entire AI development process, from data processing to model training and deployment. It does not allow multiple users to label the same dataset.",
      "options": [
       {
        "key": "T",
@@ -11103,10 +11353,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-090",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Huawei's ModelArts is a one-stop Al development platform that supports the entire Al development process, from data processing to model training and deployment. It does not allow multiple users to label the same dataset.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot; corrected AI read as Al.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "ModelArts data management includes team labeling, which lets multiple users label the same dataset together, alongside intelligent labeling and labeling evaluation. The claim that it does not allow this is false.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       526
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     }
    ],
    "uniqueNumbers": 90,

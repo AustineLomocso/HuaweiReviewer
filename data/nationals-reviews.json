@@ -6585,6 +6585,335 @@
    "inApp": true
   },
   {
+   "captureId": "n2425-capture-081",
+   "paperId": "n2425",
+   "questionNumber": 81,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215025.png",
+   "sha256": "6e17e6672f4c61f3d0412f8b097ef3ad88e0e888ade2856ed6e5e5ba60af118e",
+   "stem": "A gaming company has deployed an application on a Huawei Cloud Elastic Cloud Server (ECS), which is in the same region and VPC as its Relational Database Service (RDS) DB instance. They should use a private IP address to connect the ECS and DB instance.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "When an ECS and an RDS instance are in the same region and VPC, the ECS should connect to the database through its private IP address. Private connections have lower latency and higher security, and avoid EIP and bandwidth charges.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-082",
+   "paperId": "n2425",
+   "questionNumber": 82,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215027.png",
+   "sha256": "949f40fa32c0ada52a515e81ffae518b9a9af1dc980ee3911a4bf0b9f5529763",
+   "stem": "Fallback is a special form of fault tolerance. When the service throughput is large and resources are insufficient, you can use fallback to disable non-critical or underperforming services to reduce resource usage and keep main services running.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Fallback (service degradation) is a fault-tolerance technique: under heavy load or resource shortage, non-critical or poorly performing services are switched off or simplified so that core services keep running.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-083",
+   "paperId": "n2425",
+   "questionNumber": 83,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215029.png",
+   "sha256": "ab5c37613f1e16ffc6464556feabc5ede82ea26e0f1a32b9a1309317e034320e",
+   "stem": "RDS for MySQL read replicas have the same specifications as the primary DB instance, which improves service availability.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud",
+    "pages": [
+     342
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. That replica specifications can differ from the primary comes from RDS documentation rather than the cited page.",
+   "explanation": "RDS for MySQL read replicas offload read traffic from the primary instance, and their specifications can be chosen independently of the primary's. Availability comes from the primary/standby HA pair, which switches over in seconds, not from read replicas, which cannot exist on their own.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-084",
+   "paperId": "n2425",
+   "questionNumber": 84,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215030.png",
+   "sha256": "13ba75e5ce03a927cc3e0bfb1c1fcfc18ae8a35b72bb4ed8fd8592d134869c89",
+   "stem": "In HBase, HLogs ensure that data written by users is not lost upon a RegionServer failure. Multiple regions in a RegionServer have their own HLogs.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud-computing-architect",
+    "pages": [
+     599
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "The HLog (write-ahead log) protects written data against RegionServer failure, but all regions on a RegionServer share the same HLog rather than each having its own.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-085",
+   "paperId": "n2425",
+   "questionNumber": 85,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215032.png",
+   "sha256": "f6eb1d1c2b00cba0c5dcc8e61844542aa9e17b9a474e41f20dfa63df40fe6f65",
+   "stem": "The self-supervised learning algorithm uses certain methods to \"create\" labels when a dataset has only unlabeled data.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     15
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Self-supervised learning trains on unlabeled data by automatically generating supervisory signals (labels) from the data itself, for example by predicting masked or hidden parts of the input.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-086",
+   "paperId": "n2425",
+   "questionNumber": 86,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215034.png",
+   "sha256": "2c2aff9bc6e7ab50bb8f69b46a7fe819908c3aad4b18b47d607c7779e5264d3b",
+   "stem": "One function of the language model is to solve the problem of multi-phonic words. After the acoustic model provides the pronunciation sequence, the language model is used to find the string sequence with the highest probability from the candidate string sequences.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     277
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. The course page shows the acoustic-model-then-language-model pipeline; the homophone role is inferred from it.",
+   "explanation": "In speech recognition, the acoustic model maps audio features to a pronunciation sequence, and the language model then chooses the most probable word string among the candidates. That is how it resolves words that sound alike but are written differently.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-087",
+   "paperId": "n2425",
+   "questionNumber": 87,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215036.png",
+   "sha256": "80ea5e7deedfe20f580a8b8f70b78dc62f859a2785a8f56256bd2d15198a2f2f",
+   "stem": "Models with higher performance usually have more parameters. In other words, having more parameters is better because it helps ensure higher performance.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Larger models often perform better, but more parameters do not guarantee higher performance. Too many parameters for the available data causes overfitting, and also raises compute, memory, and latency costs, so model size has to match the task and data.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-088",
+   "paperId": "n2425",
+   "questionNumber": 88,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215037.png",
+   "sha256": "ce40220fdf86bf2f9ddc0d9713ce661f860ac9e30fd7da05fff7cce25c534076",
+   "stem": "Quantization in digital image processing converts sensor signals of sampling points into discrete integers. More quantization levels indicate more image layers. The higher the grayscale resolution, the better the image quality and less data there is.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     79,
+     80
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Quantization converts continuous sensor signals at sampling points into discrete integers, and more quantization levels give more gray levels and a higher grayscale resolution with better image quality. The cost is a larger data volume, not less data, so the final claim is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-089",
+   "paperId": "n2425",
+   "questionNumber": 89,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215039.png",
+   "sha256": "ca7e7eb77cd21e69ed5714f9a207d17e4c8e4131ad9878deb729ee796f5db1bb",
+   "stem": "If no activation functions are added, the neural network is linear. In this case, regardless of how many hidden layers are added, only one is used. Activation functions need to be added to make the neural network non-linear.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     32
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Without activation functions, each layer is a matrix multiplication, and a chain of them collapses into a single equivalent linear transformation, so extra hidden layers add nothing. Non-linear activation functions are what let a deep network model non-linear relationships.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-090",
+   "paperId": "n2425",
+   "questionNumber": 90,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215040.png",
+   "sha256": "324ac42fe37f5cdc5feb593a06bc76ab3e3373701fcc59b5d9f1400fec869e62",
+   "stem": "Huawei's ModelArts is a one-stop AI development platform that supports the entire AI development process, from data processing to model training and deployment. It does not allow multiple users to label the same dataset.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     526
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot; corrected AI read as Al.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "ModelArts data management includes team labeling, which lets multiple users label the same dataset together, alongside intelligent labeling and labeling evaluation. The claim that it does not allow this is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
    "captureId": "n2526-capture-059",
    "paperId": "n2526",
    "questionNumber": 59,

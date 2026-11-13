@@ -4,7 +4,7 @@ Read this at the start of each session, and update it before ending one. Task nu
 
 ## Current state
 
-**Nationals in the test engine, 2026-11-14.** Follow `C:/Users/austi/.claude/plans/the-task-is-to-tender-puffin.md` (summary under Decisions). Part A (engine and setup screen) is done. Part B: **n2324 is complete and open in the app** (90 questions checked against screenshots, supplied key used, letter-free explanations, Q10 ungraded; caution flags on Q39 and Q42 key oddities and on Q47). Next: n2425 (88 transcriptions and 90 answers with PDF citations), then n2526 (147 and 148). Workflow: write `work/nationals-batches/<paper>-bNN.json`, run `node tools/apply-nationals-reviews.js <batch>`, `python tools/reconcile-exams.py`, `npm test` (enforces content rules), commit. `node work/nationals-batches/dump.js <paper> <from> <to>` prints OCR records for review.
+**Nationals in the test engine, 2026-11-14.** Follow `C:/Users/austi/.claude/plans/the-task-is-to-tender-puffin.md` (summary under Decisions). Part A (engine and setup screen) is done. Part B: **n2324 and n2425 are complete and open in the app.** n2324 uses the supplied key (Q10 ungraded). n2425 has worked answers, 56 of 90 with PDF page citations, with Q11 and Q24 ungraded because no single answer is defensible. **Next: n2526** (148 available questions, 147 to transcribe). Workflow: write `work/nationals-batches/<paper>-bNN.json`, run `node tools/apply-nationals-reviews.js <batch>`, `python tools/reconcile-exams.py`, `npm test` (enforces the content rules), and commit. Helpers: `node work/nationals-batches/dump.js <paper> <from> <to>` prints OCR records; `node work/nationals-batches/find.js "term" "term"` searches the extracted PDF text.
 
 **Curriculum expansion in progress, 2026-11-14.** Follow [Complete curriculum coverage and past-exam mapping](superpowers/plans/2026-11-13-complete-curriculum-coverage.md). The user's preferences are recorded there and in `docs/content-brief.md`.
 
@@ -60,6 +60,12 @@ The spec records most decisions. These came later:
 Each code task went through an implementer and an independent reviewer. Reviewers must show that each defect comes from a reachable input, because one early report's example could not actually occur. Check reviewer and implementer claims against the code before acting.
 
 ## Session log
+
+### 2026-11-14: n2425 reviewed and opened in the app
+
+- Checked all 90 n2425 questions against their screenshots and fixed OCR errors (AI/Al, ECSs, AZs, MLlib, L1, 0, Service, and similar). Worked out every answer, searching the extracted PDFs; 56 cite pages actually read and the rest are `inferred` with caution flags. All carry the note "no official key was supplied".
+- Two are ungraded: Q11, where three ELB high-availability designs are all valid, and Q24, where the GES storage claim conflicts with the organizers' n2324 Q75 explanation. Q71 and Q75 are identical on the original paper and both kept. Q62 has a bracketed reading of text hidden by an on-screen icon.
+- Regenerated the printable pages. Checks: 118 unit tests, content check at 0 errors, and all three browser suites pass.
 
 ### 2026-11-14: n2324 reviewed and opened in the app
 
