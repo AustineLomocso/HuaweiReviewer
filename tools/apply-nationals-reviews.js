@@ -43,6 +43,11 @@ for (const entry of batch) {
     inApp: entry.inApp !== false,
   };
   if (record.answer === null) delete record.answer;
+  // optionText corrects individual options by key without restating the rest.
+  if (entry.optionText) {
+    record.options = record.options.map((o) => (entry.optionText[o.key] ? { ...o, text: entry.optionText[o.key] } : o));
+    delete record.optionText;
+  }
   if (index >= 0) { file.reviews[index] = record; updated += 1; } else { file.reviews.push(record); added += 1; }
 }
 file.reviews.sort((a, b) => a.captureId.localeCompare(b.captureId));

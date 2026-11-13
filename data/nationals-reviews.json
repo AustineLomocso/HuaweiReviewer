@@ -445,6 +445,766 @@
    "inApp": true
   },
   {
+   "captureId": "n2324-capture-011",
+   "paperId": "n2324",
+   "questionNumber": 11,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220052.png",
+   "sha256": "c5951276fd348662bf0560e7504bf0af4f77992a543fe3371e8e0ca866a1e1e2",
+   "stem": "Which of the following statements about Spark SQL datasets is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A dataset is a strongly typed collection of objects in a particular domain that can be converted in parallel by a function or relationship operation."
+    },
+    {
+     "key": "B",
+     "text": "A dataset is represented by a Catalyst logical plan and the data is stored in the encoded binary form."
+    },
+    {
+     "key": "C",
+     "text": "A dataset has to be converted back to its original form (this process is called deserialization) before operations like sorting, filtering, and shuffling can be performed on it."
+    },
+    {
+     "key": "D",
+     "text": "A dataset triggers computing only when an action is performed."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; removed the OCR number prefix.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "A Spark SQL dataset is a strongly typed, distributed collection of domain objects that can be transformed in parallel. It is represented by a Catalyst logical plan, and encoders store its data in a compact binary form. Because of those encoders, operations such as sorting, filtering, and shuffling run directly on the encoded data without first deserializing it, so the claim that deserialization is required is false. Datasets are lazily evaluated: computation happens only when an action such as collect or show runs.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-012",
+   "paperId": "n2324",
+   "questionNumber": 12,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220054.png",
+   "sha256": "d550583a712737fe9bcf1bf7a80927198486227feb2b3f44ddff59a5498ad564",
+   "stem": "Application Performance Management (APM) helps quickly detect application performance bottlenecks and locate faults. Which of the following statements about APM is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Application metric monitoring measures the health of running applications."
+    },
+    {
+     "key": "B",
+     "text": "Tracing monitors and visualizes application calls, enabling fast locating of performance bottlenecks and faults."
+    },
+    {
+     "key": "C",
+     "text": "APM regularly counts log keywords and generates metric data so that users can learn about system performance and services in real time."
+    },
+    {
+     "key": "D",
+     "text": "APM displays the call relationship between services on topologies in a period, and also shows their trends."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "APM provides application metric monitoring (the health of running applications), tracing (visualized call chains for locating bottlenecks and faults), and topologies (call relationships between services over a period, with trends). Counting log keywords to produce metrics is a log-analysis function, not a core APM capability, so that statement is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-013",
+   "paperId": "n2324",
+   "questionNumber": 13,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220055.png",
+   "sha256": "54026b835c60b91a68a579a45a485b7b2ce11e04b27dc7f905c0bc687319908f",
+   "stem": "After MindSpore builds a tensor, which of the following indicates the shape of the tensor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tensor.asnumpy()"
+    },
+    {
+     "key": "B",
+     "text": "Tensor.shape"
+    },
+    {
+     "key": "C",
+     "text": "Tensor.dtype"
+    },
+    {
+     "key": "D",
+     "text": "Tensor.sum()"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Tensor.shape is the attribute that returns a tensor's shape as a tuple giving the size of each dimension. Tensor.asnumpy() converts the tensor to a NumPy array, Tensor.dtype gives the element data type (such as float32 or int64), and Tensor.sum() adds up the elements.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-014",
+   "paperId": "n2324",
+   "questionNumber": 14,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220058.png",
+   "sha256": "db018c537a4d50bd1b04d2e1d21faf22c1c46acd8593b66c4cfb9d9c2666bbb6",
+   "stem": "Which of the following statements about word vectors is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "There are two types of Word2vec: Skip-gram and CBOW."
+    },
+    {
+     "key": "B",
+     "text": "fastText embeddings exploit subword information to construct word embeddings."
+    },
+    {
+     "key": "C",
+     "text": "GloVe can effectively deal with out-of-vocabulary words."
+    },
+    {
+     "key": "D",
+     "text": "Both BERT and ELMo can generate dynamic word vectors."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Word2vec has two architectures: CBOW predicts a target word from its context, and Skip-gram predicts the context from a target word. fastText builds embeddings from subword information, so it can produce vectors even for out-of-vocabulary words. BERT and ELMo generate dynamic, context-dependent word vectors. GloVe learns vectors from a corpus-wide co-occurrence matrix and has no vector for words it never saw, so it does not handle out-of-vocabulary words effectively.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-015",
+   "paperId": "n2324",
+   "questionNumber": 15,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220100.png",
+   "sha256": "bbef989f47d921bcf39071a324ff38da9eda9e729fd6284c0daf7f56e025fdd3",
+   "stem": "Which of the following APIs should be called when MindSpore is used to configure an environment (for example, specify a hardware platform and running mode)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "get_context"
+    },
+    {
+     "key": "B",
+     "text": "export"
+    },
+    {
+     "key": "C",
+     "text": "load_checkpoint"
+    },
+    {
+     "key": "D",
+     "text": "set_context"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot. The screenshot renders the API names with spaces where the underscores are; restored the underscores used by the MindSpore API and the supplied explanation.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "set_context configures the MindSpore environment, such as the hardware platform (device target) and the running mode, so the right computing resources are used for training and inference. get_context only reads the current settings, export saves a model's graph and parameters for deployment elsewhere, and load_checkpoint loads saved model weights.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-016",
+   "paperId": "n2324",
+   "questionNumber": 16,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220102.png",
+   "sha256": "aa62389680b8b1ba7ece83319fb5b28b59d8c6c3dc2a988c6efadeddedd295f8",
+   "stem": "Which of the following is not a part of the speech recognition process?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Speech preprocessing"
+    },
+    {
+     "key": "B",
+     "text": "Acoustic feature extraction"
+    },
+    {
+     "key": "C",
+     "text": "Language Model (LM)"
+    },
+    {
+     "key": "D",
+     "text": "Horizontal mirroring"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Speech recognition consists of speech signal collection, speech preprocessing, acoustic feature extraction, model training (acoustic and language models), and prediction and recognition. Horizontal mirroring is an image augmentation technique, not a step in speech recognition.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-017",
+   "paperId": "n2324",
+   "questionNumber": 17,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220103.png",
+   "sha256": "a5f7174e73af6fa79328e5121fd8f3166ac62d3bacd0bd25724cc091eccc60be",
+   "stem": "Databases can be classified as relational or non-relational. Which of the following descriptions about databases is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "RDS for MySQL, RDS for PostgreSQL and RDS for SQL Server are relational databases."
+    },
+    {
+     "key": "B",
+     "text": "Non-relational databases offer stronger transactional support than relational databases."
+    },
+    {
+     "key": "C",
+     "text": "Data in a non-relational database is stored in key-value pairs. Each key-value pair represents a document or object."
+    },
+    {
+     "key": "D",
+     "text": "GeminiDB Mongo API (originally \"GaussDB(for Mongo)\") and GeminiDB Redis API (originally \"GaussDB(for Redis)\") are non-relational databases."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors in two options.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "RDS for MySQL, PostgreSQL, and SQL Server are relational databases based on the relational model and SQL. Non-relational databases store data in formats such as key-value pairs and documents; GeminiDB Mongo API is document-based and GeminiDB Redis API is key-value. Relational databases are the ones with strong transaction support, including rollback, recovery, and concurrency control, so the claim that non-relational databases offer stronger transactional support is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-018",
+   "paperId": "n2324",
+   "questionNumber": 18,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220105.png",
+   "sha256": "0cd743f934fb5e74289862c2cb8e97c413d302802ae3a20736f232863298f43c",
+   "stem": "Cloud Backup and Recovery (CBR) can be used to back up cloud servers and cloud disks. Which of the following statements about cloud server backup or cloud disk backup is true?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cloud disk backups cannot be replicated to other regions."
+    },
+    {
+     "key": "B",
+     "text": "Cloud disks in the Unavailable or In-use state cannot be backed up."
+    },
+    {
+     "key": "C",
+     "text": "For data consistency concerns, shared disks on servers cannot be backed up."
+    },
+    {
+     "key": "D",
+     "text": "Both Elastic Cloud Server (ECS) backups and Bare Metal Server (BMS) backups can be used to create images."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "According to the supplied key, cloud disk backups cannot be replicated to other regions, which makes that the true statement. The others are false: disks can be backed up when they are Available or In-use, shared disks on servers can be backed up, and only ECS backups (not BMS backups) can be used to create images.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-019",
+   "paperId": "n2324",
+   "questionNumber": 19,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220106.png",
+   "sha256": "f50a5761b45ea488ba58f1fee03acc125237c2e5830a8d50376d53fa0211fbee",
+   "stem": "Which of the following statements is false about Hive data warehouse layering?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Operational Data Store (ODS) layer: indicates the raw data layer."
+    },
+    {
+     "key": "B",
+     "text": "Data Warehouse Detail (DWD) layer: acquires data after simple cleansing and maintains the same structure and granularity as the original table."
+    },
+    {
+     "key": "C",
+     "text": "Data Warehouse Summary (DWS) layer: performs lightweight summary based on the ODS layer."
+    },
+    {
+     "key": "D",
+     "text": "Application Data Store (ADS) layer: provides data for various statistical reports."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; restored colons read as full stops.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "The ODS layer holds raw data loaded from business systems. The DWD layer cleanses that data (removing nulls and dirty records) while keeping the original structure and granularity. The DWS layer summarizes data from the DWD layer, not directly from the ODS layer, building common-granularity summary indicators for reuse. The ADS layer serves data for statistical reports and data products.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-020",
+   "paperId": "n2324",
+   "questionNumber": 20,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220107.png",
+   "sha256": "fa6a16dbb4a96806a4bc3208b1a4cd1587fa8f395f2b83ea495b171ed90a72ce",
+   "stem": "Which of the following statements is false about Huawei Cloud Container Engine (CCE)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "After a CCE cluster is created, you can manage resources and applications only on web pages, but not through the CLI."
+    },
+    {
+     "key": "B",
+     "text": "CCE allows you to directly use high-performance ECSs, BMSs, and GPU-accelerated cloud servers."
+    },
+    {
+     "key": "C",
+     "text": "CCE is a highly scalable, high-performance enterprise-class Kubernetes service and supports Docker containers."
+    },
+    {
+     "key": "D",
+     "text": "In addition to local disk storage, CCE is integrated with Huawei Cloud storage services for you to store data."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "CCE exposes native Kubernetes APIs, so clusters can be managed through both the console and CLI tools such as kubectl; the claim that only web pages can be used is false. CCE is a scalable enterprise Kubernetes service that supports Docker containers, runs workloads on ECSs, BMSs, and GPU-accelerated servers, and can store data on Huawei Cloud storage services such as OBS as well as local disks.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-021",
+   "paperId": "n2324",
+   "questionNumber": 21,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220109.png",
+   "sha256": "f32a8a0175bfbfdf1bfa542523103cb3f662676ded6d95276e256f47e923e9c8",
+   "stem": "MindSpore preprocesses data in pipeline mode. Which of the following operations can be used to enhance dataset samples?",
+   "options": [
+    {
+     "key": "A",
+     "text": "map"
+    },
+    {
+     "key": "B",
+     "text": "Iter"
+    },
+    {
+     "key": "C",
+     "text": "batch"
+    },
+    {
+     "key": "D",
+     "text": "shuffle"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "In a MindSpore data pipeline, map applies operations such as augmentation transforms to every element of the dataset, so it is how samples are enhanced. Iterating over a dataset only reads elements, batch groups samples into batches for training, and shuffle randomizes their order; none of these augments the samples themselves.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-022",
+   "paperId": "n2324",
+   "questionNumber": 22,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220110.png",
+   "sha256": "51e2a8938ed63da77ba494423fdfe8b0c85201157e9d91fbce2851804ac30870",
+   "stem": "Flexus L Instance (FlexusL) is a lightweight server that is easy to set up and manage. Which of the following statements is false about the differences between FlexusL and Elastic Cloud Server (ECS)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "FlexusL uses the same underlying hardware resources as ECS. If a FlexusL instance and an ECS have the same CPU and memory, they deliver the same computing performance."
+    },
+    {
+     "key": "B",
+     "text": "FlexusL is designed for light-load scenarios and sold in packages."
+    },
+    {
+     "key": "C",
+     "text": "ECS is more suitable for high-load scenarios such as graphics rendering, data analysis, and high-performance computing because it provides more stable performance than FlexusL."
+    },
+    {
+     "key": "D",
+     "text": "FlexusL and ECS use the same software architecture to deploy applications. Both of them support yearly/monthly, pay-per-use, and spot pricing billing modes."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "FlexusL is a lightweight, package-priced server for light-load scenarios, and ECS suits heavier workloads that need stable high performance. The false statement is the claim about identical billing: FlexusL supports only yearly/monthly billing, while ECS supports yearly/monthly, pay-per-use, and spot pricing.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-023",
+   "paperId": "n2324",
+   "questionNumber": 23,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220111.png",
+   "sha256": "c601413a623fa173cd51f09f5d8e3d2aef3d728494cf3f784022a51a4760dd50",
+   "stem": "In end-to-end deep learning speech models, which of the following features is generally used as input?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Waveform data"
+    },
+    {
+     "key": "B",
+     "text": "Spectrum"
+    },
+    {
+     "key": "C",
+     "text": "Fbank"
+    },
+    {
+     "key": "D",
+     "text": "MFCC"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "End-to-end deep learning speech models most commonly take Fbank (mel filter bank) features as input. They model human frequency perception and capture key speech information at modest computational cost. Raw waveforms greatly increase model complexity, a plain spectrum is not the usual input, and MFCCs are more typical of traditional speech recognition systems.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-024",
+   "paperId": "n2324",
+   "questionNumber": 24,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220113.png",
+   "sha256": "c40321d077a998e97dda668d2e28a8930130fa20049c280d95d3ffdf51c1017b",
+   "stem": "CodeArts PerfTest is a cloud service that tests the performance of application APIs and links. Which of the following is not a recommended usage?",
+   "options": [
+    {
+     "key": "A",
+     "text": "E-commerce flash sale tests"
+    },
+    {
+     "key": "B",
+     "text": "Game peak-usage tests"
+    },
+    {
+     "key": "C",
+     "text": "Application performance optimization"
+    },
+    {
+     "key": "D",
+     "text": "DR security tests"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "CodeArts PerfTest is recommended for e-commerce flash sale tests, game peak-usage tests, complex scenario support, and application performance optimization, all of which simulate heavy load to find bottlenecks. It does not evaluate security or disaster recovery capability, so DR security testing is not a recommended use.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-025",
+   "paperId": "n2324",
+   "questionNumber": 25,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220114.png",
+   "sha256": "eeb9ee44231c01cc35c2b4e5c10f4e3a62c4e8960a454c8446cbcb8314f335ad",
+   "stem": "Which of the following statements is false about Kata containers?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Kata containers work to build lightweight VMs using QEMU or KVM. Kata containers are compatible with OCI runtime specifications."
+    },
+    {
+     "key": "B",
+     "text": "Kata containers support Kubernetes Container Runtime Interfaces (CRIs), which can be used to replace runC to create pods."
+    },
+    {
+     "key": "C",
+     "text": "Using Kata containers, you are allowed to directly run container management tools on bare metal servers and implement strong workload isolation."
+    },
+    {
+     "key": "D",
+     "text": "Kata containers share the guest VM's kernel and provide physical isolation of networks, I/O, and memory."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Kata containers run each container or pod in its own lightweight VM built with QEMU or KVM, follow the OCI runtime specification, plug into Kubernetes through CRI as a replacement for runC, and let container tools run directly on bare metal with strong workload isolation. Each lightweight VM has its own guest kernel rather than sharing one, so the shared-kernel statement is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-026",
+   "paperId": "n2324",
+   "questionNumber": 26,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220116.png",
+   "sha256": "16b2a5a8b70fd983339b997bacb054588589516af4f6c60107e0fb5052e03596",
+   "stem": "Which of the following migration services cannot migrate database data?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Resource Discovery and Assessment (RDA)"
+    },
+    {
+     "key": "B",
+     "text": "Data Replication Service (DRS)"
+    },
+    {
+     "key": "C",
+     "text": "Migration Center (MgC)"
+    },
+    {
+     "key": "D",
+     "text": "Database and Application Migration UGO (UGO)"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Resource Discovery and Assessment (RDA) discovers and collects information about cloud platforms, servers, databases, containers, and middleware, assesses migration readiness, and can migrate cloud storage, NAS, and servers, but it cannot migrate database data. DRS migrates and synchronizes databases online, MgC is the one-stop migration and modernization platform, and UGO migrates heterogeneous database schemas.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-027",
+   "paperId": "n2324",
+   "questionNumber": 27,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220117.png",
+   "sha256": "efdf68fb26b07ac299e2ca5ca33558bec72edbaae36e2ea212aedc93219041a3",
+   "stem": "Which of the following is not part of the MFCC extraction process?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Pre-emphasis"
+    },
+    {
+     "key": "B",
+     "text": "Fast Fourier Transform"
+    },
+    {
+     "key": "C",
+     "text": "Cepstrum analysis"
+    },
+    {
+     "key": "D",
+     "text": "End-to-end"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "MFCC extraction begins with pre-emphasis (a high-pass filter that boosts high frequencies), applies a Fast Fourier Transform to obtain the frequency-domain energy distribution, filters it with mel filter banks, and finishes with cepstrum analysis via a discrete cosine transform of the log filter-bank energies. \"End-to-end\" describes a way of building whole systems or models, not a step of MFCC extraction.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-028",
+   "paperId": "n2324",
+   "questionNumber": 28,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220118.png",
+   "sha256": "92f2c6ffd83af19ab82a48501d0a27bb34f1f064bf9c2a601d61fea244b0e083",
+   "stem": "Which of the following statements is false about offline batch processing?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Processing time requirements are not high."
+    },
+    {
+     "key": "B",
+     "text": "Processing involves a huge amount of data."
+    },
+    {
+     "key": "C",
+     "text": "Processing involves various data formats."
+    },
+    {
+     "key": "D",
+     "text": "It supports SQL jobs but not custom jobs."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR spacing error.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Offline batch processing tolerates long processing times, handles very large data volumes on distributed platforms such as Hadoop, and processes structured, semi-structured, and unstructured data. It supports custom jobs with complex logic as well as SQL jobs, so the claim that custom jobs are unsupported is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-029",
+   "paperId": "n2324",
+   "questionNumber": 29,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220120.png",
+   "sha256": "74dd7988ce8532b5ec344fc543bf43085a11cd433eaa59b9bb9b14356ff371ce",
+   "stem": "Container Guard Service (CGS) addresses container security risks. Which of the following statements about CGS functions is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "CGS can scan image repositories and running container images for vulnerabilities and malicious files, and provide rectification suggestions."
+    },
+    {
+     "key": "B",
+     "text": "For containers in any state, CGS can monitor their runtimes and identify malicious programs, including miners and ransomware."
+    },
+    {
+     "key": "C",
+     "text": "By configuring security policies, companies can formulate container process whitelists and file protection lists to ensure that containers run with the minimum permissions required."
+    },
+    {
+     "key": "D",
+     "text": "CGS meets the DJCP MLPS requirements for intrusion prevention and malicious code prevention. CGS can identify vulnerabilities in container images, prevent escapes, and allow users to configure security policies."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "CGS scans image repositories and running container images for vulnerabilities and malicious files, enforces process whitelists and file protection lists for least-privilege operation, and meets MLPS requirements for intrusion and malicious code prevention, including escape detection. Its runtime monitoring covers running containers; it cannot monitor stopped containers in real time, so the claim of monitoring containers in any state is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-030",
+   "paperId": "n2324",
+   "questionNumber": 30,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220121.png",
+   "sha256": "c6218c3acbfe50318a326fe51c89657a423fcfc710274e911fd4096ca971604b",
+   "stem": "Which of the following statements is false about advantages of containers over virtualization?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Regardless of the environment, containers provide unified delivery standards, enabling DevOps."
+    },
+    {
+     "key": "B",
+     "text": "Containers consume fewer resources and provide higher resource utilization. Containers are more suitable for the microservice architectures."
+    },
+    {
+     "key": "C",
+     "text": "Containers are more secure. Each container runs its own system and applications."
+    },
+    {
+     "key": "D",
+     "text": "Containers are superfast in auto scaling and fault recovery. They make O&M easy and intelligent."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Containers give consistent delivery across environments (supporting DevOps), use fewer resources than VMs and suit microservices, and start and stop quickly for fast scaling and recovery. They are not more secure than VMs: containers share the host OS kernel and offer only process-level isolation, whereas each VM runs its own operating system.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
    "captureId": "n2324-capture-037",
    "paperId": "n2324",
    "questionNumber": 37,
