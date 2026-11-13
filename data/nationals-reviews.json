@@ -1205,6 +1205,234 @@
    "inApp": true
   },
   {
+   "captureId": "n2324-capture-031",
+   "paperId": "n2324",
+   "questionNumber": 31,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220122.png",
+   "sha256": "2d3718d4b484e2511adbfaa36a8480d30d54ffcb8dfc7df1039932caa3f24102",
+   "stem": "Which of the following statements is false about Docker?",
+   "options": [
+    {
+     "key": "A",
+     "text": "With Docker, you can create or update images. You can also download images."
+    },
+    {
+     "key": "B",
+     "text": "A container is a runtime instance of an image. You can start, stop, and delete it. Containers are isolated from each other for security purposes."
+    },
+    {
+     "key": "C",
+     "text": "A repository is used to centrally store image files. A registry has multiple repositories, and each repository contains multiple images."
+    },
+    {
+     "key": "D",
+     "text": "You are advised to run docker commit instead of using a Dockerfile to create an image because the former makes version management easier."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Docker creates, updates, pulls, and pushes images; containers are isolated runtime instances of images that can be started, stopped, and deleted; and registries hold repositories of images. A Dockerfile is the recommended way to build images because it is readable, reproducible, and easy to version. docker commit snapshots a container's current state, which is hard to trace or reproduce, so recommending it for version management is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-032",
+   "paperId": "n2324",
+   "questionNumber": 32,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220124.png",
+   "sha256": "679609fc948b6fb35530f35441393344310f3f94c179340707af7d1a679c2eb1",
+   "stem": "Which of the following statements about Mel Frequency Cepstral Coefficients (MFCCs) used in speech recognition is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "MFCCs are used to extract speech features."
+    },
+    {
+     "key": "B",
+     "text": "MFCCs filter out useless features and extract high-frequency signals."
+    },
+    {
+     "key": "C",
+     "text": "Pre-emphasis is part of the MFCC process and is used to enhance high frequencies of the signal."
+    },
+    {
+     "key": "D",
+     "text": "The output of MFCCs is usually 12-dimensional vectors."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "MFCCs extract speech features for recognition. Pre-emphasis is one step of the process and boosts the high-frequency part of the signal, and the output is commonly a 12-dimensional vector of cepstral coefficients. MFCCs aim to represent the speech spectrum as a whole rather than to keep only high-frequency signals, so that statement is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-033",
+   "paperId": "n2324",
+   "questionNumber": 33,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220125.png",
+   "sha256": "558bb82379349d195078ad59f53fef6553313e299e3a5dbb35b9f99a306e5cee",
+   "stem": "Which of the following is not an algorithm commonly used for keyword extraction?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sparrow search algorithm (SSA)"
+    },
+    {
+     "key": "B",
+     "text": "TextRank"
+    },
+    {
+     "key": "C",
+     "text": "Term frequency-inverse document frequency (TF-IDF)"
+    },
+    {
+     "key": "D",
+     "text": "Latent Dirichlet allocation (LDA)"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "TextRank ranks candidate keywords using word co-occurrence windows, TF-IDF scores how relevant a word is to a document within a collection, and LDA models topics whose words can serve as keywords. The sparrow search algorithm is a swarm-intelligence optimization method for engineering problems and is not used for keyword extraction.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-034",
+   "paperId": "n2324",
+   "questionNumber": 34,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220126.png",
+   "sha256": "eea436cdebc8c4551cb9482a852092ae2135bc3ba622ca753900ed67a1c63e91",
+   "stem": "Scalable File Service (SFS) provides scalable, high-performance file storage. Which of the following statements about SFS application scenarios is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "SFS Turbo HPC is suitable for video rendering. It can provide millions of IOPS and tens of GB/s of bandwidth, which meet the high-performance requirements of video rendering."
+    },
+    {
+     "key": "B",
+     "text": "SFS Turbo General is suitable for log storage. It can work as a log output directory for multiple service nodes, to facilitate log collection and management of distributed applications."
+    },
+    {
+     "key": "C",
+     "text": "SFS Turbo HPC Cache is suitable for EDA simulation or gene analysis. Its high throughput and large cache can greatly improve the EDA and processing efficiency."
+    },
+    {
+     "key": "D",
+     "text": "SFS 3.0 Capacity-Oriented is suitable for AI and large model training. It can efficiently use cloud resources and supports massive amount of data, thus shortening the AI training duration."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "SFS 3.0 Capacity-Oriented targets cost-sensitive, large-capacity workloads such as media processing, file sharing, HPC, and backup. AI and large-model training needs very high performance, for which SFS Turbo Performance or Performance-Enhanced is recommended. The other pairings (SFS Turbo HPC for rendering, SFS Turbo General for shared log directories, and SFS Turbo HPC Cache for EDA or gene analysis) are valid.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-035",
+   "paperId": "n2324",
+   "questionNumber": 35,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220128.png",
+   "sha256": "f94e01ded48aeda48f689dda310e56259e6607205c81914386360010e3e07b55",
+   "stem": "When John trains an image classification network and the hidden layer is a convolutional neural network, he finds that the network convergence speed is slow. The error in the training set is small, yet in the test set it is large. Which of the following options can he choose to alleviate the problem?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Add Dropout to the hidden layer."
+    },
+    {
+     "key": "B",
+     "text": "Add the Batch Normalization layer after the convolution layer."
+    },
+    {
+     "key": "C",
+     "text": "Replace the convolutional layer with a fully connected layer."
+    },
+    {
+     "key": "D",
+     "text": "Increase the number of convolutional layers at the hidden layer."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "The network converges slowly and overfits (low training error, high test error). Adding Batch Normalization after the convolution layer speeds up training, stabilizes it, and improves generalization, addressing both symptoms. Dropout fights overfitting but can slow convergence further; replacing convolution with fully connected layers loses spatial information and raises overfitting risk; and adding more convolutional layers increases complexity, overfitting, and computation.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-036",
+   "paperId": "n2324",
+   "questionNumber": 36,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220129.png",
+   "sha256": "2a939849b75d4c101e109a85a3636082923a8cc6868e96ff23572bea97471c65",
+   "stem": "An engineer purchases an Elastic Cloud Server (ECS) running CentOS 7.6 on Huawei Cloud. The ECS can be accessed only from the private network and does not allow access from the default SSH port. If the engineer wants to access the ECS from a local PC through SSH to facilitate subsequent service deployment and testing, which of the following operations is incorrect?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Add an inbound rule in the security group to allow access from the newly configured SSH port."
+    },
+    {
+     "key": "B",
+     "text": "Change the default SSH port in the operating system to another port number, for example, 2030."
+    },
+    {
+     "key": "C",
+     "text": "Purchase an EIP and bind it to the ECS."
+    },
+    {
+     "key": "D",
+     "text": "Use Identity and Access Management (IAM) to obtain permissions to access ECS."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "To reach a private-network ECS over SSH from a local PC, bind an EIP so the server is reachable from the Internet, change the SSH listening port in the operating system if the default is blocked, and add a security group inbound rule allowing that port. IAM manages identities and permissions for cloud resources; it does not open network access to the server's SSH port, so using IAM for this is incorrect.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
    "captureId": "n2324-capture-037",
    "paperId": "n2324",
    "questionNumber": 37,
@@ -1229,9 +1457,528 @@
      "text": "4"
     }
    ],
-   "transcriptionStatus": "visually-reviewed",
    "status": "transcribed",
-   "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending."
+   "transcriptionStatus": "visually-reviewed",
+   "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending.",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Each convolution kernel spans all three input channels and produces one single-channel feature map. With two kernels, two feature maps are produced, and stacked together they form an output with two channels; the number of output channels equals the number of kernels.",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-038",
+   "paperId": "n2324",
+   "questionNumber": 38,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220132.png",
+   "sha256": "9e9371e39ae06c9fac995ac728c8423fb29047c580eaaca7c9223f516968b580",
+   "stem": "Data Replication Service (DRS) provides functions such as real-time migration. Which of the following network types is not supported for real-time migration?",
+   "options": [
+    {
+     "key": "A",
+     "text": "VPC Peering"
+    },
+    {
+     "key": "B",
+     "text": "Public network"
+    },
+    {
+     "key": "C",
+     "text": "Direct Connect"
+    },
+    {
+     "key": "D",
+     "text": "Virtual Private Network (VPN)"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "According to the supplied explanation, DRS real-time migration supports public networks (fast and cheap but less stable and secure), Direct Connect (dedicated, stable, secure, but costly), and VPN (encrypted tunnels over the Internet, cheaper than Direct Connect). VPC peering is not listed as a supported network type for real-time migration.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-039",
+   "paperId": "n2324",
+   "questionNumber": 39,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220133.png",
+   "sha256": "7703a7b37945539b5ad057be378cf2f281192a8e07ba01a06aa7ac43e16b978b",
+   "stem": "Which of the following statements is false about Flume configuration?",
+   "options": [
+    {
+     "key": "A",
+     "text": "server.sources.a1.batchSize: The number of events (data records) sent by Flume at a time. Increasing the value can improve performance but may reduce real-time processing, while decreasing it can improve real-time processing but may reduce performance."
+    },
+    {
+     "key": "B",
+     "text": "server.channels.ch1.type: The type of channel, which can be \"file\" or \"memory\"."
+    },
+    {
+     "key": "C",
+     "text": "server.sinks.s1.hdfs.path: The directory in HDFS where data is written, which is a required parameter."
+    },
+    {
+     "key": "D",
+     "text": "server.sinks.s1.hdfs.rollSize: The number of events written to HDFS before creating a new file."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors in the parameter names.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material. Caution: in Apache Flume, hdfs.rollSize is measured in bytes (hdfs.rollCount counts events), so the rollSize description may also be inaccurate; the supplied key treats it as true.",
+   "explanation": "The supplied key treats the channel-type description as false because Flume channels are not limited to file and memory; other types such as the JDBC channel also exist. batchSize trades throughput against latency as described, and hdfs.path is the required HDFS output directory.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-040",
+   "paperId": "n2324",
+   "questionNumber": 40,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220135.png",
+   "sha256": "8e32b84ec75ca5c86ed2e83cef2f44619be7787ee8cfaef275ed549a176d946c",
+   "stem": "Which of the following Hive tuning methods is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "When a small table and a large table are joined, the large table is directly stored in the memory, and then the map operation is performed on the small table."
+    },
+    {
+     "key": "B",
+     "text": "Hive breaks down each query into multiple phases. If some phases are not closely related, they can run in parallel to speed up the entire query task."
+    },
+    {
+     "key": "C",
+     "text": "Setting hive.auto.convert.join to true enables automatic conversion of common joins into map-side joins."
+    },
+    {
+     "key": "D",
+     "text": "Setting hive.exec.parallel to true enables parallel task execution."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "In a map-side join it is the small table that is loaded into memory (through the distributed cache) on every node, while the large table is streamed through the map tasks. A large table may far exceed a single node's memory, so holding it in memory is the wrong way round. Hive does split queries into stages that can run in parallel when hive.exec.parallel is true, and hive.auto.convert.join converts common joins into map-side joins.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-041",
+   "paperId": "n2324",
+   "questionNumber": 41,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220136.png",
+   "sha256": "96574287a55f7f575309653799430d7aeb7f5b109a8e2cb4c04e4c878df474f5",
+   "stem": "Which of the following processes are included in image digitization?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Binarization"
+    },
+    {
+     "key": "B",
+     "text": "Quantization"
+    },
+    {
+     "key": "C",
+     "text": "Sampling"
+    },
+    {
+     "key": "D",
+     "text": "Grayscale transformation"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B",
+    "C"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Image digitization consists of sampling (dividing the image into discrete pixel positions), quantization (mapping each sample's brightness to discrete levels), and compression coding. Binarization and grayscale transformation are processing operations applied to an already digital image.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-042",
+   "paperId": "n2324",
+   "questionNumber": 42,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220137.png",
+   "sha256": "c0982b4847749246c005b7f6e91ec7707542d8fb3311aaec2c7b68f579e89f97",
+   "stem": "Which of the following methods can be used to view the network model result and corresponding parameters in MindSpore?",
+   "options": [
+    {
+     "key": "A",
+     "text": "model.see_parameters()"
+    },
+    {
+     "key": "B",
+     "text": "model.check_parameters()"
+    },
+    {
+     "key": "C",
+     "text": "model.parameters_and_names()"
+    },
+    {
+     "key": "D",
+     "text": "print(model)"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C",
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot. The screenshot renders underscores in the method names as spaces; restored them as written in the supplied explanation.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material. Caution: the supplied explanation describes see_parameters() as displaying parameter names and values, which conflicts with the key; MindSpore's Cell class provides parameters_and_names() but no see_parameters() or check_parameters() method.",
+   "explanation": "In MindSpore, a network is a Cell. parameters_and_names() returns every parameter together with its name, and print(model) displays the network structure. The key treats these two as the valid ways to view the network and its parameters; see_parameters() and check_parameters() are not standard Cell methods.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-043",
+   "paperId": "n2324",
+   "questionNumber": 43,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220139.png",
+   "sha256": "38f2a6f064962590591e4505f67f908733c901128a388900ff88acf6198a9700",
+   "stem": "Which of the following statements are true about Huawei Cloud Container Engine (CCE)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "CCE is a cloud service based on open source Kubernetes. CCE provides highly scalable, high-performance enterprise-class Kubernetes clusters and supports Docker containers."
+    },
+    {
+     "key": "B",
+     "text": "You can quickly create CCE standard clusters, Kunpeng clusters, and CCE Turbo clusters on CCE based on your requirements and manage these clusters in a unified manner."
+    },
+    {
+     "key": "C",
+     "text": "You can create Kubernetes clusters in just a few clicks on CCE. There is no need to set up Docker or Kubernetes environments first."
+    },
+    {
+     "key": "D",
+     "text": "SoftWare Repository for Container (SWR) cannot be used separately as a container image repository. It must be used together with CCE and Cloud Container Instance (CCI)."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "CCE is built on open-source Kubernetes, provides scalable enterprise-class clusters that support Docker containers, lets you create CCE standard, Kunpeng, and CCE Turbo clusters and manage them centrally, and creates clusters in a few clicks without setting up Docker or Kubernetes yourself. SoftWare Repository for Container (SWR) can be used on its own as an image repository; it does not require CCE or CCI, so that statement is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-044",
+   "paperId": "n2324",
+   "questionNumber": 44,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220140.png",
+   "sha256": "2828133b83284600af3f8e24901a4b81ea2edcd16c81775521ed86c8733615f4",
+   "stem": "Which of the following statements about Application Performance Management (APM) are true?",
+   "options": [
+    {
+     "key": "A",
+     "text": "By simply installing APM Agents, users can monitor applications and facilitate online fault diagnosis."
+    },
+    {
+     "key": "B",
+     "text": "Users require an AK/SK for authentication when deploying APM Agents."
+    },
+    {
+     "key": "C",
+     "text": "When metrics reach alarm thresholds, the alarm data will be automatically sent to Application Operations Management (AOM) and displayed on the AOM alarm page."
+    },
+    {
+     "key": "D",
+     "text": "Users can tag resources under their accounts for classification."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Monitoring with APM only requires deploying the APM Agent package and adjusting application startup parameters, applications connect to APM after AK/SK authentication, and resources can be tagged for classification. According to the supplied explanation, alarms that reach thresholds are sent to users by SMS or email rather than to the AOM alarm page, so that statement is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-045",
+   "paperId": "n2324",
+   "questionNumber": 45,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220141.png",
+   "sha256": "354da938387b3601307acb06a50de8ce00806494929c7ebd97ce582957fb4a11",
+   "stem": "Which of the following statements are true about using MindSpore to complete the deep learning process (data preprocessing, network construction, model training, model evaluation, and model inference)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Data processing: The mindspore.dataset is called to load data and then transform data."
+    },
+    {
+     "key": "B",
+     "text": "Network construction: The construction class inherits nn.Cell and rewrites the __init__ and construct functions."
+    },
+    {
+     "key": "C",
+     "text": "Model training: When you define the training logic (or call the Model.eval API), there is no need to define the loss function or optimizer."
+    },
+    {
+     "key": "D",
+     "text": "Model evaluation: When you evaluate the training effect of a model based on the training dataset, the model status must be set to model.set_train(True)."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; restored the underscores around __init__.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "MindSpore loads and transforms data with mindspore.dataset, and a network is a class inheriting nn.Cell that defines its layers in __init__ and its forward pass in construct. Training always needs a loss function and an optimizer, so the claim that they are unnecessary is false. Evaluation should use validation or test data with the network in inference mode, set_train(False), not training data with set_train(True).",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-046",
+   "paperId": "n2324",
+   "questionNumber": 46,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220143.png",
+   "sha256": "e7225dd3bcfbf7c4c2ab09cdcecb2df75bfff8edd583197588dd2cf728b372c1",
+   "stem": "Which of the following statements about the Gradient Boosting Decision Trees (GBDT) and Random Forest algorithms are true?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Both can be used to solve classification problems and regression problems."
+    },
+    {
+     "key": "B",
+     "text": "During GBDT training, the sample loss predicted by the model must be as small as possible."
+    },
+    {
+     "key": "C",
+     "text": "During random forest training, base learners fit errors with each other."
+    },
+    {
+     "key": "D",
+     "text": "In GBDT, using base learner independently is better than using base learner in random forests."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Both GBDT and random forest handle classification and regression. GBDT adds trees one at a time, each fitted to reduce the loss left by the previous ones. In a random forest, trees are trained independently on random samples and features; they do not fit each other's errors. An individual GBDT tree is not better on its own than a random forest tree; each ensemble's strength comes from combining its trees.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-047",
+   "paperId": "n2324",
+   "questionNumber": 47,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220145.png",
+   "sha256": "1b34fc7c093e12268b0e8ac4298d2171ad951aea5a8ddecf57240d149cdf0ee6",
+   "stem": "Which of the following hardware does MindSpore support?",
+   "options": [
+    {
+     "key": "A",
+     "text": "CPU"
+    },
+    {
+     "key": "B",
+     "text": "CPU and NPU"
+    },
+    {
+     "key": "C",
+     "text": "NPU"
+    },
+    {
+     "key": "D",
+     "text": "GPU"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected NPU read as NPLJ.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material. The key selects the three individual hardware types and excludes the combined CPU and NPU option.",
+   "explanation": "MindSpore supports three hardware back ends: CPUs, NPUs (Ascend), and GPUs. The key selects each individual hardware type and treats the combined CPU and NPU choice as a distractor.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-048",
+   "paperId": "n2324",
+   "questionNumber": 48,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220146.png",
+   "sha256": "d0ff2bba2ec2a2475effc6ce272ffbd4e574354bbde09071e3aaa6edda6b594d",
+   "stem": "Server Migration Service (SMS) supports physical to virtual migration and virtual to virtual migration. Which of the following can be migrated using SMS?",
+   "options": [
+    {
+     "key": "A",
+     "text": "x86 physical servers in IDC"
+    },
+    {
+     "key": "B",
+     "text": "VMs on private clouds"
+    },
+    {
+     "key": "C",
+     "text": "VMs on public clouds"
+    },
+    {
+     "key": "D",
+     "text": "Service servers using the Power architecture"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected VMs read as VMS.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "SMS supports P2V and V2V migration: x86 physical servers in data centers and VMs on private or public clouds can be migrated to Huawei Cloud ECSs. Servers based on the Power architecture are not supported.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-049",
+   "paperId": "n2324",
+   "questionNumber": 49,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220147.png",
+   "sha256": "86723ba94c5e3a1e92023496ead4ba43a979e9a39d82f6e81a2999bf793fc9b4",
+   "stem": "An enterprise plans to use GeminiDB Redis API (originally \"GaussDB(for Redis)\") to improve read and write performance. Compared with open-source Redis, what are the advantages of GeminiDB Redis API?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Data is replicated asynchronously between primary and standby nodes, which impacts performance less and improves efficiency."
+    },
+    {
+     "key": "B",
+     "text": "Storage and compute resources are decoupled, so they can be scaled more flexibly."
+    },
+    {
+     "key": "C",
+     "text": "All data is flushed to disks. Three copies of data are stored in a distributed shared storage pool."
+    },
+    {
+     "key": "D",
+     "text": "A multi-thread architecture is used, so all nodes support writes, making it easy to double the throughput."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected the end of the stem.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "GeminiDB Redis API decouples storage from compute for flexible scaling, flushes all data to disk with three copies in a distributed shared storage pool, and uses a multi-threaded architecture in which every node accepts writes. It uses synchronous rather than asynchronous primary/standby replication, which favors consistency and reliability over write latency, so the asynchronous-replication statement is not an advantage it offers.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-050",
+   "paperId": "n2324",
+   "questionNumber": 50,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220149.png",
+   "sha256": "48ab93338397a20e43148b1b7a4c65d9625b83a340040cce343d40c4a3188dbd",
+   "stem": "Which of the following statements are true about source interceptors?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Flume allows you to modify or drop events in-flight with interceptors."
+    },
+    {
+     "key": "B",
+     "text": "Only one interceptor can be configured."
+    },
+    {
+     "key": "C",
+     "text": "Users can add the processing timestamp, agent host or IP address, and fixed key-value to the event head of the collected data."
+    },
+    {
+     "key": "D",
+     "text": "Timestamp interceptors and host interceptors are typical Flume interceptors."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Flume interceptors modify or drop events in flight before they reach the channel, can add a processing timestamp, the agent's host name or IP address, and fixed key-value headers, and the timestamp and host interceptors are the typical examples. Several interceptors can be chained on one source and run in the configured order, so the one-interceptor limit is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
   },
   {
    "captureId": "n2425-capture-038",
