@@ -9718,10 +9718,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-061",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are parameters for a Hidden Markov Model?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Emission probability"
+       },
+       {
+        "key": "B",
+        "text": "Transfer probability"
+       },
+       {
+        "key": "C",
+        "text": "Initial probability"
+       },
+       {
+        "key": "D",
+        "text": "Language probability"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "An HMM is defined by its initial probabilities, its state transition probabilities (how hidden states change), and its emission probabilities (how likely each observation is in each hidden state). \"Language probability\" belongs to language models, not to the HMM's parameters.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       327
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. \"Transfer probability\" is read as the transition probability."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214954.png",
@@ -9744,15 +9783,54 @@ HR.data.examInventory = {
       },
       {
        "key": "D",
-       "text": "A Markov chain, or a Markov process, is a stochastic discrete-event process that satisfies the Markov property. In this process, given the current knowledge or information, any prediction about the future dep on the present state. The past is irrelevant."
+       "text": "A Markov chain, or a Markov process, is a stochastic discrete-event process that satisfies the Markov property. In this process, given the current knowledge or information, any prediction about the future dep[ends solely] on the present state. The past is irrelevant."
       }
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-062",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Speech recognition systems often combine traditional acoustic models, such as Gaussian Mixture Models (GMM), with Hidden Markov Models (HMM). Which of the following statements about the GMM-HMM acoustic model are true?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The goal of Markov model is to learn the probabilities of state transitions based on observable data."
+       },
+       {
+        "key": "B",
+        "text": "GMM-HMM is an acoustic model. The next step is to use a language model to generate text."
+       },
+       {
+        "key": "C",
+        "text": "Third-order HMM models are commonly used in speech recognition tasks."
+       },
+       {
+        "key": "D",
+        "text": "A Markov chain, or a Markov process, is a stochastic discrete-event process that satisfies the Markov property. In this process, given the current knowledge or information, any prediction about the future dep on the present state. The past is irrelevant."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot. Part of the final option is hidden behind an on-screen icon; the bracketed words are the best reading of the covered text, matching the course definition of a Markov chain.",
+     "answer": [
+      "A",
+      "B",
+      "D"
+     ],
+     "explanation": "A Markov chain is a discrete-event stochastic process in which the future depends only on the present state, and training a Markov model estimates its transition probabilities from observed data. GMM-HMM is the acoustic model, after which a language model turns the recognized units into text. Speech recognition commonly uses first-order HMMs (often with three states per phoneme), not third-order HMMs.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       309
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The statement about learning transition probabilities is judged true because training an HMM estimates its probabilities from observed data."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214956.png",
@@ -9780,10 +9858,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-063",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following algorithms can be used for text classification?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Naive Bayes"
+       },
+       {
+        "key": "B",
+        "text": "Support vector machine (SVM)"
+       },
+       {
+        "key": "C",
+        "text": "Linear regression"
+       },
+       {
+        "key": "D",
+        "text": "TextCNN"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "D"
+     ],
+     "explanation": "Text classification can use traditional classifiers such as Naive Bayes and SVM, or deep learning models such as TextCNN, TextRNN, and BERT. Linear regression predicts continuous values and is not a classification algorithm.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       426
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214957.png",
@@ -9811,12 +9928,50 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2425-capture-064",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are convolutional neural networks?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Residual neural network (ResNet)"
+       },
+       {
+        "key": "B",
+        "text": "VGG16"
+       },
+       {
+        "key": "C",
+        "text": "Recurrent neural network (RNN)"
+       },
+       {
+        "key": "D",
+        "text": "Long short-term memory (LSTM)"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B"
+     ],
+     "explanation": "ResNet and VGG16 are convolutional neural networks built from stacked convolution layers; VGG16 uses consecutive 3x3 kernels and ResNet adds residual connections. RNNs and LSTMs are recurrent networks designed for sequence data.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       208
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214959.png",
@@ -9844,17 +9999,56 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-065",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "When documents are scanned for character recognition, the text can be hard to recognize if they are tilted at certain angles. What techniques can help fix this issue?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Gray level transformation"
+       },
+       {
+        "key": "B",
+        "text": "Affine transformation"
+       },
+       {
+        "key": "C",
+        "text": "Perspective transformation"
+       },
+       {
+        "key": "D",
+        "text": "Rotational transformation"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "Tilted scans are corrected geometrically: rotation transforms straighten skewed text, affine transforms correct rotation, scaling, and shear, and perspective transforms fix the keystone distortion of documents photographed at an angle. Gray level transformation only changes brightness and contrast, not geometry.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       134
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215001.png",
      "number": 66,
      "paperTotal": 90,
      "type": "multi",
-     "stem": "ModelArts is a one-stop Al development platform launched by Huawei. It provides full-process support from data processing, model training, to model deployment. Which of the following tasks are supported by ModelArts?",
+     "stem": "ModelArts is a one-stop AI development platform launched by Huawei. It provides full-process support from data processing, model training, to model deployment. Which of the following tasks are supported by ModelArts?",
      "options": [
       {
        "key": "A",
@@ -9875,10 +10069,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-066",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "ModelArts is a one-stop Al development platform launched by Huawei. It provides full-process support from data processing, model training, to model deployment. Which of the following tasks are supported by ModelArts?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Image segmentation"
+       },
+       {
+        "key": "B",
+        "text": "Image detection"
+       },
+       {
+        "key": "C",
+        "text": "Image classification"
+       },
+       {
+        "key": "D",
+        "text": "Genome sequencing"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "ModelArts supports computer vision tasks including image classification, object (image) detection, and image segmentation, from data labeling through training and deployment. Genome sequencing is a laboratory process, not a ModelArts AI task.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       528
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215002.png",
@@ -9906,10 +10139,48 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-067",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "The third step of training a neural network is to calculate the difference between the predicted and true values using a loss function. Which of the following are the first and second steps?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The model reaches convergence and the training ends."
+       },
+       {
+        "key": "B",
+        "text": "Input data features and obtain the predicted value by means of forward propagation."
+       },
+       {
+        "key": "C",
+        "text": "Update parameters by using gradient descent and backpropagation algorithms to minimize the loss value."
+       },
+       {
+        "key": "D",
+        "text": "Define the network structure and initialize network parameters."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "D"
+     ],
+     "explanation": "Training a neural network proceeds as follows: define the network structure and initialize parameters; feed in data and get predictions by forward propagation; compute the loss between predicted and true values; update parameters with backpropagation and gradient descent; and repeat until convergence. The first two steps are therefore defining and initializing the network, then forward propagation.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       40
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215004.png",
@@ -9937,17 +10208,55 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-068",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are the advantages of ReLU over Sigmoid?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Alleviation of the exploding gradient problem"
+       },
+       {
+        "key": "B",
+        "text": "Reduced computational load"
+       },
+       {
+        "key": "C",
+        "text": "Alleviation of the vanishing gradient problem"
+       },
+       {
+        "key": "D",
+        "text": "Global derivability"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "C"
+     ],
+     "explanation": "ReLU is simple to compute and eases the vanishing gradient problem, because its derivative is 1 for positive inputs instead of saturating like the sigmoid. It does not address exploding gradients, which need techniques such as gradient clipping, and it is not differentiable everywhere, since it has a kink at zero.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       35
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215006.png",
      "number": 69,
      "paperTotal": 90,
      "type": "multi",
-     "stem": "Speech processing is a key area in computer science and engineering, focusing on analyzing, understanding, and generating speech signals. With advancements in Al and machine learning, speech processing is now a vital part of daily life, used in applications like speech recognition and speech enhancement. Which of the following are speech processing tasks?",
+     "stem": "Speech processing is a key area in computer science and engineering, focusing on analyzing, understanding, and generating speech signals. With advancements in AI and machine learning, speech processing is now a vital part of daily life, used in applications like speech recognition and speech enhancement. Which of the following are speech processing tasks?",
      "options": [
       {
        "key": "A",
@@ -9968,10 +10277,44 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-069",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Speech processing is a key area in computer science and engineering, focusing on analyzing, understanding, and generating speech signals. With advancements in Al and machine learning, speech processing is now a vital part of daily life, used in applications like speech recognition and speech enhancement. Which of the following are speech processing tasks?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Language production"
+       },
+       {
+        "key": "B",
+        "text": "Language understanding"
+       },
+       {
+        "key": "C",
+        "text": "Text-to-speech (TTS)"
+       },
+       {
+        "key": "D",
+        "text": "Speech recognition"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al.",
+     "answer": [
+      "C",
+      "D"
+     ],
+     "explanation": "Speech processing works on speech signals: speech recognition converts speech to text and text-to-speech generates speech from text. Language production and language understanding operate on text and meaning, and belong to natural language processing rather than speech signal processing.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: language production and understanding are usually classed as natural language processing tasks, but some definitions of speech processing include them."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215007.png",
@@ -9999,10 +10342,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-070",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Once you have deployed a ModelArts ExeML object detection model, you can test it by inputting an image. Which of the following are the output prediction results?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The confidence of each detection box"
+       },
+       {
+        "key": "B",
+        "text": "The predicted label of each detection box"
+       },
+       {
+        "key": "C",
+        "text": "The actual label of each detection box"
+       },
+       {
+        "key": "D",
+        "text": "The vertex coordinates of each detection box"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "D"
+     ],
+     "explanation": "A deployed object detection model returns, for each detection box, the predicted label, a confidence score, and the box's coordinates. The actual (ground-truth) label is not known to the model at inference time, so it is not part of the prediction output.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215009.png",

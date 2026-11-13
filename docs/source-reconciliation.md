@@ -14,4 +14,4 @@ The national-stage papers are distinct from the three existing 60-question mock 
 
 Image references, supplied keys, and supplied explanations are retained in `data/exam-inventory.js`. Material-verified answers are stored separately from supplied keys. Unresolved records remain outside graded lesson sets.
 
-Reviewed transcriptions: 152. Verified answers: 2.
+Reviewed transcriptions: 162. Verified answers: 2.

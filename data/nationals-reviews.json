@@ -5841,6 +5841,434 @@
    "inApp": true
   },
   {
+   "captureId": "n2425-capture-061",
+   "paperId": "n2425",
+   "questionNumber": 61,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214953.png",
+   "sha256": "f8e0a626afc7e36326841bf1a715d7ecc0ab8d2feb5a1352930b1dd543d6a057",
+   "stem": "Which of the following are parameters for a Hidden Markov Model?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Emission probability"
+    },
+    {
+     "key": "B",
+     "text": "Transfer probability"
+    },
+    {
+     "key": "C",
+     "text": "Initial probability"
+    },
+    {
+     "key": "D",
+     "text": "Language probability"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     327
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. \"Transfer probability\" is read as the transition probability.",
+   "explanation": "An HMM is defined by its initial probabilities, its state transition probabilities (how hidden states change), and its emission probabilities (how likely each observation is in each hidden state). \"Language probability\" belongs to language models, not to the HMM's parameters.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-062",
+   "paperId": "n2425",
+   "questionNumber": 62,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214954.png",
+   "sha256": "2b72d25815500d20c1f2c664a01c84922e4d0eec452eafd0780f3a078695de02",
+   "stem": "Speech recognition systems often combine traditional acoustic models, such as Gaussian Mixture Models (GMM), with Hidden Markov Models (HMM). Which of the following statements about the GMM-HMM acoustic model are true?",
+   "options": [
+    {
+     "key": "A",
+     "text": "The goal of Markov model is to learn the probabilities of state transitions based on observable data."
+    },
+    {
+     "key": "B",
+     "text": "GMM-HMM is an acoustic model. The next step is to use a language model to generate text."
+    },
+    {
+     "key": "C",
+     "text": "Third-order HMM models are commonly used in speech recognition tasks."
+    },
+    {
+     "key": "D",
+     "text": "A Markov chain, or a Markov process, is a stochastic discrete-event process that satisfies the Markov property. In this process, given the current knowledge or information, any prediction about the future dep[ends solely] on the present state. The past is irrelevant."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     309
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot. Part of the final option is hidden behind an on-screen icon; the bracketed words are the best reading of the covered text, matching the course definition of a Markov chain.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. The statement about learning transition probabilities is judged true because training an HMM estimates its probabilities from observed data.",
+   "explanation": "A Markov chain is a discrete-event stochastic process in which the future depends only on the present state, and training a Markov model estimates its transition probabilities from observed data. GMM-HMM is the acoustic model, after which a language model turns the recognized units into text. Speech recognition commonly uses first-order HMMs (often with three states per phoneme), not third-order HMMs.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-063",
+   "paperId": "n2425",
+   "questionNumber": 63,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214956.png",
+   "sha256": "66c9bce97e436157ec90d5804b1ca4debe845896a4e1a1b5af61b2615c38e036",
+   "stem": "Which of the following algorithms can be used for text classification?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Naive Bayes"
+    },
+    {
+     "key": "B",
+     "text": "Support vector machine (SVM)"
+    },
+    {
+     "key": "C",
+     "text": "Linear regression"
+    },
+    {
+     "key": "D",
+     "text": "TextCNN"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     426
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Text classification can use traditional classifiers such as Naive Bayes and SVM, or deep learning models such as TextCNN, TextRNN, and BERT. Linear regression predicts continuous values and is not a classification algorithm.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-064",
+   "paperId": "n2425",
+   "questionNumber": 64,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214957.png",
+   "sha256": "40888d23af2cd1b76ccc3b7c20217fb561f6065fb1745b561b8c7669efce5c70",
+   "stem": "Which of the following are convolutional neural networks?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Residual neural network (ResNet)"
+    },
+    {
+     "key": "B",
+     "text": "VGG16"
+    },
+    {
+     "key": "C",
+     "text": "Recurrent neural network (RNN)"
+    },
+    {
+     "key": "D",
+     "text": "Long short-term memory (LSTM)"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     208
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "ResNet and VGG16 are convolutional neural networks built from stacked convolution layers; VGG16 uses consecutive 3x3 kernels and ResNet adds residual connections. RNNs and LSTMs are recurrent networks designed for sequence data.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-065",
+   "paperId": "n2425",
+   "questionNumber": 65,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214959.png",
+   "sha256": "32647f3400b225fff742e6428eff7ca178e9b029b058a3bb1e6dc7e35567bbbb",
+   "stem": "When documents are scanned for character recognition, the text can be hard to recognize if they are tilted at certain angles. What techniques can help fix this issue?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Gray level transformation"
+    },
+    {
+     "key": "B",
+     "text": "Affine transformation"
+    },
+    {
+     "key": "C",
+     "text": "Perspective transformation"
+    },
+    {
+     "key": "D",
+     "text": "Rotational transformation"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     134
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Tilted scans are corrected geometrically: rotation transforms straighten skewed text, affine transforms correct rotation, scaling, and shear, and perspective transforms fix the keystone distortion of documents photographed at an angle. Gray level transformation only changes brightness and contrast, not geometry.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-066",
+   "paperId": "n2425",
+   "questionNumber": 66,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215001.png",
+   "sha256": "a1a061af2c39b273a134f1cb38718cf8ecebd330e86cc02329c94aecbd61f484",
+   "stem": "ModelArts is a one-stop AI development platform launched by Huawei. It provides full-process support from data processing, model training, to model deployment. Which of the following tasks are supported by ModelArts?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Image segmentation"
+    },
+    {
+     "key": "B",
+     "text": "Image detection"
+    },
+    {
+     "key": "C",
+     "text": "Image classification"
+    },
+    {
+     "key": "D",
+     "text": "Genome sequencing"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     528
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "ModelArts supports computer vision tasks including image classification, object (image) detection, and image segmentation, from data labeling through training and deployment. Genome sequencing is a laboratory process, not a ModelArts AI task.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-067",
+   "paperId": "n2425",
+   "questionNumber": 67,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215002.png",
+   "sha256": "0ad5c0914bc0029a6d3725e9ee30ac4c69c8a371db45d0fbe124f68decce6d03",
+   "stem": "The third step of training a neural network is to calculate the difference between the predicted and true values using a loss function. Which of the following are the first and second steps?",
+   "options": [
+    {
+     "key": "A",
+     "text": "The model reaches convergence and the training ends."
+    },
+    {
+     "key": "B",
+     "text": "Input data features and obtain the predicted value by means of forward propagation."
+    },
+    {
+     "key": "C",
+     "text": "Update parameters by using gradient descent and backpropagation algorithms to minimize the loss value."
+    },
+    {
+     "key": "D",
+     "text": "Define the network structure and initialize network parameters."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B",
+    "D"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     40
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Training a neural network proceeds as follows: define the network structure and initialize parameters; feed in data and get predictions by forward propagation; compute the loss between predicted and true values; update parameters with backpropagation and gradient descent; and repeat until convergence. The first two steps are therefore defining and initializing the network, then forward propagation.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-068",
+   "paperId": "n2425",
+   "questionNumber": 68,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215004.png",
+   "sha256": "1c93b71341d053056acacefaeedde5f24574d6e0ccbbba35326f38b92ebbb97b",
+   "stem": "Which of the following are the advantages of ReLU over Sigmoid?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Alleviation of the exploding gradient problem"
+    },
+    {
+     "key": "B",
+     "text": "Reduced computational load"
+    },
+    {
+     "key": "C",
+     "text": "Alleviation of the vanishing gradient problem"
+    },
+    {
+     "key": "D",
+     "text": "Global derivability"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B",
+    "C"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     35
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "ReLU is simple to compute and eases the vanishing gradient problem, because its derivative is 1 for positive inputs instead of saturating like the sigmoid. It does not address exploding gradients, which need techniques such as gradient clipping, and it is not differentiable everywhere, since it has a kink at zero.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-069",
+   "paperId": "n2425",
+   "questionNumber": 69,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215006.png",
+   "sha256": "f5c8532f81d7121a373a031045d310cf844fd886615c2af8b96eb97a907d7641",
+   "stem": "Speech processing is a key area in computer science and engineering, focusing on analyzing, understanding, and generating speech signals. With advancements in AI and machine learning, speech processing is now a vital part of daily life, used in applications like speech recognition and speech enhancement. Which of the following are speech processing tasks?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Language production"
+    },
+    {
+     "key": "B",
+     "text": "Language understanding"
+    },
+    {
+     "key": "C",
+     "text": "Text-to-speech (TTS)"
+    },
+    {
+     "key": "D",
+     "text": "Speech recognition"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C",
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: language production and understanding are usually classed as natural language processing tasks, but some definitions of speech processing include them.",
+   "explanation": "Speech processing works on speech signals: speech recognition converts speech to text and text-to-speech generates speech from text. Language production and language understanding operate on text and meaning, and belong to natural language processing rather than speech signal processing.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-070",
+   "paperId": "n2425",
+   "questionNumber": 70,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215007.png",
+   "sha256": "de5497048bc91cd5ed3a896a61f2635252f9a9b5bb983ac22a2abf6f2c841b56",
+   "stem": "Once you have deployed a ModelArts ExeML object detection model, you can test it by inputting an image. Which of the following are the output prediction results?",
+   "options": [
+    {
+     "key": "A",
+     "text": "The confidence of each detection box"
+    },
+    {
+     "key": "B",
+     "text": "The predicted label of each detection box"
+    },
+    {
+     "key": "C",
+     "text": "The actual label of each detection box"
+    },
+    {
+     "key": "D",
+     "text": "The vertex coordinates of each detection box"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "A deployed object detection model returns, for each detection box, the predicted label, a confidence score, and the box's coordinates. The actual (ground-truth) label is not known to the model at inference time, so it is not part of the prediction output.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
    "captureId": "n2526-capture-059",
    "paperId": "n2526",
    "questionNumber": 59,
