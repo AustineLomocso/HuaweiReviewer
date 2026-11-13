@@ -9030,10 +9030,46 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-051",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "What are the image processing capabilities provided by Object Storage Service (OBS)?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Converting image formats"
+       },
+       {
+        "key": "B",
+        "text": "Cropping, compressing, and slimming images"
+       },
+       {
+        "key": "C",
+        "text": "Configuring text and image watermarks"
+       },
+       {
+        "key": "D",
+        "text": "Getting information about an image"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "OBS image processing handles images stored in buckets on the fly: it converts formats, crops, compresses, and slims images, adds text and image watermarks, and returns image information such as dimensions and format. All four capabilities are provided.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages describe OBS storage but not its image processing feature."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214938.png",
@@ -9044,7 +9080,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "obsfs is a IJI tool for accessing and managing OBS resources. It is recommended for batch processing and automated tasks."
+       "text": "obsfs is a UI tool for accessing and managing OBS resources. It is recommended for batch processing and automated tasks."
       },
       {
        "key": "B",
@@ -9061,10 +9097,48 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-052",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Object Storage Service (OBS) provides a range of tools for easy storage management. Which of the following statements about these tools are false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "obsfs is a IJI tool for accessing and managing OBS resources. It is recommended for batch processing and automated tasks."
+       },
+       {
+        "key": "B",
+        "text": "OBS SDKs encapsulate the REST API provided by OBS to simplify development."
+       },
+       {
+        "key": "C",
+        "text": "OBS Browser+ is a graphical Windows client that lets you manage OBS resources from your desktop with ease."
+       },
+       {
+        "key": "D",
+        "text": "obsutil is a tool based on Filesystem in Userspace (FUSE) and is used to mount OBS parallel file systems to Linux operating systems."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected UI read as IJI.",
+     "answer": [
+      "A",
+      "D"
+     ],
+     "explanation": "The two false statements swap the tools' roles. obsutil is the command-line tool recommended for batch processing and automated tasks, while obsfs is the FUSE-based tool that mounts OBS parallel file systems on Linux. OBS SDKs do wrap the REST API, and OBS Browser+ is a graphical desktop client.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       234
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214939.png",
@@ -9092,10 +9166,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-053",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are load balancing algorithms supported by shared and dedicated load balancers?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Weighted round robin"
+       },
+       {
+        "key": "B",
+        "text": "Weighted least connections"
+       },
+       {
+        "key": "C",
+        "text": "Source IP hash"
+       },
+       {
+        "key": "D",
+        "text": "Destination IP address"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "Both shared and dedicated load balancers support weighted round robin, weighted least connections, and source IP hash. Connection ID is available only on dedicated load balancers, and \"destination IP address\" is not a supported algorithm.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       165
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214941.png",
@@ -9123,41 +9236,115 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-054",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "In the Kubernetes architecture, which of the following components are deployed on master nodes?",
+      "options": [
+       {
+        "key": "A",
+        "text": "kubelet"
+       },
+       {
+        "key": "B",
+        "text": "Scheduler"
+       },
+       {
+        "key": "C",
+        "text": "Controller manager"
+       },
+       {
+        "key": "D",
+        "text": "etcd"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "Master nodes run the control plane: kube-apiserver, etcd (the cluster database), kube-scheduler, and kube-controller-manager. kubelet runs on every worker node to manage that node's pods.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       341
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214943.png",
      "number": 55,
      "paperTotal": 90,
      "type": "multi",
-     "stem": "Which of the following statements are true about the Spark MLIib classification algorithm?",
+     "stem": "Which of the following statements are true about the Spark MLlib classification algorithm?",
      "options": [
       {
        "key": "A",
-       "text": "In MLIib, the linear SVM uses L2 regularization for training and also supports LI regularization."
+       "text": "In MLlib, the linear SVM uses L2 regularization for training and also supports L1 regularization."
       },
       {
        "key": "B",
-       "text": "In MLIib, RDD represents the training dataset. The label index starts from O, for example, O, 1, 2. For binary labels, y is the sample with +1 for positive and —1 for negative."
+       "text": "In MLlib, RDD represents the training dataset. The label index starts from 0, for example, 0, 1, 2. For binary labels, y is the sample with +1 for positive and -1 for negative."
       },
       {
        "key": "C",
-       "text": "Linear SVMs in MLIib only support binary classification. Logistic regression supports both binary and multiclass classification."
+       "text": "Linear SVMs in MLlib only support binary classification. Logistic regression supports both binary and multiclass classification."
       },
       {
        "key": "D",
-       "text": "MLIib supports two linear methods: linear Support Vector Machines (SVMs) and logistic regression."
+       "text": "MLlib supports two linear methods: linear Support Vector Machines (SVMs) and logistic regression."
       }
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-055",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements are true about the Spark MLIib classification algorithm?",
+      "options": [
+       {
+        "key": "A",
+        "text": "In MLIib, the linear SVM uses L2 regularization for training and also supports LI regularization."
+       },
+       {
+        "key": "B",
+        "text": "In MLIib, RDD represents the training dataset. The label index starts from O, for example, O, 1, 2. For binary labels, y is the sample with +1 for positive and —1 for negative."
+       },
+       {
+        "key": "C",
+        "text": "Linear SVMs in MLIib only support binary classification. Logistic regression supports both binary and multiclass classification."
+       },
+       {
+        "key": "D",
+        "text": "MLIib supports two linear methods: linear Support Vector Machines (SVMs) and logistic regression."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; restored MLlib, L1, and the digit 0.",
+     "answer": [
+      "A",
+      "C",
+      "D"
+     ],
+     "explanation": "MLlib's linear classification methods are linear SVMs and logistic regression. Linear SVMs are trained with L2 regularization by default, also support L1, and handle only binary classification, while logistic regression handles both binary and multiclass problems. The label statement is wrong: MLlib expects class labels starting from 0, and for binary classification the labels are 0 and 1, not +1 and -1.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Based on the Spark MLlib documentation, not the supplied course pages."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214944.png",
@@ -9185,10 +9372,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-056",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements are true about the Flume architecture?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Source indicates the data source, which is the source of log information. Flume models the raw data and abstracts it into the processed data objects (events)."
+       },
+       {
+        "key": "B",
+        "text": "A channel processor caches the data sent from the sink into the channel."
+       },
+       {
+        "key": "C",
+        "text": "The interceptor is used to modify collected data based on user configuration."
+       },
+       {
+        "key": "D",
+        "text": "The channel selector is used to place data in different channels based on user configuration."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "C",
+      "D"
+     ],
+     "explanation": "In Flume, the source is where log data comes from and is modeled as events, the interceptor modifies collected data according to configuration, and the channel selector places data into different channels according to configuration. The channel processor caches data sent from the source, not from the sink, into the channel.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       606
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214946.png",
@@ -9216,10 +9442,44 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-057",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements are true about the similarities and differences between Spark and MapReduce?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Compared with MapReduce, Spark allows users to develop faster by supporting more operations on datasets and providing more flexible programming models."
+       },
+       {
+        "key": "B",
+        "text": "Spark has a higher fault tolerance capability (Spark Lineage) than MapReduce."
+       },
+       {
+        "key": "C",
+        "text": "Spark stores intermediate data in disks, which lowers the latency and improves the efficiency of iterative computing and batch processing."
+       },
+       {
+        "key": "D",
+        "text": "Spark provides 100 times the performance of MapReduce."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B"
+     ],
+     "explanation": "Spark offers many more dataset operations and a more flexible programming model than MapReduce, and its lineage records how each RDD was derived so lost partitions can be recomputed. Spark is faster because it keeps intermediate data in memory, not on disk, so that statement is false. The often-quoted 100x speed-up applies only to certain in-memory workloads and is not a general guarantee.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages describe Spark and MapReduce separately but do not compare them directly."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214948.png",
@@ -9230,7 +9490,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "You must specifry a database when creating a table."
+       "text": "You must specify a database when creating a table."
       },
       {
        "key": "B",
@@ -9247,10 +9507,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-058",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements are true about the Hive data storage model?",
+      "options": [
+       {
+        "key": "A",
+        "text": "You must specifry a database when creating a table."
+       },
+       {
+        "key": "B",
+        "text": "A partition corresponds to a subdirectory in the directory where a table is located."
+       },
+       {
+        "key": "C",
+        "text": "A bucket corresponds to a file under the directory where a table or partition resides."
+       },
+       {
+        "key": "D",
+        "text": "A table corresponds to a directory in HDFS."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "In Hive's storage model, a table corresponds to a directory on HDFS, a partition to a subdirectory of the table's directory, and a bucket to a file under the table or partition directory. Specifying a database is optional: if none is given, the default database is used.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       595
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214949.png",
@@ -9278,10 +9577,50 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-059",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are part of the speech synthesis process?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Text-to-phoneme conversion"
+       },
+       {
+        "key": "B",
+        "text": "Text normalization"
+       },
+       {
+        "key": "C",
+        "text": "Waveform generation"
+       },
+       {
+        "key": "D",
+        "text": "Result evaluation"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "Speech synthesis first analyzes text, which includes text normalization and converting text into a phonemic representation, and then synthesizes the waveform by concatenative, formant, or parametric methods. Result evaluation is not a step in the synthesis process itself.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       283,
+       284
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214951.png",
@@ -9309,10 +9648,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-060",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are image data augmentation methods?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Resizing"
+       },
+       {
+        "key": "B",
+        "text": "Flipping"
+       },
+       {
+        "key": "C",
+        "text": "Stretching"
+       },
+       {
+        "key": "D",
+        "text": "Modifying images to add sub-images"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "Common image augmentation methods include scaling (resizing), stretching, adding noise, flipping, rotation, translation, shearing, contrast adjustment, and channel transformation. Modifying images to add sub-images is not one of the standard augmentation methods listed.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       148
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214953.png",
