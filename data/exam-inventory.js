@@ -12878,7 +12878,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "ECSS with different specifications result in varying vCPU performance."
+       "text": "ECSs with different specifications result in varying vCPU performance."
       },
       {
        "key": "B",
@@ -12886,7 +12886,7 @@ HR.data.examInventory = {
       },
       {
        "key": "C",
-       "text": "Health check is configured, so traffic is not routed to unhealthy sewers, which increasing the pressure on remaining sewers."
+       "text": "Health check is configured, so traffic is not routed to unhealthy servers, which increasing the pressure on remaining servers."
       },
       {
        "key": "D",
@@ -12895,10 +12895,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-023",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An e-commerce platform uses Huawei Cloud Elastic Load Balance (ELB) and Auto Scaling to distribute user requests across Elastic Cloud Servers (ECSs) with the same weight in the backend server group. However, monitoring metrics show that the CPU usage on these ECS differs significantly. What could be the main reason for the load imbalance?",
+      "options": [
+       {
+        "key": "A",
+        "text": "ECSS with different specifications result in varying vCPU performance."
+       },
+       {
+        "key": "B",
+        "text": "HTTP/2 is enabled, so the multiplexing feature changes the request allocation logic."
+       },
+       {
+        "key": "C",
+        "text": "Health check is configured, so traffic is not routed to unhealthy sewers, which increasing the pressure on remaining sewers."
+       },
+       {
+        "key": "D",
+        "text": "Sticky session is enabled, so the requests from the same user are routed to the same ECS."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors. \"which increasing\" is as printed on the original paper.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "With equal weights, ELB sends roughly the same number of requests to each backend, so ECSs with weaker specifications (fewer or slower vCPUs) run at much higher CPU usage than larger ones. HTTP/2 multiplexing does not change how ELB allocates requests to backends, and health checks only remove unhealthy servers. Sticky sessions can contribute, but differing instance specifications are the main cause.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: sticky sessions can also skew load, but the question asks for the main reason when all weights are equal."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214006.png",
@@ -12913,7 +12946,7 @@ HR.data.examInventory = {
       },
       {
        "key": "B",
-       "text": "ClusteriP"
+       "text": "ClusterIP"
       },
       {
        "key": "C",
@@ -12926,12 +12959,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-024",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise uses Huawei Cloud Container Engine (CCE) for containerization, and its service modules only need to communicate internally within the cluster. They do not require external access. Which Service type best supports internal service discovery and load balancing?",
+      "options": [
+       {
+        "key": "A",
+        "text": "None"
+       },
+       {
+        "key": "B",
+        "text": "ClusteriP"
+       },
+       {
+        "key": "C",
+        "text": "NodePort"
+       },
+       {
+        "key": "D",
+        "text": "LoadBalancer"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected ClusterIP.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "A ClusterIP Service gives workloads a virtual IP address reachable only inside the cluster, providing internal service discovery and load balancing. NodePort and LoadBalancer Services expose workloads outside the cluster, which is not needed here.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       406
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214008.png",
@@ -12942,7 +13012,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "A VPC peering connection can be created between the VPCs of departments 8 and C."
+       "text": "A VPC peering connection can be created between the VPCs of departments B and C."
       },
       {
        "key": "B",
@@ -12959,10 +13029,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-025",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise uses multiple accounts to manage services on Huawei Cloud. Department A has a file sharing website to store employee data. Department B uploads attendance data to the database of department A. Department C reads data from department A to calculate salaries. Which of the following configurations can be used by the enterprise administrator to meet the requirements of the three departments?",
+      "options": [
+       {
+        "key": "A",
+        "text": "A VPC peering connection can be created between the VPCs of departments 8 and C."
+       },
+       {
+        "key": "B",
+        "text": "A VPC peering connection can be created between the VPCs of departments A and C, and the VPCs of departments A and B."
+       },
+       {
+        "key": "C",
+        "text": "VPC peering connections cannot be used to connect the VPCs from different accounts."
+       },
+       {
+        "key": "D",
+        "text": "A VPC peering connection can be created between the VPCs of departments A and B."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "VPC peering connects VPCs in the same region, including VPCs in different accounts once the peer owner accepts. Peering is not transitive, so Departments B and C each need their own peering connection with Department A, where the data lives.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       145
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214010.png",
@@ -12990,10 +13097,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-026",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise plans to deploy a three-tier web application on Huawei Cloud Container Engine (CCE). The application includes an Nginx web server, an application server, and a MySQL database. Which of the following workload type combinations is most appropriate based on the technical features of each component?",
+      "options": [
+       {
+        "key": "A",
+        "text": "(1) Deployment (2) Deployment (3) StatefulSet"
+       },
+       {
+        "key": "B",
+        "text": "(1) Deployment (2) Deployment (3) Deployment"
+       },
+       {
+        "key": "C",
+        "text": "(1) Deployment (2) Deployment (3) Job"
+       },
+       {
+        "key": "D",
+        "text": "(1) StatefulSet (2) StatefulSet (3) DaemonSet"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "The Nginx web server and the application server are stateless, so they run as Deployments. The MySQL database needs stable identities and persistent storage, so it runs as a StatefulSet. Jobs are for one-off tasks and DaemonSets run one pod per node, neither of which fits a database.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       395
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214012.png",
@@ -13021,23 +13165,56 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-027",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A tenant creates an IPv4 subnet with a CIDR block of 192.168.0.0/24 when creating a Virtual Private Cloud (VPC) on Huawei Cloud. How many host IP addresses can the subnet provide at most?",
+      "options": [
+       {
+        "key": "A",
+        "text": "251"
+       },
+       {
+        "key": "B",
+        "text": "62"
+       },
+       {
+        "key": "C",
+        "text": "254"
+       },
+       {
+        "key": "D",
+        "text": "510"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "A /24 subnet has 256 addresses. Huawei Cloud reserves five of them: the network address, the gateway (.1), two system addresses (.253 and .254), and the broadcast address (.255). That leaves 256 - 5 = 251 assignable host addresses.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Based on Huawei Cloud VPC documentation, which reserves five addresses in each subnet; a generic subnetting answer would be 254."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214014.png",
      "number": 28,
      "paperTotal": 150,
      "type": "single",
-     "stem": "A company deploys multiple Elastic Cloud Servers (ECSs) on Huawei Cloud, and all these ECSS need to access Internet resources. Which of the following is an action they can take during cloud network planning to reduce their Elastic IP (EIP) costs?",
+     "stem": "A company deploys multiple Elastic Cloud Servers (ECSs) on Huawei Cloud, and all these ECSs need to access Internet resources. Which of the following is an action they can take during cloud network planning to reduce their Elastic IP (EIP) costs?",
      "options": [
       {
        "key": "A",
-       "text": "Apply for a NAT proxy sewer and bind an EIP to it. The proxy server can then use destination network address translation (DNAT) to allow the ECSS to share the EIP to access the Internet."
+       "text": "Apply for a NAT proxy server and bind an EIP to it. The proxy server can then use destination network address translation (DNAT) to allow the ECSs to share the EIP to access the Internet."
       },
       {
        "key": "B",
@@ -13049,15 +13226,52 @@ HR.data.examInventory = {
       },
       {
        "key": "D",
-       "text": "Apply for a NAT proxy server and bind an EIP to it. The proxy server uses source network address translation (SNAT) to allow the ECSS to share the EIP to access the Internet."
+       "text": "Apply for a NAT proxy server and bind an EIP to it. The proxy server uses source network address translation (SNAT) to allow the ECSs to share the EIP to access the Internet."
       }
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-028",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A company deploys multiple Elastic Cloud Servers (ECSs) on Huawei Cloud, and all these ECSS need to access Internet resources. Which of the following is an action they can take during cloud network planning to reduce their Elastic IP (EIP) costs?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Apply for a NAT proxy sewer and bind an EIP to it. The proxy server can then use destination network address translation (DNAT) to allow the ECSS to share the EIP to access the Internet."
+       },
+       {
+        "key": "B",
+        "text": "Bind an EIP to each ECS."
+       },
+       {
+        "key": "C",
+        "text": "Apply for a load balancer and bind an EIP to it, so that the load balancer can function as a proxy to allow the ECSS to access the Internet."
+       },
+       {
+        "key": "D",
+        "text": "Apply for a NAT proxy server and bind an EIP to it. The proxy server uses source network address translation (SNAT) to allow the ECSS to share the EIP to access the Internet."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "SNAT translates the ECSs' private addresses into one shared EIP for outbound Internet access, so a single EIP serves many servers. DNAT does the reverse, exposing internal services to the Internet. Binding an EIP to every ECS costs more, and a load balancer distributes inbound traffic rather than proxying outbound access.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       192
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214016.png",
@@ -13085,10 +13299,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-029",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise plans to deploy a highly available website on Huawei Cloud Container Engine (CCE), including components like the frontend and backend of the site, and the databases it needs to run. Which of the following deployment solutions is the most inappropriate?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Nginx deployed via Deployments: Multiple pods with HPA allow Nginx to efficiently handle frontend traffic."
+       },
+       {
+        "key": "B",
+        "text": "MySQL deployed via Helm charts: Leveraging community Helm charts enables quick setup of primary/secondary clusters."
+       },
+       {
+        "key": "C",
+        "text": "Log clearance service deployed via CronJobs: Scheduled tasks like log archiving and cleanup can be automated to run daily, such as in the early morning."
+       },
+       {
+        "key": "D",
+        "text": "Tomcat deployed via jobs: The application services run and automatically exit after completion."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Jobs run one-off tasks that exit when complete, so they are wrong for Tomcat, which must serve requests continuously. Nginx scaled with Deployments and HPA, MySQL installed from Helm charts, and log cleanup scheduled with CronJobs are all appropriate choices.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       395
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214018.png",
@@ -13099,7 +13350,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "Acceleration optimization: CDN deploys edge Pops to shorten the content transmission distance, reducing latency and loading pages faster."
+       "text": "Acceleration optimization: CDN deploys edge PoPs to shorten the content transmission distance, reducing latency and loading pages faster."
       },
       {
        "key": "B",
@@ -13116,10 +13367,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-030",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Enterprises deploy Huawei Cloud Content Delivery Network (CDN) so their users can obtain required content from the nearest point of presence (POP), improving user experience. Which of the following is not a feature of Huawei Cloud CDN?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Acceleration optimization: CDN deploys edge Pops to shorten the content transmission distance, reducing latency and loading pages faster."
+       },
+       {
+        "key": "B",
+        "text": "Easy access management: Customers can configure domain names on the visual CDN console and call open APIs to quickly integrate CDN with existing O&M systems."
+       },
+       {
+        "key": "C",
+        "text": "Edge compute power scheduling: CDN analyzes user requests and dynamically allocates GPU compute resources to process large-scale parallel computing tasks."
+       },
+       {
+        "key": "D",
+        "text": "Smart cache: CDN uses AICache to predict content popularity and SSD storage to improve the cache hit ratio."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected PoPs.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "CDN caches content at edge PoPs close to users to cut latency, offers console and API management, and uses smart caching to raise hit ratios. It delivers content; it does not schedule GPU compute for large parallel computing tasks.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       383
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214020.png",
@@ -13134,7 +13422,7 @@ HR.data.examInventory = {
       },
       {
        "key": "B",
-       "text": "Create multiple load balancers in different regions and configure DNS records so that load balancers can provide set-vices in polling mode to improve cross-region availability."
+       "text": "Create multiple load balancers in different regions and configure DNS records so that load balancers can provide services in polling mode to improve cross-region availability."
       },
       {
        "key": "C",
@@ -13147,10 +13435,40 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-031",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A company deploys its critical service system on the cloud and uses Elastic Load Balance (ELB) to distribute traffic. Which of the following action can be taken to prevent service interruptions due to a single load balancer fault?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Deploy Elastic Cloud Servers (ECSS) in different AZS and associate them with a load balancer to improve local availability."
+       },
+       {
+        "key": "B",
+        "text": "Create multiple load balancers in different regions and configure DNS records so that load balancers can provide set-vices in polling mode to improve cross-region availability."
+       },
+       {
+        "key": "C",
+        "text": "Single points of failure (SPOFs) caused by ELB cannot be avoided. You are advised to enable health check."
+       },
+       {
+        "key": "D",
+        "text": "Create multiple load balancers in the same region and configure DNS records so that load balancers can provide services in polling mode to improve local availability."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error. Same scenario as 2024-25 question 11.",
+     "explanation": "Spreading backend ECSs across AZs protects against server failures but not a fault in the load balancer itself, and single points of failure can be avoided. Creating several load balancers and distributing traffic among them with DNS removes the dependency on one load balancer, whether they are in the same region or in different regions. Because both are valid and only one answer is accepted, this question is shown for practice but not scored.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Not graded: both multiple-load-balancer designs (in one region or across regions, behind DNS) protect against a single load balancer fault, and no key or course page says which one the paper intended."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214021.png",
@@ -13178,10 +13496,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-032",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise plans to use Storage Disaster Recovery Service (SDRS) to configure cross-AZ disaster recovery (DR) for critical service systems. Which of the following operation processes is correct?",
+      "options": [
+       {
+        "key": "A",
+        "text": "1 . Create protection groups. 2. Create protected instances. 3. Enable protection."
+       },
+       {
+        "key": "B",
+        "text": "1. Enable protection. 2. Create protection groups. 3. Create protected instances."
+       },
+       {
+        "key": "C",
+        "text": "1. Enable protection. 2. Create protected instances. 3. Create protection groups."
+       },
+       {
+        "key": "D",
+        "text": "1. Create protected instances. 2. Create protection groups. 3. Enable protection."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "With SDRS you first create a protection group (which defines the production and DR sites), then create protected instances in that group (pairing production servers with DR servers), and finally enable protection to start replication.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The sequence follows SDRS documentation; the course page describes SDRS without the setup steps."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214023.png",
