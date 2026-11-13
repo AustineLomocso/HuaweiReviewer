@@ -14901,10 +14901,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-053",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "The softmax function is often used in multiclass classification models in machine learning. Which layer of a deep neural network is the softmax function mainly used for?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Pooling"
+       },
+       {
+        "key": "B",
+        "text": "Convolutional"
+       },
+       {
+        "key": "C",
+        "text": "Input"
+       },
+       {
+        "key": "D",
+        "text": "Output"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Softmax is generally the activation function of the final fully connected output layer, where it converts the class scores into probabilities. Pooling, convolutional, and input layers do not use it.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai-v4",
+      "pages": [
+       263
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214059.png",
@@ -14932,17 +14969,54 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-054",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about overfitting and underfitting is true?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The degradation of neural networks is not caused by overfitting."
+       },
+       {
+        "key": "B",
+        "text": "Underfitting means that a model performs well during training but poorly during prediction."
+       },
+       {
+        "key": "C",
+        "text": "The underfitting problem can be solved by adding training dataset samples."
+       },
+       {
+        "key": "D",
+        "text": "Overfitting means that a model does not fully fit its training data."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "Network degradation, where deeper networks get worse accuracy even on training data, comes from optimization difficulty in deep networks rather than overfitting, which is why ResNet's residual connections address it. Underfitting means poor performance on the training data itself and is fixed with a more capable model rather than more samples, and overfitting means fitting the training data too closely, not too loosely.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       118
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214100.png",
      "number": 55,
      "paperTotal": 150,
      "type": "single",
-     "stem": "Expert systems are a key part of early Al research. To which category do they belong?",
+     "stem": "Expert systems are a key part of early AI research. To which category do they belong?",
      "options": [
       {
        "key": "A",
@@ -14963,10 +15037,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-055",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Expert systems are a key part of early Al research. To which category do they belong?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Actionism"
+       },
+       {
+        "key": "B",
+        "text": "Connectionism"
+       },
+       {
+        "key": "C",
+        "text": "Bionicsism"
+       },
+       {
+        "key": "D",
+        "text": "Symbolism"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al. \"Bionicsism\" is as printed on the original paper.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Expert systems belong to symbolism, which represents knowledge as symbols and rules and applies logical reasoning; the course credits symbolism with developing expert systems and knowledge engineering. Connectionism builds neural networks and actionism (behaviorism) focuses on perception and action.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       8
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214102.png",
@@ -14994,10 +15105,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-056",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "In what applications do CNNs excel most?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Knowledge graph"
+       },
+       {
+        "key": "B",
+        "text": "Machine translation"
+       },
+       {
+        "key": "C",
+        "text": "Computer vision"
+       },
+       {
+        "key": "D",
+        "text": "Speech recognition"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "CNNs excel at computer vision because local receptive fields and shared kernels capture spatial features such as edges and textures in images. Knowledge graphs, machine translation, and speech recognition are dominated by other techniques such as graph methods, Transformers, and sequence models.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       112
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214103.png",
@@ -15025,10 +15173,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-057",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Long short-term memory (LSTM) is a type of recurrent neural network (RNN) and is characterized by its cell state and gate structure. Which of the following is not considered a gate structure in LSTM?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Input"
+       },
+       {
+        "key": "B",
+        "text": "Memory"
+       },
+       {
+        "key": "C",
+        "text": "Output"
+       },
+       {
+        "key": "D",
+        "text": "Forget"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "An LSTM controls its cell state with three gates: input, output, and forget. \"Memory\" refers to the cell state, not a gate.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       358
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214105.png",
@@ -15056,10 +15241,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-058",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "In deep learning, which of the following does processes does ModelArts data management address?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Inference"
+       },
+       {
+        "key": "B",
+        "text": "Fine-tuning"
+       },
+       {
+        "key": "C",
+        "text": "Training"
+       },
+       {
+        "key": "D",
+        "text": "Data preparation"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot. \"which of the following does processes does\" is as printed on the original paper.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "ModelArts data management covers data preparation: cleansing, selection, verification, augmentation, and labeling of datasets. Training, fine-tuning, and inference are handled by other ModelArts modules.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       528
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214107.png",
@@ -15112,7 +15334,19 @@ HR.data.examInventory = {
       ]
      },
      "transcriptionStatus": "visually-reviewed",
-     "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending."
+     "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending.",
+     "explanation": "The course describes two model quantization approaches: post-training quantization (PTQ), which quantizes a trained floating-point model and calibrates it with a little data, and quantization-aware training (QAT), which inserts pseudo-quantizers during training so the model adapts to quantization. PTF and QAF are not recognized methods, so with two non-methods and one accepted answer this question is shown for practice but not scored.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       296,
+       299,
+       300
+      ]
+     },
+     "inApp": true,
+     "flag": "Not graded: PTQ (post-training quantization) and QAT (quantization-aware training) are the course's quantization methods, but neither PTF nor QAF is a standard quantization method, so two options fit the question and no key says which one was intended."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214113.png",
@@ -15140,10 +15374,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-060",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following ModelArts training parameters is used to customize hyperparameters?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Resource Pool"
+       },
+       {
+        "key": "B",
+        "text": "Hyperparameter"
+       },
+       {
+        "key": "C",
+        "text": "Algorithm Type"
+       },
+       {
+        "key": "D",
+        "text": "Compute Nodes"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "In a ModelArts training job, the Hyperparameter settings are where you define or adjust hyperparameters such as the learning rate and batch size. Resource pool and compute nodes choose where and on how many nodes the job runs, and algorithm type selects the algorithm source.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214115.png",
@@ -15171,10 +15438,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-061",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about common machine learning algorithms is true?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Classification is when the system tries to group samples in a dataset into several subsets, each of which is called a cluster."
+       },
+       {
+        "key": "B",
+        "text": "Naive Bayes gets its name because it assumes all features are statistically independent, which is the simplest form of Bayesian classification."
+       },
+       {
+        "key": "C",
+        "text": "A well-classified point located far from the decision boundary will influence the SVM's boundary if included in the training data."
+       },
+       {
+        "key": "D",
+        "text": "The K-means algorithm always converges to the global optimum."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "Naive Bayes is called naive because it assumes the features are independent of each other, the simplest form of Bayesian classification. Grouping samples into clusters describes clustering rather than classification, an SVM's boundary depends only on the support vectors near it, so a well-classified distant point has no effect, and K-means can converge to a local optimum depending on the initial centers.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai-v4",
+      "pages": [
+       178
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214117.png",
@@ -15202,10 +15506,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-062",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is a feature of the architecture of Huawei Cloud 910 chips?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Da Vinci architecture"
+       },
+       {
+        "key": "B",
+        "text": "Von Neumann architecture"
+       },
+       {
+        "key": "C",
+        "text": "x86"
+       },
+       {
+        "key": "D",
+        "text": "MIPS"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "Huawei's Ascend 910 AI processors use the Da Vinci architecture, whose AI cores combine cube, vector, and scalar units. Von Neumann, x86, and MIPS are general-purpose computer or CPU architectures.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The supplied course pages mention Ascend 910 hardware but not its core architecture."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214118.png",
