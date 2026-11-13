@@ -7,7 +7,8 @@ Read this at the start of each session, and update it before ending one. Task nu
 **Bulk writing in progress (Task 23).** Nothing is waiting on the user. The pilot, the practice-mode feedback changes, and the Course 3 topics are all approved and done.
 
 - **Branch:** `build/reviewer`, not merged to `main`.
-- **Done:** Tasks 1-22, practice-mode feedback, Cloud chapter 2 pilot, and all 30 Cloud subchapters.
+- **Done:** Tasks 1-22, practice-mode feedback, and every Cloud and AI subchapter and chapter file (steps 1 and 2 below).
+- **In progress (2026-11-13):** course files `cloud` and `ai`, written one test at a time (notes and pre first, then post, then summative, each by its own subagent adding to the same file), and Course 3 subchapters starting at `beyond-1-1`.
 - **Tests at last run:** 96/96 unit tests, full browser checklist passing, checker at 0 errors.
 - **Find what's left:** `npm run check` lists each unwritten section as a "not yet written" warning.
 
@@ -67,3 +68,9 @@ Each code task went through an implementer and an independent reviewer. Reviewer
 - The user approved the pilot and asked for instant practice feedback and coloured item numbers, now done.
 - Added Course 3 (11 topics), mapped its 63 past questions, and wrote all 30 Cloud subchapters.
 - Hit the 5-hour usage limit a second time, and resumed the interrupted AI sections.
+
+### 2026-11-12 to 13: Chapter files
+
+- Wrote `cloud-5`, `cloud-6` and `ai-1` to `ai-6`, 40 questions each with no shortfalls. A third usage-limit stop interrupted six writers; all resumed and finished.
+- Check result: 96/96 unit tests, checker at 0 errors.
+- Started the course files and Course 3 subchapters.
