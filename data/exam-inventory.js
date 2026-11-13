@@ -8349,10 +8349,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-041",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "What are the main functions of Huawei Cloud MRS one-stop big data platform?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Real-time computing"
+       },
+       {
+        "key": "B",
+        "text": "Offline computing"
+       },
+       {
+        "key": "C",
+        "text": "Data visualization"
+       },
+       {
+        "key": "D",
+        "text": "Interactive analysis"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "D"
+     ],
+     "explanation": "MRS is a one-stop big data platform whose components cover real-time computing (Kafka, Flink), offline computing (Hive, Spark), interactive analysis and query (HetuEngine), and real-time retrieval (HBase, Elasticsearch). Data visualization is provided by separate BI and reporting tools, not by MRS itself.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       642
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214921.png",
@@ -8380,10 +8419,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-042",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Cloud Data Migration (CDM) of Huawei Cloud can migrate data of different systems. Which of the following systems does CDM support?",
+      "options": [
+       {
+        "key": "A",
+        "text": "HBase"
+       },
+       {
+        "key": "B",
+        "text": "Elasticsearch"
+       },
+       {
+        "key": "C",
+        "text": "Pulsar"
+       },
+       {
+        "key": "D",
+        "text": "GaussDB"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "D"
+     ],
+     "explanation": "CDM migrates data between many kinds of systems, including MRS HBase and Hive, Elasticsearch, GaussDB databases and data warehouses, OBS, relational databases, and FTP/SFTP file servers. Apache Pulsar is not among its supported data sources.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       653
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course diagram shows CDM moving data between HBase, Elasticsearch, and GaussDB(DWS); Pulsar is judged by its absence from CDM's supported data sources."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214923.png",
@@ -8411,10 +8489,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-043",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Auto Scaling (AS) automatically adjusts compute resources based on service requirements and pre-configured policies. Scaling policies can be used to trigger scaling actions to adjust the number of instances and bandwidth resources for an AS group. What scaling policies are supported by AS?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Periodic policies"
+       },
+       {
+        "key": "B",
+        "text": "Priority policies"
+       },
+       {
+        "key": "C",
+        "text": "Scheduled policies"
+       },
+       {
+        "key": "D",
+        "text": "Alarm-based policies"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "C",
+      "D"
+     ],
+     "explanation": "AS supports three kinds of scaling policy: alarm-based policies triggered by monitored metrics, scheduled policies that run once at a set time, and periodic policies that repeat daily, weekly, or monthly. There is no \"priority\" policy type.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       93
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214924.png",
@@ -8442,10 +8559,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-044",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements are true about Dedicated Distributed Storage Service (DSS)?",
+      "options": [
+       {
+        "key": "A",
+        "text": "DSS disks cannot be expanded while services are running."
+       },
+       {
+        "key": "B",
+        "text": "Backups can be created for DSS disks."
+       },
+       {
+        "key": "C",
+        "text": "The capacity of storage pools can be expanded based on service requirements."
+       },
+       {
+        "key": "D",
+        "text": "Three-copy redundancy based on the dedicated distributed storage is available."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "DSS provides dedicated physical storage pools built on distributed block storage with three-copy redundancy. Its disks can be backed up, its storage pools can be expanded as services grow, and its disks can be expanded online without stopping services, so the claim that disks cannot be expanded while running is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages name DSS but do not describe these capabilities."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214926.png",
@@ -8473,10 +8625,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-045",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are advantages of containers compared with VMs?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Better isolation"
+       },
+       {
+        "key": "B",
+        "text": "Fine granularity and high resource utilization"
+       },
+       {
+        "key": "C",
+        "text": "Lightweight with fewer resources"
+       },
+       {
+        "key": "D",
+        "text": "Startup in seconds"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "Containers share the host kernel, so they are lightweight, use fewer resources, allow fine-grained high resource utilization, and start in seconds. Their isolation is only process-level, weaker than the system-level isolation of VMs, so better isolation is not one of their advantages.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       264
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214928.png",
@@ -8504,10 +8695,48 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-046",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements are true about the Docker technologies?",
+      "options": [
+       {
+        "key": "A",
+        "text": "runC is a cluster system daemon that runs as a backend process."
+       },
+       {
+        "key": "B",
+        "text": "Namespaces encapsulate the global resources of the kernel, and each namespace provides a separate global resource."
+       },
+       {
+        "key": "C",
+        "text": "StatefulSets limit what system resources can be used by a process group."
+       },
+       {
+        "key": "D",
+        "text": "Union Filesystems are hierarchical, lightweight, high-performance file systems."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "D"
+     ],
+     "explanation": "Docker builds on Linux namespaces, which wrap kernel global resources so each namespace sees its own copy, and on union file systems, which are layered, lightweight, and fast. runC is a lightweight command-line container runtime, not a cluster daemon. Limiting a process group's resources is the job of cgroups; StatefulSets are a Kubernetes workload type.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       114
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214930.png",
@@ -8535,10 +8764,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-047",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Application Operations Management (AOM) detects faults promptly and monitors applications, resources, and services in real time. Which of the following statements about AOM are true?",
+      "options": [
+       {
+        "key": "A",
+        "text": "It provides functions such as batch disk cleanup, job orchestration, and script execution, and standardizes and automates routine O&M."
+       },
+       {
+        "key": "B",
+        "text": "It monitors traces and restores execution tracks and statuses of service requests in distributed systems for troubleshooting."
+       },
+       {
+        "key": "C",
+        "text": "It provides atomic operations such as batch script execution, file distribution, and cloud service change. You can also customize atomic operations for assembly into jobs and standard O&M processes."
+       },
+       {
+        "key": "D",
+        "text": "It manages data from Cloud Eye, Log Tank Service (LTS), and Application Performance Management (APM) for unified monitoring and analysis."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "C",
+      "D"
+     ],
+     "explanation": "AOM is a one-stop O&M platform. It aggregates data from Cloud Eye, LTS, and APM for unified monitoring and analysis, and its automation module provides batch disk cleanup, job orchestration, script execution, file distribution, and customizable atomic operations assembled into standard O&M jobs. Tracing service requests across a distributed system to restore their execution tracks is a function of APM, not AOM.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: the automation features in two statements belong to AOM 2.0; the course pages describe AOM's monitoring role but not its automation module."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214931.png",
@@ -8566,25 +8830,64 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-048",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A company plans to deploy an application in the CN South-Guangzhou and CN East-Shanghai regions and uses Cloud Connect to enable network communications between the two regions. Which of the following statements about Cloud Connect are true?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Subnets of the VPCs loaded to a cloud connection cannot conflict with each other."
+       },
+       {
+        "key": "B",
+        "text": "Cloud Connect can connect VPCs of the same account only."
+       },
+       {
+        "key": "C",
+        "text": "Cloud Connect can connect VPCs of different accounts."
+       },
+       {
+        "key": "D",
+        "text": "Cloud Connect can connect VPCs in different regions."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "C",
+      "D"
+     ],
+     "explanation": "Cloud Connect loads network instances from different regions, including authorized VPCs from other accounts, into one cloud connection for private communication. Because the connected networks route to one another, the CIDR blocks of their subnets must not conflict. Restricting it to VPCs of the same account is false.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-professional",
+      "pages": [
+       641
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The non-overlapping subnet requirement comes from Cloud Connect's documented restrictions rather than the cited page."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214933.png",
      "number": 49,
      "paperTotal": 90,
      "type": "multi",
-     "stem": "A company deploys its Elastic Cloud Servers (ECSs) in different Virtual Private Clouds (VPCs) in the same region. Which of the following solutions can enable the ECSS to share data?",
+     "stem": "A company deploys its Elastic Cloud Servers (ECSs) in different Virtual Private Clouds (VPCs) in the same region. Which of the following solutions can enable the ECSs to share data?",
      "options": [
       {
        "key": "A",
-       "text": "Using obsfs to mount Object Storage Sewice (OBS) parallel file systems to Linux operating systems"
+       "text": "Using obsfs to mount Object Storage Service (OBS) parallel file systems to Linux operating systems"
       },
       {
        "key": "B",
-       "text": "Using Elastic Volume Sewice (EVS)"
+       "text": "Using Elastic Volume Service (EVS)"
       },
       {
        "key": "C",
@@ -8597,10 +8900,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-049",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A company deploys its Elastic Cloud Servers (ECSs) in different Virtual Private Clouds (VPCs) in the same region. Which of the following solutions can enable the ECSS to share data?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Using obsfs to mount Object Storage Sewice (OBS) parallel file systems to Linux operating systems"
+       },
+       {
+        "key": "B",
+        "text": "Using Elastic Volume Sewice (EVS)"
+       },
+       {
+        "key": "C",
+        "text": "Using Scalable File Service (SFS) and configuring cross-VPC access"
+       },
+       {
+        "key": "D",
+        "text": "Using SFS Turbo and configuring VPC peering connections to enable communications among multiple VPCs in the same region"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors.",
+     "answer": [
+      "A",
+      "C",
+      "D"
+     ],
+     "explanation": "ECSs in different VPCs can share data through OBS parallel file systems mounted with obsfs (OBS is reached through endpoints rather than a VPC), through SFS file systems configured for access from multiple VPCs, or through SFS Turbo combined with VPC peering so the VPCs can reach it. EVS disks attach to servers in the same AZ and cannot be shared across VPCs.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214935.png",
@@ -8653,7 +8991,18 @@ HR.data.examInventory = {
       ]
      },
      "transcriptionStatus": "visually-reviewed",
-     "reviewNotes": "Option B was merged into A by OCR. Bracketed words in D are a best reading of text partly hidden by the floating screenshot overlay."
+     "reviewNotes": "Option B was merged into A by OCR. Bracketed words in D are a best reading of text partly hidden by the floating screenshot overlay.",
+     "answer": [
+      "A",
+      "C",
+      "D"
+     ],
+     "explanation": "A two-city, three-center DR design protects each layer: RDS with DRS replicates databases in real time between remote sites, DNS directs all traffic to the production center and switches it to the DR center in a disaster, and CBR replicates server backups across regions so servers can be restored from images at the DR site. ModelArts is an AI development platform and provides no DR function.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214936.png",
