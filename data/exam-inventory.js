@@ -6253,15 +6253,16 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "reviewNotes": "Stem and options checked against source screenshot; corrected ECSs read as ECSS.",
-     "answer": [
-      "C"
-     ],
-     "explanation": "Security groups protect individual ECSs and must be selected when an ECS is created, while network ACLs are optional and protect whole subnets. Security groups filter on a 3-tuple and network ACLs on a 5-tuple. Because a network ACL controls traffic entering and leaving a subnet, it does not filter traffic between ECSs inside the same subnet; only security groups can do that.",
+     "explanation": "Security groups protect individual ECSs, must be selected when an ECS is created, and filter on a 3-tuple. Network ACLs are optional, protect whole subnets, and filter on a 5-tuple. According to the course, security groups support only Allow rules while network ACLs support both Allow and Deny, and because a network ACL controls traffic at the subnet boundary, it does not protect traffic between ECSs inside the same subnet. With two false statements and one accepted answer, this question is shown for practice but not scored.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       120
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: the course table (Cloud Service Solutions Architect p.120) says security groups support only Allow rules, with Deny rules in certain regions, so the allow-and-deny statement is also arguably false."
+     "flag": "Not graded: two statements are false. The course table says security groups support only Allow rules (Deny rules only in certain regions), so the allow-and-deny statement is false, and network ACLs filter traffic entering and leaving a subnet rather than traffic between ECSs in the same subnet. No key says which one the paper intended. 2025-26 question 36 has the same problem."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214830.png",
@@ -13560,10 +13561,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-033",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is not a cloud computing model?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Private cloud"
+       },
+       {
+        "key": "B",
+        "text": "Dedicated cloud"
+       },
+       {
+        "key": "C",
+        "text": "Hybrid cloud"
+       },
+       {
+        "key": "D",
+        "text": "Public cloud"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "The cloud deployment models are public cloud, private cloud, and hybrid cloud. \"Dedicated cloud\" is a product offering of dedicated resources, not one of the standard deployment models.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       12
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214025.png",
@@ -13591,10 +13629,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-034",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise needs to standardize Docker image management during containerization. Which of the following statements is false about the core features of Docker images?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Once you have made the necessary modifications to a container, you can use the \"docker commit\" command to create a new image."
+       },
+       {
+        "key": "B",
+        "text": "An image contains applications and their complete runtime dependency environments."
+       },
+       {
+        "key": "C",
+        "text": "An image consists of multiple read-only layers. The same layer can be shared across images."
+       },
+       {
+        "key": "D",
+        "text": "The latest dependencies are automatically downloaded and installed during image builds."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "A Docker image packages an application with its complete runtime dependencies, is built from read-only layers that can be shared across images, and can be created from a modified container with docker commit. Builds install exactly what the Dockerfile specifies, typically with pinned versions; they do not automatically download the latest dependencies.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214027.png",
@@ -13622,10 +13693,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-035",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about Kubernetes is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Kubernetes is an open-source container cluster management system that is originally developed by Google."
+       },
+       {
+        "key": "B",
+        "text": "Kubernetes cannot manage the lifecycle of containerized applications."
+       },
+       {
+        "key": "C",
+        "text": "Kubernetes provides cross-node service discovery and load balancing."
+       },
+       {
+        "key": "D",
+        "text": "Old pods can be gradually replaced by new ones to ensure service continuity."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "Kubernetes is the open-source container orchestration system originally developed by Google. It manages the full lifecycle of containerized applications (deployment, scaling, updates, and self-healing), provides service discovery and load balancing across nodes, and performs rolling updates that gradually replace old pods. The claim that it cannot manage application lifecycles is false.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       395
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214028.png",
@@ -13644,19 +13752,53 @@ HR.data.examInventory = {
       },
       {
        "key": "C",
-       "text": "Both security groups and network ACLs can be used to protect communications between Elastic Cloud Servers (ECSS) in the same subnet."
+       "text": "Both security groups and network ACLs can be used to protect communications between Elastic Cloud Servers (ECSs) in the same subnet."
       },
       {
        "key": "D",
-       "text": "Security groups are mandatory for ECSS, but network ACLs are optional."
+       "text": "Security groups are mandatory for ECSs, but network ACLs are optional."
       }
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-036",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise deploys multi-layer web applications on Huawei Cloud and requires security groups and network ACLs for access control. Which of the following descriptions of their differences is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Both security groups and network ACLs support allow and deny actions."
+       },
+       {
+        "key": "B",
+        "text": "Security groups operate at the instance level, while network ACLs operate at the subnet level."
+       },
+       {
+        "key": "C",
+        "text": "Both security groups and network ACLs can be used to protect communications between Elastic Cloud Servers (ECSS) in the same subnet."
+       },
+       {
+        "key": "D",
+        "text": "Security groups are mandatory for ECSS, but network ACLs are optional."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected ECSs read as ECSS.",
+     "explanation": "Security groups operate at the instance (ECS) level and must be selected when an ECS is created, while network ACLs are optional and operate at the subnet level. According to the course, security groups support only Allow rules, and because network ACLs control traffic at the subnet boundary, they do not protect traffic between ECSs inside one subnet. With two false statements and one accepted answer, this question is shown for practice but not scored.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       120
+      ]
+     },
+     "inApp": true,
+     "flag": "Not graded: two statements are false. The course table says security groups support only Allow rules (Deny rules only in certain regions), and network ACLs do not filter traffic between ECSs in the same subnet. No key says which one the paper intended. 2024-25 question 9 has the same problem."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214030.png",
@@ -13684,10 +13826,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-037",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A company uses Huawei Cloud Virtual Private Cloud (VPC) peering connections for cross-network communications. Which of the following statements about the core features of VPC peering connections is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Only one VPC peering connection can be created between two VPCs at the same time."
+       },
+       {
+        "key": "B",
+        "text": "A VPC peering connection can be created between VPCs in different regions."
+       },
+       {
+        "key": "C",
+        "text": "A VPC peering connection can connect VPCs from different accounts."
+       },
+       {
+        "key": "D",
+        "text": "VPC peering connections between VPCs that have overlapping subnet CIDR blocks may not be usable."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "A VPC peering connection links two VPCs in the same region, which can belong to the same or different accounts; it cannot connect VPCs in different regions (Cloud Connect does that). Only one peering connection can exist between the same two VPCs, and peering VPCs with overlapping CIDR blocks may leave routes unusable.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       145
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214032.png",
@@ -13715,10 +13894,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-038",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A financial enterprise plans to use Huawei Cloud Bare Metal Server (BMS) to meet compliance requirements. Which of the following is not one of BMS highlights?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Improved deployment density and performance to meet the requirements of mission-critical services such as enterprise databases, big data, containers, high-performance computing (HPC), and Al"
+       },
+       {
+        "key": "B",
+        "text": "Efficient deployment, provisioning within minutes, unified console, open APIs and SDKs, and self-service lifecycle management and O&M"
+       },
+       {
+        "key": "C",
+        "text": "Manual combination with other cloud services based on the Virtual Private Cloud (VPC) model, changeable VPC for a purchased BMS"
+       },
+       {
+        "key": "D",
+        "text": "Enterprise-grade security, secure and reliable services compliant with regulations"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "BMS highlights include improved deployment density and performance for databases, big data, containers, HPC, and AI; agile provisioning with self-service lifecycle management; enterprise-grade, compliant security; and quick, easy integration with other cloud resources over a VPC. Integration is easy rather than a manual combination, and the VPC of a purchased BMS cannot simply be changed, so that statement is not a highlight.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       73
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214033.png",
@@ -13733,7 +13949,7 @@ HR.data.examInventory = {
       },
       {
        "key": "B",
-       "text": "Resource creation: IAM users can create resources such as VMS and databases without depending on project quotas."
+       "text": "Resource creation: IAM users can create resources such as VMs and databases without depending on project quotas."
       },
       {
        "key": "C",
@@ -13746,10 +13962,48 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-039",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A company plans to use IAM to manage access permissions for their cloud resources. Which of the following statements about IAM core capabilities is true?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Fine-grained permission control: IAM supports RBAC-based API-level permission control for users and user groups."
+       },
+       {
+        "key": "B",
+        "text": "Resource creation: IAM users can create resources such as VMS and databases without depending on project quotas."
+       },
+       {
+        "key": "C",
+        "text": "Local identity synchronization: IAM automatically synchronizes all user passwords in the enterprise AD domain controller to the cloud platform."
+       },
+       {
+        "key": "D",
+        "text": "Network isolation configuration: IAM policies can be used to define VPC network topologies and subnet division rules for physical isolation between users."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected VMs read as VMS.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "IAM provides fine-grained, policy-based (role-based) permission control down to the API level for users and user groups. It does not bypass project quotas, does not synchronize every AD password to the cloud (federation is used instead), and does not define VPC topologies or subnets, which are configured in the VPC service.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       36,
+       38
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214035.png",
@@ -13777,17 +14031,50 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-040",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise plans to deploy microservice applications on Huawei Cloud Container Engine (CCE). The O&M team is reviewing the specifications for Deployments. Which of the following statements about Deployments is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Auto scaling: The number of pods can be automatically adjusted based on CPU or memory metrics."
+       },
+       {
+        "key": "B",
+        "text": "Rolling updates: Old pods can be gradually replaced by new ones without interrupting services."
+       },
+       {
+        "key": "C",
+        "text": "Multi-pod deployment: Pods can be evenly distributed across AZS to ensure service availability."
+       },
+       {
+        "key": "D",
+        "text": "Persistent storage: Pod data is persisted to Elastic Volume Service (EVS) disks by default to prevent data loss."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Deployments support auto scaling of pods on CPU or memory metrics, rolling updates without service interruption, and spreading pods across AZs. They run stateless pods: data is not persisted to EVS disks by default, and persistent storage must be explicitly configured as a volume.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214036.png",
      "number": 41,
      "paperTotal": 150,
      "type": "single",
-     "stem": "A company plans to use cloud computing services to improve IT resource management efficiency. Which of the following statements is true about the core feature of on-demand and self- service usability of cloud computing?",
+     "stem": "A company plans to use cloud computing services to improve IT resource management efficiency. Which of the following statements is true about the core feature of on-demand and self-service usability of cloud computing?",
      "options": [
       {
        "key": "A",
@@ -13808,10 +14095,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-041",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A company plans to use cloud computing services to improve IT resource management efficiency. Which of the following statements is true about the core feature of on-demand and self- service usability of cloud computing?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Users do not need to negotiate with service providers at any stage of using cloud computing resources."
+       },
+       {
+        "key": "B",
+        "text": "Users need to solve all problems by themselves when using cloud computing resources."
+       },
+       {
+        "key": "C",
+        "text": "Users can generate the cloud computing resource orders they need by themselves."
+       },
+       {
+        "key": "D",
+        "text": "Cloud computing service providers only need to prepare the infrastructure resources. Users can complete the remaining work by themselves."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; joined a hyphen split across lines.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "On-demand self-service means customers provision servers, storage, and network resources themselves as needed, without negotiating each request with the provider; users can generate the resource orders they need. It does not mean users never interact with the provider at any stage, must solve every problem alone, or that the provider supplies only bare infrastructure.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       8
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214038.png",
@@ -13839,10 +14163,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-042",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise plans to deploy services on Huawei Cloud Container Engine (CCE). Which of the following is not a typical application scenario of CCE?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Core database services in key sectors, like enterprise and finance, that need to be scaled dynamically to ensure efficient operation of services and cross-region high availability"
+       },
+       {
+        "key": "B",
+        "text": "E-commerce services that experience traffic surges during activities like promotions and flash sales and require cloud computing resources to be scaled quickly and automatically"
+       },
+       {
+        "key": "C",
+        "text": "Live streaming that experiences fluctuating service loads and requires real-time scaling based on CPU or memory usage"
+       },
+       {
+        "key": "D",
+        "text": "Traffic management of microservices that are built in containers for capabilities like grayscale release and traffic monitoring"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "CCE's typical scenarios include fast auto scaling for e-commerce promotions and flash sales, live streaming with fluctuating loads, and microservice traffic management with grayscale releases. Core databases in finance requiring cross-region high availability are not a typical CCE scenario; they are served by managed database services.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       118
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Judged by its absence from CCE's scenario list, as in 2024-25 question 7."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214040.png",
