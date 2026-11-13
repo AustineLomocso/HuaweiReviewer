@@ -12204,11 +12204,11 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "Distributed Database Middleware (DOM)"
+       "text": "Distributed Database Middleware (DDM)"
       },
       {
        "key": "B",
-       "text": "Data Admin Sewice (DAS)"
+       "text": "Data Admin Service (DAS)"
       },
       {
        "key": "C",
@@ -12216,15 +12216,52 @@ HR.data.examInventory = {
       },
       {
        "key": "D",
-       "text": "Document Database Sewice (DDS)"
+       "text": "Document Database Service (DDS)"
       }
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-013",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A game company develops a global multiplayer online game. Frequently updating gameplay requires dynamic adjustment of data models (for example, adding equipment attributes and season rules). Which of the following Huawei Cloud database services is the most suitable for minimizing the impact of database changes on online players?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Distributed Database Middleware (DOM)"
+       },
+       {
+        "key": "B",
+        "text": "Data Admin Sewice (DAS)"
+       },
+       {
+        "key": "C",
+        "text": "Database Security Service (DBSS)"
+       },
+       {
+        "key": "D",
+        "text": "Document Database Sewice (DDS)"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "DDS is a MongoDB-compatible document database with a flexible schema, so game data models can gain new attributes without table changes that disrupt players; the course presents DDS as the solution for a game company. DDM shards relational databases, DAS is a database administration tool, and DBSS is a security service.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       272
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213947.png",
@@ -12252,12 +12289,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-014",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise plans to build a container-based platform on Huawei Cloud. Which of the following is not a Cloud Container Engine (CCE) cluster type?",
+      "options": [
+       {
+        "key": "A",
+        "text": "CCE Autopilot"
+       },
+       {
+        "key": "B",
+        "text": "CCE Windows"
+       },
+       {
+        "key": "C",
+        "text": "CCE Turbo"
+       },
+       {
+        "key": "D",
+        "text": "CCE standard"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "CCE offers CCE standard clusters, CCE Turbo clusters, and serverless CCE Autopilot clusters. There is no \"CCE Windows\" cluster type.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages do not list every CCE cluster type."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213949.png",
@@ -12268,11 +12338,11 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "SSIJTLS decryption: The load balancer decrypts packets and distributes them based on the IP address of each player."
+       "text": "SSL/TLS decryption: The load balancer decrypts packets and distributes them based on the IP address of each player."
       },
       {
        "key": "B",
-       "text": "The load balancer fonvards traffic through an LVS cluster and distributes the traffic based on the configured load balancing algorithm."
+       "text": "The load balancer forwards traffic through an LVS cluster and distributes the traffic based on the configured load balancing algorithm."
       },
       {
        "key": "C",
@@ -12285,17 +12355,50 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-015",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A game company deploys a global server on Huawei Cloud and uses a Layer 4 (TCP/UDP) load balancer to distribute a massive volume of requests. Which of the following describes how a load balancer distributes traffic?",
+      "options": [
+       {
+        "key": "A",
+        "text": "SSIJTLS decryption: The load balancer decrypts packets and distributes them based on the IP address of each player."
+       },
+       {
+        "key": "B",
+        "text": "The load balancer fonvards traffic through an LVS cluster and distributes the traffic based on the configured load balancing algorithm."
+       },
+       {
+        "key": "C",
+        "text": "Client certificates are authenticated in an Nginx cluster and then traffic is distributed through HTTP."
+       },
+       {
+        "key": "D",
+        "text": "The load balancer forwards traffic across all nodes in the Nginx cluster and then to backend servers."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "ELB handles Layer 4 (TCP/UDP) traffic in an LVS cluster, which forwards packets to backend servers using the configured algorithm without inspecting their content. SSL/TLS decryption, client certificate authentication, and Nginx cluster forwarding belong to Layer 7 (HTTP/HTTPS) load balancing.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The LVS-for-Layer-4 and Nginx-for-Layer-7 split is ELB's documented architecture; the course mentions LVS only as a Layer-4 load balancing component."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213951.png",
      "number": 16,
      "paperTotal": 150,
      "type": "single",
-     "stem": "A financial institution plans to deploy its core transaction system on Huawei Cloud, with a hybrid cloud architecture. They hope to achieve cross-AZ disaster recovery (DR), RPO = O (no data loss), RTO < 15 minutes (quick service recovery), and automatic failover. Which of the following Huawei Cloud backup and DR services should be used?",
+     "stem": "A financial institution plans to deploy its core transaction system on Huawei Cloud, with a hybrid cloud architecture. They hope to achieve cross-AZ disaster recovery (DR), RPO = 0 (no data loss), RTO < 15 minutes (quick service recovery), and automatic failover. Which of the following Huawei Cloud backup and DR services should be used?",
      "options": [
       {
        "key": "A",
@@ -12316,10 +12419,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-016",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A financial institution plans to deploy its core transaction system on Huawei Cloud, with a hybrid cloud architecture. They hope to achieve cross-AZ disaster recovery (DR), RPO = O (no data loss), RTO < 15 minutes (quick service recovery), and automatic failover. Which of the following Huawei Cloud backup and DR services should be used?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Volume Backup Service (VBS)"
+       },
+       {
+        "key": "B",
+        "text": "Cloud Server Backup Service (CSBS)"
+       },
+       {
+        "key": "C",
+        "text": "Storage Disaster Recovery Service (SDRS)"
+       },
+       {
+        "key": "D",
+        "text": "Cloud Backup and Recovery (CBR)"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected RPO = 0.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "SDRS replicates data synchronously at the storage layer between AZs, giving zero data loss (RPO = 0), minute-level RTO, and one-click failover. VBS, CSBS, and CBR are backup services that restore from periodic backups, so they cannot guarantee zero data loss or such fast recovery.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       222
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213953.png",
@@ -12330,7 +12470,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "Sewice continuity assurance: Redundant Direct Connect connections can prevent service interruptions caused by unexpected events such as cable cuts."
+       "text": "Service continuity assurance: Redundant Direct Connect connections can prevent service interruptions caused by unexpected events such as cable cuts."
       },
       {
        "key": "B",
@@ -12347,10 +12487,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-017",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A financial enterprise uses Direct Connect to build a hybrid cloud network and plans to configure redundant Direct Connect connections for high availability. Which of the following statements about the connection redundancy solution is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Sewice continuity assurance: Redundant Direct Connect connections can prevent service interruptions caused by unexpected events such as cable cuts."
+       },
+       {
+        "key": "B",
+        "text": "Automatic failover: If the active Direct Connect connection fails, traffic is automatically routed through the standby connection within one minute."
+       },
+       {
+        "key": "C",
+        "text": "Multiple connection locations: Two Direct Connect connections terminated at different locations in the same region can be used to eliminate single points of failure."
+       },
+       {
+        "key": "D",
+        "text": "Forced route symmetry: The active and standby Direct Connect connections must use the same BGP routing policy and IP address segment. Otherwise, the switchover will fail."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Redundant Direct Connect connections, ideally terminating at different locations, protect against events like cable cuts, and BGP routing fails traffic over to the standby connection automatically. The active and standby connections do not have to share the same BGP policy and IP address segment for switchover to work; they are usually configured with different addresses and route priorities, so the forced-symmetry statement is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213955.png",
@@ -12361,7 +12534,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "Elastic Load Balance (EL B) + Auto Scaling"
+       "text": "Elastic Load Balance (ELB) + Auto Scaling"
       },
       {
        "key": "B",
@@ -12378,19 +12551,56 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-018",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A company running an e-commerce application on Huawei Cloud is preparing for a big promotion activity. They want massive user requests to be distributed across multiple backend servers, and they want the number of servers to be automatically scaled in or out as traffic changes. They do not need to manually configure and adjust routing policies. Which of the following combinations of cloud services is the best fit for this scenario?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Elastic Load Balance (EL B) + Auto Scaling"
+       },
+       {
+        "key": "B",
+        "text": "EIP + ELB"
+       },
+       {
+        "key": "C",
+        "text": "Elastic IP (EIP) + Auto Scaling"
+       },
+       {
+        "key": "D",
+        "text": "NAT Gateway + Auto Scaling"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "ELB distributes incoming requests across backend servers, and Auto Scaling adds or removes servers as traffic changes, automatically registering new instances with the load balancer. Together they handle promotion traffic without manual routing changes. EIPs and NAT gateways provide Internet access, not load distribution or scaling.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       118
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213957.png",
      "number": 19,
      "paperTotal": 150,
      "type": "single",
-     "stem": "An enterprise was using VMware to run core service systems. Now they need to back up their VMS to Huawei Cloud for cross-cloud disaster recovery (DR). They hope that incremental backups can be used to reduce the bandwidth usage; they need to be able to quickly restore to Elastic Cloud Servers (ECSs) from backups; and backup retention policies must comply with DJCP 2.0. Which of the following is the most suitable Huawei Cloud service?",
+     "stem": "An enterprise was using VMware to run core service systems. Now they need to back up their VMs to Huawei Cloud for cross-cloud disaster recovery (DR). They hope that incremental backups can be used to reduce the bandwidth usage; they need to be able to quickly restore to Elastic Cloud Servers (ECSs) from backups; and backup retention policies must comply with DJCP 2.0. Which of the following is the most suitable Huawei Cloud service?",
      "options": [
       {
        "key": "A",
@@ -12402,7 +12612,7 @@ HR.data.examInventory = {
       },
       {
        "key": "C",
-       "text": "Dedicated Distributed Storage Serv'ice (DSS)"
+       "text": "Dedicated Distributed Storage Service (DSS)"
       },
       {
        "key": "D",
@@ -12411,10 +12621,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-019",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise was using VMware to run core service systems. Now they need to back up their VMS to Huawei Cloud for cross-cloud disaster recovery (DR). They hope that incremental backups can be used to reduce the bandwidth usage; they need to be able to quickly restore to Elastic Cloud Servers (ECSs) from backups; and backup retention policies must comply with DJCP 2.0. Which of the following is the most suitable Huawei Cloud service?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Elastic Volume Service (EVS)"
+       },
+       {
+        "key": "B",
+        "text": "Cloud Backup and Recovery (CBR)"
+       },
+       {
+        "key": "C",
+        "text": "Dedicated Distributed Storage Serv'ice (DSS)"
+       },
+       {
+        "key": "D",
+        "text": "Scalable File Service (SFS)"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "CBR backs up ECSs, BMSs, EVS disks, and on-premises VMware virtual environments, using incremental backups to save bandwidth, restoring backups to ECSs, and applying configurable retention policies. EVS, DSS, and SFS are storage services, not backup services.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       216
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213959.png",
@@ -12442,10 +12689,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-020",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A startup plans to deploy a website on Huawei Cloud to showcase its brand. Given the website's low traffic and modest performance needs, which of the following ECS types would be the most cost-effective choice?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Storage-intensive"
+       },
+       {
+        "key": "B",
+        "text": "Memory-intensive"
+       },
+       {
+        "key": "C",
+        "text": "Computing-intensive"
+       },
+       {
+        "key": "D",
+        "text": "General-purpose"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Brand websites with low traffic have modest compute and storage needs, which a general-purpose ECS meets at the lowest cost. Storage-, memory-, and compute-intensive types serve heavier specialized workloads at higher prices.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-professional",
+      "pages": [
+       549
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214000.png",
@@ -12473,12 +12757,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-021",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A financial enterprise has deployed its core transaction system on Huawei Cloud. Which of the following is the most appropriate way to defend against frequent calls to APIs from malicious crawlers, SQL injection attacks on databases, and sensitive data leaks?",
+      "options": [
+       {
+        "key": "A",
+        "text": "WAF"
+       },
+       {
+        "key": "B",
+        "text": "AAD"
+       },
+       {
+        "key": "C",
+        "text": "CBH"
+       },
+       {
+        "key": "D",
+        "text": "HSS"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "WAF inspects HTTP and HTTPS traffic to block SQL injection and other web attacks, filters CC attacks and malicious crawler scanning, and offers data leakage prevention. AAD defends against volumetric DDoS attacks, CBH controls O&M access, and HSS protects hosts.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       35
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214002.png",
@@ -12506,10 +12827,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-022",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A video platform plans to expand its cloud storage to support long-term retention of 4K HD video files and enable high-speed access for users worldwide. Which of the following is the most suitable Huawei Cloud service?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Scalable File Service (SFS)"
+       },
+       {
+        "key": "B",
+        "text": "Cloud Backup and Recovery (CBR)"
+       },
+       {
+        "key": "C",
+        "text": "Object Storage Service (OBS)"
+       },
+       {
+        "key": "D",
+        "text": "Elastic Volume Service (EVS)"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "OBS provides massive, reliable, low-cost storage for data of any size and format and is used for video on demand, often combined with CDN for fast worldwide access. SFS and EVS are file and block storage attached to servers, and CBR is a backup service.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       186
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214004.png",
