@@ -6269,6 +6269,322 @@
    "inApp": true
   },
   {
+   "captureId": "n2425-capture-071",
+   "paperId": "n2425",
+   "questionNumber": 71,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215009.png",
+   "sha256": "4c1936d661281815dac3bd7681ba25604c977c34300ba7743319da6304c73934",
+   "stem": "Cloud Data Migration (CDM) of Huawei Cloud can quickly migrate Hive tables in the following procedure: It first exports MySQL data, and then copies files from the source HDFS to the destination HDFS, and finally imports the MySQL data.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot. The paper repeats this statement word for word as question 75.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. \"MySQL data\" is read as the Hive metadata kept in the MySQL metastore.",
+   "explanation": "Hive keeps table metadata in a relational metastore, typically MySQL, and table data as files in HDFS. CDM's quick Hive table migration follows that split: export the metadata from MySQL, copy the data files from the source HDFS to the destination HDFS, then import the metadata at the destination.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-072",
+   "paperId": "n2425",
+   "questionNumber": 72,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215011.png",
+   "sha256": "412ebbcdb2a652d28c9eae3da9b14652952afcc23ac34ae498c8073da991f1b9",
+   "stem": "You can call multiple AI capabilities, including image recognition, speech recognition, and natural language processing, using Huawei Cloud EI-API's RESTful APIs.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot; corrected AI and EI read as Al and El.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Huawei Cloud EI (Enterprise Intelligence) exposes AI capabilities such as image recognition, speech recognition (SIS), and natural language processing as RESTful APIs that applications call directly, without building their own models.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-073",
+   "paperId": "n2425",
+   "questionNumber": 73,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215012.png",
+   "sha256": "f1d63bde5b414599573a5ba91a95a58b784c9f5c997b66efdb61b49f4bda1e15",
+   "stem": "MindSpore is an open-source deep learning framework developed by Huawei. It simplifies AI app development and optimizes computing performance by leveraging device-edge-cloud synergy.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ai-fundamentals-2",
+    "pages": [
+     55
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot; corrected AI read as Al.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "MindSpore is Huawei's open-source, all-scenario deep learning framework. It is designed for efficient collaboration across cloud, edge, and device platforms and diverse hardware, making AI development easier while maximizing computing performance.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-074",
+   "paperId": "n2425",
+   "questionNumber": 74,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215014.png",
+   "sha256": "1659cbbad51249180db80430fd2fd09362b4a7b61da131f7dbdac40e16637df1",
+   "stem": "MRS big data clusters support deployment on both x86 and Kunpeng architectures on Huawei Cloud.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. The course mentions MRS nodes in x86 and Kunpeng scenarios for Huawei Cloud Stack; this is extended to the public cloud.",
+   "explanation": "MRS clusters can be created on either x86 or Kunpeng (Arm) compute on Huawei Cloud; you choose the CPU architecture when you create the cluster.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-075",
+   "paperId": "n2425",
+   "questionNumber": 75,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215016.png",
+   "sha256": "cc66932286eca1449d582928c9a95e461008339845d5cff3cbe880d9e60bd031",
+   "stem": "Cloud Data Migration (CDM) of Huawei Cloud can quickly migrate Hive tables in the following procedure: It first exports MySQL data, and then copies files from the source HDFS to the destination HDFS, and finally imports the MySQL data.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot. The paper repeats question 71 here word for word.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. \"MySQL data\" is read as the Hive metadata kept in the MySQL metastore.",
+   "explanation": "This repeats question 71. Hive keeps table metadata in a MySQL metastore and table data as HDFS files, so a quick CDM migration exports the metadata, copies the HDFS files to the destination, and then imports the metadata.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-076",
+   "paperId": "n2425",
+   "questionNumber": 76,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215017.png",
+   "sha256": "129773e452f5bd92436c9a750c8e37eb623f606436d1be6f6a8dbe7f4e6a93fe",
+   "stem": "You can estimate the data transmission time based on the local WAN bandwidth. If data transmission cannot be completed within the estimated time, Data Express Service (DES) on the cloud would be a good option.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud",
+    "pages": [
+     243
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. The course page shows DES moving data into OBS; the bandwidth-based decision rule is inferred.",
+   "explanation": "When the data volume is too large to upload over the available WAN bandwidth in an acceptable time, Data Express Service (DES) ships the data on physical storage media to Huawei Cloud for import into OBS. Estimating transfer time from the bandwidth is how you decide whether DES is needed.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-077",
+   "paperId": "n2425",
+   "questionNumber": 77,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215019.png",
+   "sha256": "bc5adcc4b2abada3a76a1c10bb8ac7a6eae5c667865cc1c96d1382a97834957d",
+   "stem": "CodeArts PerfTest provides both real-time and offline test reports for you to view and analyze test data anytime.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "CodeArts PerfTest shows real-time reports while a test runs and keeps offline reports afterwards, so test data can be viewed and analyzed at any time.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-078",
+   "paperId": "n2425",
+   "questionNumber": 78,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215020.png",
+   "sha256": "ad63bd99597406160455ab964a6e2c08391f329637733213813af9d948e85042",
+   "stem": "Cloud Bastion Host (CBH) prevents risky external attacks on the host system.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud-computing-architect",
+    "pages": [
+     114
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Cloud Bastion Host is a unified O&M security control platform that provides accounting, authorization, authentication, and auditing for people operating cloud resources. It controls and records O&M access rather than defending hosts against external attacks, which is the role of services such as HSS and WAF.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-079",
+   "paperId": "n2425",
+   "questionNumber": 79,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215022.png",
+   "sha256": "8e40294efc2fa2ae714390c592e7ebc2e77f906ddf37456ffab9e7a42976b699",
+   "stem": "You can view and manage the protection status and risks of any server in all regions on the same page on the HSS console.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud",
+    "pages": [
+     367
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. The course page describes HSS centralized management on a single console; the all-regions detail is inferred.",
+   "explanation": "HSS provides centralized management: you can check and fix the security issues of all protected servers from a single console page, viewing their protection status and risks together.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2425-capture-080",
+   "paperId": "n2425",
+   "questionNumber": 80,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215024.png",
+   "sha256": "496ed3d6c8357beb1daf6e9a71536235b5affd517fc314b75a1a0299b79f45a7",
+   "stem": "To monitor Java applications, install Application Performance Management (APM) Agents first. To monitor Python and C+ + applications, there is no need to install such Agents since the system-provided cloud-init collects service call data non-intrusively.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "APM collects application call data through its agents (or compatible instrumentation such as OpenTelemetry) for each supported language. cloud-init only initializes a server at first boot and does not collect service call data, so no agent-free monitoring of Python and C++ applications works this way.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
    "captureId": "n2526-capture-059",
    "paperId": "n2526",
    "questionNumber": 59,
