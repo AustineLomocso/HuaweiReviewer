@@ -154,3 +154,17 @@ test('bestScore is the highest exam percent across a node\'s own tests', () => {
   st.attempts['c-1-2:past'] = [attempt(80, 6, 'practice')];
   assert.strictEqual(progress.bestScore('c-1-2', st), null);
 });
+
+test('partial attempts are counted but never set best, latest or passed', () => {
+  const st = { attempts: { 'n1:full': [
+    { mode: 'exam', pct: 50, passed: false },
+    { mode: 'exam', pct: 100, passed: true, partial: true },
+  ] } };
+  assert.deepStrictEqual(progress.testSummary('n1:full', st), { attempts: 2, best: 50, latest: 50, passed: false });
+});
+
+test('ungraded questions never enter the retry set', () => {
+  const retry = {};
+  progress.applyRetry(retry, [{ id: 'u', type: 'single' }], { u: ['A'] }, { u: true }, 9);
+  assert.deepStrictEqual(retry, {});
+});

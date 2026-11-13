@@ -85,3 +85,13 @@ test('navLabel names the question number and its status', () => {
   assert.strictEqual(scoring.navLabel(3, 'correct'), 'Question 3, correct');
   assert.strictEqual(scoring.navLabel(12, 'incorrect'), 'Question 12, incorrect');
 });
+
+test('ungraded questions are shown but never scored', () => {
+  const disputed = { id: 'u', type: 'single' };
+  assert.strictEqual(scoring.isGraded(disputed), false);
+  assert.strictEqual(scoring.isCorrect(disputed, ['A']), false);
+  assert.strictEqual(scoring.itemStatus(disputed, ['A']), 'ungraded');
+  assert.strictEqual(scoring.navLabel(3, 'ungraded'), 'Question 3, not graded');
+  const r = scoring.scoreAttempt([single, disputed], { s: ['B'], u: ['A'] });
+  assert.deepStrictEqual([r.earned, r.total, r.pct, r.passed, r.ungraded], [16, 16, 100, true, 1]);
+});

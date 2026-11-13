@@ -21,13 +21,20 @@
 
   // Ranges are [first, last]. Source citations are lists of individual pages.
   function pagesText(pdf, pages, isRange = true) {
-    const name = { ai: 'HCIA-AI Solution', cloud: 'HCIA-Cloud Service' }[pdf];
+    if (isRange && pages.length === 2 && pages[0] === pages[1]) pages = [pages[0]];
+    const name = { ai: 'HCIA-AI Solution', cloud: 'HCIA-Cloud Service' }[pdf]
+      || HR.data.structure.courses.find((course) => course.pdf === pdf)?.title
+      || HR.data.inventory?.sources.find((source) => source.id === pdf)?.title || pdf;
     return `${name}, p${pages.length > 1 ? 'p' : ''}. ${pages.join(isRange ? '–' : ', ')}`;
   }
 
   function sourceBadge(q) {
     if (q.source && q.source.kind === 'material') {
-      return h('span', { class: 'badge good' }, 'Course material: ' + pagesText(q.source.pdf, q.source.pages, false));
+      return h('span', { class: 'badge good' }, 'Course material: ',
+        q.source.pages.map((page, i) => [i ? ', ' : '', h('a', {
+          href: HR.curriculum.sourceHref(q.source.pdf, page) || `#/sources/${q.source.pdf}`,
+          target: '_blank', rel: 'noopener',
+        }, pagesText(q.source.pdf, [page], false))]));
     }
     return h('span', { class: 'badge warned' }, 'AI-inferred, verify');
   }
@@ -52,6 +59,22 @@
     return kind === 'full' ? '#/mocks' : key === 'retry:all' ? '#/' : `#/s/${id}`;
   }
 
+  const STATUS_TEXT = { wrong: 'answered wrong last time', uncertain: 'marked Uncertain last time', unanswered: 'never answered' };
+  const TYPE_TEXT = { single: 'single-answer', multi: 'multiple-answer', tf: 'True/False' };
+
+  // Describes which questions a partial sitting used, for example "Partial: nos. 1–30, multiple-answer only".
+  function filterText(filters) {
+    if (!filters) return 'Partial';
+    const parts = [];
+    if (filters.from !== null && filters.to !== null) parts.push(`nos. ${filters.from}–${filters.to}`);
+    else if (filters.from !== null) parts.push(`from no. ${filters.from}`);
+    else if (filters.to !== null) parts.push(`up to no. ${filters.to}`);
+    if (filters.types && filters.types.length) parts.push(`${filters.types.map((t) => TYPE_TEXT[t]).join(' and ')} only`);
+    if (filters.status && filters.status !== 'all') parts.push(STATUS_TEXT[filters.status]);
+    if (filters.count) parts.push(`random ${filters.count}`);
+    return parts.length ? `Partial: ${parts.join(', ')}` : 'Partial';
+  }
+
   // Every attempt of a test, newest first, in a collapsed list.
   function history(key, attempts) {
     if (!attempts.length) return null;
@@ -60,10 +83,10 @@
       h('ul', { class: 'list small' }, attempts.map((a, i) => ({ a, i })).reverse().map(({ a, i }) =>
         h('li', null,
           [dateTime(a.at), a.mode === 'practice' ? 'Practice' : `Exam ${a.pct}%`,
-            a.passed ? 'Passed' : 'Not passed', duration(a.secs)].join(' · '), ' ',
+            a.passed ? 'Passed' : 'Not passed', duration(a.secs), a.partial && filterText(a.filters)].filter(Boolean).join(' · '), ' ',
           h('a', { href: `#/results/${encodeURIComponent(key)}/${i}` }, 'View')))));
   }
 
   HR.ui = HR.ui || {};
-  Object.assign(HR.ui, { h, bar, pagesText, sourceBadge, duration, localDate, dateTime, backHref, history });
+  Object.assign(HR.ui, { h, bar, pagesText, sourceBadge, duration, localDate, dateTime, backHref, history, filterText });
 })(globalThis);

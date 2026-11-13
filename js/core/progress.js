@@ -61,7 +61,8 @@
 
   function testSummary(key, state) {
     const list = state.attempts[key] || [];
-    const exam = list.filter((a) => a.mode === 'exam');
+    // Partial sittings stay in the history but never set Best, Latest or Passed.
+    const exam = list.filter((a) => a.mode === 'exam' && !a.partial);
     return {
       attempts: list.length,
       best: exam.length ? Math.max(...exam.map((a) => a.pct)) : null,
@@ -101,6 +102,7 @@
 
   function applyRetry(retry, questions, answers, uncertain, now) {
     questions.forEach((q) => {
+      if (!root.HR.scoring.isGraded(q)) return;
       const id = q.mergedInto || q.id;
       const answered = (answers[q.id] || []).length > 0;
       // A question that was never answered tells us nothing about it.

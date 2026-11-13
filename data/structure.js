@@ -112,4 +112,244 @@ HR.registerStructure({
     { id: 'm2425', year: '2024-25', title: 'Huawei ICT Competition 2024-2025 Preliminary Stage, Cloud Track Mock Exam' },
     { id: 'm2526', year: '2025-26', title: 'Huawei ICT Competition 2025-2026 Preliminary Mock Exam, Cloud Track' },
   ],
+  nationals: [
+    { id: 'n2324', year: '2023-24', title: '2023–24 Nationals, Cloud Track Written Exam' },
+    { id: 'n2425', year: '2024-25', title: '2024–25 Nationals, Cloud Track Mock Exam' },
+    { id: 'n2526', year: '2025-26', title: '2025–26 Nationals, Cloud Track Mock Exam' },
+  ],
 });
+
+// BEGIN AUTHORED FUNDAMENTALS1
+HR.data.structure.courses.push({
+ "id": "fundamentals1",
+ "pdf": "ai-fundamentals-1",
+ "title": "AI Fundamentals — Chapter 1: AI at First Glance",
+ "pageCount": 49,
+ "chapters": [
+  {
+   "id": "fundamentals1-1",
+   "num": "1.1",
+   "title": "Embracing the AI Era",
+   "pages": [
+    1,
+    9
+   ],
+   "subs": []
+  },
+  {
+   "id": "fundamentals1-2",
+   "num": "1.2",
+   "title": "Origins and Definitions of AI",
+   "pages": [
+    10,
+    21
+   ],
+   "subs": [
+    {
+     "id": "fundamentals1-2-1",
+     "num": "1.2.1",
+     "title": "Origins: computational models and the Dartmouth workshop",
+     "pages": [
+      11,
+      12
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-2-2",
+     "num": "1.2.2",
+     "title": "Definitions: human intelligence, artificial intelligence, and capability scope",
+     "pages": [
+      13,
+      21
+     ],
+     "subs": []
+    }
+   ]
+  },
+  {
+   "id": "fundamentals1-3",
+   "num": "1.3",
+   "title": "Major Schools of Thought in AI",
+   "pages": [
+    22,
+    27
+   ],
+   "subs": [
+    {
+     "id": "fundamentals1-3-1",
+     "num": "1.3 (1)",
+     "title": "Symbolism",
+     "pages": [
+      24,
+      25
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-3-2",
+     "num": "1.3 (2)",
+     "title": "Connectionism",
+     "pages": [
+      26,
+      26
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-3-3",
+     "num": "1.3 (3)",
+     "title": "Behaviorism and environment interaction",
+     "pages": [
+      27,
+      27
+     ],
+     "subs": []
+    }
+   ]
+  },
+  {
+   "id": "fundamentals1-4",
+   "num": "1.4",
+   "title": "The Evolution of AI",
+   "pages": [
+    28,
+    30
+   ],
+   "subs": []
+  },
+  {
+   "id": "fundamentals1-5",
+   "num": "1.5",
+   "title": "Ethics and Security in AI",
+   "pages": [
+    31,
+    39
+   ],
+   "subs": [
+    {
+     "id": "fundamentals1-5-1",
+     "num": "1.5 (1)",
+     "title": "Benefits and harms of AI",
+     "pages": [
+      32,
+      32
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-5-2",
+     "num": "1.5 (2)",
+     "title": "Moral dilemmas and ethical conflicts",
+     "pages": [
+      33,
+      33
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-5-3",
+     "num": "1.5 (3)",
+     "title": "Survivorship bias and missing populations",
+     "pages": [
+      34,
+      34
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-5-4",
+     "num": "1.5 (4)",
+     "title": "Privacy and transparency",
+     "pages": [
+      35,
+      35
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-5-5",
+     "num": "1.5 (5)",
+     "title": "Generated misinformation",
+     "pages": [
+      36,
+      36
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-5-6",
+     "num": "1.5 (6)",
+     "title": "Layered defenses against misinformation",
+     "pages": [
+      37,
+      37
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-5-7",
+     "num": "1.5 (7)",
+     "title": "Responsible AI across the lifecycle",
+     "pages": [
+      38,
+      39
+     ],
+     "subs": []
+    }
+   ]
+  },
+  {
+   "id": "fundamentals1-6",
+   "num": "1.6",
+   "title": "Why Learn AI and How to Learn It",
+   "pages": [
+    40,
+    49
+   ],
+   "subs": [
+    {
+     "id": "fundamentals1-6-1",
+     "num": "1.6 / Strategy",
+     "title": "National strategy and industrial transformation",
+     "pages": [
+      41,
+      41
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-6-2",
+     "num": "1.6 / Development",
+     "title": "Personal development and entrepreneurship",
+     "pages": [
+      42,
+      42
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-6-3",
+     "num": "1.6 / Disciplines",
+     "title": "AI across disciplines",
+     "pages": [
+      43,
+      43
+     ],
+     "subs": []
+    },
+    {
+     "id": "fundamentals1-6-4",
+     "num": "1.6 / Learning",
+     "title": "Principles, representations, and learning practice",
+     "pages": [
+      44,
+      49
+     ],
+     "subs": []
+    }
+   ]
+  }
+ ]
+});
+// END AUTHORED FUNDAMENTALS1

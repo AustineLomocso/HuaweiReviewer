@@ -21,8 +21,24 @@
     }
     return scripts[src];
   }
-  const loadSection = (id) => loadScript(`data/sections/${id}.js`);
-  const loadMocks = () => Promise.all(data.structure.mocks.map((m) => loadScript(`data/past/${m.id}.js`)));
+  const loadSection = (id) => Promise.all([
+    loadScript('data/source-inventory.js'),
+    loadScript(`data/sections/${id}.js`),
+  ]);
+  const loadMocks = () => Promise.all([
+    loadScript('data/exam-inventory.js'),
+    loadScript('data/source-inventory.js'),
+    ...data.structure.mocks.map((m) => loadScript(`data/past/${m.id}.js`)),
+  ]);
+  const loadInventory = () => Promise.all([
+    loadScript('data/source-inventory.js'),
+    loadScript('data/exam-inventory.js'),
+  ]);
+
+  function mappedLessonIds(question) {
+    const secondary = Array.isArray(question.secondarySectionIds) ? question.secondarySectionIds : [];
+    return [...new Set([question.sectionId, ...secondary].filter(Boolean))];
+  }
 
   const KIND_LABEL = { pre: 'Pre-Test', post: 'Post-Test', summative: 'Summative Test', past: 'Past Exam Set' };
 
@@ -48,18 +64,53 @@
       const q = m.questions.find((x) => x.id === qid);
       if (q) return q;
     }
-    return null;
+    return allCaptures().find((q) => q.id === qid && (q.inApp || q.status === 'verified')) || null;
+  }
+
+  const allCaptures = () => (data.examInventory?.papers || []).flatMap((paper) => paper.captures);
+  const verifiedNationals = () => allCaptures().filter((q) => q.status === 'verified');
+  const nationalsPaper = (id) => (data.examInventory?.papers || []).find((p) => p.id === id) || null;
+  const isNationals = (id) => !!(data.structure && (data.structure.nationals || []).some((n) => n.id === id));
+
+  // Review progress of one Nationals paper. It enters the test engine only once every available question is reviewed.
+  function nationalsStatus(id) {
+    const paper = nationalsPaper(id);
+    if (!paper) return { reviewed: 0, total: 0, ready: false };
+    const numbers = [...new Set(paper.captures.map((c) => c.number))];
+    const reviewed = numbers.filter((n) => paper.captures.some((c) => c.number === n && c.inApp)).length;
+    return { reviewed, total: numbers.length, ready: numbers.length > 0 && reviewed === numbers.length };
+  }
+
+  // One question per printed number, in printed order. A repeated capture adds only its screenshot.
+  function nationalsQuestions(id) {
+    const paper = nationalsPaper(id);
+    if (!paper || !nationalsStatus(id).ready) return [];
+    const seen = new Set();
+    return [...paper.captures].sort((a, b) => a.number - b.number).filter((c) => {
+      if (!c.inApp || seen.has(c.number)) return false;
+      seen.add(c.number);
+      return true;
+    });
+  }
+
+  // Every screenshot of a Nationals question, including repeated captures of the same number.
+  function sourceImages(q) {
+    if (!q.image) return [];
+    const paper = (data.examInventory?.papers || []).find((p) => p.captures.includes(q));
+    return paper ? paper.captures.filter((c) => c.number === q.number).map((c) => c.image) : [q.image];
   }
 
   function resolve(key, retry) {
     const { id, kind } = parseKey(key);
-    if (kind === 'full') return data.mocks[id] ? data.mocks[id].questions : [];
+    if (kind === 'full') {
+      if (isNationals(id)) return nationalsQuestions(id);
+      return data.mocks[id] ? data.mocks[id].questions : [];
+    }
     if (key === 'retry:all') return Object.keys(retry).map(findQuestion).filter(Boolean);
     if (kind === 'past') {
       const ids = new Set(HR.progress.descendantIds(data.structure, id));
-      return Object.values(data.mocks)
-        .flatMap((m) => m.questions)
-        .filter((q) => !q.mergedInto && ids.has(q.sectionId));
+      return [...Object.values(data.mocks).flatMap((m) => m.questions), ...verifiedNationals()]
+        .filter((q) => !q.mergedInto && mappedLessonIds(q).some((lessonId) => ids.has(lessonId)));
     }
     const s = data.sections[id];
     return s ? s.tests[kind] || [] : [];
@@ -82,13 +133,16 @@
   function title(key) {
     if (key === 'retry:all') return 'Retry Set';
     const { id, kind } = parseKey(key);
-    if (kind === 'full') return data.structure.mocks.find((m) => m.id === id).title;
+    if (kind === 'full') return [...data.structure.mocks, ...(data.structure.nationals || [])].find((m) => m.id === id).title;
     const { node } = HR.progress.findNode(data.structure, id);
     return node.num ? `${KIND_LABEL[kind]} ${node.num}` : `${KIND_LABEL[kind]}: ${node.title}`;
   }
 
   const allowsPractice = (key) => ['past', 'full', 'all'].includes(parseKey(key).kind);
 
-  HR.loader = { loadScript, loadSection, loadMocks };
-  HR.tests = { parseKey, sectionOfQid, findQuestion, resolve, ensureLoaded, title, allowsPractice, KIND_LABEL };
+  HR.loader = { loadScript, loadSection, loadMocks, loadInventory };
+  HR.tests = {
+    parseKey, sectionOfQid, findQuestion, resolve, ensureLoaded, title, allowsPractice, mappedLessonIds, KIND_LABEL,
+    isNationals, nationalsStatus, nationalsQuestions, sourceImages,
+  };
 })(globalThis);

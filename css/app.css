@@ -20,6 +20,12 @@ h2 { font-size: 1.15rem; margin: 0 0 .5rem; }
 main { max-width: 1040px; margin: 0 auto; padding: 1rem; }
 .site-footer { max-width: 1040px; margin: 0 auto; padding: 1rem; color: var(--muted); font-size: .85rem; }
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+.table-scroll { overflow-x: auto; }
+.coverage-table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+.coverage-table th, .coverage-table td { padding: .5rem; border-bottom: 1px solid var(--line); text-align: left; }
+.source-extract { white-space: pre-wrap; font: inherit; font-size: .875rem; }
+.hash { overflow-wrap: anywhere; }
+.filters input, .filters select { max-width: 100%; padding: .5rem; font: inherit; background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 4px; }
 .muted { color: var(--muted); }
 .small { font-size: .875rem; }
 .row { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; }
@@ -54,6 +60,14 @@ details > summary { cursor: pointer; font-weight: 600; }
 .nav-q.correct::after { content: "\2713"; }
 .nav-q.incorrect::after { content: "\2715"; }
 .nav-q.correct.uncertain, .nav-q.incorrect.uncertain { color: var(--accent-text); box-shadow: inset 0 0 0 2px var(--panel), inset 0 0 0 4px var(--warn); }
+.nav-q.ungraded, .qnum.ungraded { border-style: dashed; border-color: var(--warn); }
+.setup-group { border: 1px solid var(--line); border-radius: 8px; padding: .5rem .9rem .75rem; margin: 0 0 .9rem; }
+.setup-group legend { font-weight: 650; padding: 0 .3rem; }
+.setup-group .row { margin: .3rem 0; }
+.setup select { font: inherit; padding: .2rem .4rem; max-width: 100%; }
+.num-input { width: 5.5em; font: inherit; padding: .2rem .4rem; }
+.status-line { font-weight: 600; }
+.source-link { margin: .5rem 0 0; }
 .qnum { display: inline-block; min-width: 1.9em; padding: 0 .4em; margin-right: .2rem; border: 1px solid var(--line); border-radius: 4px; font-size: .9rem; text-align: center; font-weight: 600; }
 .review-nav .nav-grid { grid-template-columns: repeat(auto-fill, 3.4rem); }
 .review:focus { outline: none; }

@@ -45,7 +45,7 @@ function H(p) {
   h.go = async (hash) => { await p.goto(BASE + hash); await p.reload(); await p.waitForTimeout(600); };
   h.questions = (ids) => p.evaluate((ids) => ids.map((id) => {
     const q = HR.tests.findQuestion(id);
-    return q && { id: q.id, type: q.type, answer: q.answer, options: q.options, explanation: q.explanation, source: q.source };
+    return q && { id: q.id, type: q.type, answer: q.answer, options: q.options, explanation: q.explanation, source: q.source, number: q.number };
   }), ids);
   h.session = async (key) => {
     const s = (await h.st()).inProgress[key];
@@ -65,8 +65,10 @@ function H(p) {
   };
   h.start = async (key, { practice = false, timed = false } = {}) => {
     await h.go(`#/test/${enc(key)}`);
-    if (practice) await p.locator('input[name=mode]').nth(1).check();
-    if (timed) await p.check('#timed');
+    // Whole papers use the setup screen; section tests keep the simple start screen.
+    const setup = (await p.locator('#setup-start').count()) > 0;
+    if (practice) await (setup ? p.check('#setup-mode-practice') : p.locator('input[name=mode]').nth(1).check());
+    if (timed) await (setup ? p.selectOption('#setup-timer', 'per') : p.check('#timed'));
     await p.click('button:text-is("Start")'); await p.waitForTimeout(500);
     const auto = p.locator('.nav-panel input[type=checkbox]');
     if (await auto.isChecked()) await auto.uncheck();
@@ -539,14 +541,19 @@ async function main() {
     await p.click('button:text-is("Discard")'); await p.waitForTimeout(300);
   });
 
-  await item(9, 'Full mock: first attempt in original order, 25/20/15, 1000 points', async () => {
+  await item(9, 'Full mock: default setup keeps original order, 25/20/15, 1000 points; shuffle is a choice', async () => {
     let first = true; let tested = 0;
     for (const m of structure.mocks) {
       const key = `${m.id}:full`;
+      // Earlier practice checks can use the same mock. Isolate this first-attempt fixture.
+      await p.evaluate((key) => HR.app.store.update((state) => {
+        delete state.attempts[key];
+        delete state.inProgress[key];
+      }), key);
       await h.go(`#/test/${enc(key)}`);
       const startBtn = p.locator('button:text-is("Start")');
       if (await startBtn.isDisabled()) { info(`${m.id}: empty (Start disabled), skipped`); continue; }
-      const intro = (await h.view()).match(/(\d+) questions · (\d+) points/);
+      const intro = (await h.view()).match(/(\d+) of \d+ questions · (\d+) points/);
       await startBtn.click(); await p.waitForTimeout(500);
       const sess = await h.session(key);
       const orig = await p.evaluate((id) => HR.data.mocks[id].questions.map((q) => ({ id: q.id, keys: q.options.map((o) => o.key), type: q.type })), m.id);
@@ -554,7 +561,7 @@ async function main() {
       const sameOpts = sess.s.paper.every((x, i) => x.optionOrder.join() === orig[i].keys.join());
       const cnt = { single: 0, multi: 0, tf: 0 }; orig.forEach((q) => cnt[q.type]++);
       const pts = orig.reduce((n, q) => n + POINTS[q.type], 0);
-      ok(sameOrder && sameOpts, `${m.id}: first attempt keeps original question and option order`);
+      ok(sameOrder && sameOpts, `${m.id}: default setup keeps original question and option order`);
       ok(`${cnt.single}/${cnt.multi}/${cnt.tf}` === '25/20/15', `${m.id}: ${cnt.single}/${cnt.multi}/${cnt.tf} single/multi/tf`);
       ok(pts === 1000 && intro && Number(intro[2]) === 1000, `${m.id}: ${pts} points, start screen says "${intro && intro[0]}"`);
       const navText = await p.locator('.nav-panel').innerText();
@@ -568,15 +575,114 @@ async function main() {
         ok((await h.view()).includes(`${a.earned} / ${a.total} points`) && a.total === 1000, `results show x / 1000 points: ${a.earned} / ${a.total}`);
         ok((await p.locator('a:text-is("Back")').getAttribute('href')) === '#/mocks', 'Back goes to #/mocks');
         await p.click('a.btn:text-is("Retake")'); await p.waitForTimeout(500);
+        ok(await p.isChecked('#setup-order-original') && !(await p.isChecked('#setup-shuffle-options')), 'retake setup resets to the defaults');
+        await p.check('#setup-order-shuffle'); await p.check('#setup-shuffle-options');
         await p.click('button:text-is("Start")'); await p.waitForTimeout(500);
         const s2 = await h.session(key);
-        const same2 = JSON.stringify(s2.s.paper.map((x) => x.id)) === JSON.stringify(orig.map((q) => q.id)) &&
-          s2.s.paper.every((x, i) => x.optionOrder.join() === orig[i].keys.join());
-        ok(!same2, 'second attempt is shuffled');
+        const sameIds = JSON.stringify(s2.s.paper.map((x) => x.id)) === JSON.stringify(orig.map((q) => q.id));
+        const byId = Object.fromEntries(orig.map((q) => [q.id, q.keys.join()]));
+        const sameOpts2 = s2.s.paper.every((x) => x.optionOrder.join() === byId[x.id]);
+        ok(!sameIds && !sameOpts2, 'choosing both shuffles changes question and option order');
       }
       await p.click('button:text-is("Discard")'); await p.waitForTimeout(400);
     }
     ok(tested >= 1, `${tested} non-empty mock(s) checked`);
+  });
+
+  await item(18, 'Setup screen: subset, page layout, option shuffle, custom timer, Partial history, Nationals gating', async () => {
+    const m = structure.mocks[0];
+    const key = `${m.id}:full`;
+    await p.evaluate((key) => HR.app.store.update((st) => { delete st.attempts[key]; delete st.inProgress[key]; }), key);
+    await h.go(`#/test/${enc(key)}`);
+    ok(await p.isChecked('#setup-mode-exam') && await p.isChecked('#setup-layout-single'), 'defaults: Exam, one at a time');
+    ok((await p.inputValue('#setup-timer')) === 'off', 'default: no timer');
+    const optDisabled = await p.evaluate(() => document.querySelector('#setup-status option[value=wrong]').disabled);
+    ok(optDisabled, 'wrong-last-time filter disabled before any attempt');
+    await p.fill('#setup-from', '3'); await p.fill('#setup-to', '12');
+    await p.uncheck('#setup-type-tf');
+    await p.waitForTimeout(100);
+    const sum = await p.locator('#setup-summary').innerText();
+    ok(/Partial/.test(sum), 'summary marks a subset as Partial: ' + sum);
+    await p.fill('#setup-count', '4'); await p.waitForTimeout(80);
+    ok(/^4 of 60 questions/.test(await p.locator('#setup-summary').innerText()), 'random sample of 4 shown in summary');
+    await p.check('#setup-mode-practice');
+    ok(!(await p.locator('#setup-timer').isVisible()), 'timer hidden in Practice');
+    await p.check('#setup-layout-page'); await p.check('#setup-shuffle-options');
+    await p.click('#setup-start'); await p.waitForTimeout(500);
+    const sess = await h.session(key);
+    const nums = await p.evaluate((id) => HR.data.mocks[id].questions.map((q, i) => ({ id: q.id, n: i + 1, type: q.type })), m.id);
+    const picked = sess.s.paper.map((x) => nums.find((q) => q.id === x.id));
+    ok(picked.length === 4 && picked.every((q) => q.n >= 3 && q.n <= 12 && q.type !== 'tf'), 'session holds 4 questions from nos. 3-12, no True/False');
+    ok(sess.s.layout === 'page' && sess.s.partial && sess.s.mode === 'practice', 'session is page layout, partial, practice');
+    ok((await p.locator('.question-card').count()) === 4, 'all four questions shown on one page');
+    const q0 = sess.qs[0];
+    const order0 = sess.s.paper[0].optionOrder;
+    await p.locator('#qcard-0 .option input').nth(order0.indexOf(q0.answer[0])).check(); await p.waitForTimeout(150);
+    if (q0.type !== 'multi') ok((await p.locator('#qcard-0 .feedback').count()) === 1, 'practice feedback appears inside that card');
+    ok((await p.locator('.question-card').count()) === 4, 'answering keeps every card on the page');
+    await h.submit();
+    const st = await h.st();
+    const a = st.attempts[key][0];
+    ok(a.partial && a.filters && a.filters.from === 3 && a.filters.count === 4, 'attempt recorded as Partial with its filters');
+    ok(/Partial: nos\. 3–12, single-answer and multiple-answer only, random 4/.test(await h.view()), 'results describe the subset');
+    await h.go('#/mocks');
+    const card = p.locator('section.card', { hasText: m.title });
+    const cardText = await card.evaluate((e) => e.textContent);
+    ok(/Partial/.test(cardText) && !/Best/.test(cardText), 'Past Exams history says Partial and shows no Best from it');
+
+    // Custom total time auto-submits.
+    await h.go(`#/test/${enc(key)}`);
+    await p.selectOption('#setup-timer', 'custom'); await p.fill('#setup-minutes', '2');
+    ok(/Timer 2 min/.test(await p.locator('#setup-summary').innerText()), 'custom timer shown in summary');
+    await p.click('#setup-start'); await p.waitForTimeout(400);
+    const s3 = await h.session(key);
+    ok(Math.abs(s3.s.deadline - s3.s.startedAt - 120000) < 50, 'custom 2-minute deadline stored');
+    await p.evaluate((key) => HR.app.store.update((st) => { st.inProgress[key].deadline = Date.now() + 1500; }), key);
+    await p.waitForTimeout(3000);
+    ok((await h.hash()).startsWith('#/results/'), 'custom timer auto-submits at zero');
+
+    // A Nationals paper still in review offers only its printable version.
+    await h.go('#/mocks');
+    const ready = await p.evaluate(() => HR.data.structure.nationals.map((n) => HR.tests.nationalsStatus(n.id).ready));
+    const reviewCards = await p.locator('section.card', { hasText: 'In review' }).count();
+    ok(reviewCards === ready.filter((r) => !r).length, `${reviewCards} Nationals paper(s) shown as in review`);
+    ok((await p.locator('a:text-is("Printable version")').count()) === 3, 'each Nationals paper links its printable version');
+
+    // Simulate a fully reviewed n2324 in memory: source links, ungraded question 10, and the Retry Set.
+    await p.evaluate(() => {
+      for (const c of HR.data.examInventory.papers[0].captures) {
+        c.inApp = true;
+        if (c.number === 10) { delete c.answer; c.flag = 'Disputed key.'; continue; }
+        c.answer = c.type === 'tf' ? [c.suppliedKey[0]] : c.suppliedKey.split('');
+        c.explanation = c.explanation || 'Test explanation.';
+      }
+      HR.app.store.update((st) => { delete st.attempts['n2324:full']; delete st.inProgress['n2324:full']; });
+    });
+    // Hash navigation only: a reload would drop the in-memory review state.
+    const hop = async (hash) => { await p.evaluate((x) => { location.hash = x; }, hash); await p.waitForTimeout(600); };
+    await hop('#/');
+    await hop('#/mocks');
+    ok((await p.locator('section.card', { hasText: '2023–24 Nationals' }).locator('a:text-is("Open")').count()) === 1, 'reviewed Nationals paper opens in the reviewer');
+    await hop(`#/test/${enc('n2324:full')}`);
+    ok(/1 not graded/.test(await p.locator('#setup-summary').innerText()), 'setup counts the ungraded question');
+    await p.fill('#setup-from', '9'); await p.fill('#setup-to', '11'); await p.check('#setup-mode-practice');
+    await p.click('#setup-start'); await p.waitForTimeout(500);
+    ok(/Paper no\. 9/.test(await p.locator('.question-card').innerText()), 'card shows the printed paper number');
+    const href = await p.locator('.source-link a').first().getAttribute('href');
+    ok(/^HuaweiCloudNationals\(2324Answer\)\/Screenshot%20/.test(href), 'source screenshot link points at the original image: ' + href);
+    const ns = await h.session('n2324:full');
+    const i10 = ns.qs.findIndex((q) => q.number === 10);
+    const i9 = ns.qs.findIndex((q) => q.number === 9);
+    await h.toQ(i10);
+    await p.locator('.option input').first().check(); await p.waitForTimeout(150);
+    if (ns.qs[i10].type !== 'multi') ok(/Not graded/.test(await p.locator('.feedback').innerText()), 'question 10 reveals Not graded');
+    await h.toQ(i9);
+    const wrong = ns.qs[i9].options.map((o) => o.key).filter((k) => !ns.qs[i9].answer.includes(k));
+    await h.pick(ns, i9, ns.qs[i9].type === 'multi' ? wrong : [wrong[0]]);
+    await h.submit();
+    const retry = (await h.st()).retry;
+    ok(!!retry[ns.qs[i9].id] && !retry[ns.qs[i10].id], 'wrong Nationals answer joins the Retry Set; ungraded one does not');
+    await h.nullCheck('nationals results');
   });
 
   await item(12, 'Backup: download, clear, restore, invalid file leaves progress alone', async () => {
@@ -718,10 +824,10 @@ async function main() {
     await b.start(PAST, { practice: true });
     const ps = await b.session(PAST);
     const pi = ps.qs.map((x, i) => (x.type !== 'multi' ? i : -1)).filter((i) => i >= 0);
-    await b.pick(ps, pi[1], ps.qs[pi[1]].answer);
+    if (pi.length > 1) await b.pick(ps, pi[1], ps.qs[pi[1]].answer);
     await b.pick(ps, pi[0], [ps.qs[pi[0]].options.map((o) => o.key).filter((k) => !ps.qs[pi[0]].answer.includes(k))[0] || ps.qs[pi[0]].answer[0]]);
     await q.waitForTimeout(150);
-    await overflow('test (practice, one wrong and one right revealed)');
+    await overflow('test (practice, feedback revealed)');
     // mock with many questions
     const mockInfo = await q.evaluate(() => HR.data.structure.mocks.map((m) => m.id));
     for (const id of mockInfo) {
@@ -757,7 +863,7 @@ async function main() {
 
   await browser.close();
   console.log('\n================ SUMMARY ================');
-  const order = [1, 2, 3, 4, 5, 6, 7, 8, 15, 16, 17, 9, 10, 11, '11b', 12, 13, 14, 'corrupt', 'console'];
+  const order = [1, 2, 3, 4, 5, 6, 7, 8, 15, 16, 17, 9, 18, 10, 11, '11b', 12, 13, 14, 'corrupt', 'console'];
   for (const id of order) if (results[id]) console.log(`${results[id].pass ? 'PASS' : 'FAIL'}  ${id}  ${results[id].name}`);
   console.log('screenshots:', shotNames.join(' '));
   const failed = Object.values(results).some((r) => !r.pass);

@@ -39,7 +39,7 @@
       ];
     });
     return h('div', { class: 'review-nav' }, groups,
-      h('p', { class: 'small muted' }, 'Green is correct. Red is incorrect or unanswered. Select a number to jump to that question.'));
+      h('p', { class: 'small muted' }, 'Green is correct. Red is incorrect or unanswered. Dashed is not graded. Select a number to jump to that question.'));
   }
 
   async function render(el, key, index) {
@@ -60,6 +60,9 @@
           h('strong', null, `${attempt.earned} / ${attempt.total} points (${attempt.pct}%)`), ' ',
           h('span', { class: attempt.passed ? 'badge good' : 'badge bad' }, attempt.passed ? 'Passed' : 'Not passed')),
         h('p', { class: 'small muted' }, `${attempt.mode === 'practice' ? 'Practice' : 'Exam'} mode · ${HR.ui.duration(attempt.secs)} · Pass mark 60%`),
+        attempt.partial && h('p', { class: 'small' }, h('span', { class: 'badge' }, HR.ui.filterText(attempt.filters)),
+          ' Partial sittings appear in your history but do not count toward Best or Passed.'),
+        r.ungraded > 0 && h('p', { class: 'small warned' }, `${r.ungraded} question${r.ungraded === 1 ? ' has' : 's have'} no agreed answer, so ${r.ungraded === 1 ? 'it is' : 'they are'} shown but not scored.`),
         (r.total !== attempt.total || r.earned !== attempt.earned) && h('p', { class: 'small warned' }, 'Some questions have since been corrected, so the score below may differ from the recorded score.'),
         live.length < rows.length && h('p', { class: 'small warned' }, `${rows.length - live.length} question${rows.length - live.length === 1 ? ' is' : 's are'} no longer available and not shown below.`),
         h('ul', { class: 'list' }, Object.entries(r.byType).map(([t, b]) =>
@@ -72,19 +75,29 @@
         live.map(({ p, q }, i) => {
           const chosen = attempt.answers[q.id];
           const ok = HR.scoring.isCorrect(q, chosen);
+          const graded = HR.scoring.isGraded(q);
+          const images = HR.tests.sourceImages(q);
           return h('div', { class: 'review', id: `review-${i}`, tabindex: '-1' },
             h('div', { class: 'row spread' },
-              h('strong', { class: ok ? 'good' : 'bad' }, ok ? 'Correct' : 'Incorrect'),
+              graded
+                ? h('strong', { class: ok ? 'good' : 'bad' }, ok ? 'Correct' : 'Incorrect')
+                : h('strong', { class: 'warned' }, 'Not graded'),
               attempt.uncertain[q.id] && h('span', { class: 'badge warned' }, 'Marked Uncertain')),
             h('p', { class: 'stem' },
-              h('span', { class: `qnum ${HR.scoring.itemStatus(q, chosen)}` }, i + 1), ' ', q.stem),
+              h('span', { class: `qnum ${HR.scoring.itemStatus(q, chosen)}` }, i + 1), ' ',
+              Number.isInteger(q.number) && h('span', { class: 'small muted' }, `(paper no. ${q.number}) `), q.stem),
             q.note && h('p', { class: 'small warned' }, q.note),
             q.appearsIn && h('p', { class: 'small muted' }, `Appeared in: ${q.appearsIn.join(', ')}`),
             h('p', { class: 'small' }, h('strong', null, 'Your answer: '), letters(q, p.optionOrder, chosen)),
-            h('p', { class: 'small' }, h('strong', null, 'Correct answer: '), letters(q, p.optionOrder, q.answer)),
-            h('p', { class: 'small' }, q.explanation),
+            graded
+              ? h('p', { class: 'small' }, h('strong', null, 'Correct answer: '), letters(q, p.optionOrder, q.answer))
+              : h('p', { class: 'small' }, h('strong', null, 'Correct answer: '), 'No agreed answer'),
+            q.explanation && h('p', { class: 'small' }, q.explanation),
             q.flag && h('p', { class: 'small warned' }, q.flag),
-            sourceBadge(q));
+            sourceBadge(q),
+            images.length > 0 && h('p', { class: 'small' }, images.map((image, n) => [n ? ' · ' : '', h('a', {
+              href: image.split('/').map(encodeURIComponent).join('/'), target: '_blank', rel: 'noopener',
+            }, images.length > 1 ? `Original screenshot ${n + 1}` : 'Original screenshot')])));
         })),
     );
   }

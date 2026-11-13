@@ -86,3 +86,29 @@ test('other test types still reject when their section fails to load', async () 
     delete globalThis.document;
   }
 });
+
+test('a Nationals paper becomes a test only once every number is reviewed, one question per number', () => {
+  HR.data.structure.nationals = [{ id: 'n1', year: '2025-26', title: 'Nationals One' }];
+  const cap = (id, number, extra) => ({ id, number, image: `F/${id}.png`, type: 'tf', options: [], ...extra });
+  const captures = [
+    cap('n1-capture-002', 2, { inApp: true, answer: ['T'] }),
+    cap('n1-capture-001', 1, { inApp: true, answer: ['F'] }),
+    cap('n1-capture-003', 2, { inApp: true, answer: ['T'] }),
+    cap('n1-capture-004', 3),
+  ];
+  HR.data.examInventory = { papers: [{ id: 'n1', captures }] };
+  assert.deepStrictEqual(HR.tests.nationalsStatus('n1'), { reviewed: 2, total: 3, ready: false });
+  assert.deepStrictEqual(HR.tests.resolve('n1:full', {}), []);
+  assert.strictEqual(HR.tests.findQuestion('n1-capture-001').id, 'n1-capture-001');
+  assert.strictEqual(HR.tests.findQuestion('n1-capture-004'), null);
+
+  captures[3].inApp = true;
+  assert.strictEqual(HR.tests.nationalsStatus('n1').ready, true);
+  assert.deepStrictEqual(HR.tests.resolve('n1:full', {}).map((x) => x.id), ['n1-capture-001', 'n1-capture-002', 'n1-capture-004']);
+  assert.deepStrictEqual(HR.tests.sourceImages(captures[0]), ['F/n1-capture-002.png', 'F/n1-capture-003.png']);
+  assert.strictEqual(HR.tests.title('n1:full'), 'Nationals One');
+  assert.ok(HR.tests.isNationals('n1') && !HR.tests.isNationals('m1'));
+  assert.deepStrictEqual(HR.tests.resolve('retry:all', { 'n1-capture-004': { at: 1 } }).map((x) => x.id), ['n1-capture-004']);
+  delete HR.data.examInventory;
+  delete HR.data.structure.nationals;
+});
