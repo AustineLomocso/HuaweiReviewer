@@ -3353,7 +3353,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "Sewer migration"
+       "text": "Server migration"
       },
       {
        "key": "B",
@@ -3370,12 +3370,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABC",
      "suppliedExplanation": "Huawei Cloud supports server migration, object storage migration, cloud data migration, and database migration, but does not support image migration.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-051",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Huawei Cloud provides multiple migration modes for users to migrate services from local data centers to the cloud. Which of the following migration modes are supported by Huawei Cloud?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Sewer migration"
+       },
+       {
+        "key": "B",
+        "text": "Database migration"
+       },
+       {
+        "key": "C",
+        "text": "Object storage migration"
+       },
+       {
+        "key": "D",
+        "text": "Image migration"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "Huawei Cloud provides server migration, database migration, object storage migration, and cloud data migration for moving services from local data centers to the cloud. According to the supplied explanation, image migration is not one of the offered migration modes.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220152.png",
@@ -3398,17 +3433,51 @@ HR.data.examInventory = {
       },
       {
        "key": "D",
-       "text": "Convolution kernels with size 3 can be replaced with 3x1 and lx3 convolution kernels."
+       "text": "Convolution kernels with size 3 can be replaced with 3x1 and 1x3 convolution kernels."
       }
      ],
      "suppliedKey": "BC",
      "suppliedExplanation": "Option 8 is correct when referring to the original image. For a 3x3 convolution kernel, the receptive field is larger than that of a SXS kernel on the original image because the image size has already been reduced by the SXS convolution kernel. Option D is too absolute. Although replacing 3x3 convolution kernels with 3x1 and lx3 kernels can ensure that the input and output sizes are consistent, it may affect accuracy. This type of replacement is only suitable for deployment on the edge.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-052",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "John used 64 convolution kernels with a size of 5 and a stride of 2, and 32 convolution kernels with a size of 3 and a stride of 1 to perform convolution operations on an image with a resolution of 225 x 225 pixels (without padding). Which of the following statements are true about this operation?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The final output feature map has a dimension of [110, 110, 32]."
+       },
+       {
+        "key": "B",
+        "text": "The receptive field of a convolution kernel with size 3 (on the original image) is larger than that of a convolution kernel with size 5."
+       },
+       {
+        "key": "C",
+        "text": "Convolution kernels with size 5 can be split into two layers (each with 32 kernels of size 3), which can further reduce the number of parameters without affecting functionality."
+       },
+       {
+        "key": "D",
+        "text": "Convolution kernels with size 3 can be replaced with 3x1 and lx3 convolution kernels."
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected 1x3 read as lx3.",
+     "answer": [
+      "B",
+      "C"
+     ],
+     "explanation": "Without padding, the 5x5 stride-2 layer turns 225x225 into 111x111 and the 3x3 stride-1 layer turns that into 109x109, so the output is [109, 109, 32], not [110, 110, 32]. Because the 3x3 layer operates on the already downsampled map, each of its outputs sees a 9x9 region of the original image, larger than the 5x5 kernel's field. Two stacked 3x3 layers cover the same 5x5 field with fewer parameters. The supplied key treats replacing a 3x3 kernel with 3x1 and 1x3 kernels as too absolute, because the factorization can reduce accuracy.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220153.png",
@@ -3436,12 +3505,48 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABCD",
      "suppliedExplanation": "DEW consists of KMS, CSMS, KPS, and Dedicated HSM.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-053",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Which of the following services or functions are supported by Data Encryption Workshop (DEW)?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Key Management Service (KMS)"
+       },
+       {
+        "key": "B",
+        "text": "Cloud Secret Management Service (CSMS)"
+       },
+       {
+        "key": "C",
+        "text": "Key Pair Service (KPS)"
+       },
+       {
+        "key": "D",
+        "text": "Dedicated Hardware Security Module (Dedicated HSM)"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "Data Encryption Workshop (DEW) consists of Key Management Service (KMS), Cloud Secret Management Service (CSMS), Key Pair Service (KPS), and Dedicated Hardware Security Module (Dedicated HSM), so all four belong to it.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220155.png",
@@ -3469,12 +3574,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABD",
      "suppliedExplanation": "CCE supports the following network models: Cloud native 1.0 network, container tunnel network, and VPC network Cloud Native 2.0 network",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-054",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Cloud Container Engine (CCE) supports multiple network models to meet various requirements. Which of the following network models are supported by CCE?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Container tunnel network"
+       },
+       {
+        "key": "B",
+        "text": "VPC network"
+       },
+       {
+        "key": "C",
+        "text": "Quorum network"
+       },
+       {
+        "key": "D",
+        "text": "Cloud Native 2.0 network"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "D"
+     ],
+     "explanation": "CCE's network models are the Cloud Native 1.0 networks (the container tunnel network and the VPC network) and the Cloud Native 2.0 network. There is no quorum network model.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220156.png",
@@ -3502,12 +3642,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "BCD",
      "suppliedExplanation": "Option A: False. Rink is an open source distributed streaming processing framework. Option 8: Rink is designed to generate accurate results, even if the data is loaded out of order or arrives with delays. This is achieved through its event-time processing mechanism, which allows Flink to consider the actual time an event occurs when calculating results, rather than just the time they arrive on the system. Option C: Plink has strong stateful fault tolerance, which means it can seamlessly recover from failures while maintaining application state. This is achieved through Flink's checkpointing mechanism, which periodically records snapshots of the application state, allowing for accurate recovery to the last consistent state in the event of a failure. Option D: Plink can run efficiently on a large-scale cluster with up to thousands of nodes. It achieves high throughput and low latency by optimizing in-memory data processing and efficient network communication, which makes Flink ideal for processing large-scale data streams.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-055",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Which of the following statements are true about Flink?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Flink is a closed source distributed streaming processing framework."
+       },
+       {
+        "key": "B",
+        "text": "Flink ensures the accuracy of results, even when data is loaded out of order or with delays."
+       },
+       {
+        "key": "C",
+        "text": "Flink provides state-based fault tolerance and can seamlessly fix errors while maintaining a complete application state."
+       },
+       {
+        "key": "D",
+        "text": "Flink can offer high throughput and low latency even when running on thousands of nodes."
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "Flink is an open-source, not closed-source, distributed stream processing framework. Its event-time processing gives accurate results even with out-of-order or late data, its checkpoint-based stateful fault tolerance recovers from failures while preserving application state, and it delivers high throughput and low latency on clusters of thousands of nodes.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220157.png",
@@ -3535,12 +3710,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "BCD",
      "suppliedExplanation": "Option A: GES supports multi-instance deployment and can be scaled out. Option 8: GES offers a modeling solution that allows you to store data in property graphs by mapping it to them. Option C: GES offers user-friendly REST APIs to allow you to easily update and modify graph metadata. Option D: GES offers Gremlin graph traversal to implement complex sewice logic.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-056",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Graph Engine Service (GES) is a distributed graph database based on HBase and Elasticsearch. Which of the following are its characteristics?",
+      "options": [
+       {
+        "key": "A",
+        "text": "It allows for single-instance deployment and can be scaled up when needed."
+       },
+       {
+        "key": "B",
+        "text": "It offers a modeling solution that allows you to store data in property graphs by mapping it to them."
+       },
+       {
+        "key": "C",
+        "text": "It allows for easy update and modification of graph metadata."
+       },
+       {
+        "key": "D",
+        "text": "It offers Gremlin graph traversal to implement complex service logic."
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "GES maps data into property graphs, lets graph metadata be updated easily through REST APIs, and supports Gremlin traversal for complex service logic. It is deployed as multiple instances and scales out, rather than being a single instance that scales up.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220159.png",
@@ -3568,12 +3778,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABD",
      "suppliedExplanation": "Kafka applies to message queues, stream processing, and log collection. Kafka can be used for log aggregation. Log data is asynchronously sent to Kafka clusters in batches, which is not applicable to instant query of log data. Kafka is more suitable for batch processing and sequential read and write, instead of random access and query.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-057",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Which of the following are Kafka application scenarios?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Message queues"
+       },
+       {
+        "key": "B",
+        "text": "Stream processing"
+       },
+       {
+        "key": "C",
+        "text": "Instant query of log data"
+       },
+       {
+        "key": "D",
+        "text": "Log collection"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "D"
+     ],
+     "explanation": "Kafka is used for message queues, stream processing, and log collection or aggregation. Logs are sent to Kafka asynchronously in batches, and Kafka is optimized for sequential reads and writes rather than random access, so it is not suited to instant queries of log data.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220200.png",
@@ -3592,7 +3837,7 @@ HR.data.examInventory = {
       },
       {
        "key": "C",
-       "text": "Data marts use data layering and data modeling to store data, which helps them sewe analysis needs that vary across services and applications."
+       "text": "Data marts use data layering and data modeling to store data, which helps them serve analysis needs that vary across services and applications."
       },
       {
        "key": "D",
@@ -3601,12 +3846,46 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "BC",
      "suppliedExplanation": "Data marts can be independent and directly obtain data from the operating system. They can also be subordinate and depends on the central data warehouse to provide data. The data warehouse is used for application analysis and is not applicable to end users.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-058",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Which of the following statements are true about the differences between data marts and data warehouses?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Data marts only provide data storage services. They are oriented to data management rather than data analysis application and end users."
+       },
+       {
+        "key": "B",
+        "text": "Data marts uses a multidimensional schema for data storage to support specific users or departments."
+       },
+       {
+        "key": "C",
+        "text": "Data marts use data layering and data modeling to store data, which helps them sewe analysis needs that vary across services and applications."
+       },
+       {
+        "key": "D",
+        "text": "The data warehouse is oriented to analysis application and end users."
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+     "answer": [
+      "B",
+      "C"
+     ],
+     "explanation": "Data marts store data in multidimensional schemas for specific users or departments and use layering and modeling to meet varied analysis needs; they can be independent or fed by a central data warehouse. The supplied key treats the data warehouse as serving application analysis rather than end users directly, and data marts as doing more than storage, so the statements that data marts only store data and that the warehouse is oriented to end users are false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220202.png",
@@ -3634,12 +3913,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABC",
      "suppliedExplanation": "Option A: You can use the command line tool provided by Docker to perform various operations, such as starting, stopping, and deleting containers. These operations are usually performed by running specific commands. For example, run the docker run command to start a new container. Option 8: A container can be regarded as a running instance of an image. Docker images contain the code, runtime environment, system tools, system libraries, and settings required for running containers. Containers are running instances created based on these images. Option C: A pseudo-TTY is allocated through commands to access the operation interface of containers. This option is useful for applications that require interactive sessions. This mode is implemented by adding the -t parameter to the docker run command. Option D: In Kubernetes, pods are the smallest deployable units consisting of a group of containers. Containers in the same pod share a network namespace and can communicate with each other using localhost. However, not all containerized platforms use this model. In addition, even in the same pod, the isolation between containers is determined by their configurations. Containers in each pod may not be visible to each other.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-059",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Which of the following statements are true about Docker containers?",
+      "options": [
+       {
+        "key": "A",
+        "text": "You can run specified commands to start, stop, or delete containers."
+       },
+       {
+        "key": "B",
+        "text": "A container can be regarded as a running instance of an image."
+       },
+       {
+        "key": "C",
+        "text": "You can run a command to allocate a pseudo terminal to access a container."
+       },
+       {
+        "key": "D",
+        "text": "Containers in each pod are available to each other for resource sharing and scheduling."
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "Docker commands start, stop, and delete containers; a container is a running instance of an image; and a command option (-t in docker run) allocates a pseudo terminal for interactive access. Pods are a Kubernetes concept, and containers in a pod share a network namespace but are not necessarily visible to each other for resource sharing, so that statement is not a property of Docker containers.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220204.png",
@@ -3667,10 +3981,44 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "AB",
      "suppliedExplanation": "The core idea of a convolutional neural network (CNN) is to leverage the local perception and weight-sharing characteristics of the convolutional layer to automatically extract features. The pooling layer reduces the feature dimensions, thereby enhancing computational efficiency. Option A is true. In a convolutional neural network (CNN), a convolution kernel executes a convolution operation on the input data, with shared weights. This implies that the weights used by the same convolution kernel at different positions remain identical. Weight sharing simplifies the model and mitigates the risk of overfitting, as each feature is treated uniformly, irrespective of its position in the input data. Option 8 is true. The convolutional layer in a convolutional neural network (CNN) utilizes a convolution kernel (or filter) to perform local perception on the input data, meaning each neuron processes only a specific local region of the input data. This approach is inspired by the biological visual perception mechanism, where the human brain also processes visual information using local perception. Local perception enables the network to capture local features of the data, such as image edges and textures. Option C is false. Global perception typically refers to the ability of each neuron to sense the entire input data, contrasting with the local perception characteristic of a convolutional neural network (CNN). A CNN gradually expands the perceptual field of neurons by stacking multiple convolutional and pooling layers. However, the processing of global information is fundamentally based on multi-layer local perception. Option D is false. The statement that the weight remains unchanged implies that the weight does not vary throughout the entire training process. This clearly contradicts with the training process of a convolutional neural network (CNN). During CNN",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-060",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Which of the following are core concepts of a convolutional neural network?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Weight sharing"
+       },
+       {
+        "key": "B",
+        "text": "Local perception"
+       },
+       {
+        "key": "C",
+        "text": "Full perception"
+       },
+       {
+        "key": "D",
+        "text": "Unchanged weight"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B"
+     ],
+     "explanation": "The core ideas of a CNN are local perception (each neuron responds to a local region of the input, capturing features such as edges and textures) and weight sharing (one kernel uses the same weights at every position). CNNs build global understanding by stacking local layers rather than by full perception, and their weights are updated during training by backpropagation rather than staying unchanged.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220206.png",
@@ -3698,12 +4046,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABD",
      "suppliedExplanation": "Option A is true. Speech recognition enables a voice assistant to understand and process the voice instructions of a user. It allows the system to further parse and respond to user requirements by converting voice signals into text. Option 8 is true. Text to speech converts text responses produced by the system into speeches so that users can hear them, which is critical for natural interactions with users. Option C is false. OCR is mainly used to extract text from an image, so it is usually not necessary for voice assistants. Voice assistants mainly process voice input and output rather than text in images. Option D is true. Language generation helps system output text responses. After processing a user's request and determining the corresponding action, the system needs to generate a response in a proper human language. This technology ensures that the system responds in a smooth and natural way, providing a good user experience.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-061",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Which of the following are used by a voice assistant?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Text to speech"
+       },
+       {
+        "key": "B",
+        "text": "Speech recognition"
+       },
+       {
+        "key": "C",
+        "text": "OCR"
+       },
+       {
+        "key": "D",
+        "text": "Language generation"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "D"
+     ],
+     "explanation": "A voice assistant uses speech recognition to turn the user's speech into text, language generation to compose a natural reply, and text to speech to speak that reply. OCR extracts text from images and is not part of a voice interaction.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220207.png",
@@ -3731,12 +4114,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABC",
      "suppliedExplanation": "Compared with on-premises clusters, CCE has the following advantages: CCE enables users to create and upgrade Kubernetes container clusters with just a few clicks. Resources can be billed on usage. Infrastructure resources (such as ECSS, EVS disks, ElPs, bandwidth, and load balancers) used to store and run applications are billed on usage. CCE provides multiple types of optimized OS images. Application management throughout the lifecycle can be performed using the container service all in one place, ensuring container security and reliability. CCE can automatically resize clusters and workloads as resource usage changes. Combined use of auto scaling policies can flexibly scale clusters and workloads to meet fluctuating demands. Option D is false because CCE clusters are highly scalable and you do not have to manage the cluster O&M on your own.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-062",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "An enterprise is planning to migrate its container services from a local data center to Huawei Cloud Container Engine (CCE). Compared with on-premises clusters, what are advantages of CCE clusters?",
+      "options": [
+       {
+        "key": "A",
+        "text": "CCE is easy to use. You can create and scale out CCE clusters in just a few clicks."
+       },
+       {
+        "key": "B",
+        "text": "CCE clusters are billed on a pay-per-use basis, which reduces your costs."
+       },
+       {
+        "key": "C",
+        "text": "CCE offers optimized OS images, making CCE clusters more secure and reliable."
+       },
+       {
+        "key": "D",
+        "text": "CCE cluster scalability is poor. You need to manage the cluster O&M by yourself."
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "Compared with on-premises clusters, CCE creates and scales clusters in a few clicks, bills infrastructure such as ECSs, EVS disks, EIPs, bandwidth, and load balancers on a pay-per-use basis, and provides optimized OS images with lifecycle management for security and reliability. CCE clusters also scale automatically and you do not have to run cluster O&M yourself, so the poor-scalability statement is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220209.png",
@@ -3764,12 +4182,48 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABCD",
      "suppliedExplanation": "Speech synthesis methods include formant synthesizer, parallel formant synthesizer, PSOLA technique, and cascade formant synthesizer.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-063",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Which of the following are speech synthesis methods?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Formant synthesizer"
+       },
+       {
+        "key": "B",
+        "text": "Parallel formant synthesizer"
+       },
+       {
+        "key": "C",
+        "text": "PSOLA technique"
+       },
+       {
+        "key": "D",
+        "text": "Cascade formant synthesizer"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "All four are speech synthesis methods: formant synthesis, in both its parallel and cascade (serial) forms, models the resonances of the vocal tract, and PSOLA (pitch-synchronous overlap-add) is a waveform concatenation technique that adjusts pitch and duration.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220210.png",
@@ -3797,12 +4251,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABC",
      "suppliedExplanation": "Types of Flume sink processors are: Default Sink Processor, Failover Sink Processor, and Load Balancing Sink Processor The Default Sink Processor is the default type, so there is no need to create a sink group for it. The Failover Sink Processor serves as the failover mechanism, while the Load Balancing Sink Processor functions as the load balancing mechanism. However, for the latter processors, you will need to create sink groups.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-064",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Which of the following are types of Flume sink processors?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Default Sink Processor"
+       },
+       {
+        "key": "B",
+        "text": "Failover Sink Processor"
+       },
+       {
+        "key": "C",
+        "text": "Load Balancing Sink Processor"
+       },
+       {
+        "key": "D",
+        "text": "Replicating Sink Processor"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "Flume provides three sink processors. The Default Sink Processor needs no sink group, while the Failover Sink Processor (failover between sinks) and the Load Balancing Sink Processor (spreading events across sinks) both require a sink group. Replicating is a channel selector type, not a sink processor.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220212.png",
@@ -3813,11 +4302,11 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "First, export the MindlR model."
+       "text": "First, export the MindIR model."
       },
       {
        "key": "B",
-       "text": "Second, as MindlR is the intermediate representation of all scenarios, you do not need to convert the model file format during deployment on a device, even if the dependency library and software and hardware environments are different."
+       "text": "Second, as MindIR is the intermediate representation of all scenarios, you do not need to convert the model file format during deployment on a device, even if the dependency library and software and hardware environments are different."
       },
       {
        "key": "C",
@@ -3830,12 +4319,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ACD",
      "suppliedExplanation": "Option A is true. After model training is complete, you need to export the trained model in MindlR format. MindlR is an intermediate representation of MindSpore. It is used to migrate and deploy models between different platforms and devices. Option 8 is false. MindlR is designed for cross-platform. However, in actual applications, the model may need to be optimized or converted based on the specific requirements of the target device. Especially when MindSpore Lite is used for device-side deployment, MindlR models may need to be converted into formats that are more suitable for mobile device deployment, such as TFLite. Option C is true. After developing a mobile application that can load and use a model, you need to transfer the model file to the mobile phone. This may be implemented by various means, including but not limited to USB, emails, or other file transfer applications. Option D is true. Once a model file is transferred to a phone, it needs to be placed in a path expected by the mobile application. After that, you can run the application on the mobile phone to test and verify the actual recognition effect of the model.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-065",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "You use MindSpore to build a cat and dog classification model and plan to use the MindSpore Lite framework to deploy the model on a mobile phone. The model has been trained. Which of the following are the next steps?",
+      "options": [
+       {
+        "key": "A",
+        "text": "First, export the MindlR model."
+       },
+       {
+        "key": "B",
+        "text": "Second, as MindlR is the intermediate representation of all scenarios, you do not need to convert the model file format during deployment on a device, even if the dependency library and software and hardware environments are different."
+       },
+       {
+        "key": "C",
+        "text": "Then, build an app that can call the model file on a mobile phone and transfer the model to the mobile phone through a USB connection, email, or third-party software."
+       },
+       {
+        "key": "D",
+        "text": "Finally, store the model file to a specified path and verify the recognition effect on the mobile phone."
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected MindIR read as MindlR.",
+     "answer": [
+      "A",
+      "C",
+      "D"
+     ],
+     "explanation": "After training, export the model as MindIR, build an app that calls the model, transfer the model file to the phone (by USB, email, or other software), place it in the expected path, and verify recognition on the device. Although MindIR is cross-platform, deploying with MindSpore Lite generally requires converting the model to the on-device format for the target environment, so the claim that no conversion is needed is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220213.png",
@@ -3863,10 +4387,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABC",
      "suppliedExplanation": "Option A: Cloud Native 2.0 focuses on building an efficient resource scheduling and management platform centered on applications to provide enterprises with one-click deployment, intelligent scheduling of applications, and comprehensive monitoring and O&M capabilities. Option 8: In the era of Cloud Native 2.0, the latest DevSecOps application development mode enables agile application development, faster iteration of service applications, and ensures security throughout the entire process. This mode integrates development, security, and O&M processes, allowing for efficient and secure application design and deployment. As a result, it reduces time to market (TTM) for products and ensures the quality and security of applications. Option C: Cloud Native 2.0 helps enterprises manage data and quickly develop data operations capabilities. This allows enterprises to accumulate data assets and explore data values and helps them upgrade their services using data and Al. In today's data-driven business environment, these capabilities are especially crucial. Enterprises can uncover new business opportunities through in-depth data analysis and intelligent applications, enhancing decision-making efficiency and accuracy and",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-066",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "As digital transformation deepens, enterprises increasingly turn from operating \"on cloud\" to \"in cloud\" to power their businesses. This has enabled collaboration of existing capabilities with the new capabilities built based on the cloud. Which of the following statements are true about advantages of Cloud Native 2.0?",
+      "options": [
+       {
+        "key": "A",
+        "text": "An efficient resource scheduling and management platform centered on applications can be built to provide enterprises with one-click deployment, intelligent scheduling of applications, and comprehensive monitoring and O&M capabilities."
+       },
+       {
+        "key": "B",
+        "text": "Agile application development can be achieved using DevSecOps, enabling fast iteration of enterprise services while also ensuring the security of the entire process. Enterprise services, therefore, can respond faster to user requirements."
+       },
+       {
+        "key": "C",
+        "text": "Data can be managed well and data operations capabilities can be developed quickly. This allows enterprises to accumulate data assets and explore data values and helps them upgrade their services using data and AI."
+       },
+       {
+        "key": "D",
+        "text": "Resources like compute, storage, and network resources are pooled using virtualization technologies. A unified virtualization software platform is used to provide unified resource management APIs for upper-layer software."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "Cloud Native 2.0 builds application-centric scheduling and management platforms (one-click deployment, intelligent scheduling, full monitoring and O&M), enables agile and secure delivery through DevSecOps, and helps enterprises manage data, build data operations capabilities, and upgrade services with data and AI. Pooling compute, storage, and network through virtualization behind a unified management API describes earlier virtualization-era cloud, not a core feature of Cloud Native 2.0.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220215.png",
@@ -3894,12 +4453,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABC",
      "suppliedExplanation": "Option A: The API Server runs on the master nodes and maintains the resource status data of the cluster. It is the central hub for interaction between components in Kubernetes clusters, processing all REST requests as the sole management interface. Option 8: The Scheduler runs on the master nodes, listens to newly created pods that have not been allocated to nodes, and selects the appropriate nodes for the pods to run on. Option C: The Controller Manager runs on the master nodes and oversees various controllers in the cluster, including node controllers, replication controllers, and endpoint controllers. These controllers work together to maintain the cluster's status, ensuring that the number of pod replicas in a Deployment matches the desired amount. Option D: The kube-proxy runs on each worker node in a cluster and serves as a network proxy for Ser.'ices. It is responsible for maintaining network connectivity between pods and Ser.'ices.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-067",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "A Kubernetes cluster consists of master nodes and worker nodes. Which of the following components run on the master nodes?",
+      "options": [
+       {
+        "key": "A",
+        "text": "API Server"
+       },
+       {
+        "key": "B",
+        "text": "Scheduler"
+       },
+       {
+        "key": "C",
+        "text": "Controller Manager"
+       },
+       {
+        "key": "D",
+        "text": "kube-proxy"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "The Kubernetes control plane on master nodes includes the API Server (the REST hub for all components and cluster state), the Scheduler (assigns new pods to nodes), and the Controller Manager (runs node, replication, endpoint, and other controllers). kube-proxy runs on every worker node to provide Service networking.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220216.png",
@@ -3914,7 +4508,7 @@ HR.data.examInventory = {
       },
       {
        "key": "B",
-       "text": "Bare Metal Sewer (BMS)"
+       "text": "Bare Metal Server (BMS)"
       },
       {
        "key": "C",
@@ -3927,12 +4521,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "BCD",
      "suppliedExplanation": "After an EIP is configured for a resource, the resource can directly access the Internet. If only a private IP address is configured for the resource, the resource cannot directly access the Internet. You can easily bind an EIP to an ECS, BMS, virtual IP address, load balancer, or NAT gateway, enabling immediate Internet access.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-068",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Which of the following cloud resources can use the Elastic IP (EIP) service for Internet access?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Scalable File Service (SFS)"
+       },
+       {
+        "key": "B",
+        "text": "Bare Metal Sewer (BMS)"
+       },
+       {
+        "key": "C",
+        "text": "RDS for MySQL"
+       },
+       {
+        "key": "D",
+        "text": "Elastic Load Balance (ELB)"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "An EIP can be bound to resources such as ECSs, BMSs, virtual IP addresses, load balancers, NAT gateways, and RDS instances to give them Internet access. SFS file systems are accessed over the VPC and are not bound to EIPs.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220218.png",
@@ -3960,12 +4589,46 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "AC",
      "suppliedExplanation": "In the VGG-19 model, the number \"19\" represents the total number of weight layers (convolutional and fully connected layers) in the network. Specifically, these 19 layers are: - 16 convolutional layers: The VGG-19 model includes 16 convolutional layers, which are responsible for extracting features from the input image. Each convolutional layer is typically followed by a ReW activation function to provide non-linear processing capabilities. - 3 fully connected layers: Following all of the convolutional layers, VGG-19 includes 3 fully connected layers, which are used to map the learned feature representations to the final output space. Fully connected layers play a crucial role in processing classification tasks.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-069",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "What is the total number of layers represented by the number \"19\" in VGG-19?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Convolutional layers"
+       },
+       {
+        "key": "B",
+        "text": "Pooling layers"
+       },
+       {
+        "key": "C",
+        "text": "Fully connected layers"
+       },
+       {
+        "key": "D",
+        "text": "Input layers"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "C"
+     ],
+     "explanation": "The 19 in VGG-19 counts its weight layers: 16 convolutional layers followed by 3 fully connected layers. Pooling and input layers have no trainable weights and are not counted.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220219.png",
@@ -3993,12 +4656,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "ABD",
      "suppliedExplanation": "Option A: GaussDB Mixture Model-Hidden Markov Model (GMM-HMM) is a traditional speech recognition model that combines GMM for feature probability distribution modeling and HMM for time series modeling. Option 8: Connectionist Temporal Classification (CTC) is an algorithm dedicated to processing sequence data. It can process input and output sequences of different lengths, making end-to-end speech recognition training possible. Option C: Listen, Attend, and Spell (LAS) is an end-to-end speech recognition model based on deep learning. It combines a convolutional neural network (CNN) and a recurrent neural network (RNN) and uses an attention mechanism to improve recognition performance. However, its complex structures require a large number of computing resources, which may affect real-time recognition. Option D: Recurrent Neural Network Transducer (RNN-T) is a new end-to-end speech recognition model. It processes audio signals through an encoder network and generates text sequences through a decoder network.",
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2324-capture-070",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Which of the following models can be used for real-time automatic speech recognition (ASR)?",
+      "options": [
+       {
+        "key": "A",
+        "text": "GMM-HMM"
+       },
+       {
+        "key": "B",
+        "text": "CTC"
+       },
+       {
+        "key": "C",
+        "text": "LAS"
+       },
+       {
+        "key": "D",
+        "text": "RNN-T"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "D"
+     ],
+     "explanation": "GMM-HMM (the traditional Gaussian mixture and hidden Markov model approach), CTC (which aligns variable-length audio and text for end-to-end training), and RNN-T (an end-to-end transducer designed for streaming) can all run real-time recognition. LAS uses attention over the whole utterance and is computationally heavy, which makes it ill-suited to real-time recognition.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220221.png",
