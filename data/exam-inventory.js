@@ -62,7 +62,16 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "proposedSectionId": "beyond-1-2",
-     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Spark SQL is built for batch analysis of structured data. It handles structured data processing well, scales to petabyte-sized datasets thanks to in-memory computing, and runs faster than MapReduce, so it suits workloads with moderate timeliness requirements. It is not designed for real-time data query; real-time workloads call for Spark Streaming or another real-time analytics tool.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220038.png",
@@ -120,7 +129,16 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "proposedSectionId": "cloud-3-6",
-     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "The recommended enterprise router scenarios are: communication or isolation between VPCs with shared Direct Connect access to on-premises networks; load balancing or active/standby DR across multiple links; active/standby DR using Direct Connect and VPN; a cross-region, cross-cloud backbone network; and a border firewall between VPCs. Connecting on-premises and cloud networks for small and medium-sized enterprises is not listed as a recommended application.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220041.png",
@@ -176,7 +194,16 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "proposedSectionId": "cloud-6-2",
-     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Huawei Cloud's Anti-DDoS portfolio consists of Cloud Native Anti-DDoS Basic (CNAD Basic), Cloud Native Anti-DDoS Advanced (CNAD Advanced), Advanced Anti-DDoS (AAD), and the AAD international edition. \"Proactive Anti-DDoS\" is not one of these offerings.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220043.png",
@@ -232,7 +259,16 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "proposedSectionId": "ai-1-1",
-     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Countries such as China and the United States are entities; regions such as Europe and Asia are concepts that classify entities; and a country's longitude and latitude are entity properties. The false statement is the quadruplet claim: the basic unit of a knowledge graph is a triplet (entity-relationship-entity), such as China - located in - Asia. A property like a longitude value describes an entity directly rather than forming a separate relationship unit.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220044.png",
@@ -288,7 +324,16 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "proposedSectionId": "beyond-2-3",
-     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "MindSpore Insight visualizes training and performance data, such as operator time consumption, on a web UI for debugging and tuning. MindSpore Lite is a lightweight on-device inference engine, MindSpore Armour provides AI security and privacy protection, and MindSpore Serving deploys models for inference; none of these visualize training performance.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220046.png",
@@ -346,7 +391,16 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "proposedSectionId": "beyond-1-1",
-     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "Hive provides three kinds of user-defined functions: UDFs take one row and return one row, UDAFs aggregate many rows into one (for example counting or averaging), and UDTFs take one row and return many rows (for example when expanding a lateral view). Hive has no \"UDMF\" type, so the statement describing a UDMF is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220047.png",
@@ -440,7 +494,8 @@ HR.data.examInventory = {
        },
        "reason": "Image-processing foundations include convolution kernels, feature maps, stride, and padding."
       }
-     ]
+     ],
+     "inApp": true
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220048.png",
@@ -498,7 +553,16 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "proposedSectionId": "beyond-1-1",
-     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "HBase is a distributed NoSQL store that manages terabytes to petabytes of data, stores structured and unstructured data in flexible column families, and supports efficient random reads by row key. It does not provide the full ACID transaction properties and complex queries of a traditional relational database, so that is not one of its features.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220050.png",
@@ -590,7 +654,8 @@ HR.data.examInventory = {
        },
        "reason": "Deep-learning frameworks compute derivatives and backpropagate gradients through model operations."
       }
-     ]
+     ],
+     "inApp": true
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220051.png",
@@ -648,7 +713,13 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "proposedSectionId": "beyond-2-1",
-     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction. Supplied key C requires review: the wording can describe either sequential training of one model or an ensemble of balanced subsets. The supplied explanation assumes sequential training, while the stem does not explicitly specify it. Repeated sampling also raises overfitting risk without guaranteeing overfitting."
+     "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction. Supplied key C requires review: the wording can describe either sequential training of one model or an ensemble of balanced subsets. The supplied explanation assumes sequential training, while the stem does not explicitly specify it. Repeated sampling also raises overfitting risk without guaranteeing overfitting.",
+     "explanation": "Deleting surplus cat images balances the data but can discard useful features. Repeatedly sampling dog images up to 10,000 raises the risk of overfitting. Interpolating dog images adds training data, though it adds little genuinely new information. The supplied key treats the grouped-training statement as false, reasoning that training one model on each subset in sequence is not ensemble learning. If the ten groups instead train separate models whose predictions are combined, that is a standard ensemble approach to imbalance, which is why this question is not graded.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Not graded: the supplied key names the ensemble-learning statement as false, but the stem does not say whether the ten groups train one model in sequence or separate models that are combined. The answer stays unresolved until checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220052.png",

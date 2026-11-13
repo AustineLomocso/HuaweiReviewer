@@ -26,10 +26,19 @@
      "text": "Real-time data query"
     }
    ],
-   "transcriptionStatus": "visually-reviewed",
    "status": "transcribed",
+   "transcriptionStatus": "visually-reviewed",
    "proposedSectionId": "beyond-1-2",
-   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Spark SQL is built for batch analysis of structured data. It handles structured data processing well, scales to petabyte-sized datasets thanks to in-memory computing, and runs faster than MapReduce, so it suits workloads with moderate timeliness requirements. It is not designed for real-time data query; real-time workloads call for Spark Streaming or another real-time analytics tool.",
+   "inApp": true
   },
   {
    "captureId": "n2324-capture-002",
@@ -56,10 +65,19 @@
      "text": "A cross-region, cross-cloud highly reliable backbone network"
     }
    ],
-   "transcriptionStatus": "visually-reviewed",
    "status": "transcribed",
+   "transcriptionStatus": "visually-reviewed",
    "proposedSectionId": "cloud-3-6",
-   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+   "answer": [
+    "C"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "The recommended enterprise router scenarios are: communication or isolation between VPCs with shared Direct Connect access to on-premises networks; load balancing or active/standby DR across multiple links; active/standby DR using Direct Connect and VPN; a cross-region, cross-cloud backbone network; and a border firewall between VPCs. Connecting on-premises and cloud networks for small and medium-sized enterprises is not listed as a recommended application.",
+   "inApp": true
   },
   {
    "captureId": "n2324-capture-003",
@@ -86,10 +104,19 @@
      "text": "AAD"
     }
    ],
-   "transcriptionStatus": "visually-reviewed",
    "status": "transcribed",
+   "transcriptionStatus": "visually-reviewed",
    "proposedSectionId": "cloud-6-2",
-   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+   "answer": [
+    "C"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Huawei Cloud's Anti-DDoS portfolio consists of Cloud Native Anti-DDoS Basic (CNAD Basic), Cloud Native Anti-DDoS Advanced (CNAD Advanced), Advanced Anti-DDoS (AAD), and the AAD international edition. \"Proactive Anti-DDoS\" is not one of these offerings.",
+   "inApp": true
   },
   {
    "captureId": "n2324-capture-004",
@@ -116,10 +143,19 @@
      "text": "The basic unit of a graph is a quadruplet (entity-relationship-property-entity)."
     }
    ],
-   "transcriptionStatus": "visually-reviewed",
    "status": "transcribed",
+   "transcriptionStatus": "visually-reviewed",
    "proposedSectionId": "ai-1-1",
-   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+   "answer": [
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Countries such as China and the United States are entities; regions such as Europe and Asia are concepts that classify entities; and a country's longitude and latitude are entity properties. The false statement is the quadruplet claim: the basic unit of a knowledge graph is a triplet (entity-relationship-entity), such as China - located in - Asia. A property like a longitude value describes an entity directly rather than forming a separate relationship unit.",
+   "inApp": true
   },
   {
    "captureId": "n2324-capture-005",
@@ -146,10 +182,19 @@
      "text": "MindSpore Serving"
     }
    ],
-   "transcriptionStatus": "visually-reviewed",
    "status": "transcribed",
+   "transcriptionStatus": "visually-reviewed",
    "proposedSectionId": "beyond-2-3",
-   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "MindSpore Insight visualizes training and performance data, such as operator time consumption, on a web UI for debugging and tuning. MindSpore Lite is a lightweight on-device inference engine, MindSpore Armour provides AI security and privacy protection, and MindSpore Serving deploys models for inference; none of these visualize training performance.",
+   "inApp": true
   },
   {
    "captureId": "n2324-capture-006",
@@ -176,10 +221,19 @@
      "text": "A UDTF takes in a single data row and returns multiple data rows."
     }
    ],
-   "transcriptionStatus": "visually-reviewed",
    "status": "transcribed",
+   "transcriptionStatus": "visually-reviewed",
    "proposedSectionId": "beyond-1-1",
-   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Hive provides three kinds of user-defined functions: UDFs take one row and return one row, UDAFs aggregate many rows into one (for example counting or averaging), and UDTFs take one row and return many rows (for example when expanding a lateral view). Hive has no \"UDMF\" type, so the statement describing a UDMF is false.",
+   "inApp": true
   },
   {
    "captureId": "n2324-capture-007",
@@ -206,8 +260,8 @@
      "text": "A convolution kernel (or filter) slides over the pixels of input images based on predefined rules to extract local features."
     }
    ],
-   "transcriptionStatus": "visually-reviewed",
    "status": "verified",
+   "transcriptionStatus": "visually-reviewed",
    "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
    "answer": [
     "C"
@@ -245,7 +299,8 @@
      },
      "reason": "Image-processing foundations include convolution kernels, feature maps, stride, and padding."
     }
-   ]
+   ],
+   "inApp": true
   },
   {
    "captureId": "n2324-capture-008",
@@ -272,10 +327,19 @@
      "text": "Efficient random reading of massive amounts of data"
     }
    ],
-   "transcriptionStatus": "visually-reviewed",
    "status": "transcribed",
+   "transcriptionStatus": "visually-reviewed",
    "proposedSectionId": "beyond-1-1",
-   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "HBase is a distributed NoSQL store that manages terabytes to petabytes of data, stores structured and unstructured data in flexible column families, and supports efficient random reads by row key. It does not provide the full ACID transaction properties and complex queries of a traditional relational database, so that is not one of its features.",
+   "inApp": true
   },
   {
    "captureId": "n2324-capture-009",
@@ -302,8 +366,8 @@
      "text": "Linear algebra"
     }
    ],
-   "transcriptionStatus": "visually-reviewed",
    "status": "verified",
+   "transcriptionStatus": "visually-reviewed",
    "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction. The screenshot overlay touches the left edge. The OCR-assisted stem reads Which of the following is the basis of the backpropagation algorithm?",
    "answer": [
     "A"
@@ -341,7 +405,8 @@
      },
      "reason": "Deep-learning frameworks compute derivatives and backpropagate gradients through model operations."
     }
-   ]
+   ],
+   "inApp": true
   },
   {
    "captureId": "n2324-capture-010",
@@ -368,10 +433,16 @@
      "text": "Interpolation may be performed on dog images in the training set to generate additional data for training."
     }
    ],
-   "transcriptionStatus": "visually-reviewed",
    "status": "answer-review",
+   "transcriptionStatus": "visually-reviewed",
    "proposedSectionId": "beyond-2-1",
-   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction. Supplied key C requires review: the wording can describe either sequential training of one model or an ensemble of balanced subsets. The supplied explanation assumes sequential training, while the stem does not explicitly specify it. Repeated sampling also raises overfitting risk without guaranteeing overfitting."
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction. Supplied key C requires review: the wording can describe either sequential training of one model or an ensemble of balanced subsets. The supplied explanation assumes sequential training, while the stem does not explicitly specify it. Repeated sampling also raises overfitting risk without guaranteeing overfitting.",
+   "source": {
+    "kind": "inferred"
+   },
+   "flag": "Not graded: the supplied key names the ensemble-learning statement as false, but the stem does not say whether the ten groups train one model in sequence or separate models that are combined. The answer stays unresolved until checked against the course material.",
+   "explanation": "Deleting surplus cat images balances the data but can discard useful features. Repeatedly sampling dog images up to 10,000 raises the risk of overfitting. Interpolating dog images adds training data, though it adds little genuinely new information. The supplied key treats the grouped-training statement as false, reasoning that training one model on each subset in sequence is not ensemble learning. If the ten groups instead train separate models whose predictions are combined, that is a standard ensemble approach to imbalance, which is why this question is not graded.",
+   "inApp": true
   },
   {
    "captureId": "n2324-capture-037",
@@ -432,6 +503,35 @@
    "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending."
   },
   {
+   "captureId": "n2425-capture-050",
+   "paperId": "n2425",
+   "questionNumber": 50,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214935.png",
+   "sha256": "e1d85117cbd17a5f777eef4ffaf7d4f6505954826232bb5a539cd2d272b4e8e6",
+   "stem": "In a Huawei Cloud two-city, three-center disaster recovery (DR) solution, to implement DR between the production and DR centers at the network, host, database, and application layers, which of the following cloud services can be used to provide DR functions and improve solution reliability?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Relational Database Service (RDS) + Data Replication Service (DRS) can be used for real-time DR for RDS database instances deployed at two remote sites."
+    },
+    {
+     "key": "B",
+     "text": "ModelArts, a one-stop development platform for AI developers, can be used for massive data preprocessing, large-scale distributed training, and management of the entire lifecycle of AI workflows."
+    },
+    {
+     "key": "C",
+     "text": "Domain Name Service (DNS) can be used to query the public IP addresses of the production and DR centers, and direct 100% of user traffic to the production center, except in the event of a disaster. If there is a disaster, then 100% of the user traffic is directed to the DR center."
+    },
+    {
+     "key": "D",
+     "text": "Cloud Backup and Recovery (CBR) can be used to back up system and data disks of cloud servers across regions, create images using backups if a disaster occurs, and restore services and data carried on the [cloud servers] at the DR site."
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "reviewNotes": "Option B was merged into A by OCR. Bracketed words in D are a best reading of text partly hidden by the floating screenshot overlay."
+  },
+  {
    "captureId": "n2526-capture-059",
    "paperId": "n2526",
    "questionNumber": 59,
@@ -488,35 +588,6 @@
    "transcriptionStatus": "visually-reviewed",
    "status": "transcribed",
    "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending."
-  },
-  {
-   "captureId": "n2425-capture-050",
-   "paperId": "n2425",
-   "questionNumber": 50,
-   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214935.png",
-   "sha256": "e1d85117cbd17a5f777eef4ffaf7d4f6505954826232bb5a539cd2d272b4e8e6",
-   "stem": "In a Huawei Cloud two-city, three-center disaster recovery (DR) solution, to implement DR between the production and DR centers at the network, host, database, and application layers, which of the following cloud services can be used to provide DR functions and improve solution reliability?",
-   "options": [
-    {
-     "key": "A",
-     "text": "Relational Database Service (RDS) + Data Replication Service (DRS) can be used for real-time DR for RDS database instances deployed at two remote sites."
-    },
-    {
-     "key": "B",
-     "text": "ModelArts, a one-stop development platform for AI developers, can be used for massive data preprocessing, large-scale distributed training, and management of the entire lifecycle of AI workflows."
-    },
-    {
-     "key": "C",
-     "text": "Domain Name Service (DNS) can be used to query the public IP addresses of the production and DR centers, and direct 100% of user traffic to the production center, except in the event of a disaster. If there is a disaster, then 100% of the user traffic is directed to the DR center."
-    },
-    {
-     "key": "D",
-     "text": "Cloud Backup and Recovery (CBR) can be used to back up system and data disks of cloud servers across regions, create images using backups if a disaster occurs, and restore services and data carried on the [cloud servers] at the DR site."
-    }
-   ],
-   "transcriptionStatus": "visually-reviewed",
-   "status": "transcribed",
-   "reviewNotes": "Option B was merged into A by OCR. Bracketed words in D are a best reading of text partly hidden by the floating screenshot overlay."
   }
  ]
 }

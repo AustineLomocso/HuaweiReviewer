@@ -11,7 +11,8 @@ test('verified Nationals enter lesson practice and retry resolution', () => {
     assert.equal(HR.tests.resolve('retry:all', { [id]: { at: 1 } })[0].id, id);
   }
   assert.ok(!questions.some((q) => q.id === 'n2324-capture-010'));
-  assert.equal(HR.tests.findQuestion('n2324-capture-010'), null);
+  // Question 10 is in the app but ungraded, so it never enters lesson past sets or scoring.
+  assert.equal(HR.scoring.isGraded(HR.tests.findQuestion('n2324-capture-010')), false);
 });
 
 test('reviewed Nationals preserve supplied keys and corrected transcription separately', () => {
