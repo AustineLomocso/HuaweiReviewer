@@ -7020,10 +7020,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-021",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about the variance and deviation in data mining models is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The final prediction error is only affected by the variance and deviation."
+       },
+       {
+        "key": "B",
+        "text": "The variance is the average of the squared differences of a model's prediction results from their mean."
+       },
+       {
+        "key": "C",
+        "text": "The variance arises from the sensitivity error of the model to small fluctuations on a training set."
+       },
+       {
+        "key": "D",
+        "text": "The deviation is the difference between the average of the predicted values and the true value."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "Prediction error = bias squared + variance + irreducible error. Variance measures how far predictions spread around their mean and comes from the model's sensitivity to small fluctuations in the training set, and bias (deviation) is the gap between the average prediction and the true value. Because the irreducible error also contributes, the claim that error depends only on variance and bias is false.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai-v4",
+      "pages": [
+       136
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214848.png",
@@ -7042,7 +7079,7 @@ HR.data.examInventory = {
       },
       {
        "key": "C",
-       "text": "LI regularization"
+       "text": "L1 regularization"
       },
       {
        "key": "D",
@@ -7051,17 +7088,54 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-022",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following options utilizes the embedded method for feature selection?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Analysis of variance"
+       },
+       {
+        "key": "B",
+        "text": "Mutual information"
+       },
+       {
+        "key": "C",
+        "text": "LI regularization"
+       },
+       {
+        "key": "D",
+        "text": "Recursive feature elimination"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected L1 read as LI.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Embedded methods perform feature selection as part of model training, and regularization is the most common example: L1 regularization drives the weights of unhelpful features to zero. Analysis of variance and mutual information are filter methods that score features before training, and recursive feature elimination is a wrapper method that repeatedly retrains the model.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai-v4",
+      "pages": [
+       129
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214850.png",
      "number": 23,
      "paperTotal": 90,
      "type": "single",
-     "stem": "Assume you need to use Spark MLIib to convert a DataFrame having 3 rows and 4 columns to two-dimensional data. Which of the following approaches is incorrect?",
+     "stem": "Assume you need to use Spark MLlib to convert a DataFrame having 3 rows and 4 columns to two-dimensional data. Which of the following approaches is incorrect?",
      "options": [
       {
        "key": "A",
@@ -7082,10 +7156,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-023",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Assume you need to use Spark MLIib to convert a DataFrame having 3 rows and 4 columns to two-dimensional data. Which of the following approaches is incorrect?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Find the covariance matrix of the 3x4 matrix."
+       },
+       {
+        "key": "B",
+        "text": "Calculate the right eigenvector of the covariance matrix."
+       },
+       {
+        "key": "C",
+        "text": "Use the PCA algorithm to select eigenvectors corresponding to the two smallest eigenvalues, and form a matrix with these eigenvectors."
+       },
+       {
+        "key": "D",
+        "text": "Convert the DataFrame to a 3x4 matrix."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected MLlib.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "PCA reduces dimensions by converting the DataFrame to a 3x4 matrix, computing its covariance matrix, finding that matrix's eigenvectors, and projecting the data onto the eigenvectors with the largest eigenvalues, which capture the most variance. Choosing the eigenvectors of the two smallest eigenvalues keeps the least informative directions, so that step is incorrect.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214851.png",
@@ -7113,10 +7220,40 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-024",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements is false about the scenario-based big data real-time retrieval solution?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Real-time search engines Elasticsearch and HBase are suitable for quick retrieval (query based on specified criteria). They are not suitable for statistical query (such as queries using the GROUP and SUM statements) and complex query (such as queries using the JOIN and IN statements and subqueries)."
+       },
+       {
+        "key": "B",
+        "text": "Elasticsearch is used for full-text retrieval or as non-primary key indexes for HBase storage. Elasticsearch can store both data and indexes, but it is only appropriate for smaller sites because it is not cost-effective."
+       },
+       {
+        "key": "C",
+        "text": "HBase is used for primary key search (key-value search). The search criteria are simple."
+       },
+       {
+        "key": "D",
+        "text": "GES is a graph database based on the Hadoop ecosystem. Underlying data is stored in HBase and Elasticsearch, supporting quick search of graphs."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "explanation": "In real-time retrieval solutions, Elasticsearch and HBase serve fast criteria-based lookups rather than statistical or complex join queries; HBase handles simple primary-key searches; and Elasticsearch provides full-text search or secondary indexes for HBase. Two remaining statements are questionable: one says Elasticsearch suits only small sites because it is not cost-effective, and the other says GES stores its data in HBase and Elasticsearch, while the course describes GES as running on Huawei's EYWA kernel. Because the intended false statement cannot be confirmed, this question is shown for practice but not scored.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Not graded: no key was supplied and the sources conflict. The statement that GES stores its data in HBase and Elasticsearch contradicts the organizers' own explanation for 2023-24 question 75, which says GES uses the EYWA kernel and keeps no data in Elasticsearch; the cost claim about Elasticsearch is also doubtful, and no course page settles which statement the paper intended."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214853.png",
@@ -7144,10 +7281,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-025",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements is false about the differences between Hive internal and external tables?",
+      "options": [
+       {
+        "key": "A",
+        "text": "If an external table is created, only the data path is recorded when data is imported and the data location is not changed."
+       },
+       {
+        "key": "B",
+        "text": "When a table is deleted, the metadata and data of an internal table are deleted together."
+       },
+       {
+        "key": "C",
+        "text": "When creating an internal table, Hive moves data to the path to which the data warehouse points during data import."
+       },
+       {
+        "key": "D",
+        "text": "When a table is deleted, only the data of an external table is deleted (metadata is retained)."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "When data is loaded into an internal (managed) table, Hive moves it into the warehouse directory, and dropping the table deletes both metadata and data. An external table only records the data's location, and dropping it deletes only the metadata while the data files remain. The statement that dropping an external table deletes its data but keeps the metadata has this backwards.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course page lists internal and external tables without detailing their deletion behavior."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214855.png",
@@ -7175,10 +7345,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-026",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "When shuffling occurs, in which format will the MapTask calculation results be distributed to the corresponding tasks?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Binary mode"
+       },
+       {
+        "key": "B",
+        "text": "Key-value pair"
+       },
+       {
+        "key": "C",
+        "text": "Sequence"
+       },
+       {
+        "key": "D",
+        "text": "RDD"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "MapReduce works on key-value pairs throughout. During the shuffle, map outputs are partitioned and sorted by key into files of key-value pairs, and each reduce task fetches the pairs for its partition. Binary streams, sequences, and RDDs are not the shuffle's unit of distribution; RDDs belong to Spark.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       592
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214856.png",
@@ -7206,10 +7413,48 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-027",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "HBase is a distributed NoSQL database. Which of the following statements about HBase is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The table structure is sparse."
+       },
+       {
+        "key": "B",
+        "text": "HBase uses ZooKeeper as a collaboration service."
+       },
+       {
+        "key": "C",
+        "text": "HBase uses Hive to store underlying data."
+       },
+       {
+        "key": "D",
+        "text": "HBase is suitable for storing large table data and can read and write large table data in real time."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "HBase is a distributed, column-oriented NoSQL database with sparse tables, uses ZooKeeper for coordination, and reads and writes very large tables in real time. All HBase data is stored in HDFS, not in Hive; Hive is a data warehouse layer that can itself sit on top of HBase or HDFS.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       597,
+       599
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214857.png",
@@ -7237,10 +7482,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-028",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following architectures is used by Huawei's Ascend 910 chips?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Ascend"
+       },
+       {
+        "key": "B",
+        "text": "von Neumann"
+       },
+       {
+        "key": "C",
+        "text": "Gauss"
+       },
+       {
+        "key": "D",
+        "text": "Da Vinci"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Ascend AI processors, including the Ascend 910, are built on Huawei's Da Vinci architecture, whose AI cores combine cube, vector, and scalar compute units. Ascend is the chip family name, von Neumann is the classic general-purpose computer architecture, and Gauss is the name of Huawei's database products.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The supplied course pages mention Ascend 910 hardware but not its core architecture."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214859.png",
@@ -7268,10 +7546,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-029",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is a use case for ModelArts ExeML predictive analytics?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Image segmentation"
+       },
+       {
+        "key": "B",
+        "text": "Flower classification"
+       },
+       {
+        "key": "C",
+        "text": "Housing prices forecasting"
+       },
+       {
+        "key": "D",
+        "text": "Facial recognition"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "ModelArts ExeML offers image classification, object detection, predictive analytics, and sound classification. Predictive analytics trains models on structured tabular data to classify or forecast values, such as housing prices. Image segmentation, flower classification, and facial recognition are image tasks.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       532
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214901.png",
@@ -7299,17 +7614,54 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-030",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Long short-term memory (LSTM) is a type of recurrent neural network (RNN) and is characterized by its cell state and gate structure. Which of the following is not considered a gate structure in LSTM?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Forget"
+       },
+       {
+        "key": "B",
+        "text": "Memory"
+       },
+       {
+        "key": "C",
+        "text": "Output"
+       },
+       {
+        "key": "D",
+        "text": "Input"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "An LSTM cell controls its cell state with three gates: the forget gate decides what to discard, the input gate decides what new information to store, and the output gate decides what to output. \"Memory\" describes the cell state itself, not a gate.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       358
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214902.png",
      "number": 31,
      "paperTotal": 90,
      "type": "single",
-     "stem": "The field of Al has its roots in expert systems, which emerged in the 1960s and 1970s and reached its peak in the 1980s. Which of the following schools do expert systems belong to?",
+     "stem": "The field of AI has its roots in expert systems, which emerged in the 1960s and 1970s and reached its peak in the 1980s. Which of the following schools do expert systems belong to?",
      "options": [
       {
        "key": "A",
@@ -7330,10 +7682,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-031",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "The field of Al has its roots in expert systems, which emerged in the 1960s and 1970s and reached its peak in the 1980s. Which of the following schools do expert systems belong to?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Connectionism (neural network)"
+       },
+       {
+        "key": "B",
+        "text": "None of the above"
+       },
+       {
+        "key": "C",
+        "text": "Behaviorism (robot animals)"
+       },
+       {
+        "key": "D",
+        "text": "Symbolism"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Expert systems come from symbolism, the school that represents knowledge as symbols and applies logical reasoning; the course credits symbolism with developing expert systems and knowledge engineering, which flourished in the 1980s. Connectionism builds neural networks, and behaviorism focuses on perception and action, as in robot animals.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       8
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214903.png",
@@ -7361,10 +7750,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-032",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "During model training and evaluation, overfitting and underfitting often occur. Which of the following statements about overfitting and underfitting is true?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Underfitting means that a model performs well during training but poorly during prediction."
+       },
+       {
+        "key": "B",
+        "text": "Underfitting means that a model performs poorly during training but well during prediction."
+       },
+       {
+        "key": "C",
+        "text": "Overfitting means that a model does not fully fit its training data."
+       },
+       {
+        "key": "D",
+        "text": "In terms of evaluation metrics, overfitting means that a model performs well on the training set but poorly on the test set and new data."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Overfitting means a model performs well on the training set but poorly on the test set and new data. Underfitting means the model is too simple to fit even its training data, so it performs poorly in both training and prediction; the other statements mix up the two.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai-v4",
+      "pages": [
+       249
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214905.png",
@@ -7392,10 +7818,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-033",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about the median filter is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "It is a filter of the template sorting operation."
+       },
+       {
+        "key": "B",
+        "text": "It is not practical for reducing salt-and-pepper noise. Boundary information of an image is lost when the median filter reduces random noise of the image."
+       },
+       {
+        "key": "C",
+        "text": "Median filtering is widely used to reduce salt and pepper noise effectively. It cancels noise while preserving the image's sharpness."
+       },
+       {
+        "key": "D",
+        "text": "It replaces the original pixel value with the median output of the pixel values sorted in the neighborhood."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "The median filter is a template sorting operation: it replaces each pixel with the median of the sorted pixel values in its neighborhood. It is widely used precisely because it removes salt-and-pepper noise while preserving edges and sharpness, so the claim that it is impractical for that noise and loses boundary information is false.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       124
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214907.png",
@@ -7423,10 +7886,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-034",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is not a labeling type for creating an image dataset in ModelArts data management?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Object detection"
+       },
+       {
+        "key": "B",
+        "text": "Image classification"
+       },
+       {
+        "key": "C",
+        "text": "Image generation"
+       },
+       {
+        "key": "D",
+        "text": "Image segmentation"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "ModelArts data management labels images for image classification, object detection, and image segmentation. Image generation is a model task, not a dataset labeling type.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       528
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214908.png",
@@ -7454,10 +7954,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-035",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "If a model has a low bias and high variance on the test set, which problem does this model have?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Neither underfitting nor overfitting"
+       },
+       {
+        "key": "B",
+        "text": "Overfitting or underfitting, both of which are likely"
+       },
+       {
+        "key": "C",
+        "text": "Underfitting"
+       },
+       {
+        "key": "D",
+        "text": "Overfitting"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "High variance with low bias means the model fits its training data closely but its predictions swing widely on new data, which is overfitting. Underfitting shows up as high bias instead.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       10
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214910.png",
@@ -7485,10 +8022,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-036",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A convolution kernel is a crucial element in image processing and computer vision. It is a key component of convolutional neural networks (CNNs). Which of the following is the main function of a convolution kernel?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Image resizing"
+       },
+       {
+        "key": "B",
+        "text": "Dimension reduction"
+       },
+       {
+        "key": "C",
+        "text": "Color enhancement"
+       },
+       {
+        "key": "D",
+        "text": "Extracting local features"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "A convolution kernel scans small regions of the input with shared weights to extract local features such as edges and textures, which deeper layers combine into global information. Resizing, dimension reduction (pooling), and color enhancement are not its main role.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       112
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214912.png",
@@ -7516,10 +8090,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-037",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following compute resources is not supported by ModelArts for creating a training job?",
+      "options": [
+       {
+        "key": "A",
+        "text": "CPU"
+       },
+       {
+        "key": "B",
+        "text": "Ascend"
+       },
+       {
+        "key": "C",
+        "text": "TPU"
+       },
+       {
+        "key": "D",
+        "text": "GPU"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "ModelArts training jobs run on CPU, GPU, and Huawei Ascend resources. TPUs are Google's proprietary accelerators and are not offered by ModelArts.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages list ModelArts resource pools but not this comparison directly."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214913.png",
@@ -7573,7 +8180,16 @@ HR.data.examInventory = {
       ]
      },
      "transcriptionStatus": "visually-reviewed",
-     "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending."
+     "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "A 3 x 3 kernel applied to a three-channel image spans all three channels, so it has 3 x 3 x 3 = 27 weights. Adding the kernel's single bias term gives 28 learnable parameters.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The count assumes one bias term, as is standard for a convolution kernel."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214915.png",
@@ -7584,7 +8200,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "Sewice deployment -> Model training -> Data labeling"
+       "text": "Service deployment -> Model training -> Data labeling"
       },
       {
        "key": "B",
@@ -7601,10 +8217,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-039",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is the process of ModelArts ExeML?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Sewice deployment -> Model training -> Data labeling"
+       },
+       {
+        "key": "B",
+        "text": "Data labeling -> Service deployment -> Model training"
+       },
+       {
+        "key": "C",
+        "text": "Model training -> Data labeling -> Service deployment"
+       },
+       {
+        "key": "D",
+        "text": "Data labeling -> Model training -> Service deployment"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "ExeML is a wizard-based, no-code workflow: upload and label data, train the model automatically, then deploy it as a service. Training cannot come before labeling, and deployment needs a trained model.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       533
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214917.png",
@@ -7632,10 +8285,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-040",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "When you use ModelArts ExeML to build a predictive analytics project, if the label column contains numeric continuous data, what is the label column data type and trained model type?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Continuous value and regression model"
+       },
+       {
+        "key": "B",
+        "text": "Continuous value and classification model"
+       },
+       {
+        "key": "C",
+        "text": "Discrete value and regression model"
+       },
+       {
+        "key": "D",
+        "text": "Discrete value and classification model"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "When the label column holds continuous numeric values, ExeML treats it as a continuous value and trains a regression model. Discrete labels, such as categories, lead to a classification model instead.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214919.png",
