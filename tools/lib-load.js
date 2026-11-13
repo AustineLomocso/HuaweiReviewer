@@ -11,6 +11,8 @@ function loadAll() {
     require(path.join(ROOT, 'js/core', f + '.js'));
   }
   require(path.join(ROOT, 'data/structure.js'));
+  require(path.join(ROOT, 'data/source-inventory.js'));
+  require(path.join(ROOT, 'data/exam-inventory.js'));
   const HR = globalThis.HR;
   const original = HR.registerSection;
   let current = null;

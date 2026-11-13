@@ -1,0 +1,522 @@
+{
+ "schemaVersion": 1,
+ "reviews": [
+  {
+   "captureId": "n2324-capture-001",
+   "paperId": "n2324",
+   "questionNumber": 1,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220035.png",
+   "sha256": "78e67980e710e100ec5fdabbe0ecc861416e8cacbcaba68f78a6d9e722af94c1",
+   "stem": "Which of the following scenarios is not a good match for Spark SQL?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Structured data processing"
+    },
+    {
+     "key": "B",
+     "text": "A scenario with moderate requirements on processing timeliness"
+    },
+    {
+     "key": "C",
+     "text": "Processing petabytes of data"
+    },
+    {
+     "key": "D",
+     "text": "Real-time data query"
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "proposedSectionId": "beyond-1-2",
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+  },
+  {
+   "captureId": "n2324-capture-002",
+   "paperId": "n2324",
+   "questionNumber": 2,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220038.png",
+   "sha256": "b013ef5631cd74312274ed0aa9b3e95470aae2292e119433f12dfe7ce620fbab",
+   "stem": "An enterprise router is a central cloud router with robust specifications, high bandwidth, and high performance. Which of the following is not a recommended application for enterprise routers?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Communication or isolation between VPCs and shared Direct Connect connections for communication between on-premises and cloud networks"
+    },
+    {
+     "key": "B",
+     "text": "Load balancing or active/standby DR between multiple links for enhanced reliability"
+    },
+    {
+     "key": "C",
+     "text": "Communication between on-premises and cloud networks for small- and medium-sized enterprises"
+    },
+    {
+     "key": "D",
+     "text": "A cross-region, cross-cloud highly reliable backbone network"
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "proposedSectionId": "cloud-3-6",
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+  },
+  {
+   "captureId": "n2324-capture-003",
+   "paperId": "n2324",
+   "questionNumber": 3,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220041.png",
+   "sha256": "26882740153b37eb3751740bb651a6eb1acc335296ba30f05d293dc167fe0161",
+   "stem": "Huawei Cloud provides various security protection solutions to defend against DDoS attacks. Which of the following is not one of them?",
+   "options": [
+    {
+     "key": "A",
+     "text": "CNAD Basic"
+    },
+    {
+     "key": "B",
+     "text": "CNAD Advanced"
+    },
+    {
+     "key": "C",
+     "text": "Proactive Anti-DDoS"
+    },
+    {
+     "key": "D",
+     "text": "AAD"
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "proposedSectionId": "cloud-6-2",
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+  },
+  {
+   "captureId": "n2324-capture-004",
+   "paperId": "n2324",
+   "questionNumber": 4,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220043.png",
+   "sha256": "6e575ffb8e63b912bd6acf88c4a32876482567af1e5bdc4f4c6ed059ab3e5014",
+   "stem": "Which of the following is false about a knowledge graph of the relationships between countries and regions?",
+   "options": [
+    {
+     "key": "A",
+     "text": "China and the United States are entities in the graph."
+    },
+    {
+     "key": "B",
+     "text": "Europe and Asia are concepts in the graph."
+    },
+    {
+     "key": "C",
+     "text": "The longitude and latitude of each country are entity properties in the graph."
+    },
+    {
+     "key": "D",
+     "text": "The basic unit of a graph is a quadruplet (entity-relationship-property-entity)."
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "proposedSectionId": "ai-1-1",
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+  },
+  {
+   "captureId": "n2324-capture-005",
+   "paperId": "n2324",
+   "questionNumber": 5,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220044.png",
+   "sha256": "d796ac6c1436fd17f04c7a8d7d8faefdf05a83a2cd7ff7fff4e71c392c332f3d",
+   "stem": "When using MindSpore for model training, you want to visualize training performance data (such as operator time consumption) on the web UI to facilitate performance debugging. Which MindSpore tool can help visualize such data?",
+   "options": [
+    {
+     "key": "A",
+     "text": "MindSpore Lite"
+    },
+    {
+     "key": "B",
+     "text": "MindSpore Insight"
+    },
+    {
+     "key": "C",
+     "text": "MindSpore Armour"
+    },
+    {
+     "key": "D",
+     "text": "MindSpore Serving"
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "proposedSectionId": "beyond-2-3",
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+  },
+  {
+   "captureId": "n2324-capture-006",
+   "paperId": "n2324",
+   "questionNumber": 6,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220046.png",
+   "sha256": "0079c1eec3f8a34727efa28c9c2beed542ae9b0212945e018a62b3e814d7b0da",
+   "stem": "Which of the following statements about Hive user-defined functions (UDFs) is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A UDF takes in a single data row and returns a single data row."
+    },
+    {
+     "key": "B",
+     "text": "A UDMF takes in multiple data rows and returns multiple data rows."
+    },
+    {
+     "key": "C",
+     "text": "A UDAF takes in multiple data rows and returns a single data row."
+    },
+    {
+     "key": "D",
+     "text": "A UDTF takes in a single data row and returns multiple data rows."
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "proposedSectionId": "beyond-1-1",
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+  },
+  {
+   "captureId": "n2324-capture-007",
+   "paperId": "n2324",
+   "questionNumber": 7,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220047.png",
+   "sha256": "7e8d5b4d75dc0d78e3d1ea7fa26cd62061393d57eb8350131302acbbd9335cc4",
+   "stem": "Which of the following statements about the convolutional neural network (CNN) is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Padding involves adding a border of pixels all with the value zero around the edges of the input images."
+    },
+    {
+     "key": "B",
+     "text": "If a convolution kernel (or filter) slides over the input one pixel at a time, the stride is 1."
+    },
+    {
+     "key": "C",
+     "text": "Feature maps are the result of convolution, that is, the process of applying filters to input images. The quantity of feature maps is irrelevant to the quantity of filters used."
+    },
+    {
+     "key": "D",
+     "text": "A convolution kernel (or filter) slides over the pixels of input images based on predefined rules to extract local features."
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "verified",
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction.",
+   "answer": [
+    "C"
+   ],
+   "explanation": "Each convolution kernel produces a feature map. The output depth depends on the number of kernels, so the claim that these quantities are irrelevant is false. The same source defines stride, zero padding, and local feature extraction.",
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     190
+    ]
+   },
+   "sectionId": "ai-2-1",
+   "secondarySectionIds": [
+    "beyond-2-5"
+   ],
+   "mappingEvidence": [
+    {
+     "sectionId": "ai-2-1",
+     "source": {
+      "pdf": "ei-developer",
+      "pages": [
+       190
+      ]
+     },
+     "reason": "The neural-network lesson covers CNN feature extraction and architecture."
+    },
+    {
+     "sectionId": "beyond-2-5",
+     "source": {
+      "pdf": "ei-developer",
+      "pages": [
+       190
+      ]
+     },
+     "reason": "Image-processing foundations include convolution kernels, feature maps, stride, and padding."
+    }
+   ]
+  },
+  {
+   "captureId": "n2324-capture-008",
+   "paperId": "n2324",
+   "questionNumber": 8,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220048.png",
+   "sha256": "cb19e0f077f8d09c6107a87a74283eba2888136a0f6ed6e167f47d4ac837c5f5",
+   "stem": "Which of the following is not a feature or an application scenario of HBase?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Processing of terabytes or even petabytes of data"
+    },
+    {
+     "key": "B",
+     "text": "Atomicity, Consistency, Isolation, Durability (ACID) properties of traditional relational databases"
+    },
+    {
+     "key": "C",
+     "text": "Concurrent processing of structured and unstructured data"
+    },
+    {
+     "key": "D",
+     "text": "Efficient random reading of massive amounts of data"
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "proposedSectionId": "beyond-1-1",
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction."
+  },
+  {
+   "captureId": "n2324-capture-009",
+   "paperId": "n2324",
+   "questionNumber": 9,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220050.png",
+   "sha256": "6a3def44d383c9dece004eb975c01abcefb4cd84c1034c02e0f90e049ed2f0ce",
+   "stem": "Which of the following is the basis of the backpropagation algorithm?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Chain rule"
+    },
+    {
+     "key": "B",
+     "text": "Computational graph"
+    },
+    {
+     "key": "C",
+     "text": "Cost function"
+    },
+    {
+     "key": "D",
+     "text": "Linear algebra"
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "verified",
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction. The screenshot overlay touches the left edge. The OCR-assisted stem reads Which of the following is the basis of the backpropagation algorithm?",
+   "answer": [
+    "A"
+   ],
+   "explanation": "Backpropagation computes partial derivatives using the chain rule and avoids redundant intermediate computations. Computational graphs represent operations, and the loss supplies the objective being differentiated.",
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     47
+    ]
+   },
+   "sectionId": "ai-2-1",
+   "secondarySectionIds": [
+    "beyond-2-2"
+   ],
+   "mappingEvidence": [
+    {
+     "sectionId": "ai-2-1",
+     "source": {
+      "pdf": "ei-developer",
+      "pages": [
+       47
+      ]
+     },
+     "reason": "The neural-network lesson covers backpropagation and gradient computation."
+    },
+    {
+     "sectionId": "beyond-2-2",
+     "source": {
+      "pdf": "ei-developer",
+      "pages": [
+       47
+      ]
+     },
+     "reason": "Deep-learning frameworks compute derivatives and backpropagate gradients through model operations."
+    }
+   ]
+  },
+  {
+   "captureId": "n2324-capture-010",
+   "paperId": "n2324",
+   "questionNumber": 10,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220051.png",
+   "sha256": "c1f7cbed722c153617d709ee3580b6ddf9ff3302edf045ee93f4521008390dd1",
+   "stem": "John wants to train a cat and dog classification model, but his dataset contains 1,000 dog images and 10,000 cat images. Which of the following statements is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "He can delete the extra cat images, but some important features may be lost."
+    },
+    {
+     "key": "B",
+     "text": "Dog images can be repeatedly sampled to 10,000, but the model will be overfitting."
+    },
+    {
+     "key": "C",
+     "text": "With ensemble learning, cat images are divided into ten groups and used together with dog images to train a model group by group to avoid overfitting."
+    },
+    {
+     "key": "D",
+     "text": "Interpolation may be performed on dog images in the training set to generate additional data for training."
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "answer-review",
+   "proposedSectionId": "beyond-2-1",
+   "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction. Supplied key C requires review: the wording can describe either sequential training of one model or an ensemble of balanced subsets. The supplied explanation assumes sequential training, while the stem does not explicitly specify it. Repeated sampling also raises overfitting risk without guaranteeing overfitting."
+  },
+  {
+   "captureId": "n2324-capture-037",
+   "paperId": "n2324",
+   "questionNumber": 37,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220131.png",
+   "sha256": "936bcd7bb788e2401aacf091f203ad73b34287b6342c8d914ffb22d874efc4ab",
+   "stem": "When using two 3 x 3 convolution kernels to convolve a three-channel color image, how many channels will the generated feature map have?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "3"
+    },
+    {
+     "key": "D",
+     "text": "4"
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending."
+  },
+  {
+   "captureId": "n2425-capture-038",
+   "paperId": "n2425",
+   "questionNumber": 38,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214913.png",
+   "sha256": "7eebe5b7fe14d6e75bf0eb006caca53143f22675bab1cd3f78f6573613156afd",
+   "stem": "A convolution kernel is a key component in a convolutional neural network, extracting features from images. Assume that a 3 x 3 convolution kernel is used to convolve a three-channel color image. In this case, what is the total number of parameters that need to be learned?",
+   "options": [
+    {
+     "key": "A",
+     "text": "10"
+    },
+    {
+     "key": "B",
+     "text": "27"
+    },
+    {
+     "key": "C",
+     "text": "28"
+    },
+    {
+     "key": "D",
+     "text": "9"
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending."
+  },
+  {
+   "captureId": "n2526-capture-059",
+   "paperId": "n2526",
+   "questionNumber": 59,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214107.png",
+   "sha256": "275a6d40456136695f702c9383d27a16435645ee6afe54a98dd30a75e7763183",
+   "stem": "Which of the following is not a model quantification method?",
+   "options": [
+    {
+     "key": "A",
+     "text": "PTF"
+    },
+    {
+     "key": "B",
+     "text": "PTQ"
+    },
+    {
+     "key": "C",
+     "text": "QAT"
+    },
+    {
+     "key": "D",
+     "text": "QAF"
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending."
+  },
+  {
+   "captureId": "n2526-capture-088",
+   "paperId": "n2526",
+   "questionNumber": 88,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214201.png",
+   "sha256": "8e121e7b0cc48ed021529eb8fad1a43b65eadaed093784a0bf4b9cbd18890cc6",
+   "stem": "An enterprise plans to use Huawei Cloud Backup and Recovery (CBR) to protect critical service systems. The existing storage capacity is 1.2 TB, of which 800 GB has been used so far. About 1.5 GB data is generated every day. Backups are automatically created three times a day, at 00:00, 12:00, and 18:00, and are retained for 60 days. CBR uses compression by default (with a compression ratio of about 1.5:1). Which of the following vault capacities can meet their requirements?",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 TB"
+    },
+    {
+     "key": "B",
+     "text": "5 TB"
+    },
+    {
+     "key": "C",
+     "text": "4 TB"
+    },
+    {
+     "key": "D",
+     "text": "2 TB"
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending."
+  },
+  {
+   "captureId": "n2425-capture-050",
+   "paperId": "n2425",
+   "questionNumber": 50,
+   "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214935.png",
+   "sha256": "e1d85117cbd17a5f777eef4ffaf7d4f6505954826232bb5a539cd2d272b4e8e6",
+   "stem": "In a Huawei Cloud two-city, three-center disaster recovery (DR) solution, to implement DR between the production and DR centers at the network, host, database, and application layers, which of the following cloud services can be used to provide DR functions and improve solution reliability?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Relational Database Service (RDS) + Data Replication Service (DRS) can be used for real-time DR for RDS database instances deployed at two remote sites."
+    },
+    {
+     "key": "B",
+     "text": "ModelArts, a one-stop development platform for AI developers, can be used for massive data preprocessing, large-scale distributed training, and management of the entire lifecycle of AI workflows."
+    },
+    {
+     "key": "C",
+     "text": "Domain Name Service (DNS) can be used to query the public IP addresses of the production and DR centers, and direct 100% of user traffic to the production center, except in the event of a disaster. If there is a disaster, then 100% of the user traffic is directed to the DR center."
+    },
+    {
+     "key": "D",
+     "text": "Cloud Backup and Recovery (CBR) can be used to back up system and data disks of cloud servers across regions, create images using backups if a disaster occurs, and restore services and data carried on the [cloud servers] at the DR site."
+    }
+   ],
+   "transcriptionStatus": "visually-reviewed",
+   "status": "transcribed",
+   "reviewNotes": "Option B was merged into A by OCR. Bracketed words in D are a best reading of text partly hidden by the floating screenshot overlay."
+  }
+ ]
+}

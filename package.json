@@ -4,6 +4,7 @@
   "scripts": {
     "test": "node --test \"tests/*.test.js\"",
     "check": "node tools/check-content.js",
+    "check:coverage": "node tools/check-coverage.js",
     "manifest": "node tools/build-manifest.js"
   }
 }

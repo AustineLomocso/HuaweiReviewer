@@ -56,6 +56,11 @@
     // Built through h(), because el.append would print null and false as text.
     el.append(h('div', null,
       h('h1', null, 'Your progress'),
+      h('nav', { class: 'row', 'aria-label': 'Study resources', style: 'margin-bottom:1rem' },
+        h('a', { href: '#/coverage' }, 'Coverage'),
+        h('a', { href: '#/sources' }, 'Sources'),
+        h('a', { href: '#/mappings' }, 'Question mappings'),
+        h('a', { href: 'NationalsQuestionnaires/index.html' }, 'Nationals questionnaires')),
       state.last && typeof state.last.hash === 'string' && /^#\//.test(state.last.hash) && h('section', { class: 'card row spread' },
         h('span', null, 'Continue where you left off: ', h('strong', null, state.last.label)),
         h('a', { class: 'btn primary', href: state.last.hash }, 'Continue')),

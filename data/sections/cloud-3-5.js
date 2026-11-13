@@ -2,6 +2,11 @@
   const ID = 'cloud-3-5';
   const opts = (a, b, c, d) => [['A', a], ['B', b], ['C', c], ['D', d]].map(([key, text]) => ({ key, text }));
   const tfOpts = [{ key: 'T', text: 'True' }, { key: 'F', text: 'False' }];
+  const objectiveMap = {
+    pre: [[1], [2], [4], [1], [1], [3]],
+    post: [[2], [3], [1], [3], [2, 3], [4]],
+    summative: [[2, 3], [4], [3], [3], [1, 4], [1, 2], [2, 3], [3, 4], [3], [4]],
+  };
   const mk = (kind, n, type, stem, options, answer, explanation, pages) => ({
     id: `${ID}-${kind}-${String(n).padStart(2, '0')}`,
     type,
@@ -10,6 +15,7 @@
     answer,
     explanation,
     source: { kind: 'material', pdf: 'cloud', pages },
+    objectiveIds: objectiveMap[kind][n - 1].map((n) => `${ID}-o${n}`),
   });
 
   const pre = [
@@ -181,8 +187,40 @@
       [196, 198]),
   ];
 
+  pre.push(mk('pre', 6, 'single',
+    'An EIP already serves an All ports DNAT rule. The administrator wants to reuse that EIP for outbound SNAT on the same public NAT gateway. Which constraint applies?',
+    opts('The rules can share it if their servers occupy different subnets.',
+      'The rules cannot share it while the DNAT rule uses All ports.',
+      'The rules can share it if the gateway is changed to Extra-large.',
+      'The rules cannot share it unless they use the same private server.'),
+    ['B'],
+    'The source explicitly prohibits sharing one EIP between SNAT and All ports DNAT because their functions conflict. Changing subnet, gateway size, or server identity does not remove that rule restriction.',
+    [194, 196]));
+  post.push(mk('post', 6, 'single',
+    'A public NAT gateway has reached its bandwidth limit. Several EIPs are already configured, and increasing their number has not removed the bottleneck. Which design change addresses the gateway capacity limit in this training edition?',
+    opts('Use several gateways and associate subnet route tables with them.',
+      'Use several SNAT rules while keeping traffic on the same gateway.',
+      'Use All ports DNAT for servers that initiate Internet connections.',
+      'Use a transit IP address instead of the existing public addresses.'),
+    ['A'],
+    'The source recommends horizontal expansion with multiple gateways and the corresponding subnet route-table associations. Additional rules on the same gateway do not add gateway capacity. DNAT publishes services rather than replacing outbound SNAT; a private transit address serves private-network communication.',
+    [193, 197, 198]));
+
   HR.registerSection({
     id: ID,
+    coverageStatus: 'source-reviewed',
+    relatedLessons: [{ sectionId: 'cloud-3-2', description: 'Review EIP bindings and the shared public address used by public NAT.' }],
+    objectives: [
+      { id: `${ID}-o1`, description: 'Choose public or private NAT and explain address reuse, overlapping networks, and private transit addressing.', pages: [187, 189, 190, 193] },
+      { id: `${ID}-o2`, description: 'Distinguish SNAT from DNAT and trace outbound access or inbound service publication.', pages: [191, 192, 197, 199] },
+      { id: `${ID}-o3`, description: 'Apply subnet, routing, EIP-sharing, scenario, and port constraints when configuring public NAT.', pages: [194, 195, 196, 197] },
+      { id: `${ID}-o4`, description: 'Distinguish gateway availability, EIP resilience, and horizontal capacity expansion.', pages: [188, 196, 198] },
+    ],
+    assessmentBlueprint: {
+      pre: { count: 6, rationale: 'Diagnose all four objectives, including the previously untested EIP-sharing prerequisite.' },
+      post: { count: 6, rationale: 'Apply all four objectives, adding capacity planning to architecture and configuration decisions.' },
+      summative: { count: 10, rationale: 'Integrate all four objectives through gateway selection, routing, rule configuration, and resilience scenarios.' },
+    },
     notes: [
       {
         heading: 'Why NAT exists and the two gateway types',
@@ -269,7 +307,29 @@
           'DNAT for publishing services: requests to the EIP on the specified protocol and port are forwarded to the target ECS, or all requests are forwarded when IP address mapping is used. One rule is configured per cloud host, and rules can share one or more EIPs and their bandwidth.',
         ],
       },
-    ],
+      {
+        heading: 'Worked design: updates, a published service, and private integration',
+        pages: [191, 197],
+        objectiveIds: [`${ID}-o1`, `${ID}-o2`, `${ID}-o3`],
+        bullets: [
+          'Two application subnets need outbound package downloads. Configure public NAT with an SNAT rule for each subnet. Rules on that gateway can use the same eligible EIP; the connection starts at the private server.',
+          'One application must also receive TCP requests at public port 8443 and serve them on internal port 443. Configure Specific port DNAT with outside port 8443, inside port 443, and the matching protocol. Outbound SNAT alone does not publish this service.',
+          'If the DNAT rule instead uses All ports, it cannot share that EIP with SNAT. Decide the rule scope before selecting EIPs; gateway size does not resolve this conflict.',
+          'For communication with a private on-premises system using a shared private identity, select private NAT and a transit IP from its transit subnet. An EIP and Internet-oriented public NAT address a different requirement.',
+        ],
+      },
+      {
+        heading: 'Revision cautions and edition context',
+        pages: [187, 198],
+        objectiveIds: [`${ID}-o1`, `${ID}-o2`, `${ID}-o4`],
+        bullets: [
+          'Read numeric limits and product behavior as HCIA-Cloud Service V3.5 training-edition facts. They are not independently checked current service limits.',
+          'Page 187 says IPv4 can solve insufficient IPv4 address space, but its surrounding explanation refers to the transition before IPv6 is widely used. Treat the second IPv4 as a source typo for IPv6.',
+          'Page 191 describes SNAT by the source address it changes; page 187 also explains port translation used to distinguish users sharing an address. Do not interpret the SNAT label as a claim that source ports never change.',
+          'Keep three benefits separate: cross-AZ deployment concerns gateway availability; several EIPs allow other traffic to continue when one address is blocked; several gateways expand capacity. Multiple EIPs are randomly selected, not a stated active/standby pair.',
+        ],
+      },
+    ].map((note, i) => ({ ...note, objectiveIds: note.objectiveIds || [[1], [4], [1], [2], [1, 2], [3], [3], [2, 3], [2, 4]][i].map((n) => `${ID}-o${n}`) })),
     tests: { pre, post, summative },
     shortfall: {},
   });

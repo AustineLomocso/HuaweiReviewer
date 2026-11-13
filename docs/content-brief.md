@@ -2,6 +2,21 @@
 
 Rules for everyone writing or answering questions in this project.
 
+## Curriculum expansion decisions, 2026-11-13
+
+The user approved the scope in [the curriculum coverage plan](superpowers/plans/2026-11-13-complete-curriculum-coverage.md). These decisions supersede the earlier fixed-count and concise-note instructions for newly authored or audited content.
+
+- Include the 15 non-lab PDFs registered in `data/source-inventory.js`. Per-page text is under `work/pdf/<sourceId>/pNNNN.txt`. The Cloud Service Solutions Architect pages combine slide OCR and native speaker notes. Review diagrams and OCR against the actual PDF before verifying content.
+- Preserve each course's actual source hierarchy and link overlaps. Inventory title candidates require hierarchy and boundary review before becoming curriculum nodes.
+- Write detailed revision notes that accompany the PDFs, including meaningful distinctions, misconceptions, and brief applications. Label edition-specific regional scope, availability values, and limits as source-edition context.
+- Declare `objectives` with permanent local IDs, descriptions, and supporting pages. Add `objectiveIds` to notes and generated questions. Use `assessmentBlueprint` entries for pre/post/summative with a positive `count` and a source/coverage `rationale`. Existing sections without blueprints retain their legacy validation rules until audited.
+- Cover the lesson's objectives in notes, diagnostics, post-tests, and summatives. Select counts and the question mix from the objective coverage and source depth. Record `coverageStatus: 'source-reviewed'` only after checking the full lesson range and all answers and citations.
+- Keep original past questions in topic sets and full papers, and write fresh assessment items. Keep `sectionId` as the primary lesson and use `secondarySectionIds` for every supported secondary lesson. Record mapping evidence. Ancestor sets deduplicate by canonical question.
+- Preserve source keys separately from grading answers. The national-stage captures in `data/exam-inventory.js` are OCR drafts with their own paper identities. Verify text, options, keys, and supporting sources before graded import.
+- Preserve existing IDs, attempts, scoring, and test behavior. Follow quiz-writer's question-quality checks within this app's existing assessment format.
+
+The source and reconciliation reports are `docs/curriculum-inventory.md` and `docs/source-reconciliation.md`. Run `npm run check:coverage` for source integrity. Its `--strict` mode additionally fails on outstanding verification and missing captures.
+
 ## Sources
 - Course PDF text is in `work/pdf/<ai|cloud>/pNNNN.txt`, one file per physical PDF page. Page numbers in data always mean these physical pages.
 - Slides can hide facts in diagrams. If the text is unclear, render the page to an image with pymupdf and read it.

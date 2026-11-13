@@ -37,6 +37,9 @@ for (const m of Object.keys(YEAR)) {
     };
     if (canon === id) q.appearsIn = [...appears[id]].sort();
     if (a.flag) q.flag = a.flag;
+    if (a.secondarySectionIds) q.secondarySectionIds = a.secondarySectionIds;
+    if (a.mappingEvidence) q.mappingEvidence = a.mappingEvidence;
+    if (a.suppliedKey) q.suppliedKey = a.suppliedKey;
     if (raw[id].note) q.note = raw[id].note;
     questions.push(q);
   }

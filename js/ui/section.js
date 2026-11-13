@@ -30,10 +30,20 @@
         h('h2', null, 'Review notes'),
         node.pages && course.pdf && h('span', { class: 'small muted' }, pagesText(course.pdf, node.pages))),
       course.external && h('p', { class: 'badge warned' }, 'AI-written notes. This topic is not from your course material.'),
+      section.objectives && h('details', null,
+        h('summary', null, 'Learning objectives'),
+        h('ul', null, section.objectives.map((objective) => h('li', null, objective.description)))),
       section.notes.map((n) => h('div', { style: 'margin-top:.75rem' },
         h('strong', null, n.heading),
-        n.pages && course.pdf && h('span', { class: 'small muted' }, ` (${pagesText(course.pdf, n.pages)})`),
+        n.pages && course.pdf && h('span', { class: 'small muted' }, ' (', h('a', {
+          href: HR.curriculum.sourceHref(course.pdf, n.pages[0]) || `#/sources/${course.pdf}`,
+          target: '_blank', rel: 'noopener',
+        }, pagesText(course.pdf, n.pages)), ')'),
         h('ul', null, n.bullets.map((b) => h('li', null, b))))),
+      section.relatedLessons && h('div', { class: 'small' }, section.relatedLessons.map((related) =>
+        h('p', null, h('a', { href: `#/s/${related.sectionId}` }, 'Related lesson'), ' — ', related.description))),
+      section.relatedSources && h('div', { class: 'small' }, section.relatedSources.map((related) =>
+        h('p', null, h('a', { href: `#/sources/${related.pdf}` }, `Related source, PDF p. ${related.pages.join(', ')}`), ' — ', related.description))),
       h('button', {
         class: read ? 'btn' : 'btn primary',
         onclick: () => {
@@ -65,7 +75,7 @@
       Object.entries(short).map(([k, why]) => h('p', { class: 'small muted' }, `${HR.tests.KIND_LABEL[k]} is shorter than usual: ${why}`)),
       entry.past > 0
         ? testCard(id, 'past', entry.past)
-        : h('p', { class: 'card muted' }, 'No past exam questions on this topic.'),
+        : h('p', { class: 'card muted' }, 'No past exam questions have been mapped to this section yet.'),
     ));
     return wrap;
   }
@@ -89,7 +99,7 @@
     rememberPlace(node, `#/s/${id}`);
     el.append(crumbs(path), h('h1', null, `${node.num} ${node.title}`));
     el.append(await ownContent(id));
-    if (node.subs) {
+    if (node.subs && node.subs.length) {
       const state = HR.app.store.get();
       el.append(h('section', { class: 'card' }, h('h2', null, 'Subchapters'),
         h('ul', { class: 'list' }, node.subs.map((s) => {

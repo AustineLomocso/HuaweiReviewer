@@ -15,6 +15,17 @@ HR.progress.allNodes(HR.data.structure).forEach(({ node }) => {
     summative: s.tests.summative.length,
     past,
   };
+  if (s.objectives) {
+    manifest[node.id].coverageStatus = s.coverageStatus || 'review-pending';
+    manifest[node.id].objectives = s.objectives.map((objective) => {
+      const countLinks = (items) => items.filter((item) => (item.objectiveIds || []).includes(objective.id)).length;
+      return {
+        id: objective.id, description: objective.description,
+        notes: countLinks(s.notes), pre: countLinks(s.tests.pre),
+        post: countLinks(s.tests.post), summative: countLinks(s.tests.summative),
+      };
+    });
+  }
 });
 fs.writeFileSync(
   path.join(ROOT, 'data/manifest.js'),

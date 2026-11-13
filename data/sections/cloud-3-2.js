@@ -10,6 +10,7 @@
     answer,
     explanation,
     source: { kind: 'material', pdf: 'cloud', pages },
+    objectiveIds: [pages.includes(156) ? 'cloud-3-2-o1' : pages.includes(157) ? 'cloud-3-2-o2' : 'cloud-3-2-o3'],
   });
 
   const pre = [
@@ -52,6 +53,15 @@
       ['F'],
       'Premium BGP is currently available only in the CN-Hong Kong region. The second sentence is correct: it has the same assurance as dynamic BGP, with lower latency and higher network quality.',
       [157]),
+    mk('pre', 6, 'single',
+      'Which requirement uses both SNAT and DNAT rules with an EIP-bound NAT gateway?',
+      opts('Private servers share a public address for web downloads and outgoing package updates.',
+        'Internet clients access two internal services through a public network endpoint.',
+        'Internet requests to a web application are distributed across several backend servers.',
+        'Private servers download updates and expose an internal service to Internet clients.'),
+      ['D'],
+      'Downloading updates requires outbound access through SNAT. Exposing the internal service requires inbound access through DNAT. Shared downloads alone use SNAT, publishing services alone uses DNAT, and request distribution is the load-balancer scenario.',
+      [158, 159]),
   ];
 
   const post = [
@@ -97,6 +107,15 @@
       ['T'],
       'Dynamic BGP offers 99.95% availability with fast failover to another carrier path. Static BGP offers 99% and requires the application system to have its own disaster recovery.',
       [157]),
+    mk('post', 6, 'single',
+      'An enterprise uses a BMS and needs a directly Internet-accessible address with public network egress bandwidth. Which allocation meets both requirements?',
+      opts('An EIP bound to the BMS.',
+        'A private address allocated from the VPC subnet.',
+        'A virtual IP used only within the private network.',
+        'An additional private address on the BMS interface.'),
+      ['A'],
+      'An EIP combines a public IP address with public network egress bandwidth and can be bound to a BMS. The private-address alternatives do not supply that directly reachable public endpoint.',
+      [156]),
   ];
 
   const summative = [
@@ -148,14 +167,37 @@
       ['F'],
       'Outbound access for a subnet through a shared EIP needs an SNAT rule. A DNAT rule is for publishing services of servers in the VPC to the Internet.',
       [159]),
+    mk('summative', 7, 'multi',
+      'A design describes an EIP as a public network resource that can be attached to several supported resource types. Which statements correctly define its scope?',
+      opts('The allocation includes a public IP address and public network egress bandwidth.',
+        'The allocation is limited to a private IP address with Internet egress supplied by a VPC.',
+        'Supported binding targets include BMSs, virtual IP addresses, NAT gateways, and load balancers.',
+        'Supported binding targets are restricted to ECSs because other resources cannot use EIPs.'),
+      ['A', 'C'],
+      'An EIP includes the public address and egress bandwidth. The supported binding list extends beyond ECSs to BMSs, virtual IP addresses, NAT gateways, and load balancers.',
+      [156]),
   ];
 
   HR.registerSection({
     id: ID,
+    coverageStatus: 'source-reviewed',
+    relatedLessons: [{ sectionId: 'cloud-3-5', description: 'NAT Gateway covers SNAT, DNAT, and public/private NAT architectures in greater depth.' }],
+    relatedSources: [{ pdf: 'cloud-service-architect', pages: [139], description: 'Shared bandwidth across multiple EIPs, including the cost-reduction scenario in the past-exam set.' }],
+    objectives: [
+      { id: 'cloud-3-2-o1', description: 'Explain what an EIP provides and identify its supported binding targets.', pages: [156] },
+      { id: 'cloud-3-2-o2', description: 'Compare static, dynamic, and premium BGP for routing, availability, and the source edition\'s regional scenario.', pages: [157] },
+      { id: 'cloud-3-2-o3', description: 'Select load-balancer or NAT-gateway bindings and distinguish inbound DNAT from outbound SNAT.', pages: [158, 159] },
+    ],
+    assessmentBlueprint: {
+      pre: { count: 6, rationale: 'Diagnose EIP scope, binding targets, routing distinctions, and the two traffic directions across all three objectives.' },
+      post: { count: 6, rationale: 'Assess all three objectives after study, including BMS allocation and bidirectional NAT reasoning.' },
+      summative: { count: 7, rationale: 'Integrate public endpoint scope, routing requirements, load balancing, and NAT across the four instructional slides.' },
+    },
     notes: [
       {
         heading: 'What an EIP is',
         pages: [156, 156],
+        objectiveIds: ['cloud-3-2-o1'],
         bullets: [
           'An EIP is a public IP address that can be reached directly over the Internet. It combines the address with a certain amount of public network egress bandwidth.',
           'An EIP can be bound to or unbound from ECSs, BMSs, virtual IP addresses, NAT gateways and load balancers.',
@@ -164,26 +206,36 @@
       {
         heading: 'EIP types: static, dynamic and premium BGP',
         pages: [157, 157],
+        objectiveIds: ['cloud-3-2-o2'],
         bullets: [
           'Static BGP uses manually configured routes that must be reconfigured whenever the topology or link status changes. The delay means high availability cannot be guaranteed (99%), so the application system should have disaster recovery.',
           'Dynamic BGP chooses the optimal path from real-time network conditions and preset policies, and quickly switches to another path when a carrier link fails. Availability is 99.95%.',
           'Premium BGP has the same assurance capability as dynamic BGP, with higher network quality and lower latency. It interconnects with multiple mainstream carriers and builds direct, low-latency links between the Chinese mainland and Hong Kong (China).',
-          'Premium BGP is currently available only in the CN-Hong Kong region.',
+          'In this training edition, premium BGP is available only in the CN-Hong Kong region. The availability percentages and regional scope in these notes and tests refer to this edition.',
+          'The table heading says Preferred BGP, while its description and speaker notes use Premium BGP. This lesson follows the descriptive term used in the source.',
         ],
       },
       {
         heading: 'Typical scenarios: load balancer and NAT gateway',
         pages: [158, 159],
+        objectiveIds: ['cloud-3-2-o3'],
         bullets: [
           'EIP on a load balancer: the load balancer can then distribute requests arriving from the Internet to its backend servers.',
           'EIP on a NAT gateway: with SNAT and DNAT rules, many servers (ECSs, BMSs) can share the same EIP to reach the Internet and to provide services.',
           'An SNAT rule lets servers in a VPC subnet access the Internet through the shared EIP (outbound). A DNAT rule lets servers in a VPC provide services reachable from the Internet (inbound).',
         ],
       },
+      {
+        heading: 'Worked design comparison',
+        pages: [158, 159],
+        objectiveIds: ['cloud-3-2-o3'],
+        bullets: [
+          'If several ECSs need to download updates using one shared public address, bind the EIP to a NAT gateway and configure SNAT for their subnet. The connection starts from the private servers and goes to the Internet.',
+          'If an internal server must publish a service for Internet clients, configure DNAT on the NAT gateway. The connection starts from the Internet and is directed toward the private service.',
+          'If Internet requests must be distributed across a group of backend ECSs, bind the EIP to a load balancer. Decide whether the requirement is shared outbound access, publishing a private service, or distributing inbound requests before choosing the binding.',
+        ],
+      },
     ],
     tests: { pre, post, summative },
-    shortfall: {
-      summative: 'The section is only four content slides (EIP definition, three EIP types, and two binding scenarios), which supports about six distinct summative questions without repeating pre or post.',
-    },
   });
 })();

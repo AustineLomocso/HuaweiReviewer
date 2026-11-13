@@ -118,7 +118,10 @@ function checkAll(HR, { strict = false, sectionFiles = null } = {}) {
   const counts = { material: 0, inferred: 0, generated: 0, past: 0, shortfalls: 0, missing: 0 };
   const structure = HR.data.structure;
   const P = HR.progress;
-  const pageCounts = Object.fromEntries(structure.courses.filter((c) => c.pdf).map((c) => [c.pdf, c.pageCount]));
+  const pageCounts = Object.fromEntries([
+    ...(HR.data.inventory ? HR.data.inventory.sources.map((source) => [source.id, source.pageCount]) : []),
+    ...structure.courses.filter((c) => c.pdf).map((c) => [c.pdf, c.pageCount]),
+  ]);
   const nodes = P.allNodes(structure);
   const nodeIds = new Set(nodes.map((x) => x.node.id));
   const unwritten = (msg) => (strict ? errors : warnings).push(msg);
@@ -146,6 +149,34 @@ function checkAll(HR, { strict = false, sectionFiles = null } = {}) {
     const course = trail[0];
     const range = course.pdf ? (node.pages || [1, course.pageCount]) : null;
     const ctx = { pdf: course.pdf, range, external: !!course.external };
+    const objectiveIds = new Set();
+    if (s.objectives !== undefined) {
+      if (!Array.isArray(s.objectives) || !s.objectives.length) errors.push(`${node.id}: objectives must be a non-empty array`);
+      else s.objectives.forEach((objective) => {
+        if (!isObj(objective) || typeof objective.id !== 'string' || !objective.description) {
+          errors.push(`${node.id}: invalid learning objective`);
+          return;
+        }
+        if (objectiveIds.has(objective.id)) errors.push(`${node.id}: duplicate objective ${objective.id}`);
+        objectiveIds.add(objective.id);
+        if (course.pdf && (!isInts(objective.pages) || objective.pages.some((page) => page < range[0] || page > range[1]))) {
+          errors.push(`${node.id}: objective ${objective.id} needs in-range source pages`);
+        }
+      });
+    }
+    function checkObjectiveLinks(item, label) {
+      if (!objectiveIds.size) return;
+      if (!Array.isArray(item.objectiveIds) || !item.objectiveIds.length) {
+        errors.push(`${label}: objective links missing`);
+        return;
+      }
+      item.objectiveIds.forEach((id) => { if (!objectiveIds.has(id)) errors.push(`${label}: unknown objective ${id}`); });
+    }
+
+    function checkObjectiveCoverage(items, label) {
+      const covered = new Set(items.filter(isObj).flatMap((item) => item.objectiveIds || []));
+      objectiveIds.forEach((id) => { if (!covered.has(id)) errors.push(`${node.id}:${label}: uncovered objective ${id}`); });
+    }
 
     if (!Array.isArray(s.notes) || !s.notes.length) errors.push(`${node.id}: no notes`);
     (Array.isArray(s.notes) ? s.notes : []).forEach((n, i) => {
@@ -155,6 +186,7 @@ function checkAll(HR, { strict = false, sectionFiles = null } = {}) {
           return;
         }
         if (n.bullets.some((b) => typeof b !== 'string' || !b.trim())) errors.push(`${node.id}: note ${i}: empty bullet`);
+        checkObjectiveLinks(n, `${node.id}:note[${i}]`);
         if (course.external) {
           if (n.pages !== undefined) errors.push(`${node.id}: note ${i}: external course notes must not have pages`);
         } else if (course.pdf) {
@@ -166,6 +198,7 @@ function checkAll(HR, { strict = false, sectionFiles = null } = {}) {
         errors.push(`${node.id}: note ${i}: malformed record (${err.message})`);
       }
     });
+    checkObjectiveCoverage(Array.isArray(s.notes) ? s.notes : [], 'notes');
 
     Object.keys(s.shortfall || {}).forEach((k) => {
       if (!KINDS.includes(k)) errors.push(`${node.id}: shortfall for unknown test ${k}`);
@@ -174,11 +207,16 @@ function checkAll(HR, { strict = false, sectionFiles = null } = {}) {
       const raw = s.tests && s.tests[kind];
       if (raw !== undefined && !Array.isArray(raw)) errors.push(`${node.id}:${kind}: tests must be an array`);
       const qs = Array.isArray(raw) ? raw : [];
-      const want = expectedSize(level, kind);
+      const blueprint = s.assessmentBlueprint && s.assessmentBlueprint[kind];
+      const validBlueprint = isObj(blueprint) && Number.isInteger(blueprint.count) && blueprint.count > 0
+        && typeof blueprint.rationale === 'string' && blueprint.rationale.trim().length >= MIN_REASON;
+      if (s.assessmentBlueprint && !validBlueprint) errors.push(`${node.id}:${kind}: blueprint requires a positive count and coverage rationale`);
+      if (s.assessmentBlueprint && !objectiveIds.size) errors.push(`${node.id}:${kind}: blueprint requires declared learning objectives`);
+      const want = validBlueprint ? blueprint.count : expectedSize(level, kind);
       const reason = s.shortfall && s.shortfall[kind];
       if (qs.length === want) {
         if (reason !== undefined) errors.push(`${node.id}:${kind}: shortfall given but the test is complete`);
-        else checkMix(qs.filter(isObj)).forEach((m) => errors.push(`${node.id}:${kind}: ${m}`));
+        else if (!validBlueprint) checkMix(qs.filter(isObj)).forEach((m) => errors.push(`${node.id}:${kind}: ${m}`));
       } else if (reason === undefined) {
         errors.push(`${node.id}:${kind}: ${qs.length} questions, expected ${want}, with no shortfall reason`);
       } else if (!(qs.length > 0 && qs.length < want)) {
@@ -197,6 +235,7 @@ function checkAll(HR, { strict = false, sectionFiles = null } = {}) {
           const wantId = `${node.id}-${kind}-${String(i + 1).padStart(2, '0')}`;
           if (q.id !== wantId) errors.push(`${node.id}:${kind}: ID ${q.id}, expected ${wantId}`);
           addId(q.id, node.id);
+          checkObjectiveLinks(q, q.id);
           const found = checkQuestion(q, pageCounts, ctx);
           found.forEach((m) => errors.push(`${q.id}: ${m}`));
           tally(q);
@@ -206,6 +245,7 @@ function checkAll(HR, { strict = false, sectionFiles = null } = {}) {
           errors.push(`${(isObj(q) && q.id) || where}: malformed record (${err.message})`);
         }
       });
+      checkObjectiveCoverage(qs.filter(isObj), kind);
     }
   });
 
@@ -238,6 +278,35 @@ function checkAll(HR, { strict = false, sectionFiles = null } = {}) {
         addId(q.id, m.id);
         const hasSection = typeof q.sectionId === 'string' && q.sectionId !== '';
         if (!hasSection) errors.push(`${q.id}: missing sectionId`);
+        if (q.secondarySectionIds !== undefined) {
+          if (!Array.isArray(q.secondarySectionIds)) errors.push(`${q.id}: secondarySectionIds must be an array`);
+          else {
+            if (new Set(q.secondarySectionIds).size !== q.secondarySectionIds.length) errors.push(`${q.id}: duplicate secondary lesson`);
+            q.secondarySectionIds.forEach((id) => {
+              if (!nodeIds.has(id)) errors.push(`${q.id}: unknown secondary lesson ${id}`);
+              if (id === q.sectionId) errors.push(`${q.id}: primary lesson repeated as secondary`);
+            });
+          }
+        }
+        if (q.mappingEvidence !== undefined) {
+          const targets = new Set([q.sectionId, ...(Array.isArray(q.secondarySectionIds) ? q.secondarySectionIds : [])]);
+          if (!Array.isArray(q.mappingEvidence)) errors.push(`${q.id}: mappingEvidence must be an array`);
+          else {
+            const evidenced = new Set();
+            q.mappingEvidence.forEach((evidence) => {
+              if (!isObj(evidence) || !targets.has(evidence.sectionId)) {
+                errors.push(`${q.id}: evidence points to an unmapped lesson`);
+                return;
+              }
+              evidenced.add(evidence.sectionId);
+              const source = evidence.source;
+              if (!isObj(source) || !pageCounts[source.pdf] || !isInts(source.pages)
+                  || source.pages.some((page) => page < 1 || page > pageCounts[source.pdf])) errors.push(`${q.id}: invalid mapping evidence citation`);
+              if (typeof evidence.reason !== 'string' || evidence.reason.trim().length < MIN_REASON) errors.push(`${q.id}: mapping evidence needs a reason`);
+            });
+            targets.forEach((id) => { if (!evidenced.has(id)) errors.push(`${q.id}: mapping evidence missing for ${id}`); });
+          }
+        }
         const located = hasSection ? P.findNode(structure, q.sectionId) : null;
         const ctx = { external: !!(located && located.path[0].external) };
         checkQuestion(q, pageCounts, ctx).forEach((x) => errors.push(`${q.id}: ${x}`));

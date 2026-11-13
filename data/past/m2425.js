@@ -392,8 +392,7 @@ HR.registerMock({
    "sectionId": "cloud-1-2",
    "mergedInto": null,
    "appearsIn": [
-    "2024-25",
-    "2025-26"
+    "2024-25"
    ]
   },
   {
@@ -428,8 +427,7 @@ HR.registerMock({
    "sectionId": "cloud-4-1",
    "mergedInto": null,
    "appearsIn": [
-    "2024-25",
-    "2025-26"
+    "2024-25"
    ]
   },
   {
@@ -459,15 +457,17 @@ HR.registerMock({
    ],
    "explanation": "Putting several EIPs into one shared bandwidth lets the ECSs share a single bandwidth pool, so the tenant does not pay for a separate bandwidth per ECS. Binding a per-bandwidth pay-per-use EIP to every ECS keeps costs high.",
    "source": {
-    "kind": "inferred"
+    "kind": "material",
+    "pdf": "cloud-service-architect",
+    "pages": [
+     139
+    ]
    },
    "sectionId": "cloud-3-2",
    "mergedInto": null,
    "appearsIn": [
-    "2024-25",
-    "2025-26"
-   ],
-   "flag": "The PDF only mentions shared bandwidths in passing (in the Auto Scaling bandwidth-scaling bullet), so this answer relies on general Huawei Cloud knowledge."
+    "2024-25"
+   ]
   },
   {
    "id": "m2425-14",
@@ -1632,8 +1632,7 @@ HR.registerMock({
    "sectionId": "cloud-3-4",
    "mergedInto": null,
    "appearsIn": [
-    "2024-25",
-    "2025-26"
+    "2024-25"
    ]
   },
   {
@@ -1791,12 +1790,54 @@ HR.registerMock({
    ],
    "explanation": "Overfitting means the model fits the training data too closely, including its noise, so it generalizes poorly and performs worse on test data. Regularization, dropout and early stopping are used to prevent it.",
    "source": {
-    "kind": "inferred"
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     10,
+     12
+    ]
    },
    "sectionId": "ai-2-1",
    "mergedInto": null,
    "appearsIn": [
     "2024-25"
+   ],
+   "secondarySectionIds": [
+    "beyond-2-1",
+    "fundamentals1-3-2"
+   ],
+   "mappingEvidence": [
+    {
+     "sectionId": "ai-2-1",
+     "source": {
+      "pdf": "ai",
+      "pages": [
+       100
+      ]
+     },
+     "reason": "The primary neural-network lesson covers regularization and overfitting risks."
+    },
+    {
+     "sectionId": "beyond-2-1",
+     "source": {
+      "pdf": "ei-developer",
+      "pages": [
+       10,
+       12
+      ]
+     },
+     "reason": "The machine-learning foundations lesson covers training versus test performance and remedies for overfitting."
+    },
+    {
+     "sectionId": "fundamentals1-3-2",
+     "source": {
+      "pdf": "ai-fundamentals-1",
+      "pages": [
+       26
+      ]
+     },
+     "reason": "Secondary introductory context: the connectionism lesson names overfitting as a neural-learning limitation; the detailed definition and remedies are supplied by the primary and machine-learning lessons."
+    }
    ]
   },
   {

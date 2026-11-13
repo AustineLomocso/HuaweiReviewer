@@ -160,6 +160,42 @@ function mkHR(sections = [mkSection('p-1-1', 'sub')], mocks = [mkMock('m1', '202
 const errorsOf = (hr, opts) => checkAll(hr, opts).errors;
 const has = (list, re) => list.some((e) => re.test(e));
 
+function sectionWithBlueprint() {
+  const section = mkSection('p-1-1', 'sub');
+  section.objectives = [{ id: 'objective-1', description: 'Apply the concept.', pages: [5] }];
+  section.notes[0].objectiveIds = ['objective-1'];
+  section.assessmentBlueprint = {};
+  for (const [kind, count] of Object.entries({ pre: 3, post: 4, summative: 6 })) {
+    section.tests[kind] = section.tests[kind].slice(0, count);
+    section.tests[kind].forEach((question) => { question.objectiveIds = ['objective-1']; });
+    section.assessmentBlueprint[kind] = { count, rationale: 'Cover the declared objective at this lesson depth.' };
+  }
+  return section;
+}
+
+test('declared coverage blueprints support variable counts without legacy type-mix requirements', () => {
+  assert.deepStrictEqual(errorsOf(mkHR([sectionWithBlueprint()])), []);
+});
+
+test('blueprints require source objectives, coverage links, and valid counts', () => {
+  const section = sectionWithBlueprint();
+  section.tests.post.forEach((question) => { question.objectiveIds = []; });
+  section.assessmentBlueprint.pre.count = 0;
+  const errors = errorsOf(mkHR([section]));
+  assert.ok(has(errors, /blueprint requires a positive count/));
+  assert.ok(has(errors, /objective links missing/));
+  assert.ok(has(errors, /post: uncovered objective objective-1/));
+});
+
+test('secondary lesson mappings reject unknown, repeated, and primary lesson references', () => {
+  const hr = mkHR();
+  hr.data.mocks.m1.questions[0].secondarySectionIds = ['missing', 'missing', 'p-1-1'];
+  const errors = errorsOf(hr);
+  assert.ok(has(errors, /unknown secondary lesson/));
+  assert.ok(has(errors, /duplicate secondary lesson/));
+  assert.ok(has(errors, /primary lesson repeated as secondary/));
+});
+
 test('a well-formed data set has no errors and unwritten sections only warn', () => {
   const r = checkAll(mkHR());
   assert.deepStrictEqual(r.errors, []);

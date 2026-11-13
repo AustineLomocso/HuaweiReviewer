@@ -430,8 +430,38 @@ HR.registerMock({
     ]
    },
    "sectionId": "cloud-3-2",
-   "mergedInto": "m2425-13",
-   "flag": "Shared bandwidth, the usual answer to the sibling question, is not offered here; the NAT gateway sharing one EIP is the best fit, though enhanced 95th percentile billing is a plausible rival."
+   "mergedInto": null,
+   "appearsIn": [
+    "2025-26"
+   ],
+   "flag": "Shared bandwidth, the usual answer to the sibling question, is not offered here; the NAT gateway sharing one EIP is the best fit, though enhanced 95th percentile billing is a plausible rival.",
+   "secondarySectionIds": [
+    "cloud-3-5"
+   ],
+   "mappingEvidence": [
+    {
+     "sectionId": "cloud-3-2",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       159
+      ]
+     },
+     "reason": "An EIP-bound NAT gateway lets several servers share an EIP for outbound Internet access."
+    },
+    {
+     "sectionId": "cloud-3-5",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       192
+      ]
+     },
+     "reason": "The NAT gateway lesson explicitly describes public NAT and SNAT sharing an EIP across servers."
+    }
+   ]
   },
   {
    "id": "m2526-12",
@@ -463,7 +493,10 @@ HR.registerMock({
     "kind": "inferred"
    },
    "sectionId": "cloud-4-1",
-   "mergedInto": "m2425-12"
+   "mergedInto": null,
+   "appearsIn": [
+    "2025-26"
+   ]
   },
   {
    "id": "m2526-13",
@@ -500,7 +533,10 @@ HR.registerMock({
     ]
    },
    "sectionId": "cloud-1-2",
-   "mergedInto": "m2425-11"
+   "mergedInto": null,
+   "appearsIn": [
+    "2025-26"
+   ]
   },
   {
    "id": "m2526-14",
@@ -971,7 +1007,10 @@ HR.registerMock({
     ]
    },
    "sectionId": "cloud-3-4",
-   "mergedInto": "m2425-43"
+   "mergedInto": null,
+   "appearsIn": [
+    "2025-26"
+   ]
   },
   {
    "id": "m2526-27",
@@ -1624,6 +1663,43 @@ HR.registerMock({
    "mergedInto": null,
    "appearsIn": [
     "2025-26"
+   ],
+   "secondarySectionIds": [
+    "beyond-2-1",
+    "fundamentals1-3-2"
+   ],
+   "mappingEvidence": [
+    {
+     "sectionId": "ai-2-1",
+     "source": {
+      "pdf": "ai",
+      "pages": [
+       100
+      ]
+     },
+     "reason": "The primary neural-network lesson covers regularization and overfitting risks."
+    },
+    {
+     "sectionId": "beyond-2-1",
+     "source": {
+      "pdf": "ei-developer",
+      "pages": [
+       10,
+       12
+      ]
+     },
+     "reason": "The machine-learning foundations lesson covers training versus test performance and remedies for overfitting."
+    },
+    {
+     "sectionId": "fundamentals1-3-2",
+     "source": {
+      "pdf": "ai-fundamentals-1",
+      "pages": [
+       26
+      ]
+     },
+     "reason": "Secondary introductory context: the connectionism lesson names overfitting as a neural-learning limitation; the detailed definition and remedies are supplied by the primary and machine-learning lessons."
+    }
    ]
   },
   {

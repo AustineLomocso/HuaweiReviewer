@@ -14,6 +14,9 @@
     [/^#\/course\/(.+)$/, (m) => (el) => HR.ui.section.renderCourse(el, m[1])],
     [/^#\/s\/(.+)$/, (m) => (el) => HR.ui.section.render(el, m[1])],
     [/^#\/mocks$/, () => (el) => HR.ui.mocks.render(el)],
+    [/^#\/coverage$/, () => (el) => HR.ui.curriculum.renderCoverage(el)],
+    [/^#\/sources(?:\/([^/]+))?$/, (m) => (el) => HR.ui.curriculum.renderSources(el, m[1])],
+    [/^#\/mappings$/, () => (el) => HR.ui.curriculum.renderMappings(el)],
     [/^#\/test\/(.+)$/, (m) => (el) => HR.ui.test.render(el, decodeURIComponent(m[1]))],
     [/^#\/results\/(.+)\/(\d+)$/, (m) => (el) => HR.ui.results.render(el, decodeURIComponent(m[1]), Number(m[2]))],
   ];
