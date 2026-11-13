@@ -4,7 +4,7 @@ Read this at the start of each session, and update it before ending one. Task nu
 
 ## Current state
 
-**Nationals in the test engine, 2026-11-14.** Follow `C:/Users/austi/.claude/plans/the-task-is-to-tender-puffin.md` (summary under Decisions). Part A (engine and setup screen) is done and verified. Part B (per-question review so each paper can open in the app) has not started: n2324 needs 80 transcription checks and 90 letter-free explanations, n2425 88 transcriptions and 90 cited answers, n2526 147 transcriptions and 148 cited answers. Set `inApp: true` in `data/nationals-reviews.json`, run `python tools/reconcile-exams.py`, and `npm test` enforces the content rules.
+**Nationals in the test engine, 2026-11-14.** Follow `C:/Users/austi/.claude/plans/the-task-is-to-tender-puffin.md` (summary under Decisions). Part A (engine and setup screen) is done. Part B: **n2324 is complete and open in the app** (90 questions checked against screenshots, supplied key used, letter-free explanations, Q10 ungraded; caution flags on Q39 and Q42 key oddities and on Q47). Next: n2425 (88 transcriptions and 90 answers with PDF citations), then n2526 (147 and 148). Workflow: write `work/nationals-batches/<paper>-bNN.json`, run `node tools/apply-nationals-reviews.js <batch>`, `python tools/reconcile-exams.py`, `npm test` (enforces content rules), commit. `node work/nationals-batches/dump.js <paper> <from> <to>` prints OCR records for review.
 
 **Curriculum expansion in progress, 2026-11-14.** Follow [Complete curriculum coverage and past-exam mapping](superpowers/plans/2026-11-13-complete-curriculum-coverage.md). The user's preferences are recorded there and in `docs/content-brief.md`.
 
@@ -60,6 +60,13 @@ The spec records most decisions. These came later:
 Each code task went through an implementer and an independent reviewer. Reviewers must show that each defect comes from a reachable input, because one early report's example could not actually occur. Check reviewer and implementer claims against the code before acting.
 
 ## Session log
+
+### 2026-11-14: n2324 reviewed and opened in the app
+
+- The user approved committing earlier uncommitted work separately (`84ba82a`). Screenshot folders are now git-ignored as source material.
+- Checked all 90 n2324 questions against their screenshots and fixed OCR errors in about 30 stems and options (underscores in API names, VMs, NPU, MindIR, AI, I/O, and so on). Rewrote all explanations without option letters. Answers use the supplied key, marked `inferred` with a flag, except the two verified items (Q7, Q9). Q10 stays ungraded with its dispute flag. Flagged doubtful keys: Q39 (Flume rollSize is in bytes), Q42 (key conflicts with its own explanation), and Q47.
+- Added `tools/apply-nationals-reviews.js`. Fixed a crash in the Question mappings view for captures with inferred sources, and relabelled their answers "Answer used for scoring". Regenerated the printable n2324 page.
+- Checks: 118 unit tests, content check at 0 errors, coverage at 0 errors, and all three browser suites pass. A manual walkthrough of the real n2324 (setup, practice range 9–12, verified-question feedback with citation) showed no page errors.
 
 ### 2026-11-14: Nationals setup screen and engine (Part A)
 

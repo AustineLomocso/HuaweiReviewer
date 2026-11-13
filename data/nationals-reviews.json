@@ -2779,6 +2779,606 @@
    "inApp": true
   },
   {
+   "captureId": "n2324-capture-071",
+   "paperId": "n2324",
+   "questionNumber": 71,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220221.png",
+   "sha256": "06958641670ca086940aadf741b6493696d73b54a36c2ad131515daee61eda74",
+   "stem": "MindSpore supports multiple parallel modes, such as data parallelism, tensor model parallelism, and pipeline parallelism. However, MindSpore does not support multi-dimensional hybrid parallelism or automatic parallelism.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "MindSpore supports data parallelism, tensor model parallelism, and pipeline parallelism, and it also supports multi-dimensional hybrid parallelism and automatic parallelism. The claim that it does not support those is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-072",
+   "paperId": "n2324",
+   "questionNumber": 72,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220222.png",
+   "sha256": "61f483f1d88682f3f4fcc1b8a199d710e04d760b524c88efe2b2c5083dbec9a2",
+   "stem": "Application Operations Management (AOM) is a one-stop, multi-dimensional log management platform for cloud applications. It monitors running parameters and logs of cloud services in real time, analyzes application health status, provides flexible data visualization functions, and persistently stores logs. With AOM, users can analyze logs, detect faults promptly, and conduct security audits.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "AOM is a one-stop, multi-dimensional O&M management platform, not a log management platform. It integrates data from Cloud Eye, Log Tank Service (LTS), APM, real user experience, and backend links to provide unified resource management, observability analysis, and automated O&M. The log management capabilities described belong to LTS.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-073",
+   "paperId": "n2324",
+   "questionNumber": 73,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220223.png",
+   "sha256": "e28801baad8b08527273a3a44584b0b20af5bc2732bf6b8f0507ab8e131c1374",
+   "stem": "Backward propagation is commonly used to train artificial neural networks.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Backpropagation is the standard technique for training artificial neural networks: it computes the gradient of the loss with respect to every weight so the weights can be updated.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-074",
+   "paperId": "n2324",
+   "questionNumber": 74,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220225.png",
+   "sha256": "f8a4bf9bb9a329089a93512eb550d403cb678c47ec00568f2402e6a3284952d4",
+   "stem": "In Kafka, each partition of a topic is sub-divided into segments, making it easier for periodical clearing or deletion of consumed files to free up space.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Kafka splits each topic partition into segment files. Old segments can then be deleted or cleaned up as a whole to free disk space, which makes storing and managing large volumes of stream data efficient.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-075",
+   "paperId": "n2324",
+   "questionNumber": 75,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220226.png",
+   "sha256": "92d5dbe176e50330d00b0f286e3f68fc19600cc0369445b49713bb4fbc8546b6",
+   "stem": "GES can perfectly resolve complex multi-level relationship query and analysis. GES is used to meet the real-time query requirements of graph data. Data is stored in Elasticsearch, and indexes are stored in HBase.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "GES does not store its underlying graph data in Elasticsearch with indexes in HBase. It queries and analyzes graph data with Huawei's self-developed EYWA kernel, so the storage description is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-076",
+   "paperId": "n2324",
+   "questionNumber": 76,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220227.png",
+   "sha256": "f0676b072e87efa504504d826b17196fcc96928da2753d0fc5aca60382e631af",
+   "stem": "Data skew means that some machines have to process much more data than others because the data is not evenly distributed. This slows down data processing speed and prolongs the whole computing process.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Data skew happens when data is unevenly distributed across nodes in a distributed system such as Hadoop or Spark. The overloaded nodes finish last, so the whole job runs as slowly as its slowest task.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-077",
+   "paperId": "n2324",
+   "questionNumber": 77,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220229.png",
+   "sha256": "2eb11910ddec7d85742260c7f008072e6fd2817ab069fd1d456bcf3356a0eec6",
+   "stem": "Elastic Volume Service (EVS) adopts the industry-standard XTS-AES-128 encryption algorithm and uses keys to encrypt disks. The keys are provided by Identity and Access Management (IAM), so you do not need to build and maintain the key management infrastructure.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "EVS encryption uses the industry-standard XTS-AES-256 algorithm, not XTS-AES-128. The encryption keys come from Key Management Service (KMS) in Data Encryption Workshop rather than from IAM.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-078",
+   "paperId": "n2324",
+   "questionNumber": 78,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220230.png",
+   "sha256": "48579e872bc3ceeaea7484f3c96e03d82795cd8f1b95520d886aababbe0f85e4",
+   "stem": "Image Management Service (IMS) allows you to create an Elastic Cloud Server (ECS) or a Bare Metal Server (BMS) using public images or shared images. You can also create private images from existing cloud servers or external image files to migrate services to the cloud. However, you cannot upload local images to IMS or directly use images on a third-party cloud platform to deploy services.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "IMS creates ECSs and BMSs from public, shared, or private images, and private images can be built from existing servers or external image files. You can also upload local images to IMS and use images from third-party cloud platforms to deploy services, so the final restriction is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-079",
+   "paperId": "n2324",
+   "questionNumber": 79,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220232.png",
+   "sha256": "f636d31a85377c6c679a35de3fcaab355ac11db59dab51015b230d008e236522",
+   "stem": "The Naive Bayes algorithm is a generative algorithm. Compared with the CART algorithm in decision trees, the Naive Bayes algorithm is insensitive to missing values and has a higher generalization capability and accuracy.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Naive Bayes is a generative, probability-based classifier that assumes independent features. It can work well when that assumption roughly holds, but it is not generally more accurate or better at generalizing than CART, which can model non-linear relationships flexibly. The blanket claim of superiority is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-080",
+   "paperId": "n2324",
+   "questionNumber": 80,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220233.png",
+   "sha256": "1aacf10beb7bce5704a4f89810aeb602d6c52d11cbca6f41a44972061c5a0b91",
+   "stem": "The Latent Dirichlet allocation (LDA) algorithm assumes that the prior distribution of topics in a document and the prior distribution of words in a topic follow the Dirichlet distribution.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "LDA places Dirichlet priors on both the document-topic distribution (controlled by the hyperparameter alpha) and the topic-word distribution (controlled by beta). The Dirichlet is the conjugate prior of the multinomial, which simplifies Bayesian inference.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-081",
+   "paperId": "n2324",
+   "questionNumber": 81,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220234.png",
+   "sha256": "8981f8a380642a064dc1bded9bf5c8ba31d1163d48f5c7cdb7fabd9e28d2069a",
+   "stem": "In the case of the ReLU activation function, a phenomenon known as \"dead neuron\" occurs when the learning rate is set too high, resulting in the corresponding parameters no longer being updated.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "With ReLU, a neuron whose input is always negative outputs zero and has zero gradient, so its weights stop updating: a dead neuron. A learning rate that is too high can push weights into that state through a large update.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-082",
+   "paperId": "n2324",
+   "questionNumber": 82,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220236.png",
+   "sha256": "9bd8e48cbae71dda8e09cd6b4975a733643cd381c04f22f46833dde0741dfe40",
+   "stem": "Server Migration Service (SMS) has certain requirements on migration networks. Users can use the network measurement function provided by SMS to evaluate and optimize migration networks to prevent migration failures due to network problems.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "SMS has network requirements for migration, and its network measurement function lets users evaluate and optimize the migration network in advance to avoid failures caused by network problems.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-083",
+   "paperId": "n2324",
+   "questionNumber": 83,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220237.png",
+   "sha256": "7d7be2246d34ff4c2633f1f49a21e8148084696f87429aeed5c18f87f1d380eb",
+   "stem": "A SparkContext is the connection to a Spark cluster and acts like the main function of an application.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "A SparkContext is an application's connection to the Spark cluster and its main entry point, used to submit jobs and interact with the cluster, much like the application's main function.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-084",
+   "paperId": "n2324",
+   "questionNumber": 84,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220238.png",
+   "sha256": "1e30cbe2465dc19a42f67785e6dc87ff7620a023e497a55729a84983f1b52a3b",
+   "stem": "MindSpore uses the design concept of functional automatic differentiation. It provides the grad API to obtain differentiation functions and calculate gradients.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "MindSpore uses functional automatic differentiation: its grad API takes a function and returns a function that computes gradients.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-085",
+   "paperId": "n2324",
+   "questionNumber": 85,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220240.png",
+   "sha256": "6375e802e5ec00d2a5fa20ee74a4ae0d44ccbbdceeadafdc061a6a64e419b9f8",
+   "stem": "Containers are a kernel virtualization technology originating with Linux. They provide lightweight virtualization to isolate processes and resources. Compared with other virtualization technologies, containers have better resource utilization and start up faster.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Containers are an OS-level (kernel) virtualization technology that originated in Linux. They share the host kernel while isolating processes and resources, so they use resources more efficiently and start faster than hardware-level virtualization.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-086",
+   "paperId": "n2324",
+   "questionNumber": 86,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220241.png",
+   "sha256": "12d38d095298d9696ec4cc945ecb21437027d7517ab8cc72564259bdf635d9b1",
+   "stem": "If your servers in a Virtual Private Cloud (VPC) need to access the Internet, you can buy a public NAT gateway and configure a Destination Network Address Translation (DNAT) rule to enable the servers to share EIPs to access the Internet without exposing their private IP addresses. You can configure only one DNAT rule for each subnet in a VPC, and select one EIP for one DNAT rule. To access different services, you can create multiple DNAT rules.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot; corrected EIPs read as ElPs.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "Outbound Internet access for servers that share EIPs without exposing private addresses is provided by SNAT rules, which translate private IP addresses into EIPs. DNAT does the reverse: it maps an EIP and port to a server so that the server can provide services to the Internet. Describing outbound sharing as DNAT is therefore false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-087",
+   "paperId": "n2324",
+   "questionNumber": 87,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220242.png",
+   "sha256": "19627f4b5bcf493ae3caf5f4e68825f34ddca98590d4557abe4313e4988f8877",
+   "stem": "Data Encryption Workshop (DEW) is a comprehensive cloud data encryption service that helps you securely protect your data and keys, as well as simplifying key management. Hardware security modules (HSMs) can protect the security of your keys and can be integrated with other Huawei Cloud services.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "DEW protects data and keys and simplifies key management, and its hardware security modules protect keys while integrating with other Huawei Cloud services.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-088",
+   "paperId": "n2324",
+   "questionNumber": 88,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220244.png",
+   "sha256": "163beda880a8d68c9711c3bec9f97556873f90419bcf1b8dc4e35d273e07d533",
+   "stem": "During the training of a generative adversarial network (GAN), the input data for a generator consists of random vectors and text. Once the training is completed, the generator can produce a corresponding image based on input text information.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "A standard GAN generator takes only random noise vectors as input. Generating images from text requires a conditional, text-to-image setup with additional conditioning and preprocessing, so the description of a basic GAN is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-089",
+   "paperId": "n2324",
+   "questionNumber": 89,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220245.png",
+   "sha256": "363416c756dcbe394a0de64bbec9e065f51ef753a8ad9bcfe94f298369b8d0f8",
+   "stem": "To deploy an image classification model on a mobile phone, you can use MindSpore Lite.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "MindSpore Lite is a lightweight, efficient inference engine for running trained models on edge devices, so it is suitable for deploying an image classification model on a mobile phone.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2324-capture-090",
+   "paperId": "n2324",
+   "questionNumber": 90,
+   "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220247.png",
+   "sha256": "125cc1ba71d364cddea8a48f171ee43768067c5d8e818d6565f89625aa0cc217",
+   "stem": "Cloud Container Engine (CCE) provides CCE standard and CCE Turbo clusters. Compared with CCE standard clusters, CCE Turbo clusters support container tunnel networks and VPC networks, and these two kinds of networks can be overlaid with each other. CCE Turbo clusters support features such as cgroups.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer from the supplied exam key; not yet checked against the course material.",
+   "explanation": "The container tunnel and VPC network models belong to CCE standard clusters. CCE Turbo clusters use the Cloud Native 2.0 network model and can run both secure containers (VM-level isolation on physical machines) and common containers (cgroup isolation). The description of Turbo cluster networking is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
    "captureId": "n2425-capture-038",
    "paperId": "n2425",
    "questionNumber": 38,

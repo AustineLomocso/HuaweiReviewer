@@ -138,9 +138,10 @@
         capture.suppliedKeyStatus === 'visually-reviewed' && h('p', { class: 'small' }, 'Supplied key visually checked against the screenshot. Material-based answer verification pending.'),
         capture.suppliedExplanation && h('p', null, capture.suppliedExplanation),
         capture.reviewNotes && h('p', { class: 'small warned' }, capture.reviewNotes),
-        capture.answer && h('p', null, `Verified answer — ${capture.answer.join(', ')}`),
+        capture.answer && h('p', null, `${capture.status === 'verified' ? 'Verified answer' : 'Answer used for scoring'} — ${capture.answer.join(', ')}`),
         capture.explanation && h('p', null, capture.explanation),
-        capture.source && capture.source.pages.map((page) => pdfLink(capture.source.pdf, page, `Supporting PDF p. ${page} `)),
+        capture.flag && h('p', { class: 'small warned' }, capture.flag),
+        capture.source && capture.source.kind === 'material' && capture.source.pages.map((page) => pdfLink(capture.source.pdf, page, `Supporting PDF p. ${page} `)),
         capture.issues.length > 0 && h('ul', { class: 'small warned' }, capture.issues.map((issue) => h('li', null, issue)))));
   }
 

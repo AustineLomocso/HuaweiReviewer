@@ -4716,10 +4716,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "False",
      "suppliedExplanation": "MindSpore supports the following parallel computing modes: data parallelism, Tensor model parallelism, and pipeline parallelism. In addition, MindSpore supports automatic parallelism.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-071",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "MindSpore supports multiple parallel modes, such as data parallelism, tensor model parallelism, and pipeline parallelism. However, MindSpore does not support multi-dimensional hybrid parallelism or automatic parallelism.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "MindSpore supports data parallelism, tensor model parallelism, and pipeline parallelism, and it also supports multi-dimensional hybrid parallelism and automatic parallelism. The claim that it does not support those is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220222.png",
@@ -4739,10 +4764,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "False",
      "suppliedExplanation": "AOM is a one-stop, multi-dimensional O&M management platform instead of a log management platform for cloud applications. It integrates multiple data sources, such as Cloud Eye, Log Tank Ser.'ice (LTS), Application Performance Management (APM), real user experience, and backend link data. It provides unified application resource management, one-stop observability analysis, and automated O&M solutions. With AOM, users can quickly detect faults, monitor applications, resources, and services in real time, and improve automated O&M capability and efficiency.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-072",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Application Operations Management (AOM) is a one-stop, multi-dimensional log management platform for cloud applications. It monitors running parameters and logs of cloud services in real time, analyzes application health status, provides flexible data visualization functions, and persistently stores logs. With AOM, users can analyze logs, detect faults promptly, and conduct security audits.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "AOM is a one-stop, multi-dimensional O&M management platform, not a log management platform. It integrates data from Cloud Eye, Log Tank Service (LTS), APM, real user experience, and backend links to provide unified resource management, observability analysis, and automated O&M. The log management capabilities described belong to LTS.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220223.png",
@@ -4762,10 +4812,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "True",
      "suppliedExplanation": "Backward propagation is an effective technique for training artificial neural networks. It optimizes parameters by computing the gradient of each weight with respect to the loss function.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-073",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Backward propagation is commonly used to train artificial neural networks.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Backpropagation is the standard technique for training artificial neural networks: it computes the gradient of the loss with respect to every weight so the weights can be updated.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220225.png",
@@ -4785,10 +4860,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "True",
      "suppliedExplanation": "Kafka splits each partition in a topic into several segments to efficiently manage and store a large amount of data. This not only reduces disk usage, but also improves the data processing speed and efficiency, making Kafka an ideal choice for processing large-scale real-time data streams.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-074",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "In Kafka, each partition of a topic is sub-divided into segments, making it easier for periodical clearing or deletion of consumed files to free up space.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Kafka splits each topic partition into segment files. Old segments can then be deleted or cleaned up as a whole to free disk space, which makes storing and managing large volumes of stream data efficient.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220226.png",
@@ -4808,10 +4908,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "False",
      "suppliedExplanation": "The bottom layer of GES data does not exist in ElasticSearch. Instead, GES uses the Huawei-developed EYWA kernel to query and analyze graph data.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-075",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "GES can perfectly resolve complex multi-level relationship query and analysis. GES is used to meet the real-time query requirements of graph data. Data is stored in Elasticsearch, and indexes are stored in HBase.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "GES does not store its underlying graph data in Elasticsearch with indexes in HBase. It queries and analyzes graph data with Huawei's self-developed EYWA kernel, so the storage description is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220227.png",
@@ -4831,10 +4956,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "True",
      "suppliedExplanation": "Data skew is a typical problem in distributed data processing, especially when big data processing frameworks such as Hadoop and Spark are used. Theoretically, all worker nodes in a distributed system should evenly share processing tasks. So, all available computing resources can be effectively used to achieve the fastest processing speed. In the real world, some nodes process more jobs than others for various reasons, resulting in slower processing speeds compared to other nodes. This makes the entire calculation process excessively slow.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-076",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Data skew means that some machines have to process much more data than others because the data is not evenly distributed. This slows down data processing speed and prolongs the whole computing process.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Data skew happens when data is unevenly distributed across nodes in a distributed system such as Hadoop or Spark. The overloaded nodes finish last, so the whole job runs as slowly as its slowest task.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220229.png",
@@ -4854,10 +5004,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "False",
      "suppliedExplanation": "EVS uses the industry-standard XTS-AES-256 encryption algorithm, not the XTS-AES-128 encryption algorithm, and use keys to encrypt disks.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-077",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Elastic Volume Service (EVS) adopts the industry-standard XTS-AES-128 encryption algorithm and uses keys to encrypt disks. The keys are provided by Identity and Access Management (IAM), so you do not need to build and maintain the key management infrastructure.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "EVS encryption uses the industry-standard XTS-AES-256 algorithm, not XTS-AES-128. The encryption keys come from Key Management Service (KMS) in Data Encryption Workshop rather than from IAM.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220230.png",
@@ -4877,10 +5052,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "False",
      "suppliedExplanation": "You can upload local images to IMS or directly use images on a third-party cloud platform to deploy services.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-078",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Image Management Service (IMS) allows you to create an Elastic Cloud Server (ECS) or a Bare Metal Server (BMS) using public images or shared images. You can also create private images from existing cloud servers or external image files to migrate services to the cloud. However, you cannot upload local images to IMS or directly use images on a third-party cloud platform to deploy services.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "IMS creates ECSs and BMSs from public, shared, or private images, and private images can be built from existing servers or external image files. You can also upload local images to IMS and use images from third-party cloud platforms to deploy services, so the final restriction is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220232.png",
@@ -4900,10 +5100,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "False",
      "suppliedExplanation": "The Naive Bayes algorithm is a probability-based classification algorithm, which assumes that features are independent of each other. The CART algorithm is a decision tree algorithm. It recursively divides a data set into multiple subsets to achieve classification or regression. The Naive Bayes algorithm may perform well in some cases, especially when the data meets the assumption of independence. However, this does not mean that its generalization capability or accuracy is generally higher than that of the CART algorithm. In fact, with its flexibility and ability to model nonlinear relations, the CART algorithm usually performs quite well in many practical applications.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-079",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "The Naive Bayes algorithm is a generative algorithm. Compared with the CART algorithm in decision trees, the Naive Bayes algorithm is insensitive to missing values and has a higher generalization capability and accuracy.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "Naive Bayes is a generative, probability-based classifier that assumes independent features. It can work well when that assumption roughly holds, but it is not generally more accurate or better at generalizing than CART, which can model non-linear relationships flexibly. The blanket claim of superiority is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220233.png",
@@ -4923,10 +5148,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "True",
      "suppliedExplanation": "Dirichlet distribution is the conjugate prior distribution of multinomial distribution, which is conducive to simplifying the mathematical processing of the model, because in the framework of Bayesian method, conjugate prior can make the computation of posterior distribution more simple and convenient. In the LDA model, we have two levels of Dirichlet distribution: Document-topic distribution: Each document is regarded as a mixture over topics, and the proportion of each topic in the document is random, following the Dirichlet distribution. The Dirichlet distribution here is controlled by the hyperparameter a, which influences the model's assumption about the document topic diversity. Topic-word distribution: Each topic is represented as the distribution over words, that is, it is considered that some words are more likely to belong to a specific topic. This distribution is also sampled from the Dirichlet distribution and controlled by another hyperparameter p, which influences the model's assumption about word diversity within the topic. In this way, LDA cannot only identify the main topics in a document set, but also understand how these topics are expressed through specific word combinations. This capability makes LDA a powerful tool for exploring the potential structure of large- scale text datasets.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-080",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "The Latent Dirichlet allocation (LDA) algorithm assumes that the prior distribution of topics in a document and the prior distribution of words in a topic follow the Dirichlet distribution.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "LDA places Dirichlet priors on both the document-topic distribution (controlled by the hyperparameter alpha) and the topic-word distribution (controlled by beta). The Dirichlet is the conjugate prior of the multinomial, which simplifies Bayesian inference.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220234.png",
@@ -4946,10 +5196,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "True",
      "suppliedExplanation": "An important drawback of ReLlJ is that it is very sensitive to abnormal input, which can lead to so-called \"dead neuron\". Specifically, if the input to a neuron is negative, the output after ReLU activation is zero, and the gradient of the neuron is also zero. This means that this neuron will not be updated in the subsequent training process, because any gradient flowing through this neuron will always be zero. This happens primarily when the inputs to some neuron are always negative, and these neurons are therefore called dead neurons.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-081",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "In the case of the ReLU activation function, a phenomenon known as \"dead neuron\" occurs when the learning rate is set too high, resulting in the corresponding parameters no longer being updated.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "With ReLU, a neuron whose input is always negative outputs zero and has zero gradient, so its weights stop updating: a dead neuron. A learning rate that is too high can push weights into that state through a large update.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220236.png",
@@ -4969,10 +5244,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "True",
      "suppliedExplanation": "SMS has certain requirements on migration networks. Users can use the network measurement function provided by SMS to evaluate and optimize migration networks, so that they can prevent migration failures caused by network problems.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-082",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Server Migration Service (SMS) has certain requirements on migration networks. Users can use the network measurement function provided by SMS to evaluate and optimize migration networks to prevent migration failures due to network problems.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "SMS has network requirements for migration, and its network measurement function lets users evaluate and optimize the migration network in advance to avoid failures caused by network problems.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220237.png",
@@ -4992,10 +5292,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "True",
      "suppliedExplanation": "A SparkContext is the connection to a Spark cluster and acts like the main function of an application. It plays a critical role as the main entry point for connecting clusters, submitting jobs, and interacting with Spark clusters.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-083",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "A SparkContext is the connection to a Spark cluster and acts like the main function of an application.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "A SparkContext is an application's connection to the Spark cluster and its main entry point, used to submit jobs and interact with the cluster, much like the application's main function.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220238.png",
@@ -5015,10 +5340,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "True",
      "suppliedExplanation": "MindSpore adopts the design concept of functional automatic differentiation and provides the grad API to obtain differential functions, facilitating gradient calculation.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-084",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "MindSpore uses the design concept of functional automatic differentiation. It provides the grad API to obtain differentiation functions and calculate gradients.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "MindSpore uses functional automatic differentiation: its grad API takes a function and returns a function that computes gradients.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220240.png",
@@ -5038,17 +5388,42 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "True",
      "suppliedExplanation": "Containers isolate application running environments at the OS layer, making them more lightweight than traditional hardware-level virtualization technologies. This is because containers reuse the host kernel and provide dedicated user space for each application. Containers are a kernel virtualization technology originating with Linux. They provide lightweight virtualization to isolate processes and resources. Compared with other virtualization technologies, containers have better resource utilization and start up faster.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-085",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Containers are a kernel virtualization technology originating with Linux. They provide lightweight virtualization to isolate processes and resources. Compared with other virtualization technologies, containers have better resource utilization and start up faster.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Containers are an OS-level (kernel) virtualization technology that originated in Linux. They share the host kernel while isolating processes and resources, so they use resources more efficiently and start faster than hardware-level virtualization.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220241.png",
      "number": 86,
      "paperTotal": 90,
      "type": "tf",
-     "stem": "If your servers in a Virtual Private Cloud (VPC) need to access the Internet, you can buy a public NAT gateway and configure a Destination Network Address Translation (DNAT) rule to enable the servers to share ElPs to access the Internet without exposing their private IP addresses. You can configure only one DNAT rule for each subnet in a VPC, and select one EIP for one DNAT rule. To access different services, you can create multiple DNAT rules.",
+     "stem": "If your servers in a Virtual Private Cloud (VPC) need to access the Internet, you can buy a public NAT gateway and configure a Destination Network Address Translation (DNAT) rule to enable the servers to share EIPs to access the Internet without exposing their private IP addresses. You can configure only one DNAT rule for each subnet in a VPC, and select one EIP for one DNAT rule. To access different services, you can create multiple DNAT rules.",
      "options": [
       {
        "key": "T",
@@ -5061,10 +5436,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "False",
      "suppliedExplanation": "To enable the servers to share ElPs to access the Internet without exposing their private IP addresses, you need to buy a public NAT gateway and configure a Source Network Address Translation (SNAT) rule. SNAT translates private IP addresses into ElPs, allowing servers in different AZS of a VPC to share an EIP to access the Internet securely and efficiently. DNAT enables servers in a VPC to share an EIP to provide services accessible from the Internet through IP address mapping or port mapping.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-086",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "If your servers in a Virtual Private Cloud (VPC) need to access the Internet, you can buy a public NAT gateway and configure a Destination Network Address Translation (DNAT) rule to enable the servers to share ElPs to access the Internet without exposing their private IP addresses. You can configure only one DNAT rule for each subnet in a VPC, and select one EIP for one DNAT rule. To access different services, you can create multiple DNAT rules.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot; corrected EIPs read as ElPs.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "Outbound Internet access for servers that share EIPs without exposing private addresses is provided by SNAT rules, which translate private IP addresses into EIPs. DNAT does the reverse: it maps an EIP and port to a server so that the server can provide services to the Internet. Describing outbound sharing as DNAT is therefore false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220242.png",
@@ -5084,10 +5484,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "True",
      "suppliedExplanation": "DEW ensures the data and key security, and simplifies key management. HSMs can protect the security of your keys and can be integrated with other Huawei Cloud sewices.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-087",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Data Encryption Workshop (DEW) is a comprehensive cloud data encryption service that helps you securely protect your data and keys, as well as simplifying key management. Hardware security modules (HSMs) can protect the security of your keys and can be integrated with other Huawei Cloud services.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "DEW protects data and keys and simplifies key management, and its hardware security modules protect keys while integrating with other Huawei Cloud services.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220244.png",
@@ -5107,10 +5532,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "False",
      "suppliedExplanation": "Generative Adversarial Networks (GANs) can learn how to generate images based on text prompts through training, but the generator usually inputs only random noise vectors, while text-to-image conversion requires more complex setting or preprocessing steps.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-088",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "During the training of a generative adversarial network (GAN), the input data for a generator consists of random vectors and text. Once the training is completed, the generator can produce a corresponding image based on input text information.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "A standard GAN generator takes only random noise vectors as input. Generating images from text requires a conditional, text-to-image setup with additional conditioning and preprocessing, so the description of a basic GAN is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220245.png",
@@ -5130,10 +5580,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "True",
      "suppliedExplanation": "The main function of MindSpore Lite is to provide a lightweight and efficient inference engine for quickly executing trained neural network models on edge devices. This program is suitable for you to deploy image classification models on mobile phones.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-089",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "To deploy an image classification model on a mobile phone, you can use MindSpore Lite.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "MindSpore Lite is a lightweight, efficient inference engine for running trained models on edge devices, so it is suitable for deploying an image classification model on a mobile phone.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220247.png",
@@ -5153,10 +5628,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": "False",
      "suppliedExplanation": "CCE offers CCE standard, Turbo, and Autopilot clusters. Compared with CCE standard clusters, CCE Turbo clusters support the Cloud Native 2.0 network model and can run both secure and common containers. Secure containers are limited to physical machines and offer VM-level isolation, while common containers use cgroup isolation.",
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2324-capture-090",
-     "suppliedKeyStatus": "visually-reviewed"
+     "suppliedKeyStatus": "visually-reviewed",
+     "ocrOriginal": {
+      "stem": "Cloud Container Engine (CCE) provides CCE standard and CCE Turbo clusters. Compared with CCE standard clusters, CCE Turbo clusters support container tunnel networks and VPC networks, and these two kinds of networks can be overlaid with each other. CCE Turbo clusters support features such as cgroups.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "The container tunnel and VPC network models belong to CCE standard clusters. CCE Turbo clusters use the Cloud Native 2.0 network model and can run both secure containers (VM-level isolation on physical machines) and common containers (cgroup isolation). The description of Turbo cluster networking is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer from the supplied exam key; not yet checked against the course material."
     }
    ],
    "uniqueNumbers": 90,
