@@ -11411,7 +11411,7 @@ HR.data.examInventory = {
       },
       {
        "key": "B",
-       "text": "If Elastic Cloud Servers (ECSS) are running in different Virtual Private Clouds (VPCs), but are associated with the same security group, they can communicate with each other by default."
+       "text": "If Elastic Cloud Servers (ECSs) are running in different Virtual Private Clouds (VPCs), but are associated with the same security group, they can communicate with each other by default."
       },
       {
        "key": "C",
@@ -11424,10 +11424,48 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-001",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about security groups and network ACLs is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Security groups only support packet filtering based on a 3-tuple, but network ACLs support packet filtering based on a 5-tuple."
+       },
+       {
+        "key": "B",
+        "text": "If Elastic Cloud Servers (ECSS) are running in different Virtual Private Clouds (VPCs), but are associated with the same security group, they can communicate with each other by default."
+       },
+       {
+        "key": "C",
+        "text": "A network ACL is an optional layer of security for your subnets. You can associate one or more subnets with a network ACL to control traffic in and out of the subnets."
+       },
+       {
+        "key": "D",
+        "text": "The rules of the default security group allow all outgoing data packets and deny all incoming data packets."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected ECSs read as ECSS.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "The course states that ECSs in the same security group but different VPCs cannot communicate with each other; a VPC peering connection is needed first. Security groups filter on a 3-tuple and network ACLs on a 5-tuple, network ACLs are an optional subnet-level layer, and the default security group allows all outbound traffic and denies inbound traffic.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       143,
+       151
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213914.png",
@@ -11455,10 +11493,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-002",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise connects its on-premises network to a VPC through a Direct Connect connection. As the business grows, they need another VPC in the same region, which also needs to communicate with the on-premises network. To reduce costs, the enterprise wants to reuse the existing Direct Connect connection. Which of the following solutions is not cost-effective?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The enterprise can create a VPC peering connection between the two VPCs, and add required routes."
+       },
+       {
+        "key": "B",
+        "text": "The enterprise needs to add routes on the on-premises gateway with the destination pointing to the VPCs."
+       },
+       {
+        "key": "C",
+        "text": "The enterprise can buy a VPN connection to connect the VPCs to the on-premises network."
+       },
+       {
+        "key": "D",
+        "text": "The enterprise needs to add the CIDR block of the new VPC to the local subnet of the Direct Connect connection."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "The existing Direct Connect connection can be reused by peering the new VPC with the old one, adding the new VPC's CIDR block to the Direct Connect configuration, and adding routes on the on-premises gateway. Buying a separate VPN connection adds cost and is unnecessary, so it is the solution that is not cost-effective.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213917.png",
@@ -11486,10 +11557,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-003",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A company plans to deploy applications in the CN South-Guangzhou and CN East-Shanghai regions and uses Cloud Connect to enable network communications between the two regions. Which of the following statements about Cloud Connect is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Cloud Connect can connect VPCs of different accounts."
+       },
+       {
+        "key": "B",
+        "text": "The subnets of the VPCs loaded to a cloud connection cannot conflict with each other."
+       },
+       {
+        "key": "C",
+        "text": "Cloud Connect can connect VPCs in different regions."
+       },
+       {
+        "key": "D",
+        "text": "Cloud Connect can only connect VPCs of the same account."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Cloud Connect loads network instances from different regions, including authorized VPCs from other accounts, into one cloud connection, and the connected subnets must not have conflicting CIDR blocks. The claim that it can only connect VPCs of the same account is false.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-professional",
+      "pages": [
+       641
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213920.png",
@@ -11517,17 +11625,50 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-004",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Application Operations Management (AOM) detects faults promptly and monitors applications, resources, and services in real time. Which of the following statements about AOM is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "It monitors traces and restores execution tracks and statuses of service requests in distributed systems for fast fault locating."
+       },
+       {
+        "key": "B",
+        "text": "It provides functions such as batch disk cleanup, job orchestration, and script execution, and standardizes and automates routine O&M."
+       },
+       {
+        "key": "C",
+        "text": "It manages data from Cloud Eye, Log Tank Service (LTS), and Application Performance Management (APM) to unify monitoring and analysis."
+       },
+       {
+        "key": "D",
+        "text": "It provides atomic operations such as batch script execution, file distribution, and cloud service change. You can also customize atomic operations for assembly into jobs and standard O&M processes."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "AOM unifies monitoring of data from Cloud Eye, LTS, and APM, and its automation module provides batch disk cleanup, job orchestration, script execution, file distribution, and customizable atomic operations. Tracing service requests across a distributed system to restore their execution tracks is a function of APM, not AOM.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. AOM's automation features are part of AOM 2.0 and are not described in the course pages."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213923.png",
      "number": 6,
      "paperTotal": 150,
      "type": "single",
-     "stem": "Which of the following is an advantage of VMS overs containers?",
+     "stem": "Which of the following is an advantage of VMs overs containers?",
      "options": [
       {
        "key": "A",
@@ -11548,10 +11689,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-005",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is an advantage of VMS overs containers?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Startup in seconds"
+       },
+       {
+        "key": "B",
+        "text": "Better isolation"
+       },
+       {
+        "key": "C",
+        "text": "Fine granularity and high resource utilization"
+       },
+       {
+        "key": "D",
+        "text": "Lightweight with fewer resources"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected VMs. The word \"overs\" is as printed on the original paper.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "VMs each run their own operating system on a hypervisor, giving system-level isolation, while containers share the host kernel and isolate only at the process level. Fast startup, fine-grained high utilization, and a lightweight footprint are advantages of containers, not of VMs.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       264
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213929.png",
@@ -11579,10 +11757,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-006",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about Dedicated Distributed Storage Service (DSS) is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The capacity of storage pools can be expanded based on service requirements."
+       },
+       {
+        "key": "B",
+        "text": "Three-copy redundancy based on the dedicated distributed storage is available."
+       },
+       {
+        "key": "C",
+        "text": "DSS disks cannot be expanded while services are running."
+       },
+       {
+        "key": "D",
+        "text": "Backups can be created for disks in the dedicate storage."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot. \"dedicate storage\" is as printed on the original paper.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "DSS storage pools can be expanded as services grow, provide three-copy redundancy, and their disks can be backed up. DSS disks can also be expanded online while services keep running, so the claim that they cannot is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages name DSS but do not describe these capabilities."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213932.png",
@@ -11610,10 +11821,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-007",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about FunctionGraph is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "After a function is created, you cannot edit it inline."
+       },
+       {
+        "key": "B",
+        "text": "FunctionGraph supports multiple runtimes, including Node.js, Java, Python, and Go."
+       },
+       {
+        "key": "C",
+        "text": "You can just write your code and set running conditions without provisioning or managing servers."
+       },
+       {
+        "key": "D",
+        "text": "FunctionGraph supports event functions and HTTP functions."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "FunctionGraph is serverless: you write code and set running conditions without managing servers. It supports runtimes such as Node.js, Java, Python, and Go, and offers both event functions and HTTP functions. Functions can be edited inline in the console after creation, so the claim that they cannot is false.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       420
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Runtime list and inline editing come from FunctionGraph documentation; the course page confirms the serverless model."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213934.png",
@@ -11641,10 +11889,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-008",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise's core service systems are frequently subject to DDoS attacks. The enterprise plans to use Huawei Cloud Advanced Anti-DDoS to defend against them. Which of the following statements about the core advantages of this service is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Multi-node HA is supported by globally distributed scrubbing centers, which enable automatic failover upon node faults"
+       },
+       {
+        "key": "B",
+        "text": "You are billed based on how much traffic you are actually protected from. No fees are generated if there are no attacks."
+       },
+       {
+        "key": "C",
+        "text": "Protective hardware needs to be installed in the customer's data center."
+       },
+       {
+        "key": "D",
+        "text": "Terabit-level protection bandwidth: Up to 1 Tbit/s of traffic scrubbing is provided for a single IP address."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Advanced Anti-DDoS is a cloud service: attack traffic is diverted to Huawei's distributed scrubbing centers, which provide multi-node HA, Tbit/s-level protection, and options to pay for mitigation actually used. Customers do not install protective hardware in their own data centers.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213937.png",
@@ -11659,7 +11940,7 @@ HR.data.examInventory = {
       },
       {
        "key": "B",
-       "text": "High availability DR: When an application sewer is faulty, traffic needs to be automatically routed to healthy servers."
+       "text": "High availability DR: When an application server is faulty, traffic needs to be automatically routed to healthy servers."
       },
       {
        "key": "C",
@@ -11672,10 +11953,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-009",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise plans to deploy a hybrid network on Huawei Cloud and needs to select public or private network load balancers as required. In which of the following scenario should you avoid using a private network load balancer?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Internal microservice communications: Requests need to be distributed across multiple backend pods to discover services."
+       },
+       {
+        "key": "B",
+        "text": "High availability DR: When an application sewer is faulty, traffic needs to be automatically routed to healthy servers."
+       },
+       {
+        "key": "C",
+        "text": "E-commerce promotions: A unified public network access point is required to receive massive volume of orders."
+       },
+       {
+        "key": "D",
+        "text": "Data isolation: The real IP address of the database cluster needs to be hidden. Only intranet access is allowed."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error. This question appears in two captures.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "A private network load balancer has no EIP and can be reached only from within the VPC, which suits internal microservice traffic, failover between internal servers, and hiding a database cluster's real addresses. An e-commerce promotion needs a public entry point that receives orders from the Internet, so a public network load balancer is required there.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       456
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213938.png",
@@ -11690,7 +12008,7 @@ HR.data.examInventory = {
       },
       {
        "key": "B",
-       "text": "High availability DR: When an application sewer is faulty, traffic needs to be automatically routed to healthy servers."
+       "text": "High availability DR: When an application server is faulty, traffic needs to be automatically routed to healthy servers."
       },
       {
        "key": "C",
@@ -11703,17 +12021,54 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-010",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise plans to deploy a hybrid network on Huawei Cloud and needs to select public or private network load balancers as required. In which of the following scenario should you avoid using a private network load balancer?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Internal microservice communications: Requests need to be distributed across multiple backend pods to discover services."
+       },
+       {
+        "key": "B",
+        "text": "High availability DR: When an application sewer is faulty, traffic needs to be automatically routed to healthy servers."
+       },
+       {
+        "key": "C",
+        "text": "E-commerce promotions: A unified public network access point is required to receive massive volume of orders."
+       },
+       {
+        "key": "D",
+        "text": "Data isolation: The real IP address of the database cluster needs to be hidden. Only intranet access is allowed."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Repeated capture of question 10; checked against its screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "A private network load balancer has no EIP and can be reached only from within the VPC, which suits internal microservice traffic, failover between internal servers, and hiding a database cluster's real addresses. An e-commerce promotion needs a public entry point that receives orders from the Internet, so a public network load balancer is required there.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       456
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213941.png",
      "number": 11,
      "paperTotal": 150,
      "type": "single",
-     "stem": "1 1 . An enterprise plans to deploy a big data analytics platform on Huawei Cloud to process petabytes of logs. The platform requires high storage bandwidth to support high-speed data read/write (> 1 GB/s), high IOPS to support intensive random access (> 100,000 IOPS), and fast data exchange to support low-latency communication between nodes. Which of the following ECS types would be the most cost-effective choice?",
+     "stem": "An enterprise plans to deploy a big data analytics platform on Huawei Cloud to process petabytes of logs. The platform requires high storage bandwidth to support high-speed data read/write (> 1 GB/s), high IOPS to support intensive random access (> 100,000 IOPS), and fast data exchange to support low-latency communication between nodes. Which of the following ECS types would be the most cost-effective choice?",
      "options": [
       {
        "key": "A",
@@ -11734,10 +12089,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-011",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "1 1 . An enterprise plans to deploy a big data analytics platform on Huawei Cloud to process petabytes of logs. The platform requires high storage bandwidth to support high-speed data read/write (> 1 GB/s), high IOPS to support intensive random access (> 100,000 IOPS), and fast data exchange to support low-latency communication between nodes. Which of the following ECS types would be the most cost-effective choice?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Disk-intensive (such as D6/D7)"
+       },
+       {
+        "key": "B",
+        "text": "Memory-optimized (such as R6/R7)"
+       },
+       {
+        "key": "C",
+        "text": "GPU-accelerated (such as P2s/P2v)"
+       },
+       {
+        "key": "D",
+        "text": "General computing (such as S6/S7)"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; removed the OCR number prefix and corrected P2v.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "Disk-intensive ECSs carry large local disks with high storage bandwidth and IOPS and are recommended for Hadoop, distributed file systems, and log or data processing. They meet these big data requirements at lower cost than memory-optimized, GPU, or general-purpose types.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       57
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213943.png",
@@ -11765,10 +12157,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-012",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise plans to build a hybrid cloud security system, with some services deployed on Huawei Cloud and others maintained in its local data center. Which of the following statements is false about Huawei Cloud security services?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Web Application Firewall (WAF) protects external IDC services through CNAME access."
+       },
+       {
+        "key": "B",
+        "text": "Data Encryption Workshop (DEW) provides unified key management for OBS, EVS, and local storage on the cloud."
+       },
+       {
+        "key": "C",
+        "text": "Advanced Anti-DDoS protects only resources on Huawei Cloud. Local data centers cannot be protected."
+       },
+       {
+        "key": "D",
+        "text": "Host Security Service (HSS) requires an agent installed on the local server to provide intrusion detection."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Advanced Anti-DDoS works by diverting traffic through Huawei's scrubbing centers to a protected IP address, so it can protect services in a local data center as well as on Huawei Cloud; the claim that local data centers cannot be protected is false. WAF can protect external IDC services through CNAME access, HSS protects local servers once its agent is installed, and DEW provides key management integrated with cloud storage services.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: the DEW statement about local storage is also loosely worded."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213945.png",
