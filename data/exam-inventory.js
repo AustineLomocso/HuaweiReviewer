@@ -5674,7 +5674,7 @@ HR.data.examInventory = {
      "number": 1,
      "paperTotal": 90,
      "type": "single",
-     "stem": "Which of the following statements is true about the features of Huawei Cloud Al development platform ModelArts?",
+     "stem": "Which of the following statements is true about the features of Huawei Cloud AI development platform ModelArts?",
      "options": [
       {
        "key": "A",
@@ -5686,7 +5686,7 @@ HR.data.examInventory = {
       },
       {
        "key": "C",
-       "text": "ModelArts supports end-to-end Al development, from data labeling and model training to evaluation and deployment."
+       "text": "ModelArts supports end-to-end AI development, from data labeling and model training to evaluation and deployment."
       },
       {
        "key": "D",
@@ -5695,10 +5695,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-001",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements is true about the features of Huawei Cloud Al development platform ModelArts?",
+      "options": [
+       {
+        "key": "A",
+        "text": "ModelArts does not support deep learning frameworks such as TensorFlow and PyTorch."
+       },
+       {
+        "key": "B",
+        "text": "ModelArts only supports preprocessing of local data."
+       },
+       {
+        "key": "C",
+        "text": "ModelArts supports end-to-end Al development, from data labeling and model training to evaluation and deployment."
+       },
+       {
+        "key": "D",
+        "text": "ModelArts does not support GPU acceleration during model training."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "ModelArts is a one-stop AI development platform covering the whole lifecycle: data preprocessing and auto labeling, algorithm development, distributed training, and model deployment from cloud to edge. It supports mainstream frameworks such as TensorFlow and PyTorch, works with cloud data rather than only local data, and accelerates training on GPUs and Ascend processors, so the restrictive statements are false.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       391
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214817.png",
@@ -5726,10 +5763,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-002",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements is false about MindSpore optimization and features?",
+      "options": [
+       {
+        "key": "A",
+        "text": "MindSpore supports only Python for model development."
+       },
+       {
+        "key": "B",
+        "text": "MindSpore improves distributed training performance using automatic parallelism."
+       },
+       {
+        "key": "C",
+        "text": "MindSpore can optimize the model running efficiency through operator fusion."
+       },
+       {
+        "key": "D",
+        "text": "MindSpore supports device-edge-cloud synergy development and deployment."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "MindSpore offers automatic parallelism for distributed training, operator (graph-kernel) fusion to speed up execution, and device-edge-cloud all-scenario development and deployment. Python is its main front-end language, but it is not the only one: MindSpore also provides C++ APIs, notably for inference and on-device deployment, so the Python-only claim is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages describe MindSpore's distributed training and all-scenario deployment but do not discuss programming languages."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214819.png",
@@ -5757,10 +5827,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-003",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about the history of Pangu Large Models is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "In September 2021, the Pangu multimodal model and Pangu scientific computing model were introduced."
+       },
+       {
+        "key": "B",
+        "text": "In 2022, Huawei Cloud introduced Pangu models tailored for industry-specific tasks such as weather forecasting and mining operations, showcasing the potential of Pangu Large Models in various application scenarios."
+       },
+       {
+        "key": "C",
+        "text": "In July 2024, the milestone research results of the Pangu-Weather model were published in Nature."
+       },
+       {
+        "key": "D",
+        "text": "Pangu Large Models were initiated in 2019 and officially launched in April 2021."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Pangu began as a project in 2019 and launched in April 2021; the multimodal and scientific computing models followed in September 2021, and industry-specific models such as weather and mining arrived in 2022. The Pangu-Weather research was published in Nature in July 2023, not July 2024, so that statement is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course material states only that Pangu models were released in 2021; the dates here come from public announcements."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214821.png",
@@ -5788,10 +5891,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-004",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following frameworks is used by Flink to process SQL statements?",
+      "options": [
+       {
+        "key": "A",
+        "text": "SQLParser"
+       },
+       {
+        "key": "B",
+        "text": "Calcite"
+       },
+       {
+        "key": "C",
+        "text": "ANTLR"
+       },
+       {
+        "key": "D",
+        "text": "JOOQ"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "Flink's Table API and SQL layer uses Apache Calcite to parse, validate, and optimize SQL statements before translating them into Flink jobs. SQLParser, ANTLR, and JOOQ are other parsing or query-building tools that Flink does not use for this purpose.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The supplied course pages do not describe Flink's SQL internals."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214822.png",
@@ -5819,12 +5955,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2425-capture-005",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A pressure test had think time set to 1,000 ms. The test lasted for 10 minutes with 10 concurrent users. How many concurrent requests will the test have?",
+      "options": [
+       {
+        "key": "A",
+        "text": "9000"
+       },
+       {
+        "key": "B",
+        "text": "12000"
+       },
+       {
+        "key": "C",
+        "text": "3000"
+       },
+       {
+        "key": "D",
+        "text": "6000"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Think time is the interval between requests sent by the same virtual user. With a think time of 1,000 ms, each user sends about one request per second. Ten users over 10 minutes (600 seconds) therefore send 10 x 600 = 6,000 requests.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       551
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course defines think time; the total is calculated from it."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214824.png",
@@ -5852,10 +6025,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-006",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is false about Application Performance Management (APM)?",
+      "options": [
+       {
+        "key": "A",
+        "text": "It quickly locates exceptions."
+       },
+       {
+        "key": "B",
+        "text": "It migrates cloud data."
+       },
+       {
+        "key": "C",
+        "text": "It displays performance metrics."
+       },
+       {
+        "key": "D",
+        "text": "It monitors application latency."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "APM helps O&M staff quickly find application performance bottlenecks and the root causes of faults: it locates exceptions, displays performance metrics, and monitors latency. Migrating cloud data is the job of migration services, not APM.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       464
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214826.png",
@@ -5883,10 +6093,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-007",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is not an application scenario of CCE?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Containerized database services in key fields like enterprise and finance need to be scaled in or out dynamically to ensure services can run efficiently and cross-region high availability can be ensured."
+       },
+       {
+        "key": "B",
+        "text": "Traffic governance of microservices is built on containers and capabilities like grayscale release, traffic governance, and traffic monitoring are needed."
+       },
+       {
+        "key": "C",
+        "text": "Service loads of live streaming require real-time scaling in or out based on CPU or memory usage."
+       },
+       {
+        "key": "D",
+        "text": "Cloud computing resources often need to be expanded quickly and automatically during traffic surges caused by e-commerce promotions and flash sales."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "CCE's typical scenarios include auto scaling in seconds for shopping promotions and flash sales, live streaming with fluctuating loads, and games, plus microservice traffic governance with grayscale releases through Application Service Mesh. Running cross-region, highly available containerized databases for finance is not one of the listed CCE scenarios; such workloads are served by managed database services.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       118
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course lists the auto-scaling scenarios; the database scenario is judged by its absence from CCE's scenario list."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214827.png",
@@ -5914,10 +6161,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-008",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "You can create Deployments on Huawei Cloud Container Engine (CCE). Which of the following statements is false about Deployments?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Runtime data will be lost after a pod is restarted."
+       },
+       {
+        "key": "B",
+        "text": "Different pods have the same response to the same request."
+       },
+       {
+        "key": "C",
+        "text": "Data that needs to be stored persistently is not stored locally."
+       },
+       {
+        "key": "D",
+        "text": "Storage volumes cannot be mounted to Deployments."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Deployments run stateless pods: runtime data in a pod is lost when it restarts, every pod gives the same response to the same request, and data that must persist is kept outside the pod rather than locally. Deployments can still mount storage volumes, such as EVS, SFS, or OBS volumes, so the claim that volumes cannot be mounted is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214829.png",
@@ -5932,11 +6212,11 @@ HR.data.examInventory = {
       },
       {
        "key": "B",
-       "text": "Security groups are mandatory for ECSS, but network ACLs are optional."
+       "text": "Security groups are mandatory for ECSs, but network ACLs are optional."
       },
       {
        "key": "C",
-       "text": "Both security groups and network ACLs can be used to protect communications between Elastic Cloud Servers (ECSS) in the same subnet."
+       "text": "Both security groups and network ACLs can be used to protect communications between Elastic Cloud Servers (ECSs) in the same subnet."
       },
       {
        "key": "D",
@@ -5945,10 +6225,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-009",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about the differences between security groups and network ACLs is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Both security groups and network ACLs support the allow and deny actions."
+       },
+       {
+        "key": "B",
+        "text": "Security groups are mandatory for ECSS, but network ACLs are optional."
+       },
+       {
+        "key": "C",
+        "text": "Both security groups and network ACLs can be used to protect communications between Elastic Cloud Servers (ECSS) in the same subnet."
+       },
+       {
+        "key": "D",
+        "text": "Security groups support packet filtering based on a 3-tuple. Network ACLs support packet filtering based on a 5-tuple."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected ECSs read as ECSS.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Security groups protect individual ECSs and must be selected when an ECS is created, while network ACLs are optional and protect whole subnets. Security groups filter on a 3-tuple and network ACLs on a 5-tuple. Because a network ACL controls traffic entering and leaving a subnet, it does not filter traffic between ECSs inside the same subnet; only security groups can do that.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: the course table (Cloud Service Solutions Architect p.120) says security groups support only Allow rules, with Deny rules in certain regions, so the allow-and-deny statement is also arguably false."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214830.png",
@@ -5976,10 +6289,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-010",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements is false about Docker images?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The metadata of each image layer is stored in JSON files."
+       },
+       {
+        "key": "B",
+        "text": "Docker images are composed of layers."
+       },
+       {
+        "key": "C",
+        "text": "Docker images can be built only using Dockerfiles."
+       },
+       {
+        "key": "D",
+        "text": "Once you have made the necessary modifications to a container, you can use the docker commit command to create a new image."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Docker images are built from read-only layers, and each layer's metadata is stored as JSON. Images can be built from a Dockerfile, but they can also be created by running docker commit on a modified container or by importing an archive, so the claim that Dockerfiles are the only way is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214832.png",
@@ -6002,15 +6348,45 @@ HR.data.examInventory = {
       },
       {
        "key": "D",
-       "text": "Deploy ECSS in different AZS and associate them with a load balancer to improve local availability."
+       "text": "Deploy ECSs in different AZs and associate them with a load balancer to improve local availability."
       }
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-011",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following actions can be done to prevent single points of failure (SPOFs) when you use Huawei Cloud Elastic Load Balance (ELB)?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Single points of failure (SPOFs) cannot be avoided."
+       },
+       {
+        "key": "B",
+        "text": "Create multiple load balancers in the same region and configure DNS records so that load balancers can provide services in polling mode to improve local availability."
+       },
+       {
+        "key": "C",
+        "text": "Create multiple load balancers in different regions and configure DNS records so that load balancers can provide services in polling mode to improve cross-region availability."
+       },
+       {
+        "key": "D",
+        "text": "Deploy ECSS in different AZS and associate them with a load balancer to improve local availability."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected ECSs and AZs.",
+     "explanation": "Single points of failure can be avoided, so the first statement is wrong. The other three all describe recognized high-availability designs: several load balancers in one region behind DNS round-robin, load balancers in different regions behind DNS for cross-region availability, and backend ECSs spread across AZs behind one load balancer. ELB also health-checks backend servers and stops routing to unhealthy ones. Because the paper accepts only one answer and does not say which, this question is shown for practice but not scored.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Not graded: three of the four options describe valid ways to avoid single points of failure with ELB, and no key or course page says which one the paper intended."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214834.png",
@@ -6038,10 +6414,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-012",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A tenant plans to deploy a website application using Huawei Cloud Container Engine (CCE). After purchasing a Huawei Cloud CCE cluster, the tenant deploys various components of the website in different modes. Which of the following is not a good option?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Deploying an Nginx server in a Deployment"
+       },
+       {
+        "key": "B",
+        "text": "Deploying a MySQL database using Helm charts"
+       },
+       {
+        "key": "C",
+        "text": "Deploying a log deletion script in a cron job"
+       },
+       {
+        "key": "D",
+        "text": "Deploying a Tomcat server in a job"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Kubernetes workload types suit different components: Deployments run stateless services such as an Nginx web server, Helm charts package applications such as a MySQL database, and CronJobs run periodic tasks such as a log-deletion script. A Job is meant for a one-off task that runs to completion, so it is the wrong choice for a long-running Tomcat server.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       395
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214835.png",
@@ -6069,12 +6482,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2425-capture-013",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A user creates an IPv4 subnet with a CIDR block of 192.168.0.0/25. How many hosts at most can be deployed in this subnet?",
+      "options": [
+       {
+        "key": "A",
+        "text": "510"
+       },
+       {
+        "key": "B",
+        "text": "62"
+       },
+       {
+        "key": "C",
+        "text": "254"
+       },
+       {
+        "key": "D",
+        "text": "126"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "A /25 mask leaves 7 host bits, giving 2^7 = 128 addresses. Subtracting the network address and the broadcast address leaves 128 - 2 = 126 usable host addresses.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. In a Huawei Cloud VPC subnet, the platform reserves a few more addresses (such as the gateway), so fewer than 126 are actually assignable; the paper expects the standard subnetting answer."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214837.png",
@@ -6089,7 +6535,7 @@ HR.data.examInventory = {
       },
       {
        "key": "B",
-       "text": "They can configure a VPC peering connection between the VPCs of departments 8 and C."
+       "text": "They can configure a VPC peering connection between the VPCs of departments B and C."
       },
       {
        "key": "C",
@@ -6102,10 +6548,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-014",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise deploys its services on Huawei Cloud and each department has its own HUAWEI ID and Virtual Private Cloud (VPC). Suppose there are three departments: A, B, and C. Department A hosts a file sharing website in its VPC, allowing all employees to access shared data. Department B needs to upload attendance data to a database in Department A's VPC. Department C must access this database to calculate payroll. How can the enterprise administrator configure VPC peering connections?",
+      "options": [
+       {
+        "key": "A",
+        "text": "They can configure a VPC peering connection between the VPCs of departments A and B."
+       },
+       {
+        "key": "B",
+        "text": "They can configure a VPC peering connection between the VPCs of departments 8 and C."
+       },
+       {
+        "key": "C",
+        "text": "They can configure VPC peering connections between the VPCs of departments A and C, and the VPCs of departments A and B."
+       },
+       {
+        "key": "D",
+        "text": "VPC peering connections cannot be used to connect VPCs in different accounts."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "VPC peering connects two VPCs in the same region, including VPCs in different accounts once the peer owner accepts the request. Peering is not transitive, so both Department B and Department C each need their own peering connection to Department A's VPC, where the database lives. A link between B and C alone would not reach the database.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       145
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214838.png",
@@ -6133,48 +6616,122 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-015",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A company needs to add online storage for archiving a large number of its website logs. Which of the following Huawei Cloud services is recommended?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Elastic Volume Service (EVS)"
+       },
+       {
+        "key": "B",
+        "text": "Scalable File Service (SFS)"
+       },
+       {
+        "key": "C",
+        "text": "Object Storage Service (OBS)"
+       },
+       {
+        "key": "D",
+        "text": "Cloud Backup and Recovery (CBR)"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "OBS provides massive, reliable, low-cost storage for data of any format and size and is designed for scenarios such as enterprise backup and archiving, so it suits large volumes of archived website logs. EVS provides block disks attached to servers, SFS provides shared file systems, and CBR protects data through backups rather than serving as online archive storage.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       186
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214840.png",
      "number": 16,
      "paperTotal": 90,
      "type": "single",
-     "stem": "A startup company wants to launch its website portal on Huawei Cloud. They do not require high performance, but they require high cost-effectiveness. Which of the following types of ECSS is recommended?",
+     "stem": "A startup company wants to launch its website portal on Huawei Cloud. They do not require high performance, but they require high cost-effectiveness. Which of the following types of ECSs is recommended?",
      "options": [
       {
        "key": "A",
-       "text": "Memory-intensive ECSS"
+       "text": "Memory-intensive ECSs"
       },
       {
        "key": "B",
-       "text": "Computing-intensive ECSS"
+       "text": "Computing-intensive ECSs"
       },
       {
        "key": "C",
-       "text": "General-purpose ECSS"
+       "text": "General-purpose ECSs"
       },
       {
        "key": "D",
-       "text": "Storage-intensive ECSS"
+       "text": "Storage-intensive ECSs"
       }
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-016",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A startup company wants to launch its website portal on Huawei Cloud. They do not require high performance, but they require high cost-effectiveness. Which of the following types of ECSS is recommended?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Memory-intensive ECSS"
+       },
+       {
+        "key": "B",
+        "text": "Computing-intensive ECSS"
+       },
+       {
+        "key": "C",
+        "text": "General-purpose ECSS"
+       },
+       {
+        "key": "D",
+        "text": "Storage-intensive ECSS"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected ECSs read as ECSS.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Websites such as blogs and enterprise portals have modest compute and storage requirements, and a general-purpose ECS meets them at the lowest cost. Memory-, compute-, and storage-intensive types target heavier specialized workloads and cost more.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-professional",
+      "pages": [
+       549
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214841.png",
      "number": 17,
      "paperTotal": 90,
      "type": "single",
-     "stem": "Which of the following services in a Huawei Cloud hybrid cloud solution can help achieve zero RPO and an RTO of less than 30 minutes across AZS to ensure zero data loss?",
+     "stem": "Which of the following services in a Huawei Cloud hybrid cloud solution can help achieve zero RPO and an RTO of less than 30 minutes across AZs to ensure zero data loss?",
      "options": [
       {
        "key": "A",
@@ -6195,10 +6752,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-017",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following services in a Huawei Cloud hybrid cloud solution can help achieve zero RPO and an RTO of less than 30 minutes across AZS to ensure zero data loss?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Storage Disaster Recovery Service (SDRS)"
+       },
+       {
+        "key": "B",
+        "text": "Cloud Backup and Recovery (CBR)"
+       },
+       {
+        "key": "C",
+        "text": "Cloud Server Backup Service (CSBS)"
+       },
+       {
+        "key": "D",
+        "text": "Volume Backup Service (VBS)"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected AZs read as AZS.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "SDRS replicates ECS and EVS data synchronously at the storage layer between sites, giving zero data loss (RPO = 0), minute-level RTO, and one-click failover. CBR, CSBS, and VBS are backup services: they restore from periodic backups, so recent changes can be lost and recovery takes longer.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       222
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214843.png",
@@ -6226,10 +6820,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-018",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following cluster types is not supported by Cloud Container Engine (CCE)?",
+      "options": [
+       {
+        "key": "A",
+        "text": "CCE standard"
+       },
+       {
+        "key": "B",
+        "text": "CCE Autopilot"
+       },
+       {
+        "key": "C",
+        "text": "CCE Windows"
+       },
+       {
+        "key": "D",
+        "text": "CCE Turbo"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "CCE offers CCE standard clusters, CCE Turbo clusters (with the Cloud Native 2.0 network), and CCE Autopilot (serverless) clusters. There is no \"CCE Windows\" cluster type.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages mention CCE Turbo but do not list every cluster type."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214844.png",
@@ -6252,15 +6879,52 @@ HR.data.examInventory = {
       },
       {
        "key": "D",
-       "text": "Document Database Sewice (DDS)"
+       "text": "Document Database Service (DDS)"
       }
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-019",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "In Internet gaming scenarios, frequent changes to gaming services require changes to the table structures. Customers want to minimize the impacts of such changes. Which of the following database services is recommended?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Relational Database Service (RDS)"
+       },
+       {
+        "key": "B",
+        "text": "Database Security Service (DBSS)"
+       },
+       {
+        "key": "C",
+        "text": "Data Admin Service (DAS)"
+       },
+       {
+        "key": "D",
+        "text": "Document Database Sewice (DDS)"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "DDS is a MongoDB-compatible document database. Its flexible schema lets game data structures change without altering table definitions, and the course presents it as the solution for a game company needing elastic scale-out and high availability. RDS uses fixed relational schemas, while DBSS and DAS are security and administration tools rather than databases.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       272
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214846.png",
@@ -6271,27 +6935,64 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "Large-memory ECSS"
+       "text": "Large-memory ECSs"
       },
       {
        "key": "B",
-       "text": "General computing-basic ECSS"
+       "text": "General computing-basic ECSs"
       },
       {
        "key": "C",
-       "text": "Disk-intensive ECSS"
+       "text": "Disk-intensive ECSs"
       },
       {
        "key": "D",
-       "text": "GPU-accelerated ECSS"
+       "text": "GPU-accelerated ECSs"
       }
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2425-capture-020",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "In scenarios where a large amount of data needs to be processed, such as large-scale parallel processing data warehouse, MapReduce, and Hadoop computing-intensive scenarios, Elastic Cloud Servers (ECSs) need to provide local disks with high storage bandwidth and IOPS, and be able to exchange and process data quickly. For better performance and lower price, which of the following types of ECSS is recommended?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Large-memory ECSS"
+       },
+       {
+        "key": "B",
+        "text": "General computing-basic ECSS"
+       },
+       {
+        "key": "C",
+        "text": "Disk-intensive ECSS"
+       },
+       {
+        "key": "D",
+        "text": "GPU-accelerated ECSS"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected ECSs read as ECSS.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Disk-intensive ECSs come with large local disks offering high storage bandwidth and IOPS. The course lists them for massively parallel data warehouses, MapReduce and Hadoop distributed computing, distributed file systems, and log or data processing, at a lower cost than alternatives for the same throughput.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       57
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214847.png",
