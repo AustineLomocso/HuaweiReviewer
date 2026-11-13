@@ -8619,6 +8619,412 @@
    "inApp": true
   },
   {
+   "captureId": "n2526-capture-043",
+   "paperId": "n2526",
+   "questionNumber": 43,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214040.png",
+   "sha256": "f90fd7aebfd47ca8b8dcd697650d1eac7bf4c7d0fdc080896b612badb5a8ba29",
+   "stem": "Which of the following is not a deep learning text classification method?",
+   "options": [
+    {
+     "key": "A",
+     "text": "BERT"
+    },
+    {
+     "key": "B",
+     "text": "TextCNN"
+    },
+    {
+     "key": "C",
+     "text": "AdaBoost"
+    },
+    {
+     "key": "D",
+     "text": "TextRNN"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     426
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "TextCNN, TextRNN, and BERT are deep learning models for text classification. AdaBoost is a traditional ensemble (boosting) algorithm, not a deep learning method.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-044",
+   "paperId": "n2526",
+   "questionNumber": 44,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214041.png",
+   "sha256": "4203f1b5f16bd7ad5916711bdf0586a849f79acab619b4e088f4b3cde87dd0c4",
+   "stem": "Which of the following statements about the softmax function is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "The softmax function maps the output to the (-1, 1) range."
+    },
+    {
+     "key": "B",
+     "text": "The sum of all components in the vector produced by the softmax function equals 1."
+    },
+    {
+     "key": "C",
+     "text": "The softmax function is often used at the output layer of a multiclass classification task."
+    },
+    {
+     "key": "D",
+     "text": "Softmax functions turn a vector of K real numbers into another vector of K real numbers."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Softmax turns a vector of K real numbers into K values between 0 and 1 that sum to 1, which is why it is used at the output layer for multiclass classification. Its outputs lie in (0, 1), not (-1, 1); that range belongs to tanh.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-045",
+   "paperId": "n2526",
+   "questionNumber": 45,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214043.png",
+   "sha256": "e2825006acc1be5953eab4fd52cc54a3368f8bffa3993770c3de0b301dac3fd1",
+   "stem": "Which of the following tasks is not supported by ModelArts built-in models?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Image segmentation"
+    },
+    {
+     "key": "B",
+     "text": "Gene sequencing"
+    },
+    {
+     "key": "C",
+     "text": "Image classification"
+    },
+    {
+     "key": "D",
+     "text": "Image detection"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     534
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "ModelArts built-in algorithms cover computer vision tasks such as image classification, object detection, and image segmentation. Gene sequencing is a laboratory process, not a task supported by these built-in models.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-046",
+   "paperId": "n2526",
+   "questionNumber": 46,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214045.png",
+   "sha256": "66d9dd9df4dbb95024fa0fea04c14f7f51a85c2f5ffe4352fcb811157a01bd80",
+   "stem": "Which of the following statements about the traditional acoustic model GMM-HMM is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Third-order HMM models are commonly used in speech recognition tasks."
+    },
+    {
+     "key": "B",
+     "text": "A Markov chain, or a Markov process, is a stochastic discrete-event process that satisfies the Markov property. In this process, given the current knowledge or information, any prediction depends solely on the present state. The past is irrelevant."
+    },
+    {
+     "key": "C",
+     "text": "The goal of Markov model is to learn the probabilities of state transitions based on observable data."
+    },
+    {
+     "key": "D",
+     "text": "GMM-HMM is an acoustic model. The next step is to use a language model to generate text."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     309
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Speech recognition typically uses first-order HMMs, often with three states per phoneme, not third-order HMMs. A Markov chain's future depends only on its present state, training a Markov model estimates transition probabilities from data, and GMM-HMM is the acoustic model whose output a language model turns into text.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-047",
+   "paperId": "n2526",
+   "questionNumber": 47,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214046.png",
+   "sha256": "eeb0b7d7518d60d79d8c10d5573778afe6c7163f17b2bdca1e4e4e50d3e79d41",
+   "stem": "Which of the following is not a parameter of a hidden Markov model?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Emission probability"
+    },
+    {
+     "key": "B",
+     "text": "Initial probability"
+    },
+    {
+     "key": "C",
+     "text": "Language probability"
+    },
+    {
+     "key": "D",
+     "text": "Transition probability"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     327
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "An HMM is parameterized by initial probabilities, transition probabilities, and emission probabilities. \"Language probability\" comes from a language model, not from the HMM.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-048",
+   "paperId": "n2526",
+   "questionNumber": 48,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214048.png",
+   "sha256": "8bf473d32df24d8aab2b35078e3f43de2c2d24f40e165f4ed242c4ecae10c229",
+   "stem": "Which of the following is not an application of natural language processing (NLP)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Public opinion analysis"
+    },
+    {
+     "key": "B",
+     "text": "TTS"
+    },
+    {
+     "key": "C",
+     "text": "Machine translation"
+    },
+    {
+     "key": "D",
+     "text": "Automatic abstracting"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Public opinion analysis, machine translation, and automatic summarization are natural language processing applications that work on text. TTS (text to speech) is a speech processing task that generates audio.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-049",
+   "paperId": "n2526",
+   "questionNumber": 49,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214050.png",
+   "sha256": "59788f1859fc3072970081036d9e5bed101770eb01b15668c826cbfb5be4e29d",
+   "stem": "Which of the following is part of the speech synthesis process?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Text normalization"
+    },
+    {
+     "key": "B",
+     "text": "Waveform generation"
+    },
+    {
+     "key": "C",
+     "text": "Text-to-phoneme conversion"
+    },
+    {
+     "key": "D",
+     "text": "Pre-emphasis"
+    }
+   ],
+   "status": "transcribed",
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     283,
+     284
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot. The stem is printed as \"is part of\", although three options are parts of speech synthesis.",
+   "flag": "Not graded: as printed, three options (text normalization, waveform generation, and text-to-phoneme conversion) are all parts of speech synthesis, yet only one answer is accepted. The question probably meant to ask which is not part of it, which would be pre-emphasis.",
+   "explanation": "Speech synthesis begins with text analysis, including text normalization and conversion of text to phonemes, and ends with waveform generation. Pre-emphasis is a preprocessing step in speech recognition, not synthesis. Because three of the options fit the question as printed, it is shown for practice but not scored.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-050",
+   "paperId": "n2526",
+   "questionNumber": 50,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214052.png",
+   "sha256": "89b409874ff84fee06d03ee4176ee6a73344848832da84fab872d8c288bbd52a",
+   "stem": "Which of the following is not a step in speech recognition preprocessing?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Edge enhancement"
+    },
+    {
+     "key": "B",
+     "text": "Feature normalization"
+    },
+    {
+     "key": "C",
+     "text": "Noise reduction"
+    },
+    {
+     "key": "D",
+     "text": "Pre-emphasis"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     277
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Speech recognition preprocessing includes noise reduction, pre-emphasis, silence removal, smoothing, and normalization of features. Edge enhancement is an image processing technique, not a speech preprocessing step.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-051",
+   "paperId": "n2526",
+   "questionNumber": 51,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214054.png",
+   "sha256": "55c6d2900a636ae41e5a7113dfd3eb8fd3103d0bc6064be7b69376b54107dad5",
+   "stem": "Which of the following statements about CNN applications in text tasks and image tasks is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "CNNs work equally well for both images and text."
+    },
+    {
+     "key": "B",
+     "text": "CNNs typically process images as multidimensional pixel matrices."
+    },
+    {
+     "key": "C",
+     "text": "CNN uses convolution kernels to extract local n-gram features in text-related tasks."
+    },
+    {
+     "key": "D",
+     "text": "CNNs work better with short texts than long ones."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "CNNs process images as multidimensional pixel matrices and, in text tasks, use convolution kernels to capture local n-gram features, which makes them better at short texts than at long ones with long-range dependencies. They do not work equally well for images and text; they are naturally suited to the spatial structure of images.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-052",
+   "paperId": "n2526",
+   "questionNumber": 52,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214055.png",
+   "sha256": "c3bc981331ebbebf3969d0c72d8d83b9b7a2da329806b42628b354b207fa2a9b",
+   "stem": "Which of the following statements about median filtering is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "It is a filter of the template sorting operation."
+    },
+    {
+     "key": "B",
+     "text": "Median filtering reduces salt and pepper noise more effectively than mean filtering."
+    },
+    {
+     "key": "C",
+     "text": "Median filtering improves image clarity and works effectively on pictures with Gaussian noise."
+    },
+    {
+     "key": "D",
+     "text": "It replaces the original pixel value with the median output of the pixel values sorted in the neighborhood."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     124
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "The median filter sorts the pixel values in a neighborhood and replaces the center with the median, removing salt-and-pepper noise better than a mean filter while preserving edges. It is not especially effective against Gaussian noise, for which mean or Gaussian smoothing is better suited, so that statement is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
    "captureId": "n2526-capture-059",
    "paperId": "n2526",
    "questionNumber": 59,

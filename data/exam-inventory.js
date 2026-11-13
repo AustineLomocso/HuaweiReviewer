@@ -14231,12 +14231,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-043",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is not a deep learning text classification method?",
+      "options": [
+       {
+        "key": "A",
+        "text": "BERT"
+       },
+       {
+        "key": "B",
+        "text": "TextCNN"
+       },
+       {
+        "key": "C",
+        "text": "AdaBoost"
+       },
+       {
+        "key": "D",
+        "text": "TextRNN"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "TextCNN, TextRNN, and BERT are deep learning models for text classification. AdaBoost is a traditional ensemble (boosting) algorithm, not a deep learning method.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       426
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214041.png",
@@ -14264,10 +14301,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-044",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about the softmax function is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The softmax function maps the output to the (-1, 1) range."
+       },
+       {
+        "key": "B",
+        "text": "The sum of all components in the vector produced by the softmax function equals 1."
+       },
+       {
+        "key": "C",
+        "text": "The softmax function is often used at the output layer of a multiclass classification task."
+       },
+       {
+        "key": "D",
+        "text": "Softmax functions turn a vector of K real numbers into another vector of K real numbers."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "Softmax turns a vector of K real numbers into K values between 0 and 1 that sum to 1, which is why it is used at the output layer for multiclass classification. Its outputs lie in (0, 1), not (-1, 1); that range belongs to tanh.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214043.png",
@@ -14295,10 +14365,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-045",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following tasks is not supported by ModelArts built-in models?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Image segmentation"
+       },
+       {
+        "key": "B",
+        "text": "Gene sequencing"
+       },
+       {
+        "key": "C",
+        "text": "Image classification"
+       },
+       {
+        "key": "D",
+        "text": "Image detection"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "ModelArts built-in algorithms cover computer vision tasks such as image classification, object detection, and image segmentation. Gene sequencing is a laboratory process, not a task supported by these built-in models.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       534
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214045.png",
@@ -14326,10 +14433,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-046",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about the traditional acoustic model GMM-HMM is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Third-order HMM models are commonly used in speech recognition tasks."
+       },
+       {
+        "key": "B",
+        "text": "A Markov chain, or a Markov process, is a stochastic discrete-event process that satisfies the Markov property. In this process, given the current knowledge or information, any prediction depends solely on the present state. The past is irrelevant."
+       },
+       {
+        "key": "C",
+        "text": "The goal of Markov model is to learn the probabilities of state transitions based on observable data."
+       },
+       {
+        "key": "D",
+        "text": "GMM-HMM is an acoustic model. The next step is to use a language model to generate text."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "Speech recognition typically uses first-order HMMs, often with three states per phoneme, not third-order HMMs. A Markov chain's future depends only on its present state, training a Markov model estimates transition probabilities from data, and GMM-HMM is the acoustic model whose output a language model turns into text.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       309
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214046.png",
@@ -14357,10 +14501,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-047",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is not a parameter of a hidden Markov model?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Emission probability"
+       },
+       {
+        "key": "B",
+        "text": "Initial probability"
+       },
+       {
+        "key": "C",
+        "text": "Language probability"
+       },
+       {
+        "key": "D",
+        "text": "Transition probability"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "An HMM is parameterized by initial probabilities, transition probabilities, and emission probabilities. \"Language probability\" comes from a language model, not from the HMM.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       327
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214048.png",
@@ -14388,12 +14569,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-048",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is not an application of natural language processing (NLP)?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Public opinion analysis"
+       },
+       {
+        "key": "B",
+        "text": "TTS"
+       },
+       {
+        "key": "C",
+        "text": "Machine translation"
+       },
+       {
+        "key": "D",
+        "text": "Automatic abstracting"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "Public opinion analysis, machine translation, and automatic summarization are natural language processing applications that work on text. TTS (text to speech) is a speech processing task that generates audio.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214050.png",
@@ -14421,10 +14635,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-049",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is part of the speech synthesis process?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Text normalization"
+       },
+       {
+        "key": "B",
+        "text": "Waveform generation"
+       },
+       {
+        "key": "C",
+        "text": "Text-to-phoneme conversion"
+       },
+       {
+        "key": "D",
+        "text": "Pre-emphasis"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot. The stem is printed as \"is part of\", although three options are parts of speech synthesis.",
+     "explanation": "Speech synthesis begins with text analysis, including text normalization and conversion of text to phonemes, and ends with waveform generation. Pre-emphasis is a preprocessing step in speech recognition, not synthesis. Because three of the options fit the question as printed, it is shown for practice but not scored.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       283,
+       284
+      ]
+     },
+     "inApp": true,
+     "flag": "Not graded: as printed, three options (text normalization, waveform generation, and text-to-phoneme conversion) are all parts of speech synthesis, yet only one answer is accepted. The question probably meant to ask which is not part of it, which would be pre-emphasis."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214052.png",
@@ -14452,10 +14701,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-050",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is not a step in speech recognition preprocessing?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Edge enhancement"
+       },
+       {
+        "key": "B",
+        "text": "Feature normalization"
+       },
+       {
+        "key": "C",
+        "text": "Noise reduction"
+       },
+       {
+        "key": "D",
+        "text": "Pre-emphasis"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "Speech recognition preprocessing includes noise reduction, pre-emphasis, silence removal, smoothing, and normalization of features. Edge enhancement is an image processing technique, not a speech preprocessing step.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       277
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214054.png",
@@ -14483,10 +14769,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-051",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about CNN applications in text tasks and image tasks is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "CNNs work equally well for both images and text."
+       },
+       {
+        "key": "B",
+        "text": "CNNs typically process images as multidimensional pixel matrices."
+       },
+       {
+        "key": "C",
+        "text": "CNN uses convolution kernels to extract local n-gram features in text-related tasks."
+       },
+       {
+        "key": "D",
+        "text": "CNNs work better with short texts than long ones."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "CNNs process images as multidimensional pixel matrices and, in text tasks, use convolution kernels to capture local n-gram features, which makes them better at short texts than at long ones with long-range dependencies. They do not work equally well for images and text; they are naturally suited to the spatial structure of images.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214055.png",
@@ -14514,10 +14833,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-052",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about median filtering is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "It is a filter of the template sorting operation."
+       },
+       {
+        "key": "B",
+        "text": "Median filtering reduces salt and pepper noise more effectively than mean filtering."
+       },
+       {
+        "key": "C",
+        "text": "Median filtering improves image clarity and works effectively on pictures with Gaussian noise."
+       },
+       {
+        "key": "D",
+        "text": "It replaces the original pixel value with the median output of the pixel values sorted in the neighborhood."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "The median filter sorts the pixel values in a neighborhood and replaces the center with the median, removing salt-and-pepper noise better than a mean filter while preserving edges. It is not especially effective against Gaussian noise, for which mean or Gaussian smoothing is better suited, so that statement is false.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       124
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214057.png",
