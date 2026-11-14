@@ -4,7 +4,7 @@ Read this at the start of each session, and update it before ending one. Task nu
 
 ## Current state
 
-**Nationals in the test engine, 2026-11-14.** Follow `C:/Users/austi/.claude/plans/the-task-is-to-tender-puffin.md` (summary under Decisions). Part A (engine and setup screen) is done. Part B: **n2324 and n2425 are complete and open in the app.** n2324 uses the supplied key (Q10 ungraded). n2425 has worked answers, 56 of 90 with PDF page citations, with Q11 and Q24 ungraded because no single answer is defensible. **Next: n2526** (148 available questions, 147 to transcribe). Workflow: write `work/nationals-batches/<paper>-bNN.json`, run `node tools/apply-nationals-reviews.js <batch>`, `python tools/reconcile-exams.py`, `npm test` (enforces the content rules), and commit. Helpers: `node work/nationals-batches/dump.js <paper> <from> <to>` prints OCR records; `node work/nationals-batches/find.js "term" "term"` searches the extracted PDF text.
+**Nationals in the test engine: complete, 2026-11-14.** All three Nationals papers (90, 90, and 148 questions) are checked against their screenshots and open in the app with the setup screen. Ungraded questions: n2324 Q10; n2425 Q9, Q11, Q24; n2526 Q31, Q36, Q49, Q59, Q67, Q69, Q88 (each has a flag explaining why). Graded answers with PDF citations: 2 + 57 + 87; the rest are `inferred` with flags. Possible follow-up: verify n2324's supplied keys against the PDFs, and revisit flagged answers. Workflow for corrections: batch JSON → `node tools/apply-nationals-reviews.js` → `python tools/reconcile-exams.py` → `npm test`.
 
 **Curriculum expansion in progress, 2026-11-14.** Follow [Complete curriculum coverage and past-exam mapping](superpowers/plans/2026-11-13-complete-curriculum-coverage.md). The user's preferences are recorded there and in `docs/content-brief.md`.
 
@@ -26,7 +26,7 @@ Read this at the start of each session, and update it before ending one. Task nu
 
 ## Next steps
 
-0. **Nationals Part B first** (user's current priority): review n2324, then n2425, then n2526 in batches of 15–20, committing each batch. See the plan file for the per-question steps.
+0. Nationals work is complete. If the user wants more, offer verification of n2324 supplied keys against the course PDFs and a second fact-check of flagged worked answers.
 1. Review the source hierarchy candidates against actual pages, including deeper sublessons, and define stable curriculum IDs/page ranges for all included instructional content. Read edition-context documents before classifying their contents.
 2. Visually verify Nationals question text/options, reconcile occurrences with the original mocks, and verify answers against supplied sources. Preserve keys separately. Continue despite the two missing 2025–26 captures, retaining explicit source gaps.
 3. Map every verified question to its primary and supported secondary lessons, recording evidence. Existing merge decisions are documented in `docs/past-merge-audit.md`; their transcription and answer-verification status remains independent.
@@ -60,6 +60,11 @@ The spec records most decisions. These came later:
 Each code task went through an implementer and an independent reviewer. Reviewers must show that each defect comes from a reachable input, because one early report's example could not actually occur. Check reviewer and implementer claims against the code before acting.
 
 ## Session log
+
+### 2026-11-14: n2526 reviewed; all Nationals papers open in the app
+
+- Checked all 148 n2526 questions (149 captures) against screenshots and fixed OCR errors. Worked out answers from the PDFs: 87 cite pages read, the rest are `inferred` with flags. Seven are ungraded where two or more options are defensible (Q31, Q36, Q49, Q59, Q67, Q69, Q88). Also changed n2425 Q9 to ungraded after confirming the course table makes two statements false.
+- Regenerated printable pages. Checks: 118 unit tests, content check at 0 errors, coverage at 0 errors, all three browser suites pass, and a manual n2526 one-page session with 148 cards showed no page errors.
 
 ### 2026-11-14: n2425 reviewed and opened in the app
 

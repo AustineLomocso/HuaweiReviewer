@@ -11967,6 +11967,612 @@
    "explanation": "Image segmentation with deep learning is pixel-level classification: each pixel is assigned a class, and in the simplest case the model decides whether each pixel belongs to the foreground or the background.",
    "transcriptionStatus": "visually-reviewed",
    "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-131",
+   "paperId": "n2526",
+   "questionNumber": 132,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214312.png",
+   "sha256": "d899529e08e4d87ea3bda9dd1ba43a5070c87fc1b9daa0bcde1bef98929c3607",
+   "stem": "After affine transformation, the shape of a square in an image does not change.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     134
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "An affine transformation can rotate, scale, translate, and shear an image. Shearing or unequal scaling turns a square into a parallelogram or rectangle, so its shape can change; only parallel lines are guaranteed to stay parallel.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-132",
+   "paperId": "n2526",
+   "questionNumber": 133,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214314.png",
+   "sha256": "f17979c305ae6c2fe3af2f57f9352194a4cf3e452738a87c519e389b799383e4",
+   "stem": "A color image can be changed into a grayscale image by using a grayscale technique. The color of the grayscale image can deterministically be restored through inverse transformation.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Grayscale conversion combines the three color channels into a single brightness value, discarding hue and saturation. Many different colors map to the same gray level, so the original colors cannot be restored deterministically.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-133",
+   "paperId": "n2526",
+   "questionNumber": 134,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214316.png",
+   "sha256": "dbb4409e8a115e480bffe67ab791895b713d7b0fe28a09a9acc260e0775722f3",
+   "stem": "The difference between reinforcement learning and supervised learning is the training objective. The reinforcement signal provided by the environment in reinforcement learning is used to evaluate the action rather than telling the learning system how to perform correct actions.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "In supervised learning, labels tell the model the correct output. In reinforcement learning, the environment returns a reward signal that only evaluates how good an action was, without saying what the correct action would have been, so the agent learns by trial and error.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-134",
+   "paperId": "n2526",
+   "questionNumber": 135,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214318.png",
+   "sha256": "729f18d2a95ebc809c8577ad24b423f78a93426b0bc199883f3aa17466960892",
+   "stem": "Backpropagation minimizes the loss function by calculating its gradients with respect to model parameters and iteratively updating those parameters based on the computed gradients.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     40
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Backpropagation computes the gradient of the loss with respect to each parameter, and gradient descent then updates the parameters iteratively in the direction that reduces the loss. Together they minimize the loss function during training.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-135",
+   "paperId": "n2526",
+   "questionNumber": 136,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214319.png",
+   "sha256": "99f5674ba1a81e3a5ad67b56ec3d858aa060ab8826685704329ab556532b257a",
+   "stem": "The deeper a deep neural network is, the better its performance and higher its accuracy is.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ai",
+    "pages": [
+     118
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Deeper networks do not automatically perform better. Beyond a point they suffer from vanishing or exploding gradients, network degradation (accuracy falling even on training data), overfitting, and higher computing cost, which is why techniques such as ResNet's residual connections were needed.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-136",
+   "paperId": "n2526",
+   "questionNumber": 137,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214321.png",
+   "sha256": "fa4853ace9de68d05549e187f73a3dd5b559755e61440c8ef2c30e920f960c07",
+   "stem": "Perceptrons classify data that is linearly separable.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ai",
+    "pages": [
+     84
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "A single perceptron is a linear classifier: it separates classes with a straight line or hyperplane, so it can only correctly classify linearly separable data. It cannot solve problems such as XOR.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-137",
+   "paperId": "n2526",
+   "questionNumber": 138,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214322.png",
+   "sha256": "0404bb6e6eea7955e5651ea231a8fa9aaac4ad3cf05d2d705c71b8025ad42460",
+   "stem": "The lower the value on the diagonal of the confusion matrix is, the better the classification of the classifier is.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ai-v4",
+    "pages": [
+     140
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "The diagonal of a confusion matrix counts correctly classified samples (true positives and true negatives). Higher values on the diagonal, not lower, indicate a better classifier.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-138",
+   "paperId": "n2526",
+   "questionNumber": 139,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214324.png",
+   "sha256": "d1939d70df6ae050a8b71bf2ad0f42ed150aa7fa0d74ac57d57eeae98e463658",
+   "stem": "The gradient descent algorithm updates parameters to find the minimum point of the loss function. Its convergence point is determined solely by the cost function.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Gradient descent iteratively moves parameters downhill on the loss function, but where it converges also depends on the initial parameters, the learning rate, and the optimization method. For non-convex losses it can stop at different local minima, so the cost function alone does not determine the convergence point.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-139",
+   "paperId": "n2526",
+   "questionNumber": 140,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214325.png",
+   "sha256": "a1db8dad24e55451f6e0af8420f18f4ea98d59fc0865c7f721a264d149312d3a",
+   "stem": "AI matches or exceeds human performance in areas like image recognition and gaming strategies but falls short in tasks like speech recognition and reading comprehension compared to typical human abilities.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot; corrected AI read as Al.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "AI has reached or exceeded human-level performance not only in image recognition and games but also on benchmark tasks in speech recognition and reading comprehension, so the claim that it falls short in those areas is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-140",
+   "paperId": "n2526",
+   "questionNumber": 141,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214327.png",
+   "sha256": "833451a7d101b547e162473242b9aabef124c5ef6f8510f9a6425f4ef0c2d724",
+   "stem": "Huawei's AI development strategy includes continuous investment into basic research and AI talent cultivation, a full-stack, all-scenario portfolio of AI solutions, and an open global ecosystem.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot; corrected AI read as Al.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Huawei's AI strategy includes investing in basic research and AI talent, building a full-stack, all-scenario AI portfolio (from Ascend chips and CANN through MindSpore to ModelArts), and fostering an open global ecosystem.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-141",
+   "paperId": "n2526",
+   "questionNumber": 142,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214328.png",
+   "sha256": "27f650dc38b201cbb8444015895f4c44400c6a196bc9b3a113ed6d289ebe680e",
+   "stem": "When labeling a dataset on ModelArts, you can view the labeling progress, number of labeled images, and total number of images.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "The ModelArts dataset labeling page shows labeling progress, including the number of labeled images and the total number of images in the dataset.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-142",
+   "paperId": "n2526",
+   "questionNumber": 143,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214330.png",
+   "sha256": "11d899a535f9e26f2c1ce4a71cf9ae1ac4383ded9fd3c404ed649726ec09735e",
+   "stem": "After a ModelArts model is trained, it can be deployed on devices, edge devices, and the cloud with a few clicks.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud",
+    "pages": [
+     391
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "ModelArts lets you build, train, and deploy models anywhere from the cloud to the edge; trained models can be deployed with a few clicks as cloud services, on edge devices, or to devices.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-143",
+   "paperId": "n2526",
+   "questionNumber": 144,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214331.png",
+   "sha256": "f5f5684effda45130f23a0fbe4d3c053c79d3a284f0d87a4b639584bbe450d50",
+   "stem": "Word2vec effectively creates word embeddings by ensuring that words used in similar contexts have closely related vectors.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Word2vec learns embeddings by predicting words from their contexts (CBOW) or contexts from words (Skip-gram), so words that appear in similar contexts end up with similar vectors.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-144",
+   "paperId": "n2526",
+   "questionNumber": 145,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214333.png",
+   "sha256": "014d89119ecc3f234e9a83d7326b7772a25292fa1328908540c76d0a219492e2",
+   "stem": "The probability of an n-gram is estimated based on its frequency of occurrence within the text.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     452
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "An n-gram language model estimates the probability of a word sequence from how often the n-gram occurs in the training text, typically dividing its count by the count of its preceding (n-1)-gram.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-145",
+   "paperId": "n2526",
+   "questionNumber": 146,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214334.png",
+   "sha256": "b13aa67d7a19b3cfe3830aefa589d4ffae9a43f8f82fe12c5ba79221dc714cb9",
+   "stem": "RNNs handle sequential data in deep learning, and ResNet is one such RNN variant.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "RNNs do handle sequential data, but ResNet is a convolutional neural network with residual connections for image tasks, not an RNN variant. RNN variants include LSTM and GRU.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-146",
+   "paperId": "n2526",
+   "questionNumber": 147,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214336.png",
+   "sha256": "a99f2ffba13d0ad4320492e6710f52fd6703772bf19e1ebad71a87c0f8c383ba",
+   "stem": "RNN is a type of neural network that captures dynamic information in sequential data through periodic connections of hidden layer nodes.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "An RNN feeds its hidden state back into itself at each time step. These recurrent (\"periodic\") connections between hidden-layer nodes let it carry information forward and capture the dynamics of sequential data.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-147",
+   "paperId": "n2526",
+   "questionNumber": 148,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214337.png",
+   "sha256": "704779615c034e390110ee6afb08f1cd1a75916c6b3a7c71f5c3d9931a4a6a39",
+   "stem": "The perceptron assigns a unique weight to each input signal. It multiplies inputs by their corresponding weights, sums these products, and compares the total to a threshold value to decide if the neuron activates.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "A perceptron gives each input its own weight, computes the weighted sum of the inputs, and compares it with a threshold (or adds a bias and applies a step function) to decide whether the neuron fires.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-148",
+   "paperId": "n2526",
+   "questionNumber": 149,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214339.png",
+   "sha256": "3cc04e877a041cb2519e2252434ce6a37175b9940688c2228202a07ceeca1d49",
+   "stem": "ModelArts' data processing module offers various ways to label datasets. It prevents multiple users from labeling the same dataset simultaneously.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     526
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot. Same idea as 2024-25 question 90.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "ModelArts data management supports team labeling, which lets multiple users label the same dataset together, so the claim that it prevents simultaneous labeling is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-149",
+   "paperId": "n2526",
+   "questionNumber": 150,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214340.png",
+   "sha256": "47c2fc6eb955c92a49c725896dd8312005d440f7478f0b934e805a6b92e01ebc",
+   "stem": "Without an activation function, the neural network remains linear. Adding an activation function transforms it into a non-linear model.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ai",
+    "pages": [
+     85
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Without activation functions, stacked layers compose into a single linear transformation, equivalent to one linear layer. Activation functions add non-linear factors, making the network a non-linear model.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
   }
  ]
 }

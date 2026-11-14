@@ -19610,10 +19610,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-131",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "After affine transformation, the shape of a square in an image does not change.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "An affine transformation can rotate, scale, translate, and shear an image. Shearing or unequal scaling turns a square into a parallelogram or rectangle, so its shape can change; only parallel lines are guaranteed to stay parallel.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       134
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214314.png",
@@ -19633,10 +19662,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-132",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A color image can be changed into a grayscale image by using a grayscale technique. The color of the grayscale image can deterministically be restored through inverse transformation.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "Grayscale conversion combines the three color channels into a single brightness value, discarding hue and saturation. Many different colors map to the same gray level, so the original colors cannot be restored deterministically.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214316.png",
@@ -19656,10 +19710,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-133",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "The difference between reinforcement learning and supervised learning is the training objective. The reinforcement signal provided by the environment in reinforcement learning is used to evaluate the action rather than telling the learning system how to perform correct actions.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "In supervised learning, labels tell the model the correct output. In reinforcement learning, the environment returns a reward signal that only evaluates how good an action was, without saying what the correct action would have been, so the agent learns by trial and error.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214318.png",
@@ -19679,10 +19758,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-134",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Backpropagation minimizes the loss function by calculating its gradients with respect to model parameters and iteratively updating those parameters based on the computed gradients.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Backpropagation computes the gradient of the loss with respect to each parameter, and gradient descent then updates the parameters iteratively in the direction that reduces the loss. Together they minimize the loss function during training.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       40
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214319.png",
@@ -19702,10 +19810,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-135",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "The deeper a deep neural network is, the better its performance and higher its accuracy is.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "Deeper networks do not automatically perform better. Beyond a point they suffer from vanishing or exploding gradients, network degradation (accuracy falling even on training data), overfitting, and higher computing cost, which is why techniques such as ResNet's residual connections were needed.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       118
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214321.png",
@@ -19725,10 +19862,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-136",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Perceptrons classify data that is linearly separable.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "A single perceptron is a linear classifier: it separates classes with a straight line or hyperplane, so it can only correctly classify linearly separable data. It cannot solve problems such as XOR.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       84
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214322.png",
@@ -19748,10 +19914,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-137",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "The lower the value on the diagonal of the confusion matrix is, the better the classification of the classifier is.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "The diagonal of a confusion matrix counts correctly classified samples (true positives and true negatives). Higher values on the diagonal, not lower, indicate a better classifier.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai-v4",
+      "pages": [
+       140
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214324.png",
@@ -19771,17 +19966,42 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-138",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "The gradient descent algorithm updates parameters to find the minimum point of the loss function. Its convergence point is determined solely by the cost function.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "Gradient descent iteratively moves parameters downhill on the loss function, but where it converges also depends on the initial parameters, the learning rate, and the optimization method. For non-convex losses it can stop at different local minima, so the cost function alone does not determine the convergence point.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214325.png",
      "number": 140,
      "paperTotal": 150,
      "type": "tf",
-     "stem": "Al matches or exceeds human performance in areas like image recognition and gaming strategies but falls short in tasks like speech recognition and reading comprehension compared to typical human abilities.",
+     "stem": "AI matches or exceeds human performance in areas like image recognition and gaming strategies but falls short in tasks like speech recognition and reading comprehension compared to typical human abilities.",
      "options": [
       {
        "key": "T",
@@ -19794,17 +20014,42 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-139",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Al matches or exceeds human performance in areas like image recognition and gaming strategies but falls short in tasks like speech recognition and reading comprehension compared to typical human abilities.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot; corrected AI read as Al.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "AI has reached or exceeded human-level performance not only in image recognition and games but also on benchmark tasks in speech recognition and reading comprehension, so the claim that it falls short in those areas is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214327.png",
      "number": 141,
      "paperTotal": 150,
      "type": "tf",
-     "stem": "Huawei's Al development strategy includes continuous investment into basic research and Al talent cultivation, a full-stack, all-scenario portfolio of Al solutions, and an open global ecosystem.",
+     "stem": "Huawei's AI development strategy includes continuous investment into basic research and AI talent cultivation, a full-stack, all-scenario portfolio of AI solutions, and an open global ecosystem.",
      "options": [
       {
        "key": "T",
@@ -19817,10 +20062,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-140",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Huawei's Al development strategy includes continuous investment into basic research and Al talent cultivation, a full-stack, all-scenario portfolio of Al solutions, and an open global ecosystem.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot; corrected AI read as Al.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Huawei's AI strategy includes investing in basic research and AI talent, building a full-stack, all-scenario AI portfolio (from Ascend chips and CANN through MindSpore to ModelArts), and fostering an open global ecosystem.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214328.png",
@@ -19840,10 +20110,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-141",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "When labeling a dataset on ModelArts, you can view the labeling progress, number of labeled images, and total number of images.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "The ModelArts dataset labeling page shows labeling progress, including the number of labeled images and the total number of images in the dataset.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214330.png",
@@ -19863,10 +20158,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-142",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "After a ModelArts model is trained, it can be deployed on devices, edge devices, and the cloud with a few clicks.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "ModelArts lets you build, train, and deploy models anywhere from the cloud to the edge; trained models can be deployed with a few clicks as cloud services, on edge devices, or to devices.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       391
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214331.png",
@@ -19886,10 +20210,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-143",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Word2vec effectively creates word embeddings by ensuring that words used in similar contexts have closely related vectors.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Word2vec learns embeddings by predicting words from their contexts (CBOW) or contexts from words (Skip-gram), so words that appear in similar contexts end up with similar vectors.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214333.png",
@@ -19909,10 +20258,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-144",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "The probability of an n-gram is estimated based on its frequency of occurrence within the text.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "An n-gram language model estimates the probability of a word sequence from how often the n-gram occurs in the training text, typically dividing its count by the count of its preceding (n-1)-gram.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       452
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214334.png",
@@ -19932,10 +20310,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-145",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "RNNs handle sequential data in deep learning, and ResNet is one such RNN variant.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "RNNs do handle sequential data, but ResNet is a convolutional neural network with residual connections for image tasks, not an RNN variant. RNN variants include LSTM and GRU.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214336.png",
@@ -19955,10 +20358,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-146",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "RNN is a type of neural network that captures dynamic information in sequential data through periodic connections of hidden layer nodes.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "An RNN feeds its hidden state back into itself at each time step. These recurrent (\"periodic\") connections between hidden-layer nodes let it carry information forward and capture the dynamics of sequential data.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214337.png",
@@ -19978,10 +20406,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-147",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "The perceptron assigns a unique weight to each input signal. It multiplies inputs by their corresponding weights, sums these products, and compares the total to a threshold value to decide if the neuron activates.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "A perceptron gives each input its own weight, computes the weighted sum of the inputs, and compares it with a threshold (or adds a bias and applies a step function) to decide whether the neuron fires.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214339.png",
@@ -20001,10 +20454,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-148",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "ModelArts' data processing module offers various ways to label datasets. It prevents multiple users from labeling the same dataset simultaneously.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot. Same idea as 2024-25 question 90.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "ModelArts data management supports team labeling, which lets multiple users label the same dataset together, so the claim that it prevents simultaneous labeling is false.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       526
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214340.png",
@@ -20024,10 +20506,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-149",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Without an activation function, the neural network remains linear. Adding an activation function transforms it into a non-linear model.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Without activation functions, stacked layers compose into a single linear transformation, equivalent to one linear layer. Activation functions add non-linear factors, making the network a non-linear model.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       85
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     }
    ],
    "uniqueNumbers": 148,
