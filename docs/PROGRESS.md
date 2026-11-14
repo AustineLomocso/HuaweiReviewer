@@ -26,7 +26,7 @@ Read this at the start of each session, and update it before ending one. Task nu
 
 ## Next steps
 
-0. Nationals work is complete. If the user wants more, offer verification of n2324 supplied keys against the course PDFs and a second fact-check of flagged worked answers.
+0. Nationals work is complete, including key verification and a second fact-check. Remaining answers without course citations are not covered by the supplied PDFs.
 1. Review the source hierarchy candidates against actual pages, including deeper sublessons, and define stable curriculum IDs/page ranges for all included instructional content. Read edition-context documents before classifying their contents.
 2. Visually verify Nationals question text/options, reconcile occurrences with the original mocks, and verify answers against supplied sources. Preserve keys separately. Continue despite the two missing 2025–26 captures, retaining explicit source gaps.
 3. Map every verified question to its primary and supported secondary lessons, recording evidence. Existing merge decisions are documented in `docs/past-merge-audit.md`; their transcription and answer-verification status remains independent.
@@ -60,6 +60,12 @@ The spec records most decisions. These came later:
 Each code task went through an implementer and an independent reviewer. Reviewers must show that each defect comes from a reachable input, because one early report's example could not actually occur. Check reviewer and implementer claims against the code before acting.
 
 ## Session log
+
+### 2026-11-14: Nationals key verification and second fact-check
+
+- Verified n2324 supplied keys against the course PDFs: 31 of 87 graded keys confirmed with page citations; the other 56 cover points the course does not mention and now say so in their flag. No course page contradicted a supplied key.
+- Second fact-check of the 89 worked answers without citations (n2425, n2526): re-searched the PDFs and re-reviewed the reasoning. 17 gained course citations; no answers changed; n2526 Q76 gained an extra caution. Every remaining inferred answer's flag records the second check.
+- Course-cited answers now: n2324 33/90, n2425 59/90, n2526 102/148. Tools: `work/nationals-batches/find-many.js`, `make-v2324.js`, `make-factcheck.js`. Checks: 118 unit tests, content check at 0 errors, and browser suites pass.
 
 ### 2026-11-14: n2526 reviewed; all Nationals papers open in the app
 

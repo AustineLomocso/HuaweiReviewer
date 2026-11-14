@@ -71,7 +71,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220038.png",
@@ -138,7 +138,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220041.png",
@@ -200,10 +200,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Huawei Cloud's Anti-DDoS portfolio consists of Cloud Native Anti-DDoS Basic (CNAD Basic), Cloud Native Anti-DDoS Advanced (CNAD Advanced), Advanced Anti-DDoS (AAD), and the AAD international edition. \"Proactive Anti-DDoS\" is not one of these offerings.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       324
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220043.png",
@@ -268,7 +272,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220044.png",
@@ -333,7 +337,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220046.png",
@@ -400,7 +404,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220047.png",
@@ -559,10 +563,14 @@ HR.data.examInventory = {
      ],
      "explanation": "HBase is a distributed NoSQL store that manages terabytes to petabytes of data, stores structured and unstructured data in flexible column families, and supports efficient random reads by row key. It does not provide the full ACID transaction properties and complex queries of a traditional relational database, so that is not one of its features.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       598
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220050.png",
@@ -785,7 +793,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220054.png",
@@ -851,7 +859,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220055.png",
@@ -914,10 +922,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Tensor.shape is the attribute that returns a tensor's shape as a tuple giving the size of each dimension. Tensor.asnumpy() converts the tensor to a NumPy array, Tensor.dtype gives the element data type (such as float32 or int64), and Tensor.sum() adds up the elements.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ai-v4",
+      "pages": [
+       324
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220058.png",
@@ -981,7 +993,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220100.png",
@@ -1047,7 +1059,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220102.png",
@@ -1110,10 +1122,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Speech recognition consists of speech signal collection, speech preprocessing, acoustic feature extraction, model training (acoustic and language models), and prediction and recognition. Horizontal mirroring is an image augmentation technique, not a step in speech recognition.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       277
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220103.png",
@@ -1176,10 +1192,14 @@ HR.data.examInventory = {
      ],
      "explanation": "RDS for MySQL, PostgreSQL, and SQL Server are relational databases based on the relational model and SQL. Non-relational databases store data in formats such as key-value pairs and documents; GeminiDB Mongo API is document-based and GeminiDB Redis API is key-value. Relational databases are the ones with strong transaction support, including rollback, recovery, and concurrency control, so the claim that non-relational databases offer stronger transactional support is false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       335
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220105.png",
@@ -1243,7 +1263,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220106.png",
@@ -1306,10 +1326,14 @@ HR.data.examInventory = {
      ],
      "explanation": "The ODS layer holds raw data loaded from business systems. The DWD layer cleanses that data (removing nulls and dirty records) while keeping the original structure and granularity. The DWS layer summarizes data from the DWD layer, not directly from the ODS layer, building common-granularity summary indicators for reuse. The ADS layer serves data for statistical reports and data products.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       596
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220107.png",
@@ -1372,10 +1396,14 @@ HR.data.examInventory = {
      ],
      "explanation": "CCE exposes native Kubernetes APIs, so clusters can be managed through both the console and CLI tools such as kubectl; the claim that only web pages can be used is false. CCE is a scalable enterprise Kubernetes service that supports Docker containers, runs workloads on ECSs, BMSs, and GPU-accelerated servers, and can store data on Huawei Cloud storage services such as OBS as well as local disks.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       117
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220109.png",
@@ -1441,7 +1469,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220110.png",
@@ -1507,7 +1535,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220111.png",
@@ -1571,7 +1599,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220113.png",
@@ -1637,7 +1665,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220114.png",
@@ -1700,10 +1728,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Kata containers run each container or pod in its own lightweight VM built with QEMU or KVM, follow the OCI runtime specification, plug into Kubernetes through CRI as a replacement for runC, and let container tools run directly on bare metal with strong workload isolation. Each lightweight VM has its own guest kernel rather than sharing one, so the shared-kernel statement is false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       400
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220116.png",
@@ -1769,7 +1801,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220117.png",
@@ -1832,10 +1864,14 @@ HR.data.examInventory = {
      ],
      "explanation": "MFCC extraction begins with pre-emphasis (a high-pass filter that boosts high frequencies), applies a Fast Fourier Transform to obtain the frequency-domain energy distribution, filters it with mel filter banks, and finishes with cepstrum analysis via a discrete cosine transform of the log filter-bank energies. \"End-to-end\" describes a way of building whole systems or models, not a step of MFCC extraction.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       270
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220118.png",
@@ -1898,10 +1934,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Offline batch processing tolerates long processing times, handles very large data volumes on distributed platforms such as Hadoop, and processes structured, semi-structured, and unstructured data. It supports custom jobs with complex logic as well as SQL jobs, so the claim that custom jobs are unsupported is false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       627
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220120.png",
@@ -1967,7 +2007,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220121.png",
@@ -2030,10 +2070,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Containers give consistent delivery across environments (supporting DevOps), use fewer resources than VMs and suit microservices, and start and stop quickly for fast scaling and recovery. They are not more secure than VMs: containers share the host OS kernel and offer only process-level isolation, whereas each VM runs its own operating system.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       264
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220122.png",
@@ -2099,7 +2143,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220124.png",
@@ -2163,7 +2207,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220125.png",
@@ -2229,7 +2273,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220126.png",
@@ -2292,10 +2336,14 @@ HR.data.examInventory = {
      ],
      "explanation": "SFS 3.0 Capacity-Oriented targets cost-sensitive, large-capacity workloads such as media processing, file sharing, HPC, and backup. AI and large-model training needs very high performance, for which SFS Turbo Performance or Performance-Enhanced is recommended. The other pairings (SFS Turbo HPC for rendering, SFS Turbo General for shared log directories, and SFS Turbo HPC Cache for EDA or gene analysis) are valid.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       249
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220128.png",
@@ -2358,10 +2406,14 @@ HR.data.examInventory = {
      ],
      "explanation": "The network converges slowly and overfits (low training error, high test error). Adding Batch Normalization after the convolution layer speeds up training, stabilizes it, and improves generalization, addressing both symptoms. Dropout fights overfitting but can slow convergence further; replacing convolution with fully connected layers loses spatial information and raises overfitting risk; and adding more convolutional layers increases complexity, overfitting, and computation.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       103
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220129.png",
@@ -2427,7 +2479,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220131.png",
@@ -2476,7 +2528,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220132.png",
@@ -2540,7 +2592,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220133.png",
@@ -2606,7 +2658,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material. Caution: in Apache Flume, hdfs.rollSize is measured in bytes (hdfs.rollCount counts events), so the rollSize description may also be inaccurate; the supplied key treats it as true."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it. Caution: in Apache Flume, hdfs.rollSize is measured in bytes (hdfs.rollCount counts events), so the rollSize description may also be inaccurate; the supplied key treats it as true."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220135.png",
@@ -2670,7 +2722,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220136.png",
@@ -2734,10 +2786,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Image digitization consists of sampling (dividing the image into discrete pixel positions), quantization (mapping each sample's brightness to discrete levels), and compression coding. Binarization and grayscale transformation are processing operations applied to an already digital image.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       76
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220137.png",
@@ -2804,7 +2860,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material. Caution: the supplied explanation describes see_parameters() as displaying parameter names and values, which conflicts with the key; MindSpore's Cell class provides parameters_and_names() but no see_parameters() or check_parameters() method."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it. Caution: the supplied explanation describes see_parameters() as displaying parameter names and values, which conflicts with the key; MindSpore's Cell class provides parameters_and_names() but no see_parameters() or check_parameters() method."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220139.png",
@@ -2872,7 +2928,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220140.png",
@@ -2940,7 +2996,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220141.png",
@@ -3005,7 +3061,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220143.png",
@@ -3069,10 +3125,15 @@ HR.data.examInventory = {
      ],
      "explanation": "Both GBDT and random forest handle classification and regression. GBDT adds trees one at a time, each fitted to reduce the loss left by the previous ones. In a random forest, trees are trained independently on random samples and features; they do not fit each other's errors. An individual GBDT tree is not better on its own than a random forest tree; each ensemble's strength comes from combining its trees.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ai-v4",
+      "pages": [
+       181,
+       183
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220145.png",
@@ -3140,7 +3201,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material. The key selects the three individual hardware types and excludes the combined CPU and NPU option."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it. The key selects the three individual hardware types and excludes the combined CPU and NPU option."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220146.png",
@@ -3206,7 +3267,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220147.png",
@@ -3274,7 +3335,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220149.png",
@@ -3342,7 +3403,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220150.png",
@@ -3410,7 +3471,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220152.png",
@@ -3477,7 +3538,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220153.png",
@@ -3543,10 +3604,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Data Encryption Workshop (DEW) consists of Key Management Service (KMS), Cloud Secret Management Service (CSMS), Key Pair Service (KPS), and Dedicated Hardware Security Module (Dedicated HSM), so all four belong to it.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       376
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220155.png",
@@ -3611,10 +3676,14 @@ HR.data.examInventory = {
      ],
      "explanation": "CCE's network models are the Cloud Native 1.0 networks (the container tunnel network and the VPC network) and the Cloud Native 2.0 network. There is no quorum network model.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       401
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220156.png",
@@ -3682,7 +3751,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220157.png",
@@ -3750,7 +3819,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220159.png",
@@ -3815,10 +3884,16 @@ HR.data.examInventory = {
      ],
      "explanation": "Kafka is used for message queues, stream processing, and log collection or aggregation. Logs are sent to Kafka asynchronously in batches, and Kafka is optimized for sequential reads and writes rather than random access, so it is not suited to instant queries of log data.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       610,
+       611,
+       612
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220200.png",
@@ -3885,7 +3960,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220202.png",
@@ -3953,7 +4028,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220204.png",
@@ -4015,10 +4090,14 @@ HR.data.examInventory = {
      ],
      "explanation": "The core ideas of a CNN are local perception (each neuron responds to a local region of the input, capturing features such as edges and textures) and weight sharing (one kernel uses the same weights at every position). CNNs build global understanding by stacking local layers rather than by full perception, and their weights are updated during training by backpropagation rather than staying unchanged.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       112
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220206.png",
@@ -4086,7 +4165,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220207.png",
@@ -4154,7 +4233,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220209.png",
@@ -4223,7 +4302,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220210.png",
@@ -4291,7 +4370,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220212.png",
@@ -4359,7 +4438,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220213.png",
@@ -4425,7 +4504,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220215.png",
@@ -4490,10 +4569,14 @@ HR.data.examInventory = {
      ],
      "explanation": "The Kubernetes control plane on master nodes includes the API Server (the REST hub for all components and cluster state), the Scheduler (assigns new pods to nodes), and the Controller Manager (runs node, replication, endpoint, and other controllers). kube-proxy runs on every worker node to provide Service networking.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       385
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220216.png",
@@ -4561,7 +4644,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220218.png",
@@ -4628,7 +4711,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220219.png",
@@ -4696,7 +4779,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220221.png",
@@ -4744,7 +4827,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220222.png",
@@ -4789,10 +4872,14 @@ HR.data.examInventory = {
      ],
      "explanation": "AOM is a one-stop, multi-dimensional O&M management platform, not a log management platform. It integrates data from Cloud Eye, Log Tank Service (LTS), APM, real user experience, and backend links to provide unified resource management, observability analysis, and automated O&M. The log management capabilities described belong to LTS.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       464
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220223.png",
@@ -4837,10 +4924,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Backpropagation is the standard technique for training artificial neural networks: it computes the gradient of the loss with respect to every weight so the weights can be updated.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       40
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220225.png",
@@ -4888,7 +4979,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220226.png",
@@ -4933,10 +5024,14 @@ HR.data.examInventory = {
      ],
      "explanation": "GES does not store its underlying graph data in Elasticsearch with indexes in HBase. It queries and analyzes graph data with Huawei's self-developed EYWA kernel, so the storage description is false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       394
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220227.png",
@@ -4984,7 +5079,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220229.png",
@@ -5029,10 +5124,14 @@ HR.data.examInventory = {
      ],
      "explanation": "EVS encryption uses the industry-standard XTS-AES-256 algorithm, not XTS-AES-128. The encryption keys come from Key Management Service (KMS) in Data Encryption Workshop rather than from IAM.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       224
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220230.png",
@@ -5077,10 +5176,14 @@ HR.data.examInventory = {
      ],
      "explanation": "IMS creates ECSs and BMSs from public, shared, or private images, and private images can be built from existing servers or external image files. You can also upload local images to IMS and use images from third-party cloud platforms to deploy services, so the final restriction is false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       85
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220232.png",
@@ -5128,7 +5231,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220233.png",
@@ -5176,7 +5279,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220234.png",
@@ -5221,10 +5324,14 @@ HR.data.examInventory = {
      ],
      "explanation": "With ReLU, a neuron whose input is always negative outputs zero and has zero gradient, so its weights stop updating: a dead neuron. A learning rate that is too high can push weights into that state through a large update.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       35
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220236.png",
@@ -5272,7 +5379,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220237.png",
@@ -5320,7 +5427,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220238.png",
@@ -5368,7 +5475,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220240.png",
@@ -5413,10 +5520,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Containers are an OS-level (kernel) virtualization technology that originated in Linux. They share the host kernel while isolating processes and resources, so they use resources more efficiently and start faster than hardware-level virtualization.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       114
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220241.png",
@@ -5461,10 +5572,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Outbound Internet access for servers that share EIPs without exposing private addresses is provided by SNAT rules, which translate private IP addresses into EIPs. DNAT does the reverse: it maps an EIP and port to a server so that the server can provide services to the Internet. Describing outbound sharing as DNAT is therefore false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       159
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220242.png",
@@ -5509,10 +5624,14 @@ HR.data.examInventory = {
      ],
      "explanation": "DEW protects data and keys and simplifies key management, and its hardware security modules protect keys while integrating with other Huawei Cloud services.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       376
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220244.png",
@@ -5557,10 +5676,14 @@ HR.data.examInventory = {
      ],
      "explanation": "A standard GAN generator takes only random noise vectors as input. Generating images from text requires a conditional, text-to-image setup with additional conditioning and preprocessing, so the description of a basic GAN is false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       225
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220245.png",
@@ -5608,7 +5731,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key. The course material does not cover this point, so the key could not be checked against it."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220247.png",
@@ -5653,10 +5776,14 @@ HR.data.examInventory = {
      ],
      "explanation": "The container tunnel and VPC network models belong to CCE standard clusters. CCE Turbo clusters use the Cloud Native 2.0 network model and can run both secure containers (VM-level isolation on physical machines) and common containers (cgroup isolation). The description of Turbo cluster networking is false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       404
+      ]
      },
      "inApp": true,
-     "flag": "Answer from the supplied exam key; not yet checked against the course material."
+     "flag": "Supplied exam key, confirmed against the cited course page."
     }
    ],
    "uniqueNumbers": 90,
@@ -5799,7 +5926,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages describe MindSpore's distributed training and all-scenario deployment but do not discuss programming languages."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The course pages describe MindSpore's distributed training and all-scenario deployment but do not discuss programming languages."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214819.png",
@@ -5863,7 +5990,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The course material states only that Pangu models were released in 2021; the dates here come from public announcements."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The course material states only that Pangu models were released in 2021; the dates here come from public announcements."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214821.png",
@@ -5927,7 +6054,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The supplied course pages do not describe Flink's SQL internals."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The supplied course pages do not describe Flink's SQL internals."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214822.png",
@@ -6197,7 +6324,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214829.png",
@@ -6326,7 +6453,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214832.png",
@@ -6521,7 +6648,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. In a Huawei Cloud VPC subnet, the platform reserves a few more addresses (such as the gateway), so fewer than 126 are actually assignable; the paper expects the standard subnetting answer."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. In a Huawei Cloud VPC subnet, the platform reserves a few more addresses (such as the gateway), so fewer than 126 are actually assignable; the paper expects the standard subnetting answer."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214837.png",
@@ -6857,7 +6984,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages mention CCE Turbo but do not list every cluster type."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The course pages mention CCE Turbo but do not list every cluster type."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214844.png",
@@ -7193,7 +7320,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214851.png",
@@ -7318,7 +7445,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The course page lists internal and external tables without detailing their deletion behavior."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The course page lists internal and external tables without detailing their deletion behavior."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214855.png",
@@ -7519,7 +7646,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The supplied course pages mention Ascend 910 hardware but not its core architecture."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The supplied course pages mention Ascend 910 hardware but not its core architecture."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214859.png",
@@ -8127,7 +8254,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages list ModelArts resource pools but not this comparison directly."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The course pages list ModelArts resource pools but not this comparison directly."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214913.png",
@@ -8190,7 +8317,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The count assumes one bias term, as is standard for a convolution kernel."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The count assumes one bias term, as is standard for a convolution kernel."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214915.png",
@@ -8322,7 +8449,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214919.png",
@@ -8598,7 +8725,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages name DSS but do not describe these capabilities."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The course pages name DSS but do not describe these capabilities."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214926.png",
@@ -8803,7 +8930,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: the automation features in two statements belong to AOM 2.0; the course pages describe AOM's monitoring role but not its automation module."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. Caution: the automation features in two statements belong to AOM 2.0; the course pages describe AOM's monitoring role but not its automation module."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214931.png",
@@ -8939,7 +9066,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214935.png",
@@ -9003,7 +9130,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214936.png",
@@ -9070,7 +9197,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages describe OBS storage but not its image processing feature."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The course pages describe OBS storage but not its image processing feature."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214938.png",
@@ -9345,7 +9472,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Based on the Spark MLlib documentation, not the supplied course pages."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. Based on the Spark MLlib documentation, not the supplied course pages."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214944.png",
@@ -9480,7 +9607,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages describe Spark and MapReduce separately but do not compare them directly."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The course pages describe Spark and MapReduce separately but do not compare them directly."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214948.png",
@@ -10312,10 +10439,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Speech processing works on speech signals: speech recognition converts speech to text and text-to-speech generates speech from text. Language production and language understanding operate on text and meaning, and belong to natural language processing rather than speech signal processing.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       253
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: language production and understanding are usually classed as natural language processing tasks, but some definitions of speech processing include them."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page. Caution: language production and understanding are usually classed as natural language processing tasks, but some definitions of speech processing include them."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215007.png",
@@ -10381,7 +10512,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215009.png",
@@ -10429,7 +10560,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. \"MySQL data\" is read as the Hive metadata kept in the MySQL metastore."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. \"MySQL data\" is read as the Hive metadata kept in the MySQL metastore."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215011.png",
@@ -10477,7 +10608,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215012.png",
@@ -10577,7 +10708,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The course mentions MRS nodes in x86 and Kunpeng scenarios for Huawei Cloud Stack; this is extended to the public cloud."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The course mentions MRS nodes in x86 and Kunpeng scenarios for Huawei Cloud Stack; this is extended to the public cloud."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215016.png",
@@ -10625,7 +10756,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. \"MySQL data\" is read as the Hive metadata kept in the MySQL metastore."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. \"MySQL data\" is read as the Hive metadata kept in the MySQL metastore."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215017.png",
@@ -10725,7 +10856,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215020.png",
@@ -10874,10 +11005,15 @@ HR.data.examInventory = {
      ],
      "explanation": "APM collects application call data through its agents (or compatible instrumentation such as OpenTelemetry) for each supported language. cloud-init only initializes a server at first boot and does not collect service call data, so no agent-free monitoring of Python and C++ applications works this way.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       544,
+       545
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215025.png",
@@ -10925,7 +11061,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215027.png",
@@ -10973,7 +11109,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215029.png",
@@ -11229,7 +11365,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 215037.png",
@@ -11530,7 +11666,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213917.png",
@@ -11662,7 +11798,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. AOM's automation features are part of AOM 2.0 and are not described in the course pages."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. AOM's automation features are part of AOM 2.0 and are not described in the course pages."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213923.png",
@@ -11794,7 +11930,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages name DSS but do not describe these capabilities."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The course pages name DSS but do not describe these capabilities."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213932.png",
@@ -11926,7 +12062,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213937.png",
@@ -12194,7 +12330,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: the DEW statement about local storage is also loosely worded."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. Caution: the DEW statement about local storage is also loosely worded."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213945.png",
@@ -12328,7 +12464,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The course pages do not list every CCE cluster type."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The course pages do not list every CCE cluster type."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213949.png",
@@ -12392,7 +12528,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The LVS-for-Layer-4 and Nginx-for-Layer-7 split is ELB's documented architecture; the course mentions LVS only as a Layer-4 load balancing component."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The LVS-for-Layer-4 and Nginx-for-Layer-7 split is ELB's documented architecture; the course mentions LVS only as a Layer-4 load balancing component."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213951.png",
@@ -12524,7 +12660,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 213955.png",
@@ -12932,7 +13068,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: sticky sessions can also skew load, but the question asks for the main reason when all weights are equal."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. Caution: sticky sessions can also skew load, but the question asks for the main reason when all weights are equal."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214006.png",
@@ -13204,7 +13340,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Based on Huawei Cloud VPC documentation, which reserves five addresses in each subnet; a generic subnetting answer would be 254."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. Based on Huawei Cloud VPC documentation, which reserves five addresses in each subnet; a generic subnetting answer would be 254."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214014.png",
@@ -13533,7 +13669,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The sequence follows SDRS documentation; the course page describes SDRS without the setup steps."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The sequence follows SDRS documentation; the course page describes SDRS without the setup steps."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214023.png",
@@ -13665,7 +13801,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214027.png",
@@ -14067,7 +14203,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214036.png",
@@ -14334,10 +14470,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Softmax turns a vector of K real numbers into K values between 0 and 1 that sum to 1, which is why it is used at the output layer for multiclass classification. Its outputs lie in (0, 1), not (-1, 1); that range belongs to tanh.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       89
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214043.png",
@@ -14604,10 +14744,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Public opinion analysis, machine translation, and automatic summarization are natural language processing applications that work on text. TTS (text to speech) is a speech processing task that generates audio.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       388
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214050.png",
@@ -14805,7 +14949,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214055.png",
@@ -15410,7 +15554,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214115.png",
@@ -15542,7 +15686,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The supplied course pages mention Ascend 910 hardware but not its core architecture."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The supplied course pages mention Ascend 910 hardware but not its core architecture."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214118.png",
@@ -15671,10 +15815,14 @@ HR.data.examInventory = {
      ],
      "explanation": "LLM training involves terabytes to petabytes of data, billions to trillions of parameters, and high development cost. Such models are far too large for one processor, so training is distributed across many accelerators using data, tensor, and pipeline parallelism; a single processing unit does not handle the whole model.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       162
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214124.png",
@@ -15738,7 +15886,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: describing the influence of the previous hidden state on the candidate state is the role of the reset gate, which is why that statement is the distractor."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. Caution: describing the influence of the previous hidden state on the candidate state is the role of the reset gate, which is why that statement is the distractor."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214128.png",
@@ -15804,7 +15952,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The count assumes one bias term, as is standard."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The count assumes one bias term, as is standard."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214130.png",
@@ -16063,10 +16211,14 @@ HR.data.examInventory = {
      ],
      "explanation": "In ModelArts, a trained model is turned into a real-time service through model deployment, which publishes it as an online inference endpoint. Training produces the model, inference is what the deployed service performs, and O&M manages it afterwards.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       543
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214136.png",
@@ -16272,7 +16424,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Based on WAF documentation; the course pages describe WAF protections but not port or protocol support."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. Based on WAF documentation; the course pages describe WAF protections but not port or protocol support."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214141.png",
@@ -16478,7 +16630,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: RDS applies patches through managed minor version upgrades, but automatic vulnerability scanning with suggestions is a function of security services such as DBSS rather than RDS itself."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. Caution: RDS applies patches through managed minor version upgrades, but automatic vulnerability scanning with suggestions is a function of security services such as DBSS rather than RDS itself. Caution: RDS supports SSL/TLS encryption, but enforcing it is a configuration choice rather than a default."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214145.png",
@@ -16543,7 +16695,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: OBS image processing compresses and slims images, but device-aware quality adjustment and content moderation are not standard OBS image processing features."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. Caution: OBS image processing compresses and slims images, but device-aware quality adjustment and content moderation are not standard OBS image processing features."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214146.png",
@@ -16681,7 +16833,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214149.png",
@@ -16747,7 +16899,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214151.png",
@@ -16880,10 +17032,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Logs can be missing from the LTS console because the account lacks permission to view them (for example, no LTS read policy), because the log retention period has expired and the logs were deleted, or because ICAgent was never installed so no logs were collected. A slow browser delays display but does not stop logs from being viewed.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       306
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214153.png",
@@ -17418,10 +17574,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Voice processing works on speech signals: text to speech generates speech and speech recognition converts speech to text. Language generation and language understanding operate on text and meaning, which is natural language processing.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       253
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: language generation and understanding are usually classed as natural language processing tasks, but some definitions of voice processing include them."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page. Caution: language generation and understanding are usually classed as natural language processing tasks, but some definitions of voice processing include them."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214205.png",
@@ -17483,10 +17643,14 @@ HR.data.examInventory = {
      ],
      "explanation": "The standard normal distribution is the normal distribution with mean 0 and variance 1 (so standard deviation 1).",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       291
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214207.png",
@@ -17696,7 +17860,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. The current course page lists AscendCL, TBE, and Graph Engine; FusionEngine, the CCE operator library, and the underlying compiler come from earlier descriptions of CANN's functional modules."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. The current course page lists AscendCL, TBE, and Graph Engine; FusionEngine, the CCE operator library, and the underlying compiler come from earlier descriptions of CANN's functional modules."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214214.png",
@@ -17832,7 +17996,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214217.png",
@@ -17968,7 +18132,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214220.png",
@@ -18190,7 +18354,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214227.png",
@@ -18391,10 +18555,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Temporarily switching off non-core workloads to keep core services available, then restoring them gradually, is service degradation (fallback). A circuit breaker instead stops calls to a failing downstream service so failures do not cascade, then probes it before resuming. Attributing degradation to the circuit breaker makes the statement false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       491
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: the described behavior matches service degradation; the statement is judged false because it attributes that behavior to the circuit breaker."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page. Caution: the described behavior matches service degradation; the statement is judged false because it attributes that behavior to the circuit breaker."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214234.png",
@@ -18546,7 +18714,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214239.png",
@@ -18594,7 +18762,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214241.png",
@@ -18691,10 +18859,15 @@ HR.data.examInventory = {
      ],
      "explanation": "APM collects call data through agents or compatible instrumentation for each supported language. cloud-init only initializes servers at first boot and does not collect service call data, so the claim that it monitors applications non-intrusively is false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       544,
+       545
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214244.png",
@@ -18898,7 +19071,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214251.png",
@@ -18998,7 +19171,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: CBR's replication features vary by backup type and have changed across versions."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. Caution: CBR's replication features vary by backup type and have changed across versions."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214254.png",
@@ -19046,7 +19219,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214256.png",
@@ -19094,7 +19267,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214257.png",
@@ -19142,7 +19315,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214259.png",
@@ -19190,7 +19363,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: the exact mechanism depends on the SFS edition (multi-VPC access rules, VPC peering for SFS Turbo, or VPC endpoints for SFS 3.0)."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point. Caution: the exact mechanism depends on the SFS edition (multi-VPC access rules, VPC peering for SFS Turbo, or VPC endpoints for SFS 3.0)."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214301.png",
@@ -19238,7 +19411,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214302.png",
@@ -19335,10 +19508,14 @@ HR.data.examInventory = {
      ],
      "explanation": "KMS creates, manages, and protects encryption keys and enables server-side encryption for services such as OBS. Storing SSH key pairs and private keys is the job of Key Pair Service (KPS), another part of DEW, so the statement is false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       339
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214305.png",
@@ -19383,10 +19560,14 @@ HR.data.examInventory = {
      ],
      "explanation": "CCE is a Kubernetes-based enterprise container service with automated deployment, scaling, and monitoring, but it is not limited to Huawei Cloud. Through Ubiquitous Cloud Native Service (UCS) and on-premises or partner clusters it supports hybrid and multi-cloud scenarios.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "cloud-computing",
+      "pages": [
+       475
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214306.png",
@@ -19486,7 +19667,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214309.png",
@@ -19690,7 +19871,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214316.png",
@@ -19738,7 +19919,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214318.png",
@@ -19994,7 +20175,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214325.png",
@@ -20039,10 +20220,14 @@ HR.data.examInventory = {
      ],
      "explanation": "AI has reached or exceeded human-level performance not only in image recognition and games but also on benchmark tasks in speech recognition and reading comprehension, so the claim that it falls short in those areas is false.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       508
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214327.png",
@@ -20090,7 +20275,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214328.png",
@@ -20138,7 +20323,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214330.png",
@@ -20235,10 +20420,14 @@ HR.data.examInventory = {
      ],
      "explanation": "Word2vec learns embeddings by predicting words from their contexts (CBOW) or contexts from words (Skip-gram), so words that appear in similar contexts end up with similar vectors.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       413
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214333.png",
@@ -20338,7 +20527,7 @@ HR.data.examInventory = {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: re-reviewed; the course material does not cover this point."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214336.png",
@@ -20383,10 +20572,14 @@ HR.data.examInventory = {
      ],
      "explanation": "An RNN feeds its hidden state back into itself at each time step. These recurrent (\"periodic\") connections between hidden-layer nodes let it carry information forward and capture the dynamics of sequential data.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       116
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214337.png",
@@ -20431,10 +20624,15 @@ HR.data.examInventory = {
      ],
      "explanation": "A perceptron gives each input its own weight, computes the weighted sum of the inputs, and compares it with a threshold (or adds a bias and applies a step function) to decide whether the neuron fires.",
      "source": {
-      "kind": "inferred"
+      "kind": "material",
+      "pdf": "ai-v4",
+      "pages": [
+       196,
+       205
+      ]
      },
      "inApp": true,
-     "flag": "Answer worked out for this reviewer; no official key was supplied."
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Second fact-check: supported by the cited course page."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214339.png",
