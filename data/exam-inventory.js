@@ -15570,10 +15570,47 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-063",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Natural language understanding and analysis involve five levels. Which of the following is not one of these levels?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Lexical analysis"
+       },
+       {
+        "key": "B",
+        "text": "Structure analysis"
+       },
+       {
+        "key": "C",
+        "text": "Syntax analysis"
+       },
+       {
+        "key": "D",
+        "text": "Pragmatic analysis"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "The course lists five levels of natural language understanding and analysis: speech analysis, lexical analysis, syntax analysis, semantic analysis, and pragmatic analysis. \"Structure analysis\" is not one of them.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       394
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214122.png",
@@ -15584,7 +15621,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "A single processing unit (PO) usually handles the entire model."
+       "text": "A single processing unit (PU) usually handles the entire model."
       },
       {
        "key": "B",
@@ -15601,10 +15638,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-064",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about large language model (LLM) training is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "A single processing unit (PO) usually handles the entire model."
+       },
+       {
+        "key": "B",
+        "text": "There is usually petabyte or terabytes of data involved."
+       },
+       {
+        "key": "C",
+        "text": "There are billions to trillions of parameters."
+       },
+       {
+        "key": "D",
+        "text": "The development cost is high."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected PU read as PO.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "LLM training involves terabytes to petabytes of data, billions to trillions of parameters, and high development cost. Such models are far too large for one processor, so training is distributed across many accelerators using data, tensor, and pipeline parallelism; a single processing unit does not handle the whole model.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214124.png",
@@ -15632,10 +15702,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-065",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about the function of the updated gate in a GRU is true?",
+      "options": [
+       {
+        "key": "A",
+        "text": "It manages long-term dependencies."
+       },
+       {
+        "key": "B",
+        "text": "It controls the path of gradient backpropagation."
+       },
+       {
+        "key": "C",
+        "text": "It determines the influence of the previous hidden state on the current candidate hidden state."
+       },
+       {
+        "key": "D",
+        "text": "It adjusts the learning rate."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot. \"updated gate\" is as printed on the original paper.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "In a GRU, the update gate decides how much of the previous hidden state is carried forward versus replaced by the new candidate state, which is how the GRU keeps long-term dependencies. The reset gate controls how much the previous hidden state influences the candidate hidden state. Neither gate adjusts the learning rate or directly controls the backpropagation path.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: describing the influence of the previous hidden state on the candidate state is the role of the reset gate, which is why that statement is the distractor."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214128.png",
@@ -15663,12 +15766,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-066",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "When using a 5 x 5 convolution kernel to perform convolution on a three-channel color image, which of the following is the total number of parameters that need to be learned?",
+      "options": [
+       {
+        "key": "A",
+        "text": "76"
+       },
+       {
+        "key": "B",
+        "text": "75"
+       },
+       {
+        "key": "C",
+        "text": "26"
+       },
+       {
+        "key": "D",
+        "text": "25"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A"
+     ],
+     "explanation": "A 5 x 5 kernel over a three-channel image spans all three channels, giving 5 x 5 x 3 = 75 weights. Adding one bias term gives 76 learnable parameters.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The count assumes one bias term, as is standard."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214130.png",
@@ -15679,11 +15815,11 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "V indicates the color brightness, ranging from Oto 1."
+       "text": "V indicates the color brightness, ranging from 0 to 1."
       },
       {
        "key": "B",
-       "text": "H indicates the phase angle of the color. The value ranges from Oto 180."
+       "text": "H indicates the phase angle of the color. The value ranges from 0 to 180."
       },
       {
        "key": "C",
@@ -15696,17 +15832,51 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-067",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about the HSV color space is true?",
+      "options": [
+       {
+        "key": "A",
+        "text": "V indicates the color brightness, ranging from Oto 1."
+       },
+       {
+        "key": "B",
+        "text": "H indicates the phase angle of the color. The value ranges from Oto 180."
+       },
+       {
+        "key": "C",
+        "text": "The HSV color space can be represented by a cone."
+       },
+       {
+        "key": "D",
+        "text": "S indicates the saturation of the color. The value ranges from -1 to 1."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected 0 read as O.",
+     "explanation": "According to the course, the HSV color space can be represented as a cone; hue is measured in degrees from 0 to 360, and saturation and value (brightness) each range from 0 to 1. The hue range of 0 to 180 and the saturation range of -1 to 1 are wrong, but two statements are correct, so this question is shown for practice but not scored.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       86
+      ]
+     },
+     "inApp": true,
+     "flag": "Not graded: the course page states both that V (brightness) ranges from 0 to 1 and that HSV can be represented as a cone, so two statements are true while only one answer is accepted."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214131.png",
      "number": 68,
      "paperTotal": 150,
      "type": "single",
-     "stem": "Which of the following activation functions ranges from O to positive infinity?",
+     "stem": "Which of the following activation functions ranges from 0 to positive infinity?",
      "options": [
       {
        "key": "A",
@@ -15714,7 +15884,7 @@ HR.data.examInventory = {
       },
       {
        "key": "B",
-       "text": "ReW"
+       "text": "ReLU"
       },
       {
        "key": "C",
@@ -15727,12 +15897,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-068",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following activation functions ranges from O to positive infinity?",
+      "options": [
+       {
+        "key": "A",
+        "text": "ELU"
+       },
+       {
+        "key": "B",
+        "text": "ReW"
+       },
+       {
+        "key": "C",
+        "text": "Softmax"
+       },
+       {
+        "key": "D",
+        "text": "Tanh"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "ReLU outputs max(0, x), so its range is 0 to positive infinity. ELU can output negative values down to a negative limit, softmax outputs lie between 0 and 1, and tanh ranges from -1 to 1.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       35
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214133.png",
@@ -15751,7 +15958,7 @@ HR.data.examInventory = {
       },
       {
        "key": "C",
-       "text": "NPL's"
+       "text": "NPUs"
       },
       {
        "key": "D",
@@ -15760,12 +15967,42 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-069",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following compute resources can be selected when you create a training job on ModelArts?",
+      "options": [
+       {
+        "key": "A",
+        "text": "TPUs"
+       },
+       {
+        "key": "B",
+        "text": "CPUs"
+       },
+       {
+        "key": "C",
+        "text": "NPL's"
+       },
+       {
+        "key": "D",
+        "text": "GPUs"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected NPUs.",
+     "explanation": "ModelArts training jobs can run on CPUs, GPUs, and Ascend NPUs. TPUs are Google's accelerators and are not offered. Because three options are valid and only one is accepted, this question is shown for practice but not scored.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Not graded: this is a single-answer question, but CPUs, NPUs (Ascend), and GPUs can all be selected for a ModelArts training job; only TPUs are unavailable. 2024-25 question 37 asks the opposite question and is graded."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214134.png",
@@ -15784,7 +16021,7 @@ HR.data.examInventory = {
       },
       {
        "key": "C",
-       "text": "Model"
+       "text": "Model O&M"
       },
       {
        "key": "D",
@@ -15793,10 +16030,43 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-070",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following is used to create real-time services in ModelArts?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Model training"
+       },
+       {
+        "key": "B",
+        "text": "Model deployment"
+       },
+       {
+        "key": "C",
+        "text": "Model"
+       },
+       {
+        "key": "D",
+        "text": "Model inference"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; restored the truncated option.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "In ModelArts, a trained model is turned into a real-time service through model deployment, which publishes it as an online inference endpoint. Training produces the model, inference is what the deployed service performs, and O&M manages it afterwards.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214136.png",
@@ -15824,10 +16094,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-071",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "In a Kubernetes architecture, which of the following components are deployed on master nodes?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Controller manager"
+       },
+       {
+        "key": "B",
+        "text": "Scheduler"
+       },
+       {
+        "key": "C",
+        "text": "API server"
+       },
+       {
+        "key": "D",
+        "text": "kubelet"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "Master nodes run the control plane: the API server, scheduler, controller manager, and etcd. kubelet runs on each worker node to manage its pods.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       341
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214138.png",
@@ -15855,10 +16164,50 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-072",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise is deploying a microservice architecture on Huawei Cloud Container Engine (CCE). To ensure functionality, networks must be reachable in every scenario. Which of the following communication modes are supported by Kubernetes?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Pods on different nodes communicate directly with each other via pod IP addresses, enabled by Container Network Interface (CNI) plugins, for example, Calico."
+       },
+       {
+        "key": "B",
+        "text": "Kubernetes exposes pods to external networks via Services like NodePort and LoadBalancer, or through ingresses."
+       },
+       {
+        "key": "C",
+        "text": "Containers within the same pod communicate with each other via localhost and a shared network namespace."
+       },
+       {
+        "key": "D",
+        "text": "In the Service-to-pod load balancing scenario, kube-proxy manages iptables or IPVS rules to distribute traffic."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "All four are standard Kubernetes networking modes: containers in a pod share a network namespace and talk over localhost; pods on different nodes reach each other by pod IP through CNI plugins such as Calico; kube-proxy programs iptables or IPVS rules to balance Service traffic across pods; and NodePort and LoadBalancer Services or ingresses expose pods externally.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       406
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214139.png",
