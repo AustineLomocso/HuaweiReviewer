@@ -16894,7 +16894,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "kube-proxy balances load for Sewices and forwards traffic using iptables or IPVS rules."
+       "text": "kube-proxy balances load for Services and forwards traffic using iptables or IPVS rules."
       },
       {
        "key": "B",
@@ -16911,10 +16911,51 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-083",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise is planning to build a container-based platform on Huawei Cloud, so its technical team is evaluating the capabilities of Docker and Kubernetes. Which of the following statements are true about the core functions of Docker and Kubernetes?",
+      "options": [
+       {
+        "key": "A",
+        "text": "kube-proxy balances load for Sewices and forwards traffic using iptables or IPVS rules."
+       },
+       {
+        "key": "B",
+        "text": "Pods are the smallest deployable unit that you can create, schedule, and manage in Kubernetes. They provide a higher level of abstraction than containers, enabling easier management and deployment of containers within the cluster."
+       },
+       {
+        "key": "C",
+        "text": "Docker manages the lifecycle of containers. Kubernetes associates and orchestrates containers running on multiple nodes."
+       },
+       {
+        "key": "D",
+        "text": "kube-scheduler automatically allocates pods to the right worker nodes based on resource requirements and specified policies."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "All four statements are true: kube-proxy balances Service traffic with iptables or IPVS rules; pods are Kubernetes' smallest deployable unit and wrap one or more containers; Docker manages individual container lifecycles while Kubernetes orchestrates containers across nodes; and kube-scheduler places pods on suitable worker nodes according to resource requests and policies.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       341,
+       406
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214155.png",
@@ -16942,17 +16983,56 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-084",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements are true about Docker core components?",
+      "options": [
+       {
+        "key": "A",
+        "text": "kubelet is a core component of Kubernetes. It is used to directly create Docker containers."
+       },
+       {
+        "key": "B",
+        "text": "containerd is a daemon for container runtime. It manages images and container lifecycle."
+       },
+       {
+        "key": "C",
+        "text": "Namespaces isolate resources like processes and networks. They allow each container to have an independent PID, IPC, and network space."
+       },
+       {
+        "key": "D",
+        "text": "OverlayFS uses a tiered storage driver based on the copy-on-write (COW) strategy to enhance image storage efficiency."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "containerd is the container runtime daemon that manages images and container lifecycles, namespaces give each container its own PID, IPC, and network space, and OverlayFS is a layered copy-on-write storage driver. kubelet belongs to Kubernetes and asks the container runtime through CRI to create containers; it does not create Docker containers directly and is not a Docker component.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       114
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214157.png",
      "number": 85,
      "paperTotal": 150,
      "type": "multi",
-     "stem": "An Al startup plans to deploy its machine learning service on Cloud Container Instance (CCI). Which of the following are core features of CCI?",
+     "stem": "An AI startup plans to deploy its machine learning service on Cloud Container Instance (CCI). Which of the following are core features of CCI?",
      "options": [
       {
        "key": "A",
@@ -16973,10 +17053,51 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-085",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An Al startup plans to deploy its machine learning service on Cloud Container Instance (CCI). Which of the following are core features of CCI?",
+      "options": [
+       {
+        "key": "A",
+        "text": "No cluster management: Users can run containerized applications without preconfiguring Kubernetes nodes."
+       },
+       {
+        "key": "B",
+        "text": "Robust isolation: Kata Container is used to provide VM-level security isolation."
+       },
+       {
+        "key": "C",
+        "text": "Ultimate scalability: CCI can scale out up to 1,000 pods in seconds and supports per-second billing."
+       },
+       {
+        "key": "D",
+        "text": "Heterogeneous compute: CCI supports accelerators such as NVIDIA GPUs and Ascend NPUs."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "CCI is a serverless container engine: you run containers without managing cluster nodes, workloads are isolated with Kata containers at VM-level security, it scales out pods rapidly with per-second billing, and its heterogeneous infrastructure includes GPUs and Ascend NPUs.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       408,
+       409
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The scale and billing figures come from CCI product descriptions rather than the cited pages."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214158.png",
@@ -17004,10 +17125,48 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-086",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise is considering whether to use Huawei Cloud Container Engine (CCE) or a self-managed Kubernetes cluster to deploy its microservice architecture. Which of the following statements are true about the comparison between the two solutions?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Self-managed Kubernetes enables greater scalability. Services can scale automatically based on traffic. There is no need to configure scaling policies."
+       },
+       {
+        "key": "B",
+        "text": "CCE offers great advantages in terms of hosting. Automated O&M features, such as control plane upgrades and etcd backups, minimize manual intervention."
+       },
+       {
+        "key": "C",
+        "text": "Self-managed Kubernetes offers better security. Enterprises can directly fix operating system and component vulnerabilities on their own. There is no potential security risk."
+       },
+       {
+        "key": "D",
+        "text": "CCE is ready to use out-of-the-box. It includes built-in observability capabilities like Application Operations Management (AOM) and Application Performance Management (APM)."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "D"
+     ],
+     "explanation": "CCE is a managed service that automates control plane upgrades and etcd backups, and it works out of the box with AOM and APM for observability. A self-managed cluster still needs scaling policies configured and carries the security burden of patching everything yourself, so it is neither automatically scalable without configuration nor free of security risk.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       464
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214200.png",
@@ -17035,10 +17194,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-087",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An e-commerce platform plans to use Auto Scaling (AS) of Huawei Cloud to handle traffic fluctuations during promotions. Multiple scaling policies need to be configured to intelligently schedule resources. Which of the following are AS policies provided by Huawei Cloud?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Periodic policy: AS adds 50% more instances every Friday to handle weekend traffic."
+       },
+       {
+        "key": "B",
+        "text": "Priority policy: AS removes instances of specific flavors preferentially."
+       },
+       {
+        "key": "C",
+        "text": "Alarm policy: AS adds instances automatically when the CPU usage exceeds 80%."
+       },
+       {
+        "key": "D",
+        "text": "Scheduled policy: AS adds two instances at 20:00 every day to handle evening peaks."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "C",
+      "D"
+     ],
+     "explanation": "AS offers three policy types: periodic, alarm-based, and scheduled. A priority policy is not a scaling policy type; choosing which instances to remove first is set through the AS group's instance removal policy.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       93
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: the scheduled-policy example repeats every day, which is really how a periodic policy behaves; it is accepted here because scheduled policies are an AS policy type."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214201.png",
@@ -17078,7 +17276,13 @@ HR.data.examInventory = {
       ]
      },
      "transcriptionStatus": "visually-reviewed",
-     "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending."
+     "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending.",
+     "explanation": "A first full backup of 800 GB plus about 1.5 GB of new data per day over 60 days gives roughly 890 GB, or about 600 GB after 1.5:1 compression, which every listed vault holds. A common planning rule sizes a vault at about twice the protected disk capacity (2.4 TB for 1.2 TB), which only the 3, 4, and 5 TB vaults satisfy. Because the intended rule is unclear, this question is shown for practice but not scored.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Not graded: the course gives no vault-sizing method, and depending on the rule used (backed-up data with incrementals and compression, or a multiple of disk capacity) several of the listed capacities are sufficient, so the intended set cannot be confirmed."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214203.png",
@@ -17106,10 +17310,51 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-089",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are optimization methods for foundation model inference?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Quantization"
+       },
+       {
+        "key": "B",
+        "text": "Distillation"
+       },
+       {
+        "key": "C",
+        "text": "KV caching"
+       },
+       {
+        "key": "D",
+        "text": "Pruning"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "Foundation model inference is optimized by quantization (lower-precision weights), knowledge distillation (a smaller student model), pruning (removing unneeded structure), and KV caching (reusing attention keys and values instead of recomputing them for each new token).",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       295,
+       296
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214204.png",
@@ -17137,12 +17382,46 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-090",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are voice processing tasks?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Language generation"
+       },
+       {
+        "key": "B",
+        "text": "Text To Speech (TTS)"
+       },
+       {
+        "key": "C",
+        "text": "Language understanding"
+       },
+       {
+        "key": "D",
+        "text": "Speech recognition"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot. Same idea as 2024-25 question 69.",
+     "answer": [
+      "B",
+      "D"
+     ],
+     "explanation": "Voice processing works on speech signals: text to speech generates speech and speech recognition converts speech to text. Language generation and language understanding operate on text and meaning, which is natural language processing.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: language generation and understanding are usually classed as natural language processing tasks, but some definitions of voice processing include them."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214205.png",
@@ -17161,7 +17440,7 @@ HR.data.examInventory = {
       },
       {
        "key": "C",
-       "text": "The average value is O."
+       "text": "The average value is 0."
       },
       {
        "key": "D",
@@ -17170,10 +17449,44 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-091",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Standard normal distribution is a special form of normal distribution. Which of the following statements about standard normal distribution are true?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The variance is 1."
+       },
+       {
+        "key": "B",
+        "text": "The average value is 1."
+       },
+       {
+        "key": "C",
+        "text": "The average value is O."
+       },
+       {
+        "key": "D",
+        "text": "The variance is O."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected 0 read as O.",
+     "answer": [
+      "A",
+      "C"
+     ],
+     "explanation": "The standard normal distribution is the normal distribution with mean 0 and variance 1 (so standard deviation 1).",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214207.png",
@@ -17184,7 +17497,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "ReW"
+       "text": "ReLU"
       },
       {
        "key": "B",
@@ -17201,10 +17514,51 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-092",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are activation functions of a neural network?",
+      "options": [
+       {
+        "key": "A",
+        "text": "ReW"
+       },
+       {
+        "key": "B",
+        "text": "Sigmoid"
+       },
+       {
+        "key": "C",
+        "text": "Softmax"
+       },
+       {
+        "key": "D",
+        "text": "Softplus"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected ReLU.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "ReLU, sigmoid, softmax, and softplus are all activation functions. Softmax is typically used at the output layer for multiclass problems, and softplus is a smooth version of ReLU.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       87,
+       89
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214208.png",
@@ -17232,10 +17586,48 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-093",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Dropout is a widely used regularization technique. Which of the following are the main functions of dropout?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Enhancing model generalization"
+       },
+       {
+        "key": "B",
+        "text": "Feature extraction"
+       },
+       {
+        "key": "C",
+        "text": "Preventing overfitting"
+       },
+       {
+        "key": "D",
+        "text": "Dimension reduction"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "C"
+     ],
+     "explanation": "Dropout is a regularization method that randomly deactivates neurons during training, which prevents overfitting and improves the model's ability to generalize. It is not a feature extraction or dimension reduction technique.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai",
+      "pages": [
+       100
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214212.png",
