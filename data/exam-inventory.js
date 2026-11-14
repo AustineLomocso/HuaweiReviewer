@@ -722,12 +722,15 @@ HR.data.examInventory = {
      "transcriptionStatus": "visually-reviewed",
      "proposedSectionId": "beyond-2-1",
      "reviewNotes": "Stem and options checked against source screenshot. Supplied explanation remains its OCR extraction. Supplied key C requires review: the wording can describe either sequential training of one model or an ensemble of balanced subsets. The supplied explanation assumes sequential training, while the stem does not explicitly specify it. Repeated sampling also raises overfitting risk without guaranteeing overfitting.",
-     "explanation": "Deleting surplus cat images balances the data but can discard useful features. Repeatedly sampling dog images up to 10,000 raises the risk of overfitting. Interpolating dog images adds training data, though it adds little genuinely new information. The supplied key treats the grouped-training statement as false, reasoning that training one model on each subset in sequence is not ensemble learning. If the ten groups instead train separate models whose predictions are combined, that is a standard ensemble approach to imbalance, which is why this question is not graded.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Deleting surplus cat images balances the data but can discard useful features, repeatedly sampling dog images risks overfitting, and interpolating dog images adds training data. The supplied key treats the grouped-training statement as false: training one model on the ten groups in sequence is not ensemble learning, and each training pass is still unbalanced. If the groups instead trained separate models whose predictions were combined, it would be a valid ensemble approach, which is why this answer is a best guess.",
      "source": {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Not graded: the supplied key names the ensemble-learning statement as false, but the stem does not say whether the ten groups train one model in sequence or separate models that are combined. The answer stays unresolved until checked against the course material."
+     "flag": "Best guess: follows the supplied exam key, which is disputed. The stem does not say whether the ten groups train one model in sequence or separate models that are combined; the key assumes the first."
     },
     {
      "image": "HuaweiCloudNationals(2324Answer)/Screenshot 2026-11-13 220052.png",
@@ -6380,7 +6383,10 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "reviewNotes": "Stem and options checked against source screenshot; corrected ECSs read as ECSS.",
-     "explanation": "Security groups protect individual ECSs, must be selected when an ECS is created, and filter on a 3-tuple. Network ACLs are optional, protect whole subnets, and filter on a 5-tuple. According to the course, security groups support only Allow rules while network ACLs support both Allow and Deny, and because a network ACL controls traffic at the subnet boundary, it does not protect traffic between ECSs inside the same subnet. With two false statements and one accepted answer, this question is shown for practice but not scored.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Security groups protect individual ECSs and are mandatory; network ACLs are optional and protect subnets. Security groups filter on a 3-tuple and network ACLs on a 5-tuple, and current Huawei Cloud security groups support both allow and deny rules. A network ACL controls traffic entering and leaving a subnet, so it cannot protect traffic between ECSs inside the same subnet; only security groups can. That makes the same-subnet statement the false one.",
      "source": {
       "kind": "material",
       "pdf": "cloud-service-architect",
@@ -6389,7 +6395,7 @@ HR.data.examInventory = {
       ]
      },
      "inApp": true,
-     "flag": "Not graded: two statements are false. The course table says security groups support only Allow rules (Deny rules only in certain regions), so the allow-and-deny statement is false, and network ACLs filter traffic entering and leaving a subnet rather than traffic between ECSs in the same subnet. No key says which one the paper intended. 2025-26 question 36 has the same problem."
+     "flag": "Best guess: two statements can be read as false. The course table says security groups support only Allow rules (Deny in certain regions), but current Huawei Cloud security groups support both Allow and Deny, so the same-subnet statement is taken as the intended false one."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214830.png",
@@ -6509,12 +6515,15 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "reviewNotes": "Stem and options checked against source screenshot; corrected ECSs and AZs.",
-     "explanation": "Single points of failure can be avoided, so the first statement is wrong. The other three all describe recognized high-availability designs: several load balancers in one region behind DNS round-robin, load balancers in different regions behind DNS for cross-region availability, and backend ECSs spread across AZs behind one load balancer. ELB also health-checks backend servers and stops routing to unhealthy ones. Because the paper accepts only one answer and does not say which, this question is shown for practice but not scored.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Single points of failure can be avoided. Spreading backend ECSs across AZs protects against server failures but still depends on one load balancer. Creating load balancers in different regions and distributing traffic among them with DNS removes the dependence on both a single load balancer and a single region, giving the strongest protection against SPOFs.",
      "source": {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Not graded: three of the four options describe valid ways to avoid single points of failure with ELB, and no key or course page says which one the paper intended."
+     "flag": "Best guess: several options describe valid high-availability designs. The cross-region design is chosen because it removes dependence on any single load balancer and region."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214834.png",
@@ -7376,12 +7385,15 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "reviewNotes": "Stem and options checked against source screenshot.",
-     "explanation": "In real-time retrieval solutions, Elasticsearch and HBase serve fast criteria-based lookups rather than statistical or complex join queries; HBase handles simple primary-key searches; and Elasticsearch provides full-text search or secondary indexes for HBase. Two remaining statements are questionable: one says Elasticsearch suits only small sites because it is not cost-effective, and the other says GES stores its data in HBase and Elasticsearch, while the course describes GES as running on Huawei's EYWA kernel. Because the intended false statement cannot be confirmed, this question is shown for practice but not scored.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Elasticsearch and HBase serve fast criteria-based lookups rather than statistical or complex join queries, HBase handles simple primary-key searches, and Elasticsearch provides full-text search or secondary indexes for HBase. GES, however, runs on Huawei's EYWA graph kernel; the organizers state in another paper that its underlying data is not stored in Elasticsearch, so the GES statement is taken as the false one.",
      "source": {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Not graded: no key was supplied and the sources conflict. The statement that GES stores its data in HBase and Elasticsearch contradicts the organizers' own explanation for 2023-24 question 75, which says GES uses the EYWA kernel and keeps no data in Elasticsearch; the cost claim about Elasticsearch is also doubtful, and no course page settles which statement the paper intended."
+     "flag": "Best guess: chosen because the organizers' own explanation for 2023-24 question 75 states that GES does not store its underlying data in Elasticsearch."
     },
     {
      "image": "HuaweiCloudNationals(2425)/Screenshot 2026-11-13 214853.png",
@@ -13555,7 +13567,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "Deploy Elastic Cloud Servers (ECSS) in different AZS and associate them with a load balancer to improve local availability."
+       "text": "Deploy Elastic Cloud Servers (ECSs) in different AZs and associate them with a load balancer to improve local availability."
       },
       {
        "key": "B",
@@ -13600,12 +13612,15 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "reviewNotes": "Stem and options checked against source screenshot; corrected an OCR error. Same scenario as 2024-25 question 11.",
-     "explanation": "Spreading backend ECSs across AZs protects against server failures but not a fault in the load balancer itself, and single points of failure can be avoided. Creating several load balancers and distributing traffic among them with DNS removes the dependency on one load balancer, whether they are in the same region or in different regions. Because both are valid and only one answer is accepted, this question is shown for practice but not scored.",
+     "answer": [
+      "B"
+     ],
+     "explanation": "Spreading ECSs across AZs protects against server failures but not a fault in the load balancer itself, and single points of failure can be avoided. Creating several load balancers in different regions behind DNS removes the dependence on one load balancer and on one region, so a single load balancer fault cannot interrupt service.",
      "source": {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Not graded: both multiple-load-balancer designs (in one region or across regions, behind DNS) protect against a single load balancer fault, and no key or course page says which one the paper intended."
+     "flag": "Best guess: both multiple-load-balancer designs protect against a single load balancer fault. The cross-region design is chosen as the broader protection, matching the answer to 2024-25 question 11."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214021.png",
@@ -13925,7 +13940,10 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "reviewNotes": "Stem and options checked against source screenshot; corrected ECSs read as ECSS.",
-     "explanation": "Security groups operate at the instance (ECS) level and must be selected when an ECS is created, while network ACLs are optional and operate at the subnet level. According to the course, security groups support only Allow rules, and because network ACLs control traffic at the subnet boundary, they do not protect traffic between ECSs inside one subnet. With two false statements and one accepted answer, this question is shown for practice but not scored.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "Security groups work at the instance level and are mandatory; network ACLs work at the subnet level and are optional. Current Huawei Cloud security groups support both allow and deny rules. Because a network ACL controls traffic at the subnet boundary, it cannot protect traffic between ECSs inside one subnet, so the statement that both can do so is false.",
      "source": {
       "kind": "material",
       "pdf": "cloud-service-architect",
@@ -13934,7 +13952,7 @@ HR.data.examInventory = {
       ]
      },
      "inApp": true,
-     "flag": "Not graded: two statements are false. The course table says security groups support only Allow rules (Deny rules only in certain regions), and network ACLs do not filter traffic between ECSs in the same subnet. No key says which one the paper intended. 2024-25 question 9 has the same problem."
+     "flag": "Best guess: same reasoning as 2024-25 question 9. Current Huawei Cloud security groups support both Allow and Deny, so the same-subnet statement is taken as the intended false one."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214030.png",
@@ -14807,7 +14825,10 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "reviewNotes": "Stem and options checked against source screenshot. The stem is printed as \"is part of\", although three options are parts of speech synthesis.",
-     "explanation": "Speech synthesis begins with text analysis, including text normalization and conversion of text to phonemes, and ends with waveform generation. Pre-emphasis is a preprocessing step in speech recognition, not synthesis. Because three of the options fit the question as printed, it is shown for practice but not scored.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Speech synthesis consists of text analysis (text normalization and text-to-phoneme conversion) followed by waveform generation, so three of the options are all part of it. Pre-emphasis is a preprocessing step for speech recognition and feature extraction, not synthesis. Reading the question as asking for the odd one out gives pre-emphasis.",
      "source": {
       "kind": "material",
       "pdf": "ei-developer",
@@ -14817,7 +14838,7 @@ HR.data.examInventory = {
       ]
      },
      "inApp": true,
-     "flag": "Not graded: as printed, three options (text normalization, waveform generation, and text-to-phoneme conversion) are all parts of speech synthesis, yet only one answer is accepted. The question probably meant to ask which is not part of it, which would be pre-emphasis."
+     "flag": "Best guess: as printed, three options are parts of speech synthesis. The question very likely meant to ask which is not part of it, so pre-emphasis is chosen."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214052.png",
@@ -15479,7 +15500,10 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending.",
-     "explanation": "The course describes two model quantization approaches: post-training quantization (PTQ), which quantizes a trained floating-point model and calibrates it with a little data, and quantization-aware training (QAT), which inserts pseudo-quantizers during training so the model adapts to quantization. PTF and QAF are not recognized methods, so with two non-methods and one accepted answer this question is shown for practice but not scored.",
+     "answer": [
+      "D"
+     ],
+     "explanation": "Post-training quantization (PTQ) quantizes a trained model and calibrates it with a little data, and quantization-aware training (QAT) simulates quantization during training. Power-of-Two Factor (PTF) is a published quantization technique for vision transformers. QAF is not a recognized quantization method.",
      "source": {
       "kind": "material",
       "pdf": "ai",
@@ -15490,7 +15514,7 @@ HR.data.examInventory = {
       ]
      },
      "inApp": true,
-     "flag": "Not graded: PTQ (post-training quantization) and QAT (quantization-aware training) are the course's quantization methods, but neither PTF nor QAF is a standard quantization method, so two options fit the question and no key says which one was intended."
+     "flag": "Best guess: PTQ and QAT are standard quantization methods, and PTF (Power-of-Two Factor) is the quantization technique introduced in the FQ-ViT paper, which leaves QAF as the only option that is not a recognized method. The course pages mention only PTQ and QAT."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214113.png",
@@ -16008,7 +16032,10 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "reviewNotes": "Stem and options checked against source screenshot; corrected 0 read as O.",
-     "explanation": "According to the course, the HSV color space can be represented as a cone; hue is measured in degrees from 0 to 360, and saturation and value (brightness) each range from 0 to 1. The hue range of 0 to 180 and the saturation range of -1 to 1 are wrong, but two statements are correct, so this question is shown for practice but not scored.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "The HSV color space can be represented as a cone. Hue is an angle from 0 to 360 degrees (OpenCV stores it as 0 to 180), saturation cannot be negative, and the range of value (brightness) depends on the representation: 0 to 1 when normalized, 0 to 255 in 8-bit images. The cone representation is the statement that is true regardless of convention.",
      "source": {
       "kind": "material",
       "pdf": "ei-developer",
@@ -16017,7 +16044,7 @@ HR.data.examInventory = {
       ]
      },
      "inApp": true,
-     "flag": "Not graded: the course page states both that V (brightness) ranges from 0 to 1 and that HSV can be represented as a cone, so two statements are true while only one answer is accepted."
+     "flag": "Best guess: the course page supports both the 0-to-1 brightness range and the cone shape. The cone is chosen because the brightness range depends on representation (OpenCV, for example, uses 0 to 255), while the cone model always holds."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214131.png",
@@ -16145,12 +16172,15 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "reviewNotes": "Stem and options checked against source screenshot; corrected NPUs.",
-     "explanation": "ModelArts training jobs can run on CPUs, GPUs, and Ascend NPUs. TPUs are Google's accelerators and are not offered. Because three options are valid and only one is accepted, this question is shown for practice but not scored.",
+     "answer": [
+      "C"
+     ],
+     "explanation": "ModelArts training jobs can run on CPUs, GPUs, and Huawei Ascend NPUs, but not on Google's TPUs. Since the question expects one answer from a Huawei exam, Ascend NPUs, Huawei's own AI accelerators, are the most likely intended choice.",
      "source": {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Not graded: this is a single-answer question, but CPUs, NPUs (Ascend), and GPUs can all be selected for a ModelArts training job; only TPUs are unavailable. 2024-25 question 37 asks the opposite question and is graded."
+     "flag": "Best guess: CPUs, NPUs, and GPUs can all be selected for ModelArts training, but only one answer is accepted. NPUs (Huawei Ascend) are chosen as the resource the question most likely intends to highlight."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214134.png",
@@ -17433,12 +17463,17 @@ HR.data.examInventory = {
      },
      "transcriptionStatus": "visually-reviewed",
      "reviewNotes": "Options restored by visual inspection of supplied screenshot. Answer verification pending.",
-     "explanation": "A first full backup of 800 GB plus about 1.5 GB of new data per day over 60 days gives roughly 890 GB, or about 600 GB after 1.5:1 compression, which every listed vault holds. A common planning rule sizes a vault at about twice the protected disk capacity (2.4 TB for 1.2 TB), which only the 3, 4, and 5 TB vaults satisfy. Because the intended rule is unclear, this question is shown for practice but not scored.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "The backed-up data itself is small: an 800 GB first full backup plus about 1.5 GB a day of incremental changes over 60 days is roughly 890 GB, or about 600 GB after 1.5:1 compression. Vault planning, however, usually allows about twice the protected disk capacity to cover full backups, retention, and growth. For 1.2 TB of disks that is 2.4 TB, which the 3, 4, and 5 TB vaults satisfy and the 2 TB vault does not.",
      "source": {
       "kind": "inferred"
      },
      "inApp": true,
-     "flag": "Not graded: the course gives no vault-sizing method, and depending on the rule used (backed-up data with incrementals and compression, or a multiple of disk capacity) several of the listed capacities are sufficient, so the intended set cannot be confirmed."
+     "flag": "Best guess: the course gives no vault-sizing method. This answer applies the common planning rule of sizing a vault at about twice the protected disk capacity (2.4 TB for 1.2 TB disks)."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214203.png",

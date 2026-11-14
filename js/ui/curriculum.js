@@ -132,7 +132,7 @@
       (capture.secondarySectionIds || []).map((id) => lessonLink(id, 'Secondary')),
       capture.proposedSectionId && lessonLink(capture.proposedSectionId, 'Proposed mapping — review pending'),
       h('details', null, h('summary', null, 'Review capture and supplied key'),
-        h('p', null, h('a', { href: capture.image.split('/').map(encodeURIComponent).join('/'), target: '_blank', rel: 'noopener' }, 'Open source screenshot')),
+        HR.isLocal() && h('p', null, h('a', { href: capture.image.split('/').map(encodeURIComponent).join('/'), target: '_blank', rel: 'noopener' }, 'Open source screenshot')),
         h('ul', null, capture.options.map((option) => h('li', null, `${option.key}. ${option.text}`))),
         h('p', null, capture.suppliedKey ? `Supplied key as extracted — ${capture.suppliedKey}` : 'A supplied key was not extracted.'),
         capture.suppliedKeyStatus === 'visually-reviewed' && h('p', { class: 'small' }, 'Supplied key visually checked against the screenshot. Material-based answer verification pending.'),

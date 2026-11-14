@@ -423,6 +423,8 @@ fieldset{border:0;padding:0;margin:16px 0}legend{font-size:1.05rem;font-weight:6
 <label><input type="radio" name="q90" value="F"><span>F. False</span></label></fieldset>
   <div class="source small"><a href="../HuaweiCloudNationals(2425)/Screenshot%202026-11-13%20215040.png" target="_blank" rel="noopener">Source screenshot</a></div></article>
   <details class="answer-key"><summary>Supplied answer key</summary><p>The supplied screenshots do not show an answer key for this paper.</p></details></main><script>
+// Screenshots exist only on the owner's computer; hide their links on the published website.
+if (location.protocol !== 'file:') document.querySelectorAll('.source a').forEach((a) => a.remove());
 const storageKey = 'huawei-nationals-questionnaire-n2425-v1';
 const inputs = [...document.querySelectorAll('input[name]')];
 const progress = document.getElementById('progress');

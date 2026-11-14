@@ -3,6 +3,9 @@
   const HR = root.HR;
   const data = { structure: null, manifest: {}, sections: {}, mocks: {} };
   HR.data = data;
+  // True when the app is opened from local files (or under Node), where the git-ignored source PDFs and
+  // exam screenshots exist. On the published website those files are absent, so their links are hidden.
+  HR.isLocal = () => !root.location || root.location.protocol === 'file:';
   HR.registerStructure = (s) => { data.structure = s; };
   HR.registerManifest = (m) => { data.manifest = m; };
   HR.registerSection = (s) => { data.sections[s.id] = s; };
@@ -94,8 +97,9 @@
   }
 
   // Every screenshot of a Nationals question, including repeated captures of the same number.
+  // Screenshots exist only on the owner's computer, so they are offered only when the app runs from local files.
   function sourceImages(q) {
-    if (!q.image) return [];
+    if (!q.image || !HR.isLocal()) return [];
     const paper = (data.examInventory?.papers || []).find((p) => p.captures.includes(q));
     return paper ? paper.captures.filter((c) => c.number === q.number).map((c) => c.image) : [q.image];
   }

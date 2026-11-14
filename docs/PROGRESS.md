@@ -61,6 +61,11 @@ Each code task went through an implementer and an independent reviewer. Reviewer
 
 ## Session log
 
+### 2026-11-14: Best-guess answers and GitHub Pages deployment
+
+- At the user's request, gave the 11 previously ungraded Nationals questions flagged best-guess answers (n2324 Q10; n2425 Q9, Q11, Q24; n2526 Q31, Q36, Q49, Q59, Q67, Q69, Q88). All 328 questions are now scored; each best guess says so in its flag.
+- Deployment: the user chose to make the repo public and serve GitHub Pages from `build/reviewer`. Screenshot and PDF links are local-only (git-ignored, and screenshots show personal details), so `HR.isLocal()` hides them on http(s); citations fall back to the in-app Sources view. The printable pages hide screenshot links online too. Progress keeps using localStorage per browser; backup download/restore moves it between devices.
+
 ### 2026-11-14: Nationals key verification and second fact-check
 
 - Verified n2324 supplied keys against the course PDFs: 31 of 87 graded keys confirmed with page citations; the other 56 cover points the course does not mention and now say so in their flag. No course page contradicted a supplied key.

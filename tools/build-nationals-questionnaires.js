@@ -28,6 +28,8 @@ function questionMarkup(number, captures) {
   <div class="source small">${captures.map((capture, i) => `<a href="${sourceHref(capture.image)}" target="_blank" rel="noopener">${captures.length > 1 ? `Source screenshot ${i + 1}` : 'Source screenshot'}</a>`).join(' · ')}${question.reviewNotes && question.reviewNotes.includes('Bracketed') ? `<p>${escape(question.reviewNotes)}</p>` : ''}</div></article>`;
 }
 const script = (id) => `
+// Screenshots exist only on the owner's computer; hide their links on the published website.
+if (location.protocol !== 'file:') document.querySelectorAll('.source a').forEach((a) => a.remove());
 const storageKey = 'huawei-nationals-questionnaire-${id}-v1';
 const inputs = [...document.querySelectorAll('input[name]')];
 const progress = document.getElementById('progress');

@@ -3,7 +3,7 @@
 
   function sourceHref(sourceId, page) {
     const source = HR.data.inventory && HR.data.inventory.sources.find((item) => item.id === sourceId);
-    if (!source) return null;
+    if (!source || !HR.isLocal()) return null;
     if (page !== undefined && (!Number.isInteger(page) || page < 1 || page > source.pageCount)) return null;
     const path = source.path.split('/').map(encodeURIComponent).join('/');
     return path + (page === undefined ? '' : `#page=${page}`);

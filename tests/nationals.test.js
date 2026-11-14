@@ -11,8 +11,8 @@ test('verified Nationals enter lesson practice and retry resolution', () => {
     assert.equal(HR.tests.resolve('retry:all', { [id]: { at: 1 } })[0].id, id);
   }
   assert.ok(!questions.some((q) => q.id === 'n2324-capture-010'));
-  // Question 10 is in the app but ungraded, so it never enters lesson past sets or scoring.
-  assert.equal(HR.scoring.isGraded(HR.tests.findQuestion('n2324-capture-010')), false);
+  // Question 10 has only a flagged best-guess answer, so it stays out of lesson past sets.
+  assert.ok(HR.tests.findQuestion('n2324-capture-010').flag.startsWith('Best guess'));
 });
 
 test('reviewed Nationals preserve supplied keys and corrected transcription separately', () => {
@@ -21,7 +21,7 @@ test('reviewed Nationals preserve supplied keys and corrected transcription sepa
   assert.match(captures[5].ocrOriginal.options[1].text, /IJDMF/);
   assert.equal(captures[9].suppliedKey, 'C');
   assert.equal(captures[9].status, 'answer-review');
-  assert.equal(captures[9].answer, undefined);
+  assert.deepEqual(captures[9].answer, ['C']);
 });
 
 // Rules for every Nationals question that has been admitted to the in-app test engine.
@@ -52,5 +52,19 @@ test('in-app Nationals questions are reviewed, complete, letter-free and properl
         assert.ok(q.flag, `${where}: inferred answer needs a caution flag`);
       }
     }
+  }
+});
+
+test('screenshot and PDF links are offered only when running from local files', () => {
+  require('../js/core/curriculum.js');
+  const q = HR.tests.findQuestion('n2324-capture-001');
+  assert.ok(HR.tests.sourceImages(q).length > 0);
+  assert.ok(HR.curriculum.sourceHref('cloud', 1));
+  globalThis.location = { protocol: 'https:' };
+  try {
+    assert.deepEqual(HR.tests.sourceImages(q), []);
+    assert.equal(HR.curriculum.sourceHref('cloud', 1), null);
+  } finally {
+    delete globalThis.location;
   }
 });
