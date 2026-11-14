@@ -10720,6 +10720,259 @@
    "explanation": "Dropout is a regularization method that randomly deactivates neurons during training, which prevents overfitting and improves the model's ability to generalize. It is not a feature extraction or dimension reduction technique.",
    "transcriptionStatus": "visually-reviewed",
    "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-094",
+   "paperId": "n2526",
+   "questionNumber": 95,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214212.png",
+   "sha256": "d7ffd5584a04db279aad7c307d3a2bd1b75456c56ee5546ece757d19acc300e5",
+   "stem": "Which of the following are function modules of CANN?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Underlying compiler"
+    },
+    {
+     "key": "B",
+     "text": "TBE"
+    },
+    {
+     "key": "C",
+     "text": "FusionEngine"
+    },
+    {
+     "key": "D",
+     "text": "CCE operator library"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. The current course page lists AscendCL, TBE, and Graph Engine; FusionEngine, the CCE operator library, and the underlying compiler come from earlier descriptions of CANN's functional modules.",
+   "explanation": "CANN bridges AI frameworks and Ascend processors. Its functional modules have included FusionEngine (operator fusion), the CCE operator library (optimized compute operators), the Tensor Boosting Engine (TBE) for custom operator development, and the underlying compiler that turns operators into executable code for the processor.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-095",
+   "paperId": "n2526",
+   "questionNumber": 96,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214214.png",
+   "sha256": "42057dd5c28375d7bcd9ca7315c34e5d375a42ac52e1a51e2a4f51193d5b07ae",
+   "stem": "During neural network training, which of the following tasks are finished before the loss function value is calculated?",
+   "options": [
+    {
+     "key": "A",
+     "text": "The model reaches convergence and the training ends."
+    },
+    {
+     "key": "B",
+     "text": "Learnable parameters are updated using the gradient descent and backpropagation algorithms to minimize the loss value."
+    },
+    {
+     "key": "C",
+     "text": "The network structure is defined and learnable parameters are initialized."
+    },
+    {
+     "key": "D",
+     "text": "The model receives input data features and makes predictions by means of forward propagation."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "C",
+    "D"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     40
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot. Same idea as 2024-25 question 67.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Before the loss can be calculated, the network structure must be defined and its parameters initialized, and the model must produce predictions by forward propagation. Updating parameters with backpropagation and gradient descent comes after the loss, and convergence marks the end of training.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-096",
+   "paperId": "n2526",
+   "questionNumber": 97,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214216.png",
+   "sha256": "c32c5638c3b215f7a972833035296c2627e34064817428da36954132bb220530",
+   "stem": "Which of the following AI engines are supported by ModelArts?",
+   "options": [
+    {
+     "key": "A",
+     "text": "PyTorch"
+    },
+    {
+     "key": "B",
+     "text": "MindSpore"
+    },
+    {
+     "key": "C",
+     "text": "MXNet"
+    },
+    {
+     "key": "D",
+     "text": "TensorFlow"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "ModelArts provides training and inference images for the mainstream AI engines, including PyTorch, MindSpore, TensorFlow, and MXNet.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-097",
+   "paperId": "n2526",
+   "questionNumber": 98,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214217.png",
+   "sha256": "6eac0b43513e6b3d90360607e6a6996d51de587563f6d86e00f3e5c13b14e2f7",
+   "stem": "Which of the following statements are true about the advantages of MindSpore?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Collaborative optimization with MindSpore and Ascend AI Processors significantly improves operation efficiency and computing performance."
+    },
+    {
+     "key": "B",
+     "text": "MindSpore supports object-oriented and function-oriented programming paradigms, both of which can be used to build network algorithms and training processes."
+    },
+    {
+     "key": "C",
+     "text": "MindSpore natively adapts to each scenario and supports on-demand synergy across devices, edges, and the cloud, as well as flexible deployment."
+    },
+    {
+     "key": "D",
+     "text": "Implementing AI algorithms as code makes the develop time more friendly to developers, significantly reducing the time required for model development and lowering the bar for new developers."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ai-fundamentals-2",
+    "pages": [
+     55
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al. \"develop time\" is as printed on the original paper.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "MindSpore's advertised advantages include co-optimization with Ascend AI processors for performance, support for both object-oriented and functional programming, native all-scenario deployment across device, edge, and cloud, and an \"AI algorithm as code\" design that makes development friendlier and faster. All four statements describe its advantages.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-098",
+   "paperId": "n2526",
+   "questionNumber": 99,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214219.png",
+   "sha256": "342ae90a15c2cf00e7fbc6a37dd12e97c82e8fb200ed40f82daee1073fcdee37",
+   "stem": "Which of the following statements about the standard RNN model is false?",
+   "options": [
+    {
+     "key": "A",
+     "text": "There is a one-to-one model structure."
+    },
+    {
+     "key": "B",
+     "text": "There is no many-to-many model structure."
+    },
+    {
+     "key": "C",
+     "text": "There is a one-to-many model structure."
+    },
+    {
+     "key": "D",
+     "text": "The time direction element is irrelevant during backpropagation."
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "B",
+    "D"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Standard RNNs come in one-to-one, one-to-many, many-to-one, and many-to-many structures, so the claim that there is no many-to-many structure is false. RNNs are trained with backpropagation through time, which unrolls the network along the time dimension, so time is very much relevant during backpropagation.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-099",
+   "paperId": "n2526",
+   "questionNumber": 100,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214220.png",
+   "sha256": "cb9014c3520da1ebc1826e43c4850581e4a72f8c0c6948f1f0d1b301da936e4c",
+   "stem": "Which of the following are basic image recognition tasks?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Image segmentation"
+    },
+    {
+     "key": "B",
+     "text": "Object tracking"
+    },
+    {
+     "key": "C",
+     "text": "Image classification"
+    },
+    {
+     "key": "D",
+     "text": "Object detection"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "ei-developer",
+    "pages": [
+     154
+    ]
+   },
+   "reviewNotes": "Stem and options checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "The basic image recognition tasks are image classification (what is in the image), object detection (what and where), and image segmentation (pixel-level labels). Object tracking follows objects across video frames and builds on these basic tasks.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
   }
  ]
 }

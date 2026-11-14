@@ -17655,12 +17655,48 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
-     "issues": [
-      "Second option label normalized from OCR; review image"
-     ],
+     "status": "transcribed",
+     "issues": [],
      "id": "n2526-capture-094",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are function modules of CANN?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Underlying compiler"
+       },
+       {
+        "key": "B",
+        "text": "TBE"
+       },
+       {
+        "key": "C",
+        "text": "FusionEngine"
+       },
+       {
+        "key": "D",
+        "text": "CCE operator library"
+       }
+      ],
+      "issues": [
+       "Second option label normalized from OCR; review image"
+      ]
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "CANN bridges AI frameworks and Ascend processors. Its functional modules have included FusionEngine (operator fusion), the CCE operator library (optimized compute operators), the Tensor Boosting Engine (TBE) for custom operator development, and the underlying compiler that turns operators into executable code for the processor.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. The current course page lists AscendCL, TBE, and Graph Engine; FusionEngine, the CCE operator library, and the underlying compiler come from earlier descriptions of CANN's functional modules."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214214.png",
@@ -17688,17 +17724,55 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-095",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "During neural network training, which of the following tasks are finished before the loss function value is calculated?",
+      "options": [
+       {
+        "key": "A",
+        "text": "The model reaches convergence and the training ends."
+       },
+       {
+        "key": "B",
+        "text": "Learnable parameters are updated using the gradient descent and backpropagation algorithms to minimize the loss value."
+       },
+       {
+        "key": "C",
+        "text": "The network structure is defined and learnable parameters are initialized."
+       },
+       {
+        "key": "D",
+        "text": "The model receives input data features and makes predictions by means of forward propagation."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot. Same idea as 2024-25 question 67.",
+     "answer": [
+      "C",
+      "D"
+     ],
+     "explanation": "Before the loss can be calculated, the network structure must be defined and its parameters initialized, and the model must produce predictions by forward propagation. Updating parameters with backpropagation and gradient descent comes after the loss, and convergence marks the end of training.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       40
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214216.png",
      "number": 97,
      "paperTotal": 150,
      "type": "multi",
-     "stem": "Which of the following Al engines are supported by ModelArts?",
+     "stem": "Which of the following AI engines are supported by ModelArts?",
      "options": [
       {
        "key": "A",
@@ -17719,10 +17793,46 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-096",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following Al engines are supported by ModelArts?",
+      "options": [
+       {
+        "key": "A",
+        "text": "PyTorch"
+       },
+       {
+        "key": "B",
+        "text": "MindSpore"
+       },
+       {
+        "key": "C",
+        "text": "MXNet"
+       },
+       {
+        "key": "D",
+        "text": "TensorFlow"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "ModelArts provides training and inference images for the mainstream AI engines, including PyTorch, MindSpore, TensorFlow, and MXNet.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214217.png",
@@ -17733,7 +17843,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "Collaborative optimization with MindSpore and Ascend Al Processors significantly improves operation efficiency and computing performance."
+       "text": "Collaborative optimization with MindSpore and Ascend AI Processors significantly improves operation efficiency and computing performance."
       },
       {
        "key": "B",
@@ -17745,15 +17855,55 @@ HR.data.examInventory = {
       },
       {
        "key": "D",
-       "text": "Implementing Al algorithms as code makes the develop time more friendly to developers, significantly reducing the time required for model development and lowering the bar for new developers."
+       "text": "Implementing AI algorithms as code makes the develop time more friendly to developers, significantly reducing the time required for model development and lowering the bar for new developers."
       }
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-097",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements are true about the advantages of MindSpore?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Collaborative optimization with MindSpore and Ascend Al Processors significantly improves operation efficiency and computing performance."
+       },
+       {
+        "key": "B",
+        "text": "MindSpore supports object-oriented and function-oriented programming paradigms, both of which can be used to build network algorithms and training processes."
+       },
+       {
+        "key": "C",
+        "text": "MindSpore natively adapts to each scenario and supports on-demand synergy across devices, edges, and the cloud, as well as flexible deployment."
+       },
+       {
+        "key": "D",
+        "text": "Implementing Al algorithms as code makes the develop time more friendly to developers, significantly reducing the time required for model development and lowering the bar for new developers."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected AI read as Al. \"develop time\" is as printed on the original paper.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "MindSpore's advertised advantages include co-optimization with Ascend AI processors for performance, support for both object-oriented and functional programming, native all-scenario deployment across device, edge, and cloud, and an \"AI algorithm as code\" design that makes development friendlier and faster. All four statements describe its advantages.",
+     "source": {
+      "kind": "material",
+      "pdf": "ai-fundamentals-2",
+      "pages": [
+       55
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214219.png",
@@ -17781,10 +17931,44 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-098",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following statements about the standard RNN model is false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "There is a one-to-one model structure."
+       },
+       {
+        "key": "B",
+        "text": "There is no many-to-many model structure."
+       },
+       {
+        "key": "C",
+        "text": "There is a one-to-many model structure."
+       },
+       {
+        "key": "D",
+        "text": "The time direction element is irrelevant during backpropagation."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "D"
+     ],
+     "explanation": "Standard RNNs come in one-to-one, one-to-many, many-to-one, and many-to-many structures, so the claim that there is no many-to-many structure is false. RNNs are trained with backpropagation through time, which unrolls the network along the time dimension, so time is very much relevant during backpropagation.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214220.png",
@@ -17812,10 +17996,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-099",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Which of the following are basic image recognition tasks?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Image segmentation"
+       },
+       {
+        "key": "B",
+        "text": "Object tracking"
+       },
+       {
+        "key": "C",
+        "text": "Image classification"
+       },
+       {
+        "key": "D",
+        "text": "Object detection"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "C",
+      "D"
+     ],
+     "explanation": "The basic image recognition tasks are image classification (what is in the image), object detection (what and where), and image segmentation (pixel-level labels). Object tracking follows objects across video frames and builds on these basic tasks.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       154
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214222.png",
