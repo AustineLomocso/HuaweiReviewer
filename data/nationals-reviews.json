@@ -10973,6 +10973,398 @@
    "explanation": "The basic image recognition tasks are image classification (what is in the image), object detection (what and where), and image segmentation (pixel-level labels). Object tracking follows objects across video frames and builds on these basic tasks.",
    "transcriptionStatus": "visually-reviewed",
    "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-100",
+   "paperId": "n2526",
+   "questionNumber": 101,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214222.png",
+   "sha256": "5c4f70d6ae19ff02032864f3175f666045653882af10a9a39782bbf9abe629b6",
+   "stem": "Namespaces and cgroups are two fundamental strategies in container technologies. Namespaces limit resources like CPU and memory quotas for groups of processes. cgroups provide process isolation by creating separate views of resources, such as PIDs and networks. Together, they enable fine-grained resource control, runtime independence, and enhanced security for containers.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud",
+    "pages": [
+     114
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "The statement swaps the two mechanisms. Namespaces provide isolation by giving processes separate views of resources such as PIDs and networks, while cgroups limit resource usage such as CPU and memory quotas for groups of processes.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-101",
+   "paperId": "n2526",
+   "questionNumber": 102,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214224.png",
+   "sha256": "d3356a17c673f2a220849eb02d1af066b85da20b232f5df9c55fb70f22d19fec",
+   "stem": "Docker isolates resources using Linux kernel features such as cgroups and namespaces. It leverages union file system technologies like OverlayFS to support layered image management. As an operating system-level virtualization solution, Docker's runtime component, originally developed in Go, has become a core project in the Cloud Native Computing Foundation (CNCF) ecosystem.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud",
+    "pages": [
+     114
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. The CNCF detail refers to containerd, Docker's runtime component, which was donated to CNCF.",
+   "explanation": "Docker isolates resources with Linux namespaces and cgroups, manages layered images with union file systems such as OverlayFS, and is an OS-level virtualization technology. Its runtime component, containerd, is written in Go and became a graduated Cloud Native Computing Foundation project.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-102",
+   "paperId": "n2526",
+   "questionNumber": 103,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214226.png",
+   "sha256": "aeeee43efa250f2a7eb3147bfe5b6fefae5684aa57fb1e6b9cedd24dc9a4cfd2",
+   "stem": "GaussDB supports two deployment architectures: distributed and primary/standby. Distributed GaussDB instances can only be deployed on Elastic Cloud Servers (ECSs) with Kunpeng processors; primary/standby GaussDB instances can be deployed on physical servers using either x86 or Kunpeng processors.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "GaussDB does offer distributed and primary/standby deployment, but distributed instances are not limited to Kunpeng ECSs; both architectures can run on x86 or Kunpeng compute, so the restriction described is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-103",
+   "paperId": "n2526",
+   "questionNumber": 104,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214227.png",
+   "sha256": "4a5634ee20ece685ab6550c21fbc1defc83e9e02da7214bfe38d5ce1d258b34f",
+   "stem": "To ensure the stability of RDS for MySQL read replicas, the specifications (such as vCPUs and memory) of read replicas must be exactly the same as those of the primary DB instance. Or, there may be replication delay or query performance deterioration.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud",
+    "pages": [
+     342
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. Same idea as 2024-25 question 83.",
+   "explanation": "RDS for MySQL read replicas do not have to match the primary instance's specifications exactly. Their specifications can be chosen separately, although replicas much smaller than the primary may lag under heavy write load, so a mandatory exact match is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-104",
+   "paperId": "n2526",
+   "questionNumber": 105,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214229.png",
+   "sha256": "0f9d0d5681c75d270f451cac8ca4c9ba6da97ac9cc77779b019bc4365021ed84",
+   "stem": "WAF checks TCP/IP requests and provides a variety of functions to help keep web services secure and stable. These functions include asset overview, host management, container management, host fingerprints, container asset management, vulnerability management, baseline checks, container image security, cluster environment security, application protection, web tamper protection, ransomware protection, file integrity management, and virus scanning. Currently, WAF provides cloud, dedicated, shared, and distributed mode to meet diverse security requirements.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud",
+    "pages": [
+     372
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "The functions listed (asset and host management, container security, baseline checks, web tamper protection, ransomware protection, virus scanning) belong to Host Security Service (HSS). WAF inspects HTTP and HTTPS web traffic to block attacks such as SQL injection and XSS, so the description is false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-105",
+   "paperId": "n2526",
+   "questionNumber": 106,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214231.png",
+   "sha256": "6c48c48a5a956bb96572657dccd54e9c352bf89f7293ca7de7713f4fff13849e",
+   "stem": "Huawei Cloud Object Storage Service (OBS) can use the OBSA-HDFS protocol to directly connect to big data computing frameworks such as Spark and Flink. This allows for HDFS- compatible data storage and access, so big data components can use OBS as a persistent storage layer without requiring architectural changes, thereby fully supporting the data lake architecture.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud-service-architect",
+    "pages": [
+     194
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. The OBSA-HDFS name comes from OBS documentation; the course page shows OBS interconnecting with Spark and Hadoop HDFS.",
+   "explanation": "OBS provides an HDFS-compatible interface (OBSA-HDFS) so big data frameworks such as Spark, Flink, and Hadoop can read and write OBS directly, letting OBS serve as the persistent storage layer of a data lake without architectural changes.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-106",
+   "paperId": "n2526",
+   "questionNumber": 107,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214232.png",
+   "sha256": "d6cf04eaeec6056c45083f1f6b33319c280d77c831c3f6e3f73e987586f215b6",
+   "stem": "When the system resources and core services of a microservice architecture hits performance bottlenecks, the service circuit breaker mechanism can be triggered to prioritize the availability of core workloads (such as order payment and user logins) while temporarily sidelining non-core workloads (such as data analysis and log collection). Once the system has stabilized, the affected workloads can be gradually restored.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "F"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: the described behavior matches service degradation; the statement is judged false because it attributes that behavior to the circuit breaker.",
+   "explanation": "Temporarily switching off non-core workloads to keep core services available, then restoring them gradually, is service degradation (fallback). A circuit breaker instead stops calls to a failing downstream service so failures do not cascade, then probes it before resuming. Attributing degradation to the circuit breaker makes the statement false.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-107",
+   "paperId": "n2526",
+   "questionNumber": 108,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214234.png",
+   "sha256": "8115c15149b4f6e1c64e7d59d85d9104064757b06a1dc2a401d49388888b41c4",
+   "stem": "An enterprise uses Elastic Load Balance (ELB) on Huawei Cloud. The backend server group contains two types of ECSs with different flavors: s3.large.2 (2 vCPUs and 8 GiB) and s3.2xlarge.4 (8 vCPUs and 32 GiB). To ensure proper traffic distribution, users need to configure higher weights to high-performance instances, typically two to four times those of low-performance ones, to prevent low-specification instances from being overloaded.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud",
+    "pages": [
+     168
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot; corrected ECSs.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "With weighted algorithms, ELB sends traffic in proportion to each backend server's weight. Giving the 8-vCPU instances higher weights than the 2-vCPU instances, roughly in proportion to their capacity, prevents the smaller instances from being overloaded.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-108",
+   "paperId": "n2526",
+   "questionNumber": 109,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214236.png",
+   "sha256": "e437fd38f24954add261071c76c99444d71acfa2183715170b0fd60ae3d29d5c",
+   "stem": "Bare Metal Server (BMS) provides physical servers dedicated to a single user. Virtual Private Cloud (VPC) and security groups can be used for network isolation. A BMS can use Elastic Volume Service (EVS) disks as system and data disks. Cloud Backup and Recovery (CBR) can be used for data protection. Additionally, Dedicated Enterprise Storage Service (DESS) can be used to help BMS meet enterprise-grade data compliance requirements. BMS has the same security and performance as physical servers.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud-service-architect",
+    "pages": [
+     73
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "BMS provides dedicated physical servers with the performance and security of physical machines, integrates with VPC and security groups for network isolation, can use EVS disks for system and data disks, is protected by CBR, and can use dedicated storage such as DESS for compliance needs.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-109",
+   "paperId": "n2526",
+   "questionNumber": 110,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214238.png",
+   "sha256": "47f17aaacef0904d266500acfb33219d77cf39474cb2fe14f364e7e995660bbb",
+   "stem": "An online education platform, currently deployed in a Huawei Cloud region in East China, is experiencing high latency for global users. To optimize the experience, a new access point should be established in an international Huawei Cloud region, such as AP-Singapore. This configuration will use the Huawei Cloud backbone network to enable nearby access and intelligent scheduling of requests for reduced cross-border latency.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Deploying an access point in an overseas region such as AP-Singapore lets global users connect nearby, and Huawei Cloud's backbone network carries traffic between regions with intelligent scheduling, reducing cross-border latency.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-110",
+   "paperId": "n2526",
+   "questionNumber": 111,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214239.png",
+   "sha256": "3ca6318a67bb2f507576e275d12da3e7e3fb090827bdb9e51c8b9e04082b1607",
+   "stem": "A game company deploys its web applications on the Huawei Cloud Elastic Cloud Server (ECS), and uses Distributed Cache Service (DCS) within the same VPC. To improve performance and ensure security, it is recommended to use internal IP addresses for communication between ECS and DCS.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "inferred"
+   },
+   "reviewNotes": "Stem checked against source screenshot; removed the OCR number prefix.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "When an ECS and a DCS instance are in the same VPC, connecting over private IP addresses gives lower latency and keeps the cache off the public Internet.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
+  },
+  {
+   "captureId": "n2526-capture-111",
+   "paperId": "n2526",
+   "questionNumber": 112,
+   "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214241.png",
+   "sha256": "5e1d8219bf8c6e360876d203bef644488a8753171cf8e716bf2a45b1b3558622",
+   "stem": "Containers isolate processes with namespaces and cgroups. In contrast, VMs rely on hypervisors to virtualize hardware resources and provide full operating system-level isolation.",
+   "options": [
+    {
+     "key": "T",
+     "text": "True"
+    },
+    {
+     "key": "F",
+     "text": "False"
+    }
+   ],
+   "status": "transcribed",
+   "answer": [
+    "T"
+   ],
+   "source": {
+    "kind": "material",
+    "pdf": "cloud-computing-architect",
+    "pages": [
+     264
+    ]
+   },
+   "reviewNotes": "Stem checked against source screenshot; corrected VMs.",
+   "flag": "Answer worked out for this reviewer; no official key was supplied.",
+   "explanation": "Containers use Linux namespaces and cgroups for process-level isolation on a shared kernel, while VMs use hypervisors to virtualize hardware so each VM runs its own operating system with system-level isolation.",
+   "transcriptionStatus": "visually-reviewed",
+   "inApp": true
   }
  ]
 }
