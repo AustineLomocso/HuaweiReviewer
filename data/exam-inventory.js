@@ -16235,10 +16235,44 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-073",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A financial enterprise uses Huawei Cloud Web Application Firewall (WAF) to protect its online transaction system. Which of the following statements about WAF functions are false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Supported ports: Only standard ports such as 80 and 443 are supported. AAD is required to protect non-standard ports."
+       },
+       {
+        "key": "B",
+        "text": "Precise protection: WAF can protect against CC attacks based on conditions such as geographical locations and HTTP headers."
+       },
+       {
+        "key": "C",
+        "text": "Data masking: WAF can automatically mask fields such as bank card numbers and ID card numbers in attack logs."
+       },
+       {
+        "key": "D",
+        "text": "Supported protocols: Security controls, such as WebSocket and SSE, are disabled by default. Customers need to enable and configure these security controls manually."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "D"
+     ],
+     "explanation": "WAF protects many non-standard ports as well as 80 and 443, so needing AAD for non-standard ports is false. Protocols such as WebSocket are supported and inspected by default rather than switched off until configured, so that statement is also false. WAF's precise protection can block CC attacks by conditions like geographic location and HTTP headers, and it can mask sensitive fields such as card and ID numbers in logs.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Based on WAF documentation; the course pages describe WAF protections but not port or protocol support."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214141.png",
@@ -16249,27 +16283,66 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "Alarm policy: AS automatically adds two Elastic Cloud Servers (ECSS) when the CPU usage exceeds 80% for 5 minutes."
+       "text": "Alarm policy: AS automatically adds two Elastic Cloud Servers (ECSs) when the CPU usage exceeds 80% for 5 minutes."
       },
       {
        "key": "B",
-       "text": "Periodic policy: AS adds 30% more ECSS at 18:00 every Friday to handle weekend traffic peaks."
+       "text": "Periodic policy: AS adds 30% more ECSs at 18:00 every Friday to handle weekend traffic peaks."
       },
       {
        "key": "C",
-       "text": "Scheduled policy: AS adds 20 ECSS at 00:00 on November 11."
+       "text": "Scheduled policy: AS adds 20 ECSs at 00:00 on November 11."
       },
       {
        "key": "D",
-       "text": "Manual policy: O&M personnel manually adjust the number of ECSS on the console."
+       "text": "Manual policy: O&M personnel manually adjust the number of ECSs on the console."
       }
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-074",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An e-commerce platform plans to use Huawei Cloud Auto Scaling (AS) to handle traffic fluctuations during promotions. Multiple scaling policies need to be configured to intelligently schedule resources. Which of the following policies can be used for automatic scaling?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Alarm policy: AS automatically adds two Elastic Cloud Servers (ECSS) when the CPU usage exceeds 80% for 5 minutes."
+       },
+       {
+        "key": "B",
+        "text": "Periodic policy: AS adds 30% more ECSS at 18:00 every Friday to handle weekend traffic peaks."
+       },
+       {
+        "key": "C",
+        "text": "Scheduled policy: AS adds 20 ECSS at 00:00 on November 11."
+       },
+       {
+        "key": "D",
+        "text": "Manual policy: O&M personnel manually adjust the number of ECSS on the console."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected ECSs read as ECSS.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "AS supports three automatic scaling policies: alarm-based (triggered by metrics such as CPU usage), periodic (repeating on a daily, weekly, or monthly schedule), and scheduled (running once at a set time). Manually changing the instance count is a manual operation, not an automatic scaling policy.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       93
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214142.png",
@@ -16280,7 +16353,7 @@ HR.data.examInventory = {
      "options": [
       {
        "key": "A",
-       "text": "OBS Browser* is a graphical Windows client that lets you manage OBS resources from your desktop with ease."
+       "text": "OBS Browser+ is a graphical Windows client that lets you manage OBS resources from your desktop with ease."
       },
       {
        "key": "B",
@@ -16297,10 +16370,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-075",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Object Storage Service (OBS) offers a range of resource management tools. Which of the following statements about these tools are false?",
+      "options": [
+       {
+        "key": "A",
+        "text": "OBS Browser* is a graphical Windows client that lets you manage OBS resources from your desktop with ease."
+       },
+       {
+        "key": "B",
+        "text": "obsfs is a GUI tool for accessing and managing OBS resources. It is recommended for batch processing and automated tasks."
+       },
+       {
+        "key": "C",
+        "text": "obsutil is a tool based on Filesystem in Userspace (FUSE). It is used to mount OBS parallel file systems to Linux."
+       },
+       {
+        "key": "D",
+        "text": "obsfs is used to mount OBS buckets, but cannot be used to mount OBS parallel file systems."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected Browser+.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "OBS Browser+ is the graphical desktop client. obsutil is the command-line tool recommended for batch processing and automation, and obsfs is the FUSE-based tool that mounts OBS parallel file systems on Linux. The statements calling obsfs a GUI tool, calling obsutil the FUSE mount tool, and saying obsfs cannot mount parallel file systems are all false.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       234
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214143.png",
@@ -16328,10 +16440,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-076",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A financial institution plans to migrate its mission-critical databases to Huawei Cloud Relational Database Service (RDS) in compliance with DJCP Multi-level Protection Scheme (MLPS) L3 requirements. Which of the following security capabilities are supported by RDS?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Vulnerability scan: The system automatically detects database patch statuses and generates suggestions."
+       },
+       {
+        "key": "B",
+        "text": "Storage encryption: The Key Management Service (KMS) keys are used to encrypt disk data with AES-256."
+       },
+       {
+        "key": "C",
+        "text": "Network isolation: Instance-level access control is implemented using security groups and subnets."
+       },
+       {
+        "key": "D",
+        "text": "Transmission encryption: SSL/TLS 1.2+ is enforced to prevent man-in-the-middle attacks from compromising communications."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "RDS supports encryption of stored data with KMS keys, network isolation through VPC subnets and security groups, and SSL/TLS encryption of connections. Scanning for vulnerabilities and generating patch suggestions is provided by dedicated security services rather than RDS.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: RDS applies patches through managed minor version upgrades, but automatic vulnerability scanning with suggestions is a function of security services such as DBSS rather than RDS itself."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214145.png",
@@ -16359,10 +16506,44 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-077",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An e-commerce platform uses Object Storage Service (OBS) to store product pictures. The platform needs to use OBS image processing to optimize user experience. Which of the following are the functions of OBS image processing?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Dynamic cropping: It generates thumbnails of different sizes in real time through URL parameters."
+       },
+       {
+        "key": "B",
+        "text": "Content moderation: It identifies illegal images, including those related to pornography and terrorism."
+       },
+       {
+        "key": "C",
+        "text": "Blind watermarking: It embeds invisible digital watermarks into images to help prevent unauthorized use or theft."
+       },
+       {
+        "key": "D",
+        "text": "Smart compression: It adjusts image quality based on the device type."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "C"
+     ],
+     "explanation": "OBS image processing generates resized or cropped thumbnails on the fly through URL parameters and supports watermarking, including invisible (blind) watermarks. Content moderation is a separate service that detects illegal images, and automatically adjusting quality by device type is not an OBS image processing function.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: OBS image processing compresses and slims images, but device-aware quality adjustment and content moderation are not standard OBS image processing features."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214146.png",
@@ -16390,17 +16571,57 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-078",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A financial institution plans to build a two-city, three-center disaster recovery (DR) system on Huawei Cloud and requires DR at the network, host, database, and application layers. Which of the following services can greatly improve the solution reliability?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Cloud Backup and Recovery (CBR): Back up system and data disks of cloud sewers across regions, creating images from backups in the event of a disaster, and recovering services and data on DR site servers."
+       },
+       {
+        "key": "B",
+        "text": "Domain Name Service (DNS): Configure intelligent resolution policies to automatically switch traffic to the DR site in the event of a fault."
+       },
+       {
+        "key": "C",
+        "text": "Storage Disaster Recovery Service (SDRS): Use storage-layer synchronous replication to achieve cross-AZ DR with almost zero RPO."
+       },
+       {
+        "key": "D",
+        "text": "Distributed Database Middleware (DDM)+Data Replication Sewice (DRS): Implement remote, active-active database DR."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "Each option protects a different layer of a two-city, three-center design: CBR replicates server backups across regions for recovery at the DR site, DNS resolution policies switch traffic to the DR site on failure, SDRS replicates storage synchronously across AZs with near-zero RPO, and DDM with DRS supports remote active-active database DR.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       222
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214148.png",
      "number": 79,
      "paperTotal": 150,
      "type": "multi",
-     "stem": "An Al startup is deploying a machine learning training platform on Huawei Cloud Container Engine (CCE). They require high-performance persistent storage for their workloads. Which of the following Huawei Cloud storage volumes can be directly mounted to a container using a PersistentVolumeClaim (PVC)?",
+     "stem": "An AI startup is deploying a machine learning training platform on Huawei Cloud Container Engine (CCE). They require high-performance persistent storage for their workloads. Which of the following Huawei Cloud storage volumes can be directly mounted to a container using a PersistentVolumeClaim (PVC)?",
      "options": [
       {
        "key": "A",
@@ -16412,7 +16633,7 @@ HR.data.examInventory = {
       },
       {
        "key": "C",
-       "text": "Scalable File Sewice (SFS)"
+       "text": "Scalable File Service (SFS)"
       },
       {
        "key": "D",
@@ -16421,10 +16642,46 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-079",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An Al startup is deploying a machine learning training platform on Huawei Cloud Container Engine (CCE). They require high-performance persistent storage for their workloads. Which of the following Huawei Cloud storage volumes can be directly mounted to a container using a PersistentVolumeClaim (PVC)?",
+      "options": [
+       {
+        "key": "A",
+        "text": "SFS Turbo"
+       },
+       {
+        "key": "B",
+        "text": "Object Storage Service (OBS)"
+       },
+       {
+        "key": "C",
+        "text": "Scalable File Sewice (SFS)"
+       },
+       {
+        "key": "D",
+        "text": "Elastic Volume Service (EVS)"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot; corrected OCR errors.",
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "CCE storage classes let pods claim EVS disks, SFS and SFS Turbo file systems, and OBS buckets through PVCs, so all four can be mounted into containers as persistent volumes.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214149.png",
@@ -16452,10 +16709,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-080",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise uses Huawei Cloud to deploy services. Their Elastic Cloud Servers (ECSs) are deployed in different Virtual Private Clouds (VPCs) (such as a finance VPC and an R&D VPC) in the same region. To allow these ECSS to share files across VPCs and meet the low-latency, high-throughput requirements at the same time, which of the following are feasible solutions?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Using Scalable File Service (SFS) and configuring multi-VPC access"
+       },
+       {
+        "key": "B",
+        "text": "Using obsfs to mount Object Storage Service (OBS) parallel file systems to Linux servers"
+       },
+       {
+        "key": "C",
+        "text": "Using SFS Turbo and configuring VPC peering connections to enable communications between two or more VPCs in the same region"
+       },
+       {
+        "key": "D",
+        "text": "Creating shared Elastic Volume Service (EVS) disks and manually attach them to the ECSS in each VPC"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot. Same scenario as 2024-25 question 49.",
+     "answer": [
+      "A",
+      "B",
+      "C"
+     ],
+     "explanation": "ECSs in different VPCs can share files through SFS configured for multi-VPC access, through OBS parallel file systems mounted with obsfs, or through SFS Turbo reached over VPC peering. EVS disks, even shared ones, attach only to servers in the same AZ and cannot be shared across VPCs.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214151.png",
@@ -16483,10 +16775,49 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-081",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "A financial institution needs to set up a physically isolated resource pool on Huawei Cloud to meet compliance requirements. Which of the following services can provide exclusive hardware resources?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Elastic Cloud Sewer (ECS)"
+       },
+       {
+        "key": "B",
+        "text": "Bare Metal Sewer (BMS)"
+       },
+       {
+        "key": "C",
+        "text": "Dedicated Distributed Storage Sewice (DSS)"
+       },
+       {
+        "key": "D",
+        "text": "Dedicated Computing Cluster (DCC)"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "BMS provides dedicated physical servers, DSS provides dedicated physical storage pools, and DCC provides dedicated physical compute clusters, all giving exclusive hardware. Ordinary ECSs run on shared physical hosts.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       73
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214152.png",
@@ -16514,10 +16845,45 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-082",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "O&M personnel uses Log Tank Service (LTS) to monitor their company system and finds that some logs cannot be viewed on the console. Which of the following are possible causes?",
+      "options": [
+       {
+        "key": "A",
+        "text": "Slow browser: There are too many log requests."
+       },
+       {
+        "key": "B",
+        "text": "Insufficient IAM permissions: The current account does not have the LTS ReadOnlyAccess policy."
+       },
+       {
+        "key": "C",
+        "text": "Log group expiration: The log retention duration is set to one day and logs have been automatically deleted."
+       },
+       {
+        "key": "D",
+        "text": "ICAgent not installed: The log collection client is not deployed on the host and data is not collected."
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem and options checked against source screenshot.",
+     "answer": [
+      "B",
+      "C",
+      "D"
+     ],
+     "explanation": "Logs can be missing from the LTS console because the account lacks permission to view them (for example, no LTS read policy), because the log retention period has expired and the logs were deleted, or because ICAgent was never installed so no logs were collected. A slow browser delays display but does not stop logs from being viewed.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214153.png",
