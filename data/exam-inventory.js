@@ -18666,10 +18666,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-112",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "To monitor Java applications, you need to install Application Performance Management (APM) Agents. To monitor Go or Node.js applications, simply configure environment variables on servers. You can use the built-in cloud-init to collect service call data non-intrusively.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot. Same idea as 2024-25 question 80.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "APM collects call data through agents or compatible instrumentation for each supported language. cloud-init only initializes servers at first boot and does not collect service call data, so the claim that it monitors applications non-intrusively is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214244.png",
@@ -18689,10 +18714,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-113",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Application Performance Management (APM) monitors SQL statement execution. By analyzing metrics such as slow queries and error rates, APM helps locate and optimize the statements that cause service delay or performance bottlenecks.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "APM helps locate performance bottlenecks and root causes. Its database call analysis tracks SQL execution, including slow queries and error rates, so the statements behind service delays can be found and optimized.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       464
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. SQL-level analysis is an APM feature described in its documentation; the course page states APM's bottleneck-locating role."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214246.png",
@@ -18712,10 +18766,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-114",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "On the Host Security Service (HSS) console, you can fix the vulnerabilities of all servers across all regions with one click. You do not need to manually select servers or confirm their fix policies.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "HSS centralizes vulnerability management on one console, but fixing vulnerabilities is not a blind one-click action across every server: you select the servers and vulnerabilities to fix and confirm the operation, since fixes can require restarts and affect services.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       367
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214247.png",
@@ -18735,10 +18818,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-115",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "System-defined policies provided by IAM are preset permission sets and cannot be modified. Custom policies can be flexibly defined based on your requirements.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "IAM's system-defined policies are preset by Huawei Cloud and cannot be modified, while custom policies let you define fine-grained permissions for your own requirements.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       36
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214249.png",
@@ -18758,10 +18870,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-116",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Microservice architecture improves development agility through service splitting and team autonomy. It also significantly simplifies O&M for organizations thanks to multi-service monitoring, distributed transactions, and cross-service link tracing.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "Microservices do improve agility through service splitting and team autonomy, but they make O&M more complex, not simpler: many services must be monitored, distributed transactions are hard to keep consistent, and cross-service tracing is needed precisely because troubleshooting is harder.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214251.png",
@@ -18781,10 +18918,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-117",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Cloud Bastion Host (CBH) can defend against DDoS attacks and vulnerability exploits. It ensures traceable O&M activities through centralized account management, real-time command recording, and bidirectional session interception. However, it needs to work with other security services such as WAF and HSS to implement comprehensive protection.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "CBH is an O&M audit and control platform: it provides centralized account management, authorization, command recording, and session control to make O&M traceable. It does not defend against DDoS attacks or vulnerability exploits; those need services such as Anti-DDoS, WAF, and HSS.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       114
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214252.png",
@@ -18804,10 +18970,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-118",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Huawei Cloud Backup and Recovery (CBR) supports cross-account, cross-region backup replication. Users can replicate backups of Elastic Cloud Server (ECS) system disks, Elastic Volume Service (EVS) disk snapshots, or SFS Turbo backups from one region to another for remote disaster recovery (DR). Before the replication, they need to ensure that the destination account has granted the source account required access permissions.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "CBR replicates backups across regions within the same account for remote DR; it does not replicate backups across accounts. EVS snapshots are also a separate EVS feature rather than CBR backups, so the statement is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: CBR's replication features vary by backup type and have changed across versions."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214254.png",
@@ -18827,10 +19018,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-119",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Cloud Container Engine (CCE) supports the deployment of master and worker nodes across AZs. It uses multi-node etcd clusters and load balancing to ensure high availability of the control plane. Additionally, it guarantees data reliability using Elastic Volume Service (EVS) multi-copy storage and disaster recovery, meeting financial-grade service continuity requirements.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "CCE can spread master nodes (three-master HA clusters) and worker nodes across AZs, runs etcd as a multi-node cluster behind load balancing for a highly available control plane, and relies on EVS multi-copy storage and DR for data reliability.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214256.png",
@@ -18850,10 +19066,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-120",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Cloud Trace Service (CTS) records the API calling logs of all cloud services by default. You can query operation records on the console or using APIs, and transfer logs to OBS buckets for long-term archiving. Log files are automatically encrypted using Key Management Service (KMS).",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "CTS records operations once a tracker is enabled, and records can be queried and transferred to OBS. Log file encryption with KMS is optional and must be configured, so the claim that files are encrypted automatically by default is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214257.png",
@@ -18873,17 +19114,42 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-121",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Cloud native technologies provide applications with one-click deployment, auto scaling, and automated O&M across multi-cloud environments with core capabilities like containerization, microservice architectures, and declarative APIs. This significantly enhances service agility and resource utilization.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Cloud native technologies (containers, microservices, service meshes, declarative APIs, and immutable infrastructure) enable one-click deployment, auto scaling, and automated O&M across clouds, improving agility and resource utilization.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214259.png",
      "number": 123,
      "paperTotal": 150,
      "type": "tf",
-     "stem": "Scalable File Service (SFS) supports cross-VPC access. Users can configure VPC peering connections or use VPC Endpoint (VPCEP) to enable communication between ECSS in different VPCs. They also need to ensure that security group rules allow for cross-VPC traffic. This way, ECSS in different VPCs can share the same file system.",
+     "stem": "Scalable File Service (SFS) supports cross-VPC access. Users can configure VPC peering connections or use VPC Endpoint (VPCEP) to enable communication between ECSs in different VPCs. They also need to ensure that security group rules allow for cross-VPC traffic. This way, ECSs in different VPCs can share the same file system.",
      "options": [
       {
        "key": "T",
@@ -18896,10 +19162,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-122",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Scalable File Service (SFS) supports cross-VPC access. Users can configure VPC peering connections or use VPC Endpoint (VPCEP) to enable communication between ECSS in different VPCs. They also need to ensure that security group rules allow for cross-VPC traffic. This way, ECSS in different VPCs can share the same file system.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot; corrected ECSs.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "SFS file systems can be shared across VPCs: depending on the edition, you authorize multiple VPCs, connect VPCs with peering, or reach the file system through a VPC endpoint, and security group rules must allow the traffic. ECSs in different VPCs can then mount the same file system.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied. Caution: the exact mechanism depends on the SFS edition (multi-VPC access rules, VPC peering for SFS Turbo, or VPC endpoints for SFS 3.0)."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214301.png",
@@ -18919,10 +19210,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-123",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Huawei Cloud CodeArts PerfTest supports real-time test and monitoring and offline report analysis. Users can view key metrics such as concurrency and response time in real time during a test. A detailed PDF report containing data analysis charts (such as TPS and error rate) will be generated after the test.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot. Similar to 2024-25 question 77.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "CodeArts PerfTest shows real-time metrics such as concurrency and response time during a test, and produces offline reports afterwards with charts such as TPS and error rate, which can be exported.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214302.png",
@@ -18942,10 +19258,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-124",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "An enterprise needs to migrate petabytes of data to Huawei Cloud. It is estimated that migration over the public network would take a long time. In this case, Data Express Service (DES) is recommended. DES allows for high-speed offline data migration through offline mailing. This greatly shortens the transfer time.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "For petabyte-scale data that would take too long over the network, DES ships the data offline on physical storage devices to Huawei Cloud for import, greatly shortening the migration time.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud",
+      "pages": [
+       243
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214304.png",
@@ -18965,10 +19310,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-125",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Key Management Service (KMS) is a secure, reliable, and easy-to-use key hosting service that helps you create, manage, and protect keys. KMS enables server encryption for OBS buckets and stores SSH private key files.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "KMS creates, manages, and protects encryption keys and enables server-side encryption for services such as OBS. Storing SSH key pairs and private keys is the job of Key Pair Service (KPS), another part of DEW, so the statement is false.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214305.png",
@@ -18988,10 +19358,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-126",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Huawei Cloud Container Engine (CCE) is an enterprise-level container management service based on Kubernetes. It supports automatic deployment, auto scaling, and O&M monitoring of containers. It is only for Huawei Cloud environments. It does not support hybrid cloud or cross-cloud scenarios.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "CCE is a Kubernetes-based enterprise container service with automated deployment, scaling, and monitoring, but it is not limited to Huawei Cloud. Through Ubiquitous Cloud Native Service (UCS) and on-premises or partner clusters it supports hybrid and multi-cloud scenarios.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214306.png",
@@ -19011,10 +19406,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-127",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Kubernetes is a container orchestration platform that automates the deployment, scaling, and load balancing of containers. The smallest unit it manages is the container.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "F"
+     ],
+     "explanation": "Kubernetes automates deploying, scaling, and load balancing containers, but the smallest unit it manages is the pod, which wraps one or more containers, not the individual container.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-computing-architect",
+      "pages": [
+       395
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214308.png",
@@ -19034,10 +19458,35 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-128",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Container images are lightweight, executable, independent packages that contain all dependencies and settings required for applications, except for the OS kernel.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "A container image packages an application with all its libraries, dependencies, and settings in a lightweight, runnable form. It does not contain an OS kernel, because containers share the host's kernel.",
+     "source": {
+      "kind": "inferred"
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214309.png",
@@ -19057,10 +19506,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-129",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "The core advantage of serverless architecture is that developers do not need to manage infrastructure like servers, and instead can focus purely on service logic code. The cloud platform then automatically handles dynamic resource allocation, scaling, and O&M.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Serverless computing lets developers write business logic without provisioning or managing servers, while the platform automatically allocates resources, scales, and handles O&M, as FunctionGraph does.",
+     "source": {
+      "kind": "material",
+      "pdf": "cloud-service-architect",
+      "pages": [
+       420
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214311.png",
@@ -19080,10 +19558,39 @@ HR.data.examInventory = {
      ],
      "suppliedKey": null,
      "suppliedExplanation": null,
-     "status": "ocr-draft",
+     "status": "transcribed",
      "issues": [],
      "id": "n2526-capture-130",
-     "suppliedKeyStatus": "not-extracted"
+     "suppliedKeyStatus": "not-extracted",
+     "ocrOriginal": {
+      "stem": "Deep learning is used for image segmentation, in which classification is used to determine whether a pixel belongs to the foreground or background.",
+      "options": [
+       {
+        "key": "T",
+        "text": "True"
+       },
+       {
+        "key": "F",
+        "text": "False"
+       }
+      ],
+      "issues": []
+     },
+     "transcriptionStatus": "visually-reviewed",
+     "reviewNotes": "Stem checked against source screenshot.",
+     "answer": [
+      "T"
+     ],
+     "explanation": "Image segmentation with deep learning is pixel-level classification: each pixel is assigned a class, and in the simplest case the model decides whether each pixel belongs to the foreground or the background.",
+     "source": {
+      "kind": "material",
+      "pdf": "ei-developer",
+      "pages": [
+       154
+      ]
+     },
+     "inApp": true,
+     "flag": "Answer worked out for this reviewer; no official key was supplied."
     },
     {
      "image": "HuaweiCloudNationals(2526)/Screenshot 2026-11-13 214312.png",
